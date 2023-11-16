@@ -1,0 +1,61 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #6600cc;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Adding transition effect */
+}
+
+nav ul li a:hover {
+  color: #a0a0a0; /* Changing color on hover */
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  border: 1px solid #6600cc;
+  border-radius: 5px;
+}
+
+section:hover {
+  background-color: #e1c2ff;
+  border: 3px solid #6600cc;
+  transition: color 0.6s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #6600cc;
+  color: #fff;
+}
