@@ -1,95 +1,119 @@
-/* styles.css */
+
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f4f4f4;
   color: #333;
-}
-
-header {
-  background-color: #6600cc;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+/* --------------------- */
+/* ------ HEADER ------- */
+/* --------------------- */
+
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+  border-bottom: #666 solid;
+  border-width: 0.1rem;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#name-surname {
+  font-size: 2rem;
+}
+
+#bachelor {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Adding transition effect */
   text-align: center;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 10px;
+nav a:hover {
+  text-decoration: underline;
 }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease; /* Adding transition effect */
-}
-
-nav ul li a:hover {
-  color: #a0a0a0; /* Changing color on hover */
-}
-
+/* --------------------- */
+/* ------- MIDDLE ------ */
+/* --------------------- */
 section {
-  padding: 20px;
-  margin: 20px;
-  background-color: #fff;
-  border: 1px solid #6600cc;
-  border-radius: 5px;
+  padding-top: 1rem;
+}
+#bio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: justify;
 }
 
-section:hover {
-  background-color: #e1c2ff;
-  border: 3px solid #6600cc;
-  transition: color 0.6s ease;
+.text-wrapper{
+  width: 75%;
+  padding-right: 2rem;
 }
+
+.img-wrapper {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+/* --------------------- */
+/* ------ FOOTER ------- */
+/* --------------------- */
 
 footer {
   text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #6600cc;
-  color: #fff;
-}
-
-
-.frame {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  align-self: center;
-  margin: 0px;
-  padding: 0px;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.word{
   display: flex;
-  align-items:center;
-  text-shadow: 0.2rem 0.2rem 0.2rem rgb(0,0,0,0.5); /* Horizontal offset, Vertical offset, Blur radius, Shadow color */
-  margin: 0.2rem;
-  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #999;
+  border-top: #666 solid;
+  border-width: 0.1rem;
+  font-size: 0.9rem;
 }
 
-.letter{
-  margin: 0px;
-}
-.letter:hover {
-  font-size: 2.5rem;
+#social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.space {
-  padding: 0 0.3rem 0 0;
-  margin: 0px;
+#social-links i {
+  margin: .5rem;
+  color: #666;
+}
+
+#copyright {
+  margin: .5rem;
 }
