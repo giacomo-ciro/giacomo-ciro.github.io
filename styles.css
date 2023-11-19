@@ -114,6 +114,10 @@ footer {
   color: #666;
 }
 
+#social-links i:hover {
+  color:#fff;
+}
+
 #copyright {
   margin: .5rem;
 }
