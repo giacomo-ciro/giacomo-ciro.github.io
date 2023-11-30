@@ -1,15 +1,16 @@
-[
-    {
-      "title": "Project 1",
-      "tags": "Tag1",
-      "description": "Description 1",
-      "link": "https://example.com/project1"
-    },
-    {
-      "title": "Project 2",
-      "tags": "Tag2",
-      "description": "Description 2",
-      "link": "https://example.com/project2"
-    }
-  ]
-  
+{
+    "projects": [
+        {
+          "title": "Project 1",
+          "tags": "Tag1",
+          "description": "Description 1",
+          "link": "https://example.com/project1"
+        },
+        {
+          "title": "Project 2",
+          "tags": "Tag2",
+          "description": "Description 2",
+          "link": "https://example.com/project2"
+        }
+        ]
+}
