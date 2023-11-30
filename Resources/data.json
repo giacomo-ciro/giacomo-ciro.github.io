@@ -1,16 +1,18 @@
 {
     "projects": [
         {
-          "title": "Project 1",
-          "tags": "Tag1",
-          "description": "Description 1",
-          "link": "https://example.com/project1"
+          "title": "Words Generator",
+          "tags": "Python, Generative AI Models",
+          "description": "I trained a collection of neural networks on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones. I deployed the final model as a user-interactive and free-access web-app",
+          "link1": "https://example.com/project1",
+          "link2": "https://example.com/project1",
         },
         {
           "title": "Project 2",
           "tags": "Tag2",
           "description": "Description 2",
-          "link": "https://example.com/project2"
+          "link1": "https://example.com/project1",
+          "link2": "https://example.com/project1",
         }
         ]
 }
