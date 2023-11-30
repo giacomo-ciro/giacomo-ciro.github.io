@@ -11,8 +11,7 @@
           "title": "Project 2",
           "tags": "Tag2",
           "description": "Description 2",
-          "link1": "https://example.com/project1",
-          "link2": "https://example.com/project1"
+          "link1": "https://example.com/project1"
         }
         ]
 }
