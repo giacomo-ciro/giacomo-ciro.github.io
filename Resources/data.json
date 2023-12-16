@@ -3,28 +3,28 @@
         {
           "title": "Daily Spin Bot",
           "tags": "Python, Browser Automation",
-          "description": "I created a program to automate SNAI Daily Spin and maximize the reward. The .exe is available at the link below.",
+          "description": "Program to automate SNAI Daily Spin and maximize the reward. The .exe is available at the link below.",
           "code": "https://github.com/giacomo-ciro/daily-spin-bot",
           "webapp": ""
         },
         {
           "title": "Words Generator",
           "tags": "Python, Generative AI Models",
-          "description": "I trained a collection of neural networks on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones. I deployed the final model as a user-interactive and free-access web-app.",
+          "description": "Collection of neural networks trained on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones. The final model has been deployed through a user-interactive and free-access web-app.",
           "code": "https://github.com/giacomo-ciro/words-generator",
           "webapp": "https://words-generator.streamlit.app/"
         },
         {
           "title": "F1 Race Analysis",
           "tags": "Python, Data Analysis, Data Visualization, Data Mining",
-          "description": "I created a web app to display some statistics and insights from the first ever to the most recent Formula 1 Grand Prix, automatically updated after each race.",
+          "description": "Interactive application to display statistics and insights from the first ever to the most recent Formula 1 Grand Prix, automatically updated after each race.",
           "code": "https://github.com/giacomo-ciro/F1-race-analysis",
           "webapp": "https://f1-analysis.streamlit.app/"
         },
         {
           "title": "House Price Predictor",
           "tags": "Python, Random Forest Regressor, Neural Network, Linear Regression",
-          "description": "I developed, trained and tested three different machine learning models to predict the price of several houses in Milan, Rome and Venice (45k +). I then developed a user-interactive and free-access web app to deploy the best performing model.",
+          "description": "As a ML challenge at university, I developed, trained and tested different machine learning models to predict the price of several houses in Milan, Rome and Venice (45k +). The best performing model has been deployed through a free-access web app.",
           "code": "https://github.com/giacomo-ciro/house-price-predictor",
           "webapp": "https://house-price-predictor.streamlit.app/"
         },
@@ -38,7 +38,7 @@
         {
           "title": "Taylor Rule Estimation by OLS",
           "tags": "R, Linear Regression",
-          "description": "My group and I estimated Austria’s interest rate through the application of Ordinary Least Squares (OLS) regression and the insights provided by Taylor’s rule. We retrieved the data related to the macroeconomics indicators needed and successfully estimated the target variable, carefully performing essential diagnostic checks on the obtained results to ensure robustness and accuracy.",
+          "description": "My group and I estimated Austria’s interest rate through the application of Ordinary Least Squares Linear Regression and the insights provided by Taylor’s rule. We retrieved the data related to the macroeconomics indicators needed and successfully estimated the target variable, carefully performing diagnostic checks on the obtained results to ensure robustness and accuracy.",
           "code": "https://github.com/giacomo-ciro/taylor_rule_estimation_by_OLS",
           "webapp": ""
         }
