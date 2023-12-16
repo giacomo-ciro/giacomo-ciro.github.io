@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+          "title": "Daily Spin Bot",
+          "tags": "Python, Browser Automation",
+          "description": "I created a program to automate SNAI Daily Spin and maximize the reward. The .exe is available at the link below.",
+          "code": "https://github.com/giacomo-ciro/daily-spin-bot",
+          "webapp": ""
+        },
+        {
           "title": "Words Generator",
           "tags": "Python, Generative AI Models",
           "description": "I trained a collection of neural networks on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones. I deployed the final model as a user-interactive and free-access web-app.",
