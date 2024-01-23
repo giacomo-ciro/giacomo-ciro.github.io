@@ -108,6 +108,7 @@ section {
 
 .project:hover {
   border-color: #000;
+  border-width: 0.2rem;
 }
 
 .project-tags {
