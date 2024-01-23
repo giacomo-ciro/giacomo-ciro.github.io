@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+          "title": "Standardization",
+          "tags": "Python, StataSE, Marketing Analytics",
+          "description": "We investigated how standardization in customer support influences customer satisfaction while considering different factors which can mitigate or magnify this effect. Our analytical approach includes OLS regression as a baseline model, further extended to account for confounding variables, moderator and mediator effects, industry-specific trends and language patterns in responses.",
+          "code": "https://github.com/giacomo-ciro/standardization",
+          "webapp": ""
+        },
+        {
           "title": "Daily Spin Bot",
           "tags": "Python, Browser Automation",
           "description": "Program to automate SNAI Daily Spin and maximize the reward. The .exe is available at the link below.",
