@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+          "title": "Q-Learning Playground",
+          "tags": "Python, Reinforcement Learning",
+          "description": "I created an online playground to let everybody appreciate the beauty of the Bellman Equation and the remarkable effectiveness of a simple Q-learning algorithm.",
+          "code": "https://github.com/giacomo-ciro/q-learning",
+          "webapp": "https://q-learning.streamlit.app/"
+        },
+        {
           "title": "Standardization",
           "tags": "Python, StataSE, Marketing Analytics",
           "description": "We investigated how standardization in customer support influences customer satisfaction while considering different factors which can mitigate or magnify this effect. Our analytical approach includes OLS regression as a baseline model, further extended to account for confounding variables, moderator and mediator effects, industry-specific trends and language patterns in responses.",
