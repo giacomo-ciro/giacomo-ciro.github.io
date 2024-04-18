@@ -26,7 +26,7 @@
           "tags": "Python, Generative AI Models",
           "description": "Collection of neural networks trained on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones. The final model has been deployed through a user-interactive and free-access web-app.",
           "code": "https://github.com/giacomo-ciro/words-generator",
-          "webapp": "https://words-generator.streamlit.app/"
+          "webapp": "https://word-generator.streamlit.app/"
         },
         {
           "title": "F1 Race Analysis",
