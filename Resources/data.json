@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+          "title": "Evolving Tinder",
+          "tags": "Python, Evolutionary Algorithm",
+          "description": "The project aims to address the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
+          "code": "https://github.com/giacomo-ciro/evolving-tinder",
+          "webapp": ""
+        },
+        {
           "title": "Q-Learning Playground",
           "tags": "Python, Reinforcement Learning",
           "description": "I created an online playground to let everybody appreciate the beauty of the Bellman Equation and the remarkable effectiveness of a simple Q-learning algorithm.",
