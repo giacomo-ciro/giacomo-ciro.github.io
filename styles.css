@@ -97,6 +97,7 @@ section {
 
 .img-wrapper {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -241,7 +242,8 @@ footer {
 
     #bio {
       flex-direction: column-reverse;
-      justify-content: center;
+      justify-content: left;
+      align-items: left;
     }
 
     .text-wrapper{
@@ -249,7 +251,7 @@ footer {
     }
     
     .img-wrapper {
-      width: 75%;
+      width: 50%;
     }
 
     footer {

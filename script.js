@@ -52,7 +52,7 @@ function updateTimeline(){
   fetch("https://giacomo-ciro.github.io/Resources/timeline.json")
     .then(response => response.json())
     .then(data => {
-      const chronologicalEvents = data['timeline'].reverse()
+      const chronologicalEvents = data['timeline']
       chronologicalEvents.forEach(project => {
         const { date, event } = project;
         
@@ -77,7 +77,7 @@ console.log('Timeline updated from https://giacomo-ciro.github.io/Resources/time
 };
 
 // ---------- ABOUT
-// function updateAbout(){
+function updateAbout(){
 //   fetch('https://giacomo-ciro.github.io/Resources/about.txt')
 //             .then(response => response.text()) // Convert the response to text
 //             .then(data => {
@@ -89,7 +89,7 @@ console.log('Timeline updated from https://giacomo-ciro.github.io/Resources/time
 //                 console.error('Error fetching data:', error);
 //             });
 // console.log('Timeline updated from https://giacomo-ciro.github.io/Resources/about.txt')
-// };
+};
 //------------------------------------------- call everything
 window.onload = function() {
   // if on the project page, update projects
