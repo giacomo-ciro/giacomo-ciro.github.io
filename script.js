@@ -1,48 +1,5 @@
-// UPDATE PROJECTS FROM JSON
-// function updateProjects(){
-//   fetch("https://giacomo-ciro.github.io/Resources/data.json")
-//     .then(response => response.json())
-//     .then(data => {
-//       data['projects'].forEach(project => {
-//         const { title, tags, description, code, webapp } = project;
-//         // console.log(project)
-//         if (webapp.length === 0) {
-//           var projectHTML = `
-//               <section class="project">
-//                   <h2 class="project-title">${title}</h2>
-//                   <p class="project-tags">${tags}</p>
-//                   <p class="project-description">${description}</p>
-//                   <div class="project-links">
-//                       <a href="${code}" target="_blank">Code</a>
-//                   </div>
-//               </section>
-//           `;
-//         } else {
-//           var projectHTML = `
-//           <section class="project">
-//               <h2 class="project-title">${title}</h2>
-//               <p class="project-tags">${tags}</p>
-//               <p class="project-description">${description}</p>
-//               <div class="project-links">
-//                   <a href="${code}" target="_blank">Code</a>
-//                   <a href="${webapp}" target="_blank">Webapp</a>
-//               </div>
-//           </section>
-//           `;
-//         }
-
-//         // console.log(projectHTML)
-//         document.getElementById('project-list').innerHTML += projectHTML;
-//       });
-//     })
-//     .catch(error => {
-//       console.error('Error fetching data:', error);
-//     });
-//     console.log('Project list updated from https://giacomo-ciro.github.io/Resources/data.json')
-//   }
-
-  function updateProjects(){
-    fetch("https://giacomo-ciro.github.io/Resources/projects.json")
+function updateProjects(){
+    fetch("https://giacomo-ciro.github.io/Resources/data.json")
       .then(response => response.json())
       .then(data => {
         data['projects'].forEach(project => {
@@ -80,7 +37,7 @@
   console.log('Project list updated from https://giacomo-ciro.github.io/Resources/projects.json')
   }
 
-// UPDATE ALL FOOTER BASED ON FIRST PAGE
+//-----------------FOOTER
 function includeFooter() {
   fetch("https://giacomo-ciro.github.io/footer.html")
       .then(response => response.text())
@@ -89,12 +46,42 @@ function includeFooter() {
           console.log('Footer updated from https://giacomo-ciro.github.io/footer.html')
       });
 }
+
+//------------------TIMELINE
+function updateTimeline(){
+  fetch("https://giacomo-ciro.github.io/Resources/timeline.json")
+    .then(response => response.json())
+    .then(data => {
+      data['timeline'].forEach(project => {
+        const { date, event } = project;
+        
+        // Initialize projectHTML with the common elements
+        var projectHTML = `
+                  <div class="timeline-event">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-content">
+                          <div class="timeline-date">${date}</div>
+                          <div class="timeline-title">${event}</div>
+                      </div>
+                  </div>
+        `;
+        // Append the projectHTML to the project list
+        document.getElementById('timeline').innerHTML += projectHTML;
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+console.log('Timeline updated from https://giacomo-ciro.github.io/Resources/timeline.json')
+}
 // Call the functions
 window.onload = function() {
   // if on the project page, update projects
   var path = window.location.pathname;
   if (path.includes('projects.html')) {
       updateProjects();
+  } else if (path.includes('timeline.html')){
+    updateTimeline();
   };
   // always update footer
   includeFooter();
