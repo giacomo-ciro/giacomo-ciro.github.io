@@ -46,10 +46,7 @@ function includeFooter() {
   fetch("https://giacomo-ciro.github.io/footer.html")
       .then(response => response.text())
       .then(data => {
-        console.log(data)
-        console.log(document.getElementById('footer').outerHTML)
           document.getElementById('footer').innerHTML = data;
-          console.log(document.getElementById('footer').innerHTML)
           console.log('Footer updated from https://giacomo-ciro.github.io/footer.html')
       });
 }
