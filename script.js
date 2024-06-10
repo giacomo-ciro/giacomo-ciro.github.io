@@ -35,7 +35,7 @@ function updateProjects(){
         console.error('Error fetching data:', error);
       });
   console.log('Project list updated from https://giacomo-ciro.github.io/Resources/projects.json')
-  }
+  };
 
 //-----------------FOOTER
 function includeFooter() {
@@ -45,7 +45,7 @@ function includeFooter() {
           document.getElementById('footer').innerHTML = data;
           console.log('Footer updated from https://giacomo-ciro.github.io/footer.html')
       });
-}
+};
 
 //------------------TIMELINE
 function updateTimeline(){
@@ -74,15 +74,32 @@ function updateTimeline(){
       console.error('Error fetching data:', error);
     });
 console.log('Timeline updated from https://giacomo-ciro.github.io/Resources/timeline.json')
-}
-// Call the functions
+};
+
+// ---------- ABOUT
+// function updateAbout(){
+//   fetch('https://giacomo-ciro.github.io/Resources/about.txt')
+//             .then(response => response.text()) // Convert the response to text
+//             .then(data => {
+//                 // Update the content of the tag with the text file content
+//                 document.getElementById('text-content').textContent = data;
+//             })
+//             .catch(error => {
+//                 // Handle errors
+//                 console.error('Error fetching data:', error);
+//             });
+// console.log('Timeline updated from https://giacomo-ciro.github.io/Resources/about.txt')
+// };
+//------------------------------------------- call everything
 window.onload = function() {
   // if on the project page, update projects
   var path = window.location.pathname;
   if (path.includes('projects.html')) {
       updateProjects();
   } else if (path.includes('timeline.html')){
-    updateTimeline();
+      updateTimeline();
+  } else if (path.includes('index.html')){
+      updateAbout();
   };
   // always update footer
   includeFooter();
