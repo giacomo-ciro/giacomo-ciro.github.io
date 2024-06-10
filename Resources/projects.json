@@ -1,0 +1,82 @@
+{
+    "projects": [
+        {
+          "title": "Evolving Tinder",
+          "tags": "Python, Evolutionary Algorithm",
+          "description": "The project aims to address the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/evolving-tinder",
+                    "report": "https://github.com/giacomo-ciro/evolving-tinder/evolving_tinder.pdf"
+                  }
+        },
+        {
+          "title": "Q-Learning Playground",
+          "tags": "Python, Reinforcement Learning",
+          "description": "I created an online playground to let everybody appreciate the beauty of the Bellman Equation and the remarkable effectiveness of a simple Q-learning algorithm.",
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/q-learning",
+                    "webapp": "https://q-learning.streamlit.app/"
+                  }
+        },
+        {
+          "title": "Standardization",
+          "tags": "Python, StataSE, Marketing Analytics",
+          "description": "We investigated how standardization in customer support influences customer satisfaction while considering different factors which can mitigate or magnify this effect. Our analytical approach includes OLS regression as a baseline model, further extended to account for confounding variables, moderator and mediator effects, industry-specific trends and language patterns in responses.",
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/standardization"
+                  }
+        },
+        {
+          "title": "Daily Spin Bot",
+          "tags": "Python, Browser Automation",
+          "description": "Program to automate SNAI Daily Spin and maximize the reward. The .exe is available at the link below.",
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/daily-spin-bot"
+                  }
+        },
+        {
+          "title": "Words Generator",
+          "tags": "Python, Generative AI Models",
+          "description": "Collection of neural networks trained on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones. The final model has been deployed through a user-interactive and free-access web-app.",
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/words-generator",
+                    "webapp": "https://word-generator.streamlit.app/"
+                  }
+        },
+        {
+          "title": "F1 Race Analysis",
+          "tags": "Python, Data Analysis, Data Visualization, Data Mining",
+          "description": "Interactive application to display statistics and insights from the first ever to the most recent Formula 1 Grand Prix, automatically updated after each race.",
+
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/F1-race-analysis",
+                    "webapp": "https://f1-analysis.streamlit.app/"
+                  }
+        },
+        {
+          "title": "House Price Predictor",
+          "tags": "Python, Random Forest Regressor, Neural Network, Linear Regression",
+          "description": "As a ML challenge at university, I developed, trained and tested different machine learning models to predict the price of several houses in Milan, Rome and Venice (45k +). The best performing model has been deployed through a free-access web app.",
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/house-price-predictor",
+                    "webapp": "https://house-price-predictor.streamlit.app/"
+                  }
+        },
+        {
+          "title": "Production Function Estimation",
+          "tags": "R, Panel Data Analysis, FE/RE Model",
+          "description": "My group and I applied Panel Data Analysis tools, such as the Fixed Effect (FE) and Random Effect (RE) models to identify individual and time specific latent heterogeneity and provide a statistically relevant estimation of the production function of a firm.",
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/production_function_estimation"
+                  }
+        },
+        {
+          "title": "Taylor Rule Estimation by OLS",
+          "tags": "R, Linear Regression",
+          "description": "My group and I estimated Austria’s interest rate through the application of Ordinary Least Squares Linear Regression and the insights provided by Taylor’s rule. We retrieved the data related to the macroeconomics indicators needed and successfully estimated the target variable, carefully performing diagnostic checks on the obtained results to ensure robustness and accuracy.",   
+          "links": {
+                    "code": "https://github.com/giacomo-ciro/taylor_rule_estimation_by_OLS"
+                  }
+        }
+        ]
+}

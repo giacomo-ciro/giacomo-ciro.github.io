@@ -1,13 +1,17 @@
-
+:root {
+  --width: 60%;
+}
 
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
-  width: 60%;
+  width: var(--width);
   margin: 0 auto 0 auto;
   padding: 0;
   height: 100vh;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 p {
@@ -32,7 +36,7 @@ header {
   padding: 1rem 0 1rem 0;
   border-bottom: #666 solid;
   border-width: 0.1rem;
-  position: sticky;
+  position: sticky; 
   top: 0;
   background-color: #f4f4f4;
 }
@@ -130,17 +134,18 @@ section {
  --------------------- */
 
 footer {
+  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem 0 1rem 0;
+  margin: 0 auto 0 auto;
   color: #999;
   border-top: #666 solid;
   border-width: 0.1rem;
   font-size: 0.9rem;
-  position: sticky;
   bottom: 0;
   background-color: #f4f4f4;
 }
@@ -199,3 +204,59 @@ footer {
       flex-direction: column;
     }
   }
+
+/*---------------------------------------
+     TIMELINE              
+  -----------------------------------------*/
+
+  .timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #ddd;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    margin-left: -2px;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #666;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    /* top: 0; */
+    transform: translateY(-50%);
+}
+
+.timeline-content {
+    padding: 0 20px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    position: relative;
+    left: 60px;
+}
+
+.timeline-date {
+    font-size: 14px;
+    color: #888;
+}
+
+.timeline-title {
+    font-size: 18px;
+    margin: 5px 0;
+}
