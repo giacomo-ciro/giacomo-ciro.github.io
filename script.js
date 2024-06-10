@@ -42,7 +42,7 @@
 //   }
 
   function updateProjects(){
-    fetch("https://giacomo-ciro.github.io/Resources/data.json")
+    fetch("https://giacomo-ciro.github.io/Resources/projects.json")
       .then(response => response.json())
       .then(data => {
         data['projects'].forEach(project => {
@@ -77,7 +77,7 @@
       .catch(error => {
         console.error('Error fetching data:', error);
       });
-  console.log('Project list updated from https://giacomo-ciro.github.io/Resources/data.json')
+  console.log('Project list updated from https://giacomo-ciro.github.io/Resources/projects.json')
   }
 
 // UPDATE ALL FOOTER BASED ON FIRST PAGE
