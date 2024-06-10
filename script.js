@@ -52,7 +52,7 @@ function updateTimeline(){
   fetch("https://giacomo-ciro.github.io/Resources/timeline.json")
     .then(response => response.json())
     .then(data => {
-      const chronologicalEvents = data['timeline']
+      const chronologicalEvents = data['timeline'].reverse()
       chronologicalEvents.forEach(project => {
         const { date, event } = project;
         
