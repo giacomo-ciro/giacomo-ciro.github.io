@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, sans-serif;
+  font-size: large;
   background-color: #f4f4f4;
   color: #333;
   width: var(--width);
@@ -169,6 +170,66 @@ footer {
   margin: .5rem;
 }
 
+
+/*---------------------------------------
+     TIMELINE              
+  -----------------------------------------*/
+
+  #timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+#timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #ddd;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    margin-left: -2px;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #666;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    /* top: 0; */
+    transform: translateY(-75%);
+}
+
+.timeline-content {
+    padding: 0 20px;
+    /* background: #ddd; */
+    border-radius: 6px;
+    position: relative;
+    left: 60px;
+}
+
+.timeline-date {
+    font-size: 14px;
+    color: #888;
+}
+
+.timeline-title {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+
 /*---------------------------------------
      RESPONSIVE STYLES              
   -----------------------------------------*/
@@ -204,59 +265,3 @@ footer {
       flex-direction: column;
     }
   }
-
-/*---------------------------------------
-     TIMELINE              
-  -----------------------------------------*/
-
-  .timeline {
-    position: relative;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #ddd;
-    top: 0;
-    bottom: 0;
-    left: 30px;
-    margin-left: -2px;
-}
-
-.timeline-event {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.timeline-dot {
-    width: 20px;
-    height: 20px;
-    background-color: #666;
-    border-radius: 50%;
-    position: absolute;
-    left: 20px;
-    /* top: 0; */
-    transform: translateY(-50%);
-}
-
-.timeline-content {
-    padding: 0 20px;
-    background: #f9f9f9;
-    border-radius: 6px;
-    position: relative;
-    left: 60px;
-}
-
-.timeline-date {
-    font-size: 14px;
-    color: #888;
-}
-
-.timeline-title {
-    font-size: 18px;
-    margin: 5px 0;
-}

@@ -1,5 +1,5 @@
 function updateProjects(){
-    fetch("https://giacomo-ciro.github.io/Resources/data.json")
+    fetch("https://giacomo-ciro.github.io/Resources/projects.json")
       .then(response => response.json())
       .then(data => {
         data['projects'].forEach(project => {
@@ -52,7 +52,8 @@ function updateTimeline(){
   fetch("https://giacomo-ciro.github.io/Resources/timeline.json")
     .then(response => response.json())
     .then(data => {
-      data['timeline'].forEach(project => {
+      const chronologicalEvents = data['timeline'].reverse()
+      chronologicalEvents.forEach(project => {
         const { date, event } = project;
         
         // Initialize projectHTML with the common elements
