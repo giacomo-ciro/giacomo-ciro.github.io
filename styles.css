@@ -40,6 +40,7 @@ header {
   position: sticky; 
   top: 0;
   background-color: #f4f4f4;
+  z-index: 10;
 }
 
 .name {
@@ -176,12 +177,13 @@ footer {
      TIMELINE              
   -----------------------------------------*/
 
-  #timeline {
+#timeline {
     position: relative;
     max-width: 600px;
     margin: 20px auto;
     /* display: flex;
     flex-direction: column; */
+    z-index: 1;
 }
 
 #timeline::before {
