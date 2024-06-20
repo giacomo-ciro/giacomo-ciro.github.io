@@ -1,6 +1,14 @@
 {
     "timeline": [
         {
+            "date": "18 June 2023",
+            "event": "Completed the last exam of my BSc in Economics and Computer Science"
+        },
+        {
+            "date": "13 June 2023",
+            "event": "Submitted my Bachelor's Thesis titled \"Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction\" supervised by professor Francesca Buffa"
+        },
+        {
             "date": "September 2023",
             "event": "Got into boxing"
         },
@@ -10,7 +18,7 @@
         },
         {
             "date": "May 2023",
-            "event": "Decided to pursue a career in Machine Learning research after a pivotal course my study plan"
+            "event": "Decided to pursue a career in Machine Learning research after completing a pivotal course in my study plan"
         },
         {
             "date": "June 2021",
