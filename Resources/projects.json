@@ -6,7 +6,7 @@
           "description": "The project aims to address the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
           "links": {
                     "code": "https://github.com/giacomo-ciro/evolving-tinder",
-                    "report": "https://github.com/giacomo-ciro/evolving-tinder/evolving_tinder.pdf"
+                    "report": "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
                   }
         },
         {
