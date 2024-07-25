@@ -1,11 +1,15 @@
 {
     "timeline": [
         {
-            "date": "18 June 2023",
+            "date": "18 July 2024",
+            "event": "Graduated with 110 Cum Laude"
+        },
+        {
+            "date": "18 June 2024",
             "event": "Completed the last exam of my BSc in Economics and Computer Science"
         },
         {
-            "date": "13 June 2023",
+            "date": "13 June 2024",
             "event": "Submitted my Bachelor's Thesis titled \"Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction\" supervised by professor Francesca Buffa"
         },
         {
