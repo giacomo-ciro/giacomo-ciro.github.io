@@ -11,19 +11,14 @@ body {
   margin: 0 auto 0 auto;
   padding: 0;
   height: 100vh;
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
 }
 
 p {
   text-align: justify;
 }
 
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 5%;
-}
 /* --------------------- */
 /* ------ HEADER ------- */
 /* --------------------- */
@@ -73,20 +68,23 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+  color: #000;
 }
 
 /* --------------------- */
 /* ------- MIDDLE ------ */
 /* --------------------- */
 section {
-  width: 90%;
-  margin: 1rem auto 1rem auto;
+  margin: 1rem;
+}
+
+.project {
   padding: 1rem;
 }
 
 #bio {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   text-align: justify;
@@ -96,15 +94,34 @@ section {
   padding-right: 2rem;
 }
 
+.text-wrapper h2 {
+  border-bottom: solid #555;
+  border-width: 0.01rem;
+}
+
 .img-wrapper {
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
 }
 
+.img-wrapper img {
+  width: 40%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.img-wrapper div{
+  font-family: Orpheus;
+  font-style: italic;
+  margin: 0 0 0 2rem;
+}
 #about a {
-  color: #333;
+  color: #0d1d91;
+  text-decoration: none;
+}
+
+#about a:hover {
   text-decoration: underline;
 }
 
@@ -252,10 +269,6 @@ footer {
     .text-wrapper{
       padding: 0;
     }
-    
-    .img-wrapper {
-      width: 50%;
-    }
 
     footer {
       width: 100%;
@@ -270,3 +283,10 @@ footer {
       flex-direction: column;
     }
   }
+
+
+/* To check status */
+/* * {
+  border: solid;
+  border-color: greenyellow;
+} */
