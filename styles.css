@@ -37,20 +37,47 @@ header {
   background-color: #f4f4f4;
   z-index: 10;
 }
-
-.name {
+.title {
   display: flex;
   flex-direction: column;
+}
+.title-up {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
   text-align: left;
 }
 
-.hero-name {
-  font-size: 2rem;
+.jumping-word {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0.4rem 0 0;
+  padding: 0;
 }
 
-.hero-subtitle {
+.jumping-letter {
+  margin: 0;
+}
+
+.jumping-letter:hover {
+    transform: translate(0, -5px);
+    /* font-size: larger; */
+    /* animation: anim 1s forwards */
+    /* text-shadow: 0.1rem 0.5rem 0.1rem green; */
+  }
+  @keyframes anim {
+    0% {
+      /* transform: translate(0, -5px);
+      text-shadow: 0.1rem 0.3rem 0.1rem rgb(0,0,0,0.5); */
+      font-size: larger;
+    }
+  }
+
+.title-down {
   font-size: 1.2rem;
   color: #666;
+  display: flex;
+  flex-direction: row;
 }
 
 nav {
@@ -116,6 +143,29 @@ section {
   font-style: italic;
   margin: 0 0 0 2rem;
 }
+.img-wrapper div p {
+  animation: anim 1s;
+  animation-delay: 0.1s;
+}
+.img-wrapper div p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.img-wrapper div p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes anim {
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    color: black;
+  }
+}
+
 #about a {
   color: #0d1d91;
   text-decoration: none;
@@ -218,7 +268,7 @@ footer {
 .timeline-event {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px 0
 }
 
 .timeline-dot {
@@ -238,6 +288,10 @@ footer {
     border-radius: 6px;
     position: relative;
     left: 60px;
+}
+
+.timeline-event:nth-child(1) {
+  animation: anim 1s;
 }
 
 .timeline-date {

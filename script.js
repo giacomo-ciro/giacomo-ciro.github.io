@@ -1,3 +1,17 @@
+// Retrieve names
+function jumpingName(){
+  var list = document.getElementsByClassName('jumping-word')
+  console.log(list)
+  for (elem of list) {
+    var temp = ''
+    for (letter of elem.innerHTML) {
+      temp += `<p class="jumping-letter">${letter}</p>`
+    }
+    console.log(temp)
+    elem.innerHTML = temp
+  }
+}
+
 function updateProjects(){
     fetch("https://giacomo-ciro.github.io/Resources/projects.json")
       .then(response => response.json())
@@ -103,4 +117,5 @@ window.onload = function() {
   };
   // always update footer
   includeFooter();
+  jumpingName();
 };
