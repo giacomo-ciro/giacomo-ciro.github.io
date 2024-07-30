@@ -168,6 +168,10 @@ a:hover {
     transition: 3s ease-in;
 }
 
+.section p {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 /*-------------------------------------------------------------------
 # Hero Section
