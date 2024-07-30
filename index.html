@@ -5,35 +5,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giacomo Cirò | MSc in Artificial Intelligence</title>
-  <link rel="stylesheet" href="styles.css">
+  
+  
+  <!-- CSS -->
+  <link href="Resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Resources/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="main.css" rel="stylesheet">
+
+  <!-- JS -->
   <script src="https://kit.fontawesome.com/2aecf49df8.js" crossorigin="anonymous"></script>
   <script src="script.js" async></script>
 </head>
+ 
+<body class="index-page" class="d-flex justify-content-center align-items-center">
 
-<body>
-
-  <header>
-    <div class="title">
-      <div class="title-up">
-        <div class="jumping-word">Giacomo</div>
-        <div class="jumping-word">Cirò</div>
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-center">
+      
+      <div class="col-md-7">
+        <a href="index.html" class="d-flex flex-column">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="hero-title">Giacomo Cirò</h1>
+          <h2 class="hero-subtitle">MSc in Artificial Intelligence</h2>
+        </a>
       </div>
-      <div class="title-down">
-        <div class="jumping-word">MSc</div>
-        <div class="jumping-word">in</div>
-        <div class="jumping-word">Artificial</div>
-        <div class="jumping-word">Intelligence</div>
+      
+      <div class="upper-right-nav col-md-5 d-flex align-items-center justify-content-center">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+          </ul>
+        </nav>
+          <a class="btn-cv" href="Resources/cv.pdf" download="giacomo-ciro.pdf" target="_blank">Download CV</a>
       </div>
+      
     </div>
-    
-    <nav>
-      <a href="projects.html">Projects</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="Resources/cv.pdf" download="giacomo-ciro.pdf" target="_blank">Download CV</a>
-    </nav>
   </header>
 
-  <section id="about">
+  <!-- Hero Section  -->
+   <section id="hero" class="section">
+      <div class="col-md-7 col-12 hero container d-flex flex-row justify-content-center">
+        <img src="Resources/giacomo.png" class="img-fluid">
+        <ul>
+          <li>CS Student</li>
+          <li>BSML Co-founder</li>
+          <li>Data Nerd</li>
+        </ul>
+      </div>
+   </section>
+
+   <!-- About Section  -->
+   <section id="about" class="section about">
+    
+    <div class="container-fluid d-flex flex-column align-items-center">
+      
+      <h1 class="col-md-7 col-12">About Me</h1>
+      
+      <div class="d-flex flex-column col-md-7 col-sm-12" data-aos="fade-up">
+        <p>I am currently pursuing a
+          <a href="https://www.unibocconi.it/en/programs/master-science/artificial-intelligence">
+            MSc in Artificial Intelligence</a> at
+          <a href="https://www.unibocconi.it/en">Bocconi University</a> in Milan, Italy after having completed a 
+          <a href="https://www.unibocconi.it/en/programs/bachelor-science/economics-management-and-computer-science">
+            BSc in Economics and Computer Science</a>. </p>
+        <p>My passion lies in Mathematics and Computer Science and I aim at a career in Machine Learning research, Software Engineering, and Data Science.</p>
+        <p>Nonetheless, I want to connect minds, not only layers. For this reason, I co-founded the first machine learning student association at my university:
+          <a href="https://www.bsmachinelearning.com/">
+            Bocconi Students for Machine Learning (BSML)</a>.</p>
+        <p>I love studying and discovering what others have done before me, with the ultimate goal of improving the state-of-the-art and making an impact in the world I live in.</p>
+        <p>I am currently doing research at the intersection of Machine Learning and Life Sciences. In particular, I am exploring how prior biological knowledge about transcriptional regulation processes can be integrated into transformer models for gene expression prediction.</p>  
+      </div>
+
+    </div>
+    
+  </section>
+  <!-- <section id="about">
     <div id="bio">
       <div class="text-wrapper">
         <h2>About Me</h2>
@@ -62,10 +112,13 @@
         </div>
       </div>
     </div> 
-  </section>
+  </section> -->
 
-  <footer id="footer">
+  <footer id="footer" class="col-md-7 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
   </footer>
+
+  <!-- JS File  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 
