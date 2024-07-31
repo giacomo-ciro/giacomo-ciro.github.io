@@ -25,7 +25,7 @@ function updateProjects(){
           const { title, date, tags, description, links } = project;
           // Initialize projectHTML with the common elements
           var projectHTML = `
-            <div class="project col-md-6 col-12" data-aos="fade-up">
+            <div class="project col-md-7 col-12" data-aos="fade-up">
               <div class="d-flex flex-row align-item-center justify-content-between">
                 <h1>${title}</h1>
                 <h3>${date}</h3>
