@@ -20,12 +20,13 @@ function updateProjects(){
     fetch("https://giacomo-ciro.github.io/assets/projects.json")
       .then(response => response.json())
       .then(data => {
+        delay = 0
         data['projects'].forEach(project => {
           console.log(project)
           const { title, date, tags, description, links } = project;
           // Initialize projectHTML with the common elements
           var projectHTML = `
-            <div class="project col-md-7 col-12" data-aos="fade-up">
+            <div class="project col-md-7 col-12" data-aos="fade-in" data-aos-delay="${delay}">
               <div class="d-flex flex-row align-item-center justify-content-between">
                 <h1>${title}</h1>
                 <h3>${date}</h3>
@@ -34,7 +35,7 @@ function updateProjects(){
                 <p>${description}</p>
                 <div class="d-flex flex-row justify-content-center align-items-center">
           `;
-          
+          delay += 25
           // Loop through the links dictionary and add the corresponding tags with links
           for (const [key, value] of Object.entries(links)) {
             if (value) {
