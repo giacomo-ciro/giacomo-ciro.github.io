@@ -20,11 +20,9 @@ function updateProjects(){
     fetch("https://giacomo-ciro.github.io/assets/projects.json")
       .then(response => response.json())
       .then(data => {
-
-        console.log(data)
         data['projects'].forEach(project => {
+          console.log(project)
           const { title, date, tags, description, links } = project;
-          
           // Initialize projectHTML with the common elements
           var projectHTML = `
             <div class="project col-md-6 col-12" data-aos="fade-up">
