@@ -51,7 +51,7 @@
         },
         {
           "title": "Production Function Estimation",
-          "date": "May '24",
+          "date": "May '23",
           "tags": "R, Panel Data Analysis, FE/RE Model",
           "description": "My group and I applied Panel Data Analysis tools, such as the Fixed Effect (FE) and Random Effect (RE) models to identify individual and time specific latent heterogeneity and provide a statistically relevant estimation of the production function of a firm.",
           "links": {
