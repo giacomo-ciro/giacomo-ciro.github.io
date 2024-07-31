@@ -70,6 +70,7 @@ function includeFooter() {
 
 //------------------TIMELINE
 function updateTimeline(){
+  delay = 0
   fetch("https://giacomo-ciro.github.io/assets/timeline.json")
     .then(response => response.json())
     .then(data => {
@@ -79,7 +80,7 @@ function updateTimeline(){
         
         // Initialize projectHTML with the common elements
         var projectHTML = `
-                  <div class="timeline-event">
+                  <div class="timeline-event d-flex flex-row align-items-center" data-aos="fade-in" data-aos-delay="${delay}">
                       <div class="timeline-dot"></div>
                       <div class="timeline-content">
                           <div class="timeline-date">${date}</div>
@@ -88,9 +89,11 @@ function updateTimeline(){
                   </div>
         `;
         // Append the projectHTML to the project list
-        document.getElementById('timeline').innerHTML += projectHTML;
+        document.getElementById('timeline-container').innerHTML += projectHTML;
+
+        delay += 50
       });
-    })
+      })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
@@ -126,6 +129,7 @@ window.onload = function() {
   // always update footer
   includeFooter();
   jumpingName();
+  aosInit()
 };
 
 function toggleScrolled() {
@@ -146,4 +150,3 @@ function aosInit() {
     mirror: false
   });
 }
-window.addEventListener('load', aosInit);
