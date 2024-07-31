@@ -226,3 +226,47 @@ footer {
 #social-links i {
     margin: .5rem;
 }
+
+/*-------------------------------------------------------------------
+# Projects
+--------------------------------------------------------------------*/
+
+.project {
+    /* border: #666 solid;
+    border-width: 0.1rem; */
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.project h1 {
+    font-size: 2rem;
+    font-weight: 450;
+}
+
+.project h2 {
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: 150;
+}
+
+.project h3 {
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: 150;
+    text-align: center;
+}
+
+.project p {
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 0 0 0.5rem 0;
+}
+
+.project a {
+    padding: 0 2rem;  
+}
+
+.project:hover {
+    box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  }

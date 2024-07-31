@@ -1,3 +1,7 @@
+// All variables
+document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
+
+
 // Retrieve names
 function jumpingName(){
   var list = document.getElementsByClassName('jumping-word')
@@ -16,16 +20,21 @@ function updateProjects(){
     fetch("https://giacomo-ciro.github.io/assets/projects.json")
       .then(response => response.json())
       .then(data => {
+
+        console.log(data)
         data['projects'].forEach(project => {
-          const { title, tags, description, links } = project;
+          const { title, date, tags, description, links } = project;
           
           // Initialize projectHTML with the common elements
           var projectHTML = `
-            <section class="project">
-                <h2 class="project-title">${title}</h2>
-                <p class="project-tags">${tags}</p>
-                <p class="project-description">${description}</p>
-                <div class="project-links">
+            <div class="project col-md-6 col-12" data-aos="fade-up">
+              <div class="d-flex flex-row align-item-center justify-content-between">
+                <h1>${title}</h1>
+                <h3>${date}</h3>
+              </div>
+                <h2>${tags}</h2>
+                <p>${description}</p>
+                <div class="d-flex flex-row justify-content-center align-items-center">
           `;
           
           // Loop through the links dictionary and add the corresponding tags with links
@@ -38,11 +47,11 @@ function updateProjects(){
           // Close the projectHTML structure
           projectHTML += `
                 </div>
-            </section>
+            </div>
           `;
   
           // Append the projectHTML to the project list
-          document.getElementById('project-list').innerHTML += projectHTML;
+          document.getElementById('project-container').innerHTML += projectHTML;
         });
       })
       .catch(error => {
