@@ -1,6 +1,15 @@
 {
     "projects": [
       {
+        "title": "BioFormer",
+        "date": "September '24",
+        "tags": "Machine Learning, Transcriptomics",
+        "description": "Using insights and ideas from DeepMind's AlphaFold 2 to integrate Transcription Factors' activity into transformer models to predict RNA transcription values.",
+        "links": {
+                  "code": "https://github.com/giacomo-ciro/240316_bio-llms"
+                }
+      },
+      {
         "title": "Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction",
         "date": "July '24",
         "tags": "Bachelor of Science Thesis",
