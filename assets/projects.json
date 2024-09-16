@@ -10,6 +10,15 @@
                 }
       },
       {
+        "title": "Boolean Compiler",
+        "date": "September '24",
+        "tags": "Python, Software Development",
+        "description": "A compiler to parse a .txt file containing boolean instructions such as variable declaration and assignments. It recursively evaluates the expressions and displays the resulting truth tables.",
+        "links": {
+                  "code": "https://github.com/giacomo-ciro/240911_20875-Software-Engineering"
+                }
+      },
+      {
         "title": "Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction",
         "date": "July '24",
         "tags": "Bachelor of Science Thesis",
