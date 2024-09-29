@@ -7,7 +7,7 @@ function includeGoogleAnalytics() {
       .then(response => response.text())
       .then(data => {
           document.getElementById('head').innerHTML += data;
-          console.log('Google Analytics added from https://giacomo-ciro.github.io/google-analytics.html')
+          console.log('Google Analytics added from https://giacomo-ciro.github.io/google_analytics.html')
       });
 };
 // Retrieve names
