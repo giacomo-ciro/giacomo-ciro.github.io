@@ -126,6 +126,7 @@ function updateAbout(){
 
 //------------------------------------------- call everything
 window.onload = function() {
+  includeGoogleAnalytics();
   // if on the project page, update projects
   var path = window.location.pathname;
   if (path.includes('projects.html')) {
