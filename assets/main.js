@@ -3,10 +3,10 @@ document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Gia
 
 // ADD GOOGLE ANALYTICS
 function includeGoogleAnalytics() {
-  fetch("https://giacomo-ciro.github.io/google-analytics.html")
+  fetch("https://giacomo-ciro.github.io/google_analytics.html")
       .then(response => response.text())
       .then(data => {
-          document.getElementById('head').innerHTML += data;
+          document.getElementsByTagName('head')[0].innerHTML += data;
           console.log('Google Analytics added from https://giacomo-ciro.github.io/google_analytics.html')
       });
 };
