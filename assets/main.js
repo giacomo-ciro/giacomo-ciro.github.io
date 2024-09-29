@@ -1,7 +1,15 @@
 // All variables
 document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
 
-
+// ADD GOOGLE ANALYTICS
+function includeGoogleAnalytics() {
+  fetch("https://giacomo-ciro.github.io/google-analytics.html")
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('head').innerHTML += data;
+          console.log('Footer updated from https://giacomo-ciro.github.io/footer.html')
+      });
+};
 // Retrieve names
 function jumpingName(){
   var list = document.getElementsByClassName('jumping-word')
