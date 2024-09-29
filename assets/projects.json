@@ -24,7 +24,7 @@
         "tags": "Bachelor of Science Thesis",
         "description": "I developed my BSc thesis in Machine Learning applied to Transcriptomics under the supervision of prof. Francesca Buffa. In particular, I worked on the gene expression prediction task: I proposed and implemented some key changes to a state-of-the-art transformer model (scGPT) to improve its accuracy by incorporating prior biological knowledge about regulation processes at transcription level.",
         "links": {
-                  "PDF": "assets/bsc_thesis.pdf"
+                  "PDF": "assets/giacomo_ciro_bemacs_24.pdf"
                 }
       },
         {
