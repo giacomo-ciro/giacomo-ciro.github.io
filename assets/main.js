@@ -1,15 +1,6 @@
 // All variables
 document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
 
-// ADD GOOGLE ANALYTICS
-function includeGoogleAnalytics() {
-  fetch("https://giacomo-ciro.github.io/google_analytics.html")
-      .then(response => response.text())
-      .then(data => {
-          document.getElementsByTagName('head')[0].innerHTML += data;
-          console.log('Google Analytics added from https://giacomo-ciro.github.io/google_analytics.html')
-      });
-};
 // Retrieve names
 function jumpingName(){
   var list = document.getElementsByClassName('jumping-word')
@@ -126,7 +117,6 @@ function updateAbout(){
 
 //------------------------------------------- call everything
 window.onload = function() {
-  includeGoogleAnalytics();
   // if on the project page, update projects
   var path = window.location.pathname;
   if (path.includes('projects.html')) {
