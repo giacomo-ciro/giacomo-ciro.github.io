@@ -13,7 +13,7 @@
       {
         "title": "BioFormer",
         "date": "September '24",
-        "tags": "Machine Learning, Transcriptomics",
+        "tags": "Machine Learning, Gene Expresion Modelling",
         "description": "Using insights and ideas from DeepMind's AlphaFold 2 to integrate Transcription Factors' activity into transformer models to predict RNA transcription values.",
         "links": {
                   "code": "https://github.com/giacomo-ciro/240316_bio-llms"
