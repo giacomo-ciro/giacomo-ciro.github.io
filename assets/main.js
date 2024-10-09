@@ -16,7 +16,7 @@ function jumpingName(){
 }
 
 function updateProjects(){
-    fetch("https://giacomo-ciro.github.io/assets/projects.json")
+    fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/projects.json")
       .then(response => response.json())
       .then(data => {
         delay = 0
@@ -51,27 +51,27 @@ function updateProjects(){
           // Append the projectHTML to the project list
           document.getElementById('project-container').innerHTML += projectHTML;
         });
+        console.log('Project list updated')
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
-  console.log('Project list updated from https://giacomo-ciro.github.io/assets/projects.json')
   };
 
 //-----------------FOOTER
 function includeFooter() {
-  fetch("https://giacomo-ciro.github.io/footer.html")
+  fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/footer.html")
       .then(response => response.text())
       .then(data => {
           document.getElementById('footer').innerHTML = data;
-          console.log('Footer updated from https://giacomo-ciro.github.io/footer.html')
+          console.log('Footer updated')
       });
 };
 
 //------------------TIMELINE
 function updateTimeline(){
   delay = 0
-  fetch("https://giacomo-ciro.github.io/assets/timeline.json")
+  fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/timeline.json")
     .then(response => response.json())
     .then(data => {
       const chronologicalEvents = data['timeline'];
@@ -93,26 +93,12 @@ function updateTimeline(){
 
         delay += 50
       });
+      console.log('Timeline updated')
       })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
-console.log('Timeline updated from https://giacomo-ciro.github.io/assets/timeline.json')
-};
 
-// ---------- ABOUT
-function updateAbout(){
-//   fetch('https://giacomo-ciro.github.io/assets/about.txt')
-//             .then(response => response.text()) // Convert the response to text
-//             .then(data => {
-//                 // Update the content of the tag with the text file content
-//                 document.getElementById('text-content').textContent = data;
-//             })
-//             .catch(error => {
-//                 // Handle errors
-//                 console.error('Error fetching data:', error);
-//             });
-// console.log('Timeline updated from https://giacomo-ciro.github.io/assets/about.txt')
 };
 
 //------------------------------------------- call everything
