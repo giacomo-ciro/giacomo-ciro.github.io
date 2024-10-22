@@ -23,9 +23,9 @@
         "title": "Boolean Compiler",
         "date": "September '24",
         "tags": "Python, Software Development",
-        "description": "A compiler to parse a .txt file containing boolean instructions such as variable declaration and assignments. It recursively evaluates the expressions and displays the resulting truth tables.",
+        "description": "A compiler for a boolean programming language.",
         "links": {
-                  "code": "https://github.com/giacomo-ciro/240911_20875-Software-Engineering"
+                  "code": "https://github.com/giacomo-ciro/240912_boolean-compiler"
                 }
       },
       {
