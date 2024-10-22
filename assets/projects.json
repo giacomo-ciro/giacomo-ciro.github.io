@@ -1,6 +1,15 @@
 {
     "projects": [
       {
+        "title": "Image Compression via IP",
+        "date": "October '24",
+        "tags": "Linear Progamming, Image Processing",
+        "description": "Image compression via K-means clustering and Integer Programming (IP).",
+        "links": {
+                  "code": "https://github.com/giacomo-ciro/241012_image-compression-via-ip"
+                }
+      },
+      {
         "title": "Resilient Companies",
         "date": "October '24",
         "tags": "Finance, Data Analysis",
