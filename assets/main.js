@@ -109,8 +109,6 @@ window.onload = function() {
       updateProjects();
   } else if (path.includes('timeline.html')){
       updateTimeline();
-  } else if (path.includes('index.html')){
-      updateAbout();
   };
   // always update footer
   includeFooter();
