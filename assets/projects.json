@@ -23,7 +23,7 @@
         "title": "BioFormer",
         "date": "September '24",
         "tags": "Machine Learning, Gene Expresion Modelling",
-        "description": "Alpha Fold 2 inspired transformer model for gene expression modelling augmented with prior knowledge about transcriptional regulatory processes.",
+        "description": "We developed a novel architecture dubbed BioFormer, which combines the encodings from scGPT with the EvoFormer module from AlphaFold 2. BioFormer can reason on both sequence-based and pair representations of RNA expression values, effectively capturing gene interactions. Moreover, initializing the pair representation with known regulatory interactions allows us to inject prior knowledge into the model.",
         "links": {
                   "code": "https://github.com/giacomo-ciro/240316_bio-llms"
                 }
