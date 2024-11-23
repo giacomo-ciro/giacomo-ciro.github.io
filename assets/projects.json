@@ -13,7 +13,7 @@
         "title": "Resilient Companies",
         "date": "October '24",
         "tags": "Finance, Data Analysis",
-        "description": "We analyzed financial data from 31,710 Indian companies to classify them based on their performance compared to industry averages. We identified resilient companies, which showed consistent strong performance before and after 2020. This project allowed for an in-depth comparison of company performance across different industries, helping to determine resilience in response to economic shifts.",
+        "description": "We analyzed financial data from 31,710 Indian companies to classify them based on their performance compared to industry averages. We identified resilient companies, which showed consistent strong performance before and after 2020. This is the first step toward a greater projects whose goal is to determine the cause of the observed phenomenon and determine the impact of information systems in such resilience.",
         "links": {
                   "report": "https://github.com/giacomo-ciro/240713_resilient-companies",
                   "code": "https://github.com/giacomo-ciro/240713_resilient-companies/blob/main/main.ipynb"
