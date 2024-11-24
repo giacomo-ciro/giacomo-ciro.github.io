@@ -41,7 +41,7 @@
         "title": "Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction",
         "date": "July '24",
         "tags": "Bachelor of Science Thesis",
-        "description": "I developed my BSc thesis in Machine Learning applied to Transcriptomics under the supervision of prof. Francesca Buffa. In particular, I worked on the gene expression prediction task: I proposed and implemented some key changes to a state-of-the-art transformer model (scGPT) to improve its accuracy by incorporating prior biological knowledge about regulation processes at transcription level.",
+        "description": "Under the supervision of prof. Francesca Buffa, I proposed and implemented key changes to scGPT (a state-of-the-art transformer model for gene expression modelling) to improve its accuracy by incorporating prior biological knowledge about regulation processes at transcription level.",
         "links": {
                   "PDF": "assets/giacomo_ciro_bemacs_24.pdf"
                 }
@@ -50,7 +50,7 @@
           "title": "Evolving Tinder",
           "date": "April '24",
           "tags": "Python, Evolutionary Algorithm",
-          "description": "The project aims to address the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
+          "description": "Addressed the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
           "links": {
                     "code": "https://github.com/giacomo-ciro/evolving-tinder",
                     "report": "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
