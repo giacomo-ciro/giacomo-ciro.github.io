@@ -2,11 +2,15 @@
     "timeline": [
         {
             "date": "9 Semptember 2024",
-            "event": "Started a MSc in Artificial Intelligence at Bocconi University"
+            "event": "Enrolled in a MSc in Artificial Intelligence"
         },
         {
             "date": "1 September 2024",
-            "event": "Started a 5-months contract as ML researcher at the Bocconi Institute for Data Science and Analytics"
+            "event": "Started a new position as Machine Learning Researcher at BIDSA"
+        },
+        {
+            "date": "August 2024",
+            "event": "Restructured BSML as the first Machine Learning Project Incubator at Bocconi University"
         },
         {
             "date": "18 July 2024",
@@ -14,43 +18,43 @@
         },
         {
             "date": "18 June 2024",
-            "event": "Completed the last exam of my BSc in Economics and Computer Science"
+            "event": "Completed the last exam of my BSc"
         },
         {
             "date": "13 June 2024",
-            "event": "Submitted my Bachelor's Thesis titled \"Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction\" supervised by professor Francesca Buffa"
+            "event": "Submitted my Bachelor's Thesis"
         },
         {
             "date": "September 2023",
-            "event": "Got into boxing"
+            "event": "Started my boxing career"
         },
         {
             "date": "June 2023",
-            "event": "Concluded my rugby career"
+            "event": "Co-founded BSML"
         },
         {
             "date": "May 2023",
-            "event": "Decided to pursue a career in Machine Learning research after completing a pivotal course in my study plan"
+            "event": "Decided to pursue a career in Machine Learning"
+        },
+        {
+            "date": "September 2021",
+            "event": "Enrolled in a BSc in Economics and Computer Science"
         },
         {
             "date": "June 2021",
-            "event": "Enrolled in a BSc at Bocconi University in Milan"
+            "event": "Received my High School Diploma"
         },
         {
-            "date": "June 2021",
-            "event": "Received my High School Diploma from Liceo Scientifico S. Allende in Milan"
-        },
-        {
-            "date": "October 2019",
-            "event": "Concluded my journey in the \"Milano 5\" A.G.E.S.C.I. boy-scout group"
+            "date": "3 October 2013",
+            "event": "Established the village #2VQLJOP (currently TH 15)"
         },
         {
             "date": "September 2010",
-            "event": "Started playing rugby"
+            "event": "Started my rugby career"
         },
         {
             "date": "September 2009",
-            "event": "Joined the \"Milano 5\" A.G.E.S.C.I. boy-scout group"
+            "event": "Joined a boy-scout group "
         },
         {
             "date": "9 July 2002",
