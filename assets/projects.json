@@ -4,7 +4,7 @@
         "title": "Image Compression via IP",
         "date": "October '24",
         "tags": "Linear Progamming, Image Processing",
-        "description": "Image compression via K-means clustering and Integer Programming (IP).",
+        "description": "Pipeline to compress images using K-means clustering optimized via Integer Programming (IP).",
         "links": {
                   "code": "https://github.com/giacomo-ciro/241012_image-compression-via-ip"
                 }
@@ -23,7 +23,7 @@
         "title": "BioFormer",
         "date": "September '24",
         "tags": "Machine Learning, Gene Expresion Modelling",
-        "description": "We developed a novel architecture dubbed BioFormer, which combines the encodings from scGPT with the EvoFormer module from AlphaFold 2. BioFormer can reason on both sequence-based and pair representations of RNA expression values, effectively capturing gene interactions. Moreover, initializing the pair representation with known regulatory interactions allows us to inject prior knowledge into the model.",
+        "description": "We developed a novel architecture (BioFormer) for gene expression modelling. It combines the encodings from scGPT with the EvoFormer module from AlphaFold 2. BioFormer can reason on both sequence-based and pair representations of RNA expression values, effectively capturing gene interactions.",
         "links": {
                   "code": "https://github.com/giacomo-ciro/240316_bio-llms"
                 }
@@ -38,10 +38,10 @@
                 }
       },
       {
-        "title": "Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction",
+        "title": "Bachelor of Science Thesis",
         "date": "July '24",
-        "tags": "Bachelor of Science Thesis",
-        "description": "Under the supervision of prof. Francesca Buffa, I proposed and implemented key changes to scGPT (a state-of-the-art transformer model for gene expression modelling) to improve its accuracy by incorporating prior biological knowledge about regulation processes at transcription level.",
+        "tags": "Bioinformatics, Machine Learning",
+        "description": "My thesis, titled \"Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction\", focused on advancing scGPT, a state-of-the-art transformer model for gene expression modeling. Under the supervision of Prof. Francesca Buffa, I proposed and implemented key modifications to incorporate biological knowledge of transcriptional regulation, significantly improving the model's accuracy.",
         "links": {
                   "PDF": "assets/giacomo_ciro_bemacs_24.pdf"
                 }
@@ -50,7 +50,7 @@
           "title": "Evolving Tinder",
           "date": "April '24",
           "tags": "Python, Evolutionary Algorithm",
-          "description": "Addressed the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
+          "description": "I addressed the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
           "links": {
                     "code": "https://github.com/giacomo-ciro/evolving-tinder",
                     "report": "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
@@ -79,7 +79,7 @@
           "title": "Standardization",
           "date": "October '23",
           "tags": "Python, StataSE, Marketing Analytics",
-          "description": "We investigated how standardization in customer support influences customer satisfaction while considering different factors which can mitigate or magnify this effect. Our analytical approach includes OLS regression as a baseline model, further extended to account for confounding variables, moderator and mediator effects, industry-specific trends and language patterns in responses.",
+          "description": "We investigated how standardization in customer support influences customer satisfaction. Our analytical approach includes OLS regression as a baseline model, further extended to account for confounding variables, moderator and mediator effects, industry-specific trends and language patterns in responses.",
           "links": {
                     "code": "https://github.com/giacomo-ciro/standardization"
                   }
@@ -99,7 +99,7 @@
           "title": "Production Function Estimation",
           "date": "May '23",
           "tags": "R, Panel Data Analysis, FE/RE Model",
-          "description": "My group and I applied Panel Data Analysis tools, such as the Fixed Effect (FE) and Random Effect (RE) models to identify individual and time specific latent heterogeneity and provide a statistically relevant estimation of the production function of a firm.",
+          "description": "We applied Panel Data Analysis tools, such as the Fixed Effect (FE) and Random Effect (RE) models, to identify individual and time specific latent heterogeneity and provide a statistically relevant estimation of the production function of a firm.",
           "links": {
                     "code": "https://github.com/giacomo-ciro/production_function_estimation"
                   }
@@ -108,7 +108,7 @@
           "title": "Words Generator",
           "date": "April '23",
           "tags": "Python, Generative AI Models",
-          "description": "Collection of neural networks trained on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones. The final model has been deployed through a user-interactive and free-access web-app.",
+          "description": "I trained a collection of neural networks on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones.",
           "links": {
                     "code": "https://github.com/giacomo-ciro/words-generator",
                     "webapp": "https://word-generator.streamlit.app/"
@@ -118,7 +118,7 @@
           "title": "House Price Predictor",
           "date": "April '23",
           "tags": "Python, Random Forest Regressor, Neural Network, Linear Regression",
-          "description": "As a ML challenge at university, I developed, trained and tested different machine learning models to predict the price of several houses in Milan, Rome and Venice (45k +). The best performing model has been deployed through a free-access web app.",
+          "description": "I developed, trained and tested different machine learning models to predict house prices in Milan, Rome and Venice (45k +).",
           "links": {
                     "code": "https://github.com/giacomo-ciro/house-price-predictor-webapp",
                     "webapp": "https://house-price-predictor.streamlit.app/"
@@ -128,7 +128,7 @@
           "title": "Taylor Rule Estimation by OLS",
           "date": "February '23",
           "tags": "R, Linear Regression",
-          "description": "My group and I estimated Austria’s interest rate through the application of Ordinary Least Squares Linear Regression and the insights provided by Taylor’s rule. We retrieved the data related to the macroeconomics indicators needed and successfully estimated the target variable, carefully performing diagnostic checks on the obtained results to ensure robustness and accuracy.",   
+          "description": "My group and I estimated Austria’s interest rate through the application of OLS Regression and the insights provided by Taylor’s rule. We performed diagnostic checks to ensure robustness and accuracy.",   
           "links": {
                     "code": "https://github.com/giacomo-ciro/taylor_rule_estimation_by_OLS"
                   }
