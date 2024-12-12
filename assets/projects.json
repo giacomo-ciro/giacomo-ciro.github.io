@@ -1,6 +1,15 @@
 {
     "projects": [
       {
+        "title": "Gooper",
+        "date": "December '24",
+        "tags": "Software Development",
+        "description": "Building a search engine for influencers. Gooper v1 online now!",
+        "links": {
+                  "Gooper v1": "https://instagram-profiles-affinity.streamlit.app/"
+                }
+      },
+      {
         "title": "Image Compression via IP",
         "date": "October '24",
         "tags": "Linear Progamming, Image Processing",
