@@ -2,7 +2,7 @@ const chatBox = document.getElementById('chat-box');
 const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-btn');
 const modelVersion = document.getElementById('model-version');
-const databaseSize = document.getElementById('database-size');
+const influencerCount = document.getElementById('influencer-count');
 let botTypingMessage = null; // Holds the temporary typing message
 
 const updateModelInfo = async () => {
@@ -12,19 +12,19 @@ const updateModelInfo = async () => {
       method: 'GET',
     });
     const data = await response.json();
-    modelVersion.innerHTML = "Model Version: " + data.response;
+    modelVersion.innerHTML += data.response;
   } catch (error) {
-    modelVersion.innerHTML = "Model Version: " + "na";
+    modelVersion.innerHTML += "na";
   }
 
   try {
-    const response = await fetch('https://brimax.pythonanywhere.com/database_count', {
+    const response = await fetch('https://brimax.pythonanywhere.com/influencer_count', {
       method: 'GET',
     });
     const data = await response.json();
-    databaseSize.innerHTML = "Database Size: " + data.response;
+    influencerCount.innerHTML += data.response;
   } catch (error) {
-    databaseSize.innerHTML = "Database Size: " + "na";
+    influencerCount.innerHTML += "na";
   }
 }
 
