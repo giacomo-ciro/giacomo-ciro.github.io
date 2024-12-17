@@ -33,13 +33,13 @@ const appendMessage = (message, type) => {
   msgDiv.classList.add('chat-message', type === 'user' ? 'user-message' : 'bot-message');
   msgDiv.textContent = message;
   chatBox.appendChild(msgDiv);
-  chatBox.scrollTop = chatBox.scrollHeight;
+  chatBox.scrollTop = chatBox.scrollHeight; // scroll to the bottom by setting the scrollTop (offset to top) to the scrollHeight
 };
 
-const showBotTyping = () => {
+const showBotTyping = () => {   // same as = function() {
   botTypingMessage = document.createElement('div');
   botTypingMessage.classList.add('chat-message', 'bot-typing');
-  botTypingMessage.textContent = 'Finding the right influencer for your needs...';
+  botTypingMessage.textContent = 'Finding the right influencer for you...';
   chatBox.appendChild(botTypingMessage);
   chatBox.scrollTop = chatBox.scrollHeight;
 };
@@ -57,7 +57,7 @@ const sendMessage = async () => {
 
   appendMessage(message, 'user');
   userInput.value = '';
-  showBotTyping(); // Show bot is typing
+  setTimeout(showBotTyping, 500); // Show bot is typing
 
   try {
     const response = await fetch('https://brimax.pythonanywhere.com/generate', {
