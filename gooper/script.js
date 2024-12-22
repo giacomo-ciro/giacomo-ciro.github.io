@@ -31,7 +31,12 @@ const updateModelInfo = async () => {
 const appendMessage = (message, type) => {
   const msgDiv = document.createElement('div');
   msgDiv.classList.add('chat-message', type === 'user' ? 'user-message' : 'bot-message');
-  msgDiv.textContent = message;
+
+  const linkedMessage = message.replace(/@(\w+)/g, (match, username) => {
+    return `<a href="https://instagram.com/${username}/" target="_blank" class="instagram-link">@${username}</a>`;
+  });
+
+  msgDiv.innerHTML = linkedMessage;
   chatBox.appendChild(msgDiv);
   chatBox.scrollTop = chatBox.scrollHeight; // scroll to the bottom by setting the scrollTop (offset to top) to the scrollHeight
 };
