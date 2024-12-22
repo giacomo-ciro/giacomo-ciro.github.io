@@ -12,6 +12,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -139,4 +140,16 @@ body {
 
 .instagram-link {
     color: greenyellow;
+}
+
+footer {
+    /* position: absolute;
+    bottom: 0; */
+    padding-top: 30px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
 }
