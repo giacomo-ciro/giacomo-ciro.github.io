@@ -43,14 +43,28 @@ body {
     font-weight: 100;
 }
 
-.chat-header .model-info {
+.chat-header .model-info-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     font-size: 0.6rem;
 }
 
-.chat-header .model-info h2 {
+.chat-header .model-info-container .model-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.model-info p, .model-info h2 {
+    margin: 0.3rem;
+}
+.model-info h2 {
+    font-weight: 150;
+    font-style: italic;
+}
+
+.model-info p {
+    font-size: 0.85rem;
     font-weight: 150;
 }
 

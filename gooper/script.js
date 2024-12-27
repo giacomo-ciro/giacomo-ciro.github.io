@@ -3,6 +3,7 @@ const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-btn');
 const modelVersion = document.getElementById('model-version');
 const influencerCount = document.getElementById('influencer-count');
+const modelName = document.getElementById('model-name');
 let botTypingMessage = null; // Holds the temporary typing message
 
 const updateModelInfo = async () => {
@@ -25,6 +26,18 @@ const updateModelInfo = async () => {
     influencerCount.innerHTML += data.response;
   } catch (error) {
     influencerCount.innerHTML += "na";
+  }
+
+  try {
+    const response = await fetch('https://brimax.pythonanywhere.com/model_name', {
+      method: 'GET',
+    });
+    const data = await response.json();
+    data.response = data.response.replace(/.+\//g, '');
+    // data.response = data.response.replace(/-/g, ' ');
+    modelName.innerHTML += data.response;
+  } catch (error) {
+    modelName.innerHTML += "na";
   }
 }
 
