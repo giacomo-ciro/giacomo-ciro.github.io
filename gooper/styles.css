@@ -5,22 +5,15 @@
     --text-color: #fff;
 }
 
-/* styles.css content */
 body {
     margin: 0;
     font-family: 'Fira Code', monospace;
     background-color: var(--background-color);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
 .chat-container {
-    display: flex;
-    flex-direction: column;
     width: 400px;
     height: 600px;
     border: 1px solid var(--primary-color);
@@ -44,15 +37,7 @@ body {
 }
 
 .chat-header .model-info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     font-size: 0.6rem;
-}
-
-.chat-header .model-info-container .model-info {
-    display: flex;
-    flex-direction: row;
 }
 
 .model-info p, .model-info h2 {
@@ -61,6 +46,7 @@ body {
 .model-info h2 {
     font-weight: 150;
     font-style: italic;
+    font-size: 0.9rem;
 }
 
 .model-info p {
@@ -157,8 +143,6 @@ body {
 }
 
 footer {
-    /* position: absolute;
-    bottom: 0; */
     padding-top: 30px;
     font-size: 0.8rem;
     text-align: center;
