@@ -6,7 +6,7 @@
         "tags": "Machine Learning, Gene Expresion Modelling",
         "description": "Developing a novel architecture (BioFormer) for gene expression modelling. It combines the encodings from scGPT with the EvoFormer module from AlphaFold 2. BioFormer can reason on both sequence-based and pair representations of RNA expression values, effectively capturing gene interactions. Endgoal is a foundation model for single-cell omics data",
         "links": {
-                  "code": "https://github.com/giacomo-ciro/240316_bio-llms"
+                
                 }
       },
       {
@@ -15,7 +15,7 @@
         "tags": "Software Development",
         "description": "Building a search engine for influencers. Gooper v1 online now!",
         "links": {
-                  "Gooper v1": "https://instagram-profiles-affinity.streamlit.app/"
+                  "Gooper v1": "https://giacomo-ciro.github.io/gooper/index.html"
                 }
       },
       {
