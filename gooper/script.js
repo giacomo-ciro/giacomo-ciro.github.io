@@ -9,7 +9,7 @@ let botTypingMessage = null; // Holds the temporary typing message
 const updateModelInfo = async () => {
  
   try {
-    const response = await fetch('https://brimax.pythonanywhere.com/model_version', {
+    const response = await fetch('https://gooper.pythonanywhere.com/model_version', {
       method: 'GET',
     });
     const data = await response.json();
@@ -19,7 +19,7 @@ const updateModelInfo = async () => {
   }
 
   try {
-    const response = await fetch('https://brimax.pythonanywhere.com/influencer_count', {
+    const response = await fetch('https://gooper.pythonanywhere.com/influencer_count', {
       method: 'GET',
     });
     const data = await response.json();
@@ -29,7 +29,7 @@ const updateModelInfo = async () => {
   }
 
   try {
-    const response = await fetch('https://brimax.pythonanywhere.com/model_name', {
+    const response = await fetch('https://gooper.pythonanywhere.com/model_name', {
       method: 'GET',
     });
     const data = await response.json();
@@ -78,7 +78,7 @@ const sendMessage = async () => {
   setTimeout(showBotTyping, 500); // Show bot is typing
 
   try {
-    const response = await fetch('https://brimax.pythonanywhere.com/generate', {
+    const response = await fetch('https://gooper.pythonanywhere.com/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ "prompt": message })
