@@ -22,18 +22,18 @@
         "title": "Information Retrieval",
         "date": "March '24",
         "tags": "Natural Language Processing",
-        "description": "Built an algorithm to retrieve the most appropriate answer to a given prompt, from a set of possible answers. I employed and tested different methods, such as TF-IDF and raw count embeddings, Okapi BM25 Ranking, Fast-Text and Doc2Vec embeddings, and state-of-the-art contextual embeddings using transformer models.",
+        "description": "An algorithm to retrieve the most appropriate answer to a given prompt.",
         "links": {
-                "Repo": "https://github.com/giacomo-ciro/20879_Language_Technology"
+                "Repo": "https://github.com/giacomo-ciro/information-retrieval"
                 }
       },
       {
         "title": "Wordle Solver",
         "date": "February '24",
         "tags": "Natural Language Processing",
-        "description": "Built a program to find the optimal next word to try to guess the word in the popular online game Wordle. I used entropy of the words left at each round as the main selection criterion. On a set of 4,200 possible words, I achieved an accuracy of 100% over 50,000 total trials, with 3.7 average number of guesses to guess the word. When restricted to 500 possible words, this average number of guesses dropped down to 2.91.",
+        "description": "A program to find the optimal best guess in the popular online game Worlde. It achieved an accuracy of 100% and an average of 2.91 words used to guess, with a running time of 0.5s.",
         "links": {
-                "Repo": "https://github.com/giacomo-ciro/20879_Language_Technology"
+                "Repo": "https://github.com/giacomo-ciro/wordle-solver"
                 }
       },
       {
@@ -53,6 +53,15 @@
         "links": {
                   "report": "https://github.com/giacomo-ciro/240713_resilient-companies",
                   "code": "https://github.com/giacomo-ciro/240713_resilient-companies/blob/main/main.ipynb"
+                }
+      },
+      {
+        "title": "SCIP Debugging",
+        "date": "October '24",
+        "tags": "C, Software Development",
+        "description": "Used gdb and AFL++ to discover and fix 2 bugs in the open source project SCIP, used to solve LP problems.",
+        "links": {
+                  "report": "assets/20875_SWE_HW02.pdf"
                 }
       },
       {
