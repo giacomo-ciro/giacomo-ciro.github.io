@@ -42,7 +42,7 @@
         "tags": "Linear Progamming, Image Processing",
         "description": "Pipeline to compress images using K-means clustering optimized via Integer Programming (IP).",
         "links": {
-                  "code": "https://github.com/giacomo-ciro/241012_image-compression-via-ip"
+                  "Code": "https://github.com/giacomo-ciro/241012_image-compression-via-ip"
                 }
       },
       {
@@ -51,8 +51,8 @@
         "tags": "Finance, Data Analysis",
         "description": "We analyzed financial data from 31,710 Indian companies to classify them based on their performance compared to industry averages. We identified resilient companies, which showed consistent strong performance before and after 2020. This is the first step toward a greater projects whose goal is to determine the cause of the observed phenomenon and determine the impact of information systems in such resilience.",
         "links": {
-                  "report": "https://github.com/giacomo-ciro/240713_resilient-companies",
-                  "code": "https://github.com/giacomo-ciro/240713_resilient-companies/blob/main/main.ipynb"
+                  "Report": "https://github.com/giacomo-ciro/240713_resilient-companies",
+                  "Code": "https://github.com/giacomo-ciro/240713_resilient-companies/blob/main/main.ipynb"
                 }
       },
       {
@@ -61,7 +61,7 @@
         "tags": "C, Software Development",
         "description": "Used gdb and AFL++ to discover and fix 2 bugs in the open source project SCIP, used to solve LP problems.",
         "links": {
-                  "report": "assets/20875_SWE_HW02.pdf"
+                  "Report": "assets/20875_SWE_HW02.pdf"
                 }
       },
       {
@@ -70,7 +70,7 @@
         "tags": "Python, Software Development",
         "description": "A compiler for a boolean programming language.",
         "links": {
-                  "code": "https://github.com/giacomo-ciro/240912_boolean-compiler"
+                  "Code": "https://github.com/giacomo-ciro/240912_boolean-compiler"
                 }
       },
       {
@@ -79,7 +79,7 @@
         "tags": "Bioinformatics, Machine Learning",
         "description": "My thesis, titled \"Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction\", focused on advancing scGPT, a state-of-the-art transformer model for gene expression modeling. Under the supervision of Prof. Francesca Buffa, I proposed and implemented key modifications to incorporate biological knowledge of transcriptional regulation, significantly improving the model's accuracy.",
         "links": {
-                  "PDF": "assets/giacomo_ciro_bemacs_24.pdf"
+                  "Thesis": "assets/giacomo_ciro_bemacs_24.pdf"
                 }
       },
         {
@@ -88,8 +88,8 @@
           "tags": "Python, Evolutionary Algorithm",
           "description": "I addressed the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
           "links": {
-                    "code": "https://github.com/giacomo-ciro/evolving-tinder",
-                    "report": "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
+                    "Code": "https://github.com/giacomo-ciro/evolving-tinder",
+                    "Report": "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
                   }
         },
         {
@@ -98,8 +98,8 @@
           "tags": "Python, Reinforcement Learning",
           "description": "I created an online playground to let everybody appreciate the beauty of the Bellman Equation and the remarkable effectiveness of a simple Q-learning algorithm.",
           "links": {
-                    "code": "https://github.com/giacomo-ciro/q-learning",
-                    "webapp": "https://q-learning.streamlit.app/"
+                    "Code": "https://github.com/giacomo-ciro/q-learning",
+                    "Web App": "https://q-learning.streamlit.app/"
                   }
         },
         {
@@ -108,7 +108,7 @@
           "tags": "Python, Browser Automation",
           "description": "Program to automate SNAI Daily Spin and maximize the reward. The .exe is available at the link below.",
           "links": {
-                    "code": "https://github.com/giacomo-ciro/daily-spin-bot"
+                    "Code": "https://github.com/giacomo-ciro/daily-spin-bot"
                   }
         },
         {
@@ -117,7 +117,7 @@
           "tags": "Python, StataSE, Marketing Analytics",
           "description": "We investigated how standardization in customer support influences customer satisfaction. Our analytical approach includes OLS regression as a baseline model, further extended to account for confounding variables, moderator and mediator effects, industry-specific trends and language patterns in responses.",
           "links": {
-                    "code": "https://github.com/giacomo-ciro/standardization"
+                    "Code": "https://github.com/giacomo-ciro/standardization"
                   }
         },
         {
@@ -127,8 +127,8 @@
           "description": "Interactive application to display statistics and insights from the first ever to the most recent Formula 1 Grand Prix, automatically updated after each race.",
 
           "links": {
-                    "code": "https://github.com/giacomo-ciro/F1-race-analysis",
-                    "webapp": "https://f1-analysis.streamlit.app/"
+                    "Code": "https://github.com/giacomo-ciro/F1-race-analysis",
+                    "Web App": "https://f1-analysis.streamlit.app/"
                   }
         },
         {
@@ -137,7 +137,7 @@
           "tags": "R, Panel Data Analysis, FE/RE Model",
           "description": "We applied Panel Data Analysis tools, such as the Fixed Effect (FE) and Random Effect (RE) models, to identify individual and time specific latent heterogeneity and provide a statistically relevant estimation of the production function of a firm.",
           "links": {
-                    "code": "https://github.com/giacomo-ciro/production_function_estimation"
+                    "Code": "https://github.com/giacomo-ciro/production_function_estimation"
                   }
         },
         {
@@ -146,8 +146,8 @@
           "tags": "Python, Generative AI Models",
           "description": "I trained a collection of neural networks on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones.",
           "links": {
-                    "code": "https://github.com/giacomo-ciro/words-generator",
-                    "webapp": "https://word-generator.streamlit.app/"
+                    "Code": "https://github.com/giacomo-ciro/words-generator",
+                    "Web App": "https://word-generator.streamlit.app/"
                   }
         },
         {
@@ -156,8 +156,8 @@
           "tags": "Python, Random Forest Regressor, Neural Network, Linear Regression",
           "description": "I developed, trained and tested different machine learning models to predict house prices in Milan, Rome and Venice (45k +).",
           "links": {
-                    "code": "https://github.com/giacomo-ciro/house-price-predictor-webapp",
-                    "webapp": "https://house-price-predictor.streamlit.app/"
+                    "Code": "https://github.com/giacomo-ciro/house-price-predictor-webapp",
+                    "Web App": "https://house-price-predictor.streamlit.app/"
                   }
         },
         {
@@ -166,7 +166,7 @@
           "tags": "R, Linear Regression",
           "description": "My group and I estimated Austria’s interest rate through the application of OLS Regression and the insights provided by Taylor’s rule. We performed diagnostic checks to ensure robustness and accuracy.",   
           "links": {
-                    "code": "https://github.com/giacomo-ciro/taylor_rule_estimation_by_OLS"
+                    "Code": "https://github.com/giacomo-ciro/taylor_rule_estimation_by_OLS"
                   }
         }
         ]
