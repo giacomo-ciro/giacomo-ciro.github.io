@@ -24,7 +24,7 @@
         "tags": "Geometric Computer Vision",
         "description": "Python implementation of the eight-point algorithm to estimate the fundamental matrix given two views of the same scene.",
         "links": {
-                "Repo": "https://github.com/giacomo-ciro/projective-geometry-estimation"
+                "Code": "https://github.com/giacomo-ciro/projective-geometry-estimation"
                 }
       },
       {
@@ -33,7 +33,7 @@
         "tags": "Geometric Computer Vision",
         "description": "Algorithm to estimate a person's height given a reference height in the scene.",
         "links": {
-                "Repo": "https://github.com/giacomo-ciro/projective-geometry-estimation"
+                "Code": "https://github.com/giacomo-ciro/projective-geometry-estimation"
                 }
       },
       {
@@ -42,7 +42,7 @@
         "tags": "Natural Language Processing",
         "description": "An algorithm to retrieve the most appropriate answer to a given prompt.",
         "links": {
-                "Repo": "https://github.com/giacomo-ciro/information-retrieval"
+                "Code": "https://github.com/giacomo-ciro/information-retrieval"
                 }
       },
       {
@@ -51,7 +51,7 @@
         "tags": "Natural Language Processing",
         "description": "A program to find the optimal best guess in the popular online game Worlde. It achieved an accuracy of 100% and an average of 2.91 words used to guess, with a running time of 0.5s.",
         "links": {
-                "Repo": "https://github.com/giacomo-ciro/wordle-solver"
+                "Code": "https://github.com/giacomo-ciro/wordle-solver"
                 }
       },
       {
