@@ -31,7 +31,7 @@
         "title": "Single View Metrology",
         "date": "March '25",
         "tags": "Geometric Computer Vision",
-        "description": "Algorithm to estimate a person's height given a reference height in the scene.",
+        "description": "Algorithm to estimate a person's height given a reference point in the scene.",
         "links": {
                 "Code": "https://github.com/giacomo-ciro/projective-geometry-estimation"
                 }
