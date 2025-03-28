@@ -19,8 +19,26 @@
                 }
       },
       {
+        "title": "Fundamental Matrix Estimation",
+        "date": "March '25",
+        "tags": "Geometric Computer Vision",
+        "description": "Python implementation of the eight-point algorithm to estimate the fundamental matrix given two views of the same scene.",
+        "links": {
+                "Repo": "https://github.com/giacomo-ciro/projective-geometry-estimation"
+                }
+      },
+      {
+        "title": "Single View Metrology",
+        "date": "March '25",
+        "tags": "Geometric Computer Vision",
+        "description": "Algorithm to estimate a person's height given a reference height in the scene.",
+        "links": {
+                "Repo": "https://github.com/giacomo-ciro/projective-geometry-estimation"
+                }
+      },
+      {
         "title": "Information Retrieval",
-        "date": "March '24",
+        "date": "March '25",
         "tags": "Natural Language Processing",
         "description": "An algorithm to retrieve the most appropriate answer to a given prompt.",
         "links": {
