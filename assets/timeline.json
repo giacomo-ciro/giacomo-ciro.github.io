@@ -1,6 +1,22 @@
 {
     "timeline": [
         {
+            "date": "1 May 2025",
+            "event": "Renewed my contract as Machine Learning Researcher at BIDSA"
+        },
+        {
+            "date": "13 January 2025",
+            "event": "Exam: Software Engineering"
+        },
+        {
+            "date": "9 January 2025",
+            "event": "Exam: Mathematical Methods in Computer Science"
+        },
+        {
+            "date": "11 December 2024",
+            "event": "Exam: Algorithms for Optimization and Inference"
+        },
+        {
             "date": "9 Semptember 2024",
             "event": "Enrolled in a MSc in Artificial Intelligence"
         },
@@ -46,7 +62,7 @@
         },
         {
             "date": "3 October 2013",
-            "event": "Established the village #2VQLJOP (currently TH 15)"
+            "event": "Established the village #2VQLJOP (currently TH 16)"
         },
         {
             "date": "September 2010",
