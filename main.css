@@ -399,40 +399,6 @@ footer {
     opacity: 0.8;
 }
 
-.quote-category {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    font-size: 0.7rem;
-    background-color: var(--accent-color);
-    color: var(--heading-color);
-    padding: 0.2rem 0.7rem;
-    border-radius: 1rem;
-}
-
-/* Quote filters */
-.quote-filters {
-    margin-top: 1rem;
-}
-
-.filter-btn {
-    background-color: transparent;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: 0.3rem 1rem;
-    margin: 0.3rem;
-    border-radius: 1.5rem;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.filter-btn:hover, 
-.filter-btn.active {
-    background-color: var(--accent-color);
-    color: var(--heading-color);
-}
-
 /* No quotes found message */
 .no-quotes {
     text-align: center;
