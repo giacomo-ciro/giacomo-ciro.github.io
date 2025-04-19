@@ -344,3 +344,99 @@ footer {
 .timeline-event:nth-last-child(1):before {
     visibility: hidden;
 }
+
+/*-------------------------------------------------------------------
+# Quotes
+--------------------------------------------------------------------*/
+
+.quote-card {
+    position: relative;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    padding: 2rem 2.5rem;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.quote-card:hover {
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.quote-content {
+    font-size: 1.2rem;
+    font-style: italic;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.quote-content::before, 
+.quote-content::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--accent-color);
+    opacity: 0.5;
+}
+
+.quote-content::before {
+    position: absolute;
+    left: -1.5rem;
+    top: -0.5rem;
+}
+
+.quote-author {
+    text-align: right;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+.quote-source {
+    text-align: right;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--accent-color);
+    opacity: 0.8;
+}
+
+.quote-category {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.7rem;
+    background-color: var(--accent-color);
+    color: var(--heading-color);
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+}
+
+/* Quote filters */
+.quote-filters {
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.3rem 1rem;
+    margin: 0.3rem;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover, 
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: var(--heading-color);
+}
+
+/* No quotes found message */
+.no-quotes {
+    text-align: center;
+    font-style: italic;
+    color: var(--accent-color);
+    margin: 3rem 0;
+}

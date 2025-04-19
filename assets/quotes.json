@@ -1,0 +1,60 @@
+{
+    "quotes": [
+      {
+        "text": "The limits of my language mean the limits of my world.",
+        "author": "Ludwig Wittgenstein",
+        "source": "Tractatus Logico-Philosophicus",
+        "year": "1921",
+        "category": "Philosophy"
+      },
+      {
+        "text": "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.",
+        "author": "Edsger W. Dijkstra",
+        "source": "The Threats to Computing Science",
+        "year": "1984",
+        "category": "Computer Science"
+      },
+      {
+        "text": "It is impossible to be a mathematician without being a poet in soul.",
+        "author": "Sofia Kovalevskaya",
+        "source": "",
+        "year": "",
+        "category": "Mathematics"
+      },
+      {
+        "text": "Science is what we understand well enough to explain to a computer. Art is everything else we do.",
+        "author": "Donald Knuth",
+        "source": "Things a Computer Scientist Rarely Talks About",
+        "year": "2001",
+        "category": "Computer Science"
+      },
+      {
+        "text": "Innovation is saying no to a thousand things.",
+        "author": "Steve Jobs",
+        "source": "Apple Worldwide Developers Conference",
+        "year": "1997",
+        "category": "Innovation"
+      },
+      {
+        "text": "The more I learn, the more I realize how much I don't know.",
+        "author": "Albert Einstein",
+        "source": "",
+        "year": "",
+        "category": "Learning"
+      },
+      {
+        "text": "Data is not information, information is not knowledge, knowledge is not understanding, understanding is not wisdom.",
+        "author": "Clifford Stoll",
+        "source": "",
+        "year": "",
+        "category": "Data Science"
+      },
+      {
+        "text": "The best way to predict the future is to invent it.",
+        "author": "Alan Kay",
+        "source": "Palo Alto Research Center meeting",
+        "year": "1971",
+        "category": "Innovation"
+      }
+    ]
+  }

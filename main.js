@@ -1,20 +1,6 @@
 // All variables
 document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
 
-// Retrieve names
-function jumpingName(){
-  var list = document.getElementsByClassName('jumping-word')
-  console.log(list)
-  for (elem of list) {
-    var temp = ''
-    for (letter of elem.innerHTML) {
-      temp += `<p class="jumping-letter">${letter}</p>`
-    }
-    console.log(temp)
-    elem.innerHTML = temp
-  }
-}
-
 function updateProjects(){
     fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/projects.json")
       .then(response => response.json())
@@ -58,7 +44,6 @@ function updateProjects(){
       });
   };
 
-//-----------------FOOTER
 function includeFooter() {
   fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/footer.html")
       .then(response => response.text())
@@ -68,7 +53,6 @@ function includeFooter() {
       });
 };
 
-//------------------TIMELINE
 function updateTimeline(){
   delay = 0
   fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/timeline.json")
@@ -101,6 +85,118 @@ function updateTimeline(){
 
 };
 
+function updateQuotes() {
+  let delay = 0;
+  const quotesContainer = document.getElementById('quotes-container');
+  const loadingIndicator = document.getElementById('quotes-loading');
+  const categoryFilters = document.getElementById('category-filters');
+  
+  // Show loading indicator
+  if (loadingIndicator) {
+    loadingIndicator.style.display = 'block';
+  }
+  
+  if (!quotesContainer) return;
+  
+  // Clear existing quotes
+  quotesContainer.innerHTML = '';
+  
+  fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/quotes.json")
+    .then(response => response.json())
+    .then(data => {
+      // Hide loading indicator
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+      }
+      
+      // If no quotes, show message
+      if (!data.quotes || data.quotes.length === 0) {
+        quotesContainer.innerHTML = '<div class="no-quotes">No quotes found. Add some to your quotes.json file!</div>';
+        return;
+      }
+      
+      // Extract unique categories for filters
+      const categories = new Set();
+      data.quotes.forEach(quote => {
+        if (quote.category) {
+          categories.add(quote.category);
+        }
+      });
+      
+      // Generate category filter buttons
+      if (categoryFilters) {
+        categories.forEach(category => {
+          categoryFilters.innerHTML += `<button class="filter-btn" data-filter="${category}">${category}</button>`;
+        });
+        
+        // Add event listeners to filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            const quoteCards = document.querySelectorAll('.quote-card');
+            
+            quoteCards.forEach(card => {
+              if (filter === 'all') {
+                card.style.display = 'block';
+              } else {
+                const cardCategory = card.getAttribute('data-category');
+                if (cardCategory === filter) {
+                  card.style.display = 'block';
+                } else {
+                  card.style.display = 'none';
+                }
+              }
+            });
+          });
+        });
+      }
+      
+      // Render quotes
+      data.quotes.forEach(quote => {
+        const { text, author, source, category, year } = quote;
+        
+        let quoteHTML = `
+          <div class="quote-card" data-aos="fade-up" data-aos-delay="${delay}" data-category="${category || ''}">
+            <p class="quote-content">${text}</p>
+            <p class="quote-author">${author || 'Unknown'}</p>
+        `;
+        
+        // Add source info if available
+        if (source || year) {
+          quoteHTML += `<p class="quote-source">${source || ''}${source && year ? ', ' : ''}${year || ''}</p>`;
+        }
+        
+        // Add category tag if available
+        if (category) {
+          quoteHTML += `<span class="quote-category">${category}</span>`;
+        }
+        
+        quoteHTML += `</div>`;
+        
+        // Append quote to container
+        quotesContainer.innerHTML += quoteHTML;
+        
+        delay += 50;
+      });
+      
+      console.log('Quotes updated');
+    })
+    .catch(error => {
+      console.error('Error fetching quotes:', error);
+      // Hide loading indicator and show error message
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+      }
+      quotesContainer.innerHTML = '<div class="no-quotes">Failed to load quotes. Please try again later.</div>';
+    });
+}
+
 //------------------------------------------- call everything
 window.onload = function() {
   // if on the project page, update projects
@@ -109,10 +205,11 @@ window.onload = function() {
       updateProjects();
   } else if (path.includes('timeline.html')){
       updateTimeline();
-  };
+  } else if (path.includes('quotes.html')) {
+      updateQuotes();
+  }
   // always update footer
   includeFooter();
-  jumpingName();
   aosInit()
 };
 
