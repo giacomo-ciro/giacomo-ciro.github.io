@@ -87,13 +87,7 @@ function updateTimeline(){
 
 function updateQuotes() {
   let delay = 0;
-  const quotesContainer = document.getElementById('quotes-container');
-  const loadingIndicator = document.getElementById('quotes-loading');
-  
-  // Show loading indicator
-  if (loadingIndicator) {
-    loadingIndicator.style.display = 'block';
-  }
+  const quotesContainer = document.getElementById('quotes-container-row');
   
   if (!quotesContainer) return;
   
@@ -103,10 +97,6 @@ function updateQuotes() {
   fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/quotes.json")
     .then(response => response.json())
     .then(data => {
-      // Hide loading indicator
-      if (loadingIndicator) {
-        loadingIndicator.style.display = 'none';
-      }
       
       // If no quotes, show message
       if (!data.quotes || data.quotes.length === 0) {
@@ -124,9 +114,8 @@ function updateQuotes() {
       // Render randomized quotes
       quotes.forEach(quote => {
         const { text, author, source, year } = quote;
-        
         let quoteHTML = `
-          <div class="quote-card" data-aos="fade-up" data-aos-delay="${delay}">
+          <div class="quote-card col-md-3 col-sm-5 col-12" data-aos="fade-up" data-aos-delay="${delay}">
             <p class="quote-content">${text}</p>
             <p class="quote-author">${author || 'Unknown'}</p>
         `;

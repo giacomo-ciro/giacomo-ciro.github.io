@@ -1,28 +1,596 @@
-{
-    "quotes": [
-      {
-        "text": "The onus is on you to demonstrate greatness, and then you’ll get the opportunities. It’s not the other way around.",
-        "author": "Richard Hamming",
-        "source": "",
-        "year": ""
-      },
-      {
-        "text": "Genius is 99% perspiration and 1% inspiration",
-        "author": "Thomas Edison",
-        "source": "",
-        "year": ""
-      },
-      {
-        "text": "The way you lead your life from day to day you prepare yourself for success or you don’t. And when the lightning strikes, you’re either ready or you’re not. It misses you, or hits you.",
-        "author": "Richard Hamming",
-        "source": "",
-        "year": ""
-      },
-      {
-        "text": "Chance favors the prepared mind ",
-        "author": "Louis Pasteur",
-        "source": "",
-        "year": ""
-      }
-    ]
+[
+  {
+      "text": "The onus is on you to demonstrate greatness, and then you’ll get the opportunities. It’s not the other way around",
+      "author": "R. Hamming",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Genius is 99% perspiration and 1& inspiration",
+      "author": "Thomas Edison",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The way you lead your life from day to day you prepare yourself for success or you don’t. And when the lightning strikes, you’re either ready or you’re not. It misses you, or hits you.",
+      "author": "R. Hamming",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Chance favors the prepared mind",
+      "author": "Louis Pasteur",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Non è per sesso né godimento, se sono nel loro cuore non sono dentro a un inferno",
+      "author": "Marracash",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "se fossi stato un buon figlio quando tu eri in vita non avrei svoltato la mia vita",
+      "author": "Noyz Narcos",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Thinking small is a self-fulfilling prophecy",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "get rewarded for the effort, not the results",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Studying is offsetting the natural forgetting of new information",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Growth mindset: not there yet, enjoy the effort itself and not the end goal, always keep pushing",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Don't get it confused, it's ninety percent grind, ten percent talent",
+      "author": "Central Cee",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "A good life was never a comfortable life",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Define a Life Vision. Break it down to 3-years goals, to yearly goals, to monthly tasks, to daily tasks",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Save 10% of what you earn, always.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I can have fun after my career, but right now is grind time",
+      "author": "Terence Crawford",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "You say our relationship is childish, you are my baby so I agree",
+      "author": "Central Cee",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Per me era dipendenza mica semplice abitudine, ti ho usata per colmare il mio senso di solitudine",
+      "author": "Silent Bob",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "taglia i legami ai tuoi cari, riprendili solo quando da solo te la cavi",
+      "author": "Marracash",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Comfort is a really dangerous thing",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I see tasks in life as missions in a videogame: if they are there it's because they can be achieved, you just need to figure out how. It might be in hardcore mode, but still doable.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "When I win, I don't feel euphoria. It's just on to the next. When I loose, there's when I feel it.",
+      "author": "A. Joshua",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Ti cerco morbosamente se perdo felicità",
+      "author": "Kid Yugi",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The Goldilocks Rule states that humans experience peak motivation when working on tasks that are right on the edge of their current abilities. Not too hard. Not too easy. Just right.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I coulda been laid up with shorty, fuck it, the grind more important",
+      "author": "Central Cee",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I haven’t failed 1,000 times. I’ve just found 1,000 ways that won’t work. I have found 1,000 ways to not light up an incandescent light bulb.",
+      "author": "Thomas Edison",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The pain is compulsory, suffering is optional",
+      "author": "Dave - My 19th Birthday",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Stare insieme è l'arte di risolvere i problemi che non ho da solo",
+      "author": "Lazza, Cento Messaggi",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "My greatness is not in achievig the goal, it is in keep on trying",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I’m not addicted to gaming, I’m addicted to the feeling of leveling up",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Outwork your self-doubt",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I wanna drain my soul of every bit of person I am",
+      "author": "David Goggins",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Discipline is the bridge between goals and accomplishments",
+      "author": "Jim Rohn",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Devo imparare a vivere, non solo a funzionare",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "My personal life ain't right but I'm putting this first so I won't lose focus",
+      "author": "Central Cee",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Infelicità Produttiva",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The filter in your head is so high, that nothing breaks through that as being worthy of being said",
+      "author": "C. Houpert",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "A problem with hustle culture is that it gets people more focused on working harder as opposed to working more effectively, so speed over direction",
+      "author": "C. Williamson",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The advantages of one phase of your life will be the obstacles of the subsequent one",
+      "author": "C. Houpert",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Sognarlo è meglio che averlo, anche il milione d'euro",
+      "author": "Villabanks",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "When nobody's heard, the loudest voices are the only ones that make noise",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "You’ll never know the value of a moment until it becomes a memory",
+      "author": "T. Seuss",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Il sesso più bello è il sesso non fatto",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Want to know is different from want to study",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "It appears, then, that people might be comparing their realistic offline selves to the idealized online selves of others, which may be\ndetrimental for well-being and self-evaluations. (Social Comparison, Social Media, and Self-Esteem, E. A. Vogel et al., 2014)",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Ma l’area semantica è ZTL?",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Isn't happiness a relative definition? Isn't it feel something higher than a baseline?",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Pressure builds diamonds",
+      "author": "Dr. Ivan Joseph",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The Dunning–Kruger effect is a cognitive bias https://en.m.wikipedia.org/wiki/Cognitive_biasn which people with limited competence in a particular domain overestimate their abilities.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Se vuoi nascondere un albero, piantalo nella foresta",
+      "author": "proverbio ebraico",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "We form our relationships’ blueprints from our parents’ relationship with us, plus we watch and adsorb their relational dynamics",
+      "author": "Ali Hendry",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Gli artisti devono soffrire, il risultato è migliore",
+      "author": "Lars von Trier",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Should know that you can't rush greatness",
+      "author": "Central Cee",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Nobody queues for a flat rollercoaster",
+      "author": "popular UK idiom",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Ask my mum what I’m like, she’ll say that I'm selfless and I give back. If you ask my ex what I'm like she'll say I'm a narcissistic and a sociopath",
+      "author": "Central Cee",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "If there's no test that you can apply that would allow you to tell the difference, then there is no difference",
+      "author": "Elon Musk",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The universe rewards calculated risk and passion",
+      "author": "Joe Rogan",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "OGs need to get back to reality, I don't wanna hear ‘bout back in the days",
+      "author": "Central Cee",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Good ideas are often times born from bad ideas",
+      "author": "Andrew Bustamante",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "People, when they meet you, they put you in a bin […] if you want to avoid being put in a particular bin, just show some kind characteristics that bin you in another way […] you have to be in a bin, just choose the bin",
+      "author": "Andrew Bustamante",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Every man is not only responsible for everything it does, but also for everything anyone else does […] is what you receive back proportional to what you deliver? […] people certainly respond to you in kind with how you treat them […] the world you experience is defined by the way you live it",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The more you act out the proposition that it's good (the world, ndr), the better it gets",
+      "author": "L. Fridman",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Scale back the dragon till you find one that's conquerable and moves you forward. And it’ll give you a little bit of goal.",
+      "author": "J. Peterson",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Your destiny is to be found in what bothers you",
+      "author": "J. Peterson",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Why would I dwell on the past? Without that, maybe this wouldn't have happened",
+      "author": "Central Cee",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Arranging your life so that you have interesting experiences",
+      "author": "Jimmy Wales",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "if you don't respect yourself, you go looking for signs of disrespect in others",
+      "author": "J. Wales",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "You can't just join a conversation, you must advance that conversation. Add something new to it. Take it in a different direction. Engage in unusual, insightful ways.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "And how good is any of it if I don't have the person I want to share it with?",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "You can say money don't buy happiness only once you’ve made it",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Anyone can do my job, but no one can be me.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Everybody was a nobody before they were a somebody.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "It’s what you do in the dark that puts you in the light.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Never give up on something that you can’t go a day without thinking about",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "It’s going to happen because I’m going to make it happen",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "97% of people who quit are employed by the 3% that never gave up.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Work until you no longer have to introduce yourself",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "It’s not bragging if it’s true",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I don't have dreams, I have goals. Now it’s on to the next one.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "A mother loves you, but a grandmother is always on your side",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Your ego is writing checks that your body can't cash",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I want to find something that will wake me up before 10am",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "If the night is to shape our dreams, the day is to build them",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Camera con vista dall'edificio più alto, come posso pretenderla se non do gas al massimo",
+      "author": "Diss Gacha",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Boredom is when none of the options you have available to you, appeal to you",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Raising our awareness of fortunate events can also make us happier, because it allows us to feel gratitude",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "If you perceive an outcome to be uncertain, you’re less likely to invest effort in it, which further decreases your chances of success. So it is a useful delusion to believe you’re in full control of your destiny.",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "“Assertion passed” turns me on more than “is typing”",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "In the top left corner of my screen, I see more often main.py than my girlfriend's profile picture",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "La bellezza arresta il moto",
+      "author": "S. Tommaso D’Aquino",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Le persone eccezionali manifestano la propria vocazione nel modo più lampante e forse da questo dipende il fascino che esse esercitano",
+      "author": "James Hilman",
+      "source": "Il Codice Dell'Anima",
+      "year": ""
+  },
+  {
+      "text": "L’amore per me è stima perché la bellezza stanca",
+      "author": "Tedua",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Non amo che le rose che non colsi",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Shoot for the moon, even if you miss you’re landing on a star",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Healthy people wish many things, unhealthy people only one",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "The opposite of love is not anger or hate, it's apaty",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Life is what happens when you’re busy making other plans",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Education isn't meant to be binged, and because of this I'll probably remind you quite a bit to take breaks",
+      "author": "Andrej Karpathy",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "I own an obscenely expensive black sport car that does 0 to 140 in six seconds, do you think that i fantasize about driving an obscenely expensive black sport car that does 0 to 140 in six seconds?",
+      "author": "",
+      "source": "",
+      "year": ""
+  },
+  {
+      "text": "Whatever you feel matters only to you, whatever you do about it matters to the world",
+      "author": "",
+      "source": "",
+      "year": ""
   }
+]
