@@ -131,7 +131,7 @@ function updateQuotes() {
         // Append quote to container
         quotesContainer.innerHTML += quoteHTML;
         
-        delay += 50;
+        delay += 0;
       });
       
       console.log('Quotes updated and randomized');

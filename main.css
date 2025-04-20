@@ -349,6 +349,21 @@ footer {
 # Quotes
 --------------------------------------------------------------------*/
 
+.section {
+    margin: 3rem 0 5rem 0;
+}
+
+.quotes-disclaimer {
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
 .quote-card {
     position: relative;
     border-radius: 1rem;
