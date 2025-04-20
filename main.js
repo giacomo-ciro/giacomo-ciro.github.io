@@ -97,7 +97,8 @@ function updateQuotes() {
   fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/quotes.json")
     .then(response => response.json())
     .then(data => {
-      
+      console.log("here")
+      console.log(data.quotes)
       // If no quotes, show message
       if (!data.quotes || data.quotes.length === 0) {
         quotesContainer.innerHTML = '<div class="no-quotes">No quotes found. Add some to your quotes.json file!</div>';
