@@ -34,14 +34,14 @@
             </div>
 
             <div class="tools">
-                <div class="color-picker">
+                <!-- <div class="color-picker">
                     <label for="brush-color">Annotation Color:</label>
                     <input type="color" id="brush-color" value="#ff0000">
-                </div>
+                </div> -->
                 <div class="brush-size">
                     <label for="brush-size">Brush Size:</label>
-                    <input type="range" id="brush-size" min="1" max="20" value="5">
-                    <span id="size-value">5px</span>
+                    <input type="range" id="brush-size" min="5" max="30" value="15">
+                    <span id="size-value">15px</span>
                 </div>
                 <button id="clear-btn">Clear Annotation</button>
                 <button id="submit-btn">Submit Annotation</button>
@@ -52,5 +52,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>

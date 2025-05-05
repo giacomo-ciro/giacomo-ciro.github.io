@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     const imageCounter = document.getElementById('image-counter');
-    const brushColor = document.getElementById('brush-color');
+    // const brushColor = document.getElementById('brush-color');
     const brushSize = document.getElementById('brush-size');
     const sizeValue = document.getElementById('size-value');
     const clearBtn = document.getElementById('clear-btn');
@@ -19,9 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastX = 0;
     let lastY = 0;
     let currentImage = new Image();
+    let points = []; // Store points for smooth interpolation
+    let animationFrameId = null;
+    
+    // Create a separate canvas for storing annotations
+    const annotationLayer = document.createElement('canvas');
+    const annotationCtx = annotationLayer.getContext('2d');
 
     // Initialize brush settings
-    ctx.strokeStyle = brushColor.value;
+    ctx.strokeStyle = "#ff0000";
     ctx.lineWidth = brushSize.value;
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
@@ -36,10 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Example list - in production replace this with your actual images
             images = [
                 'img/sample1.jpeg',
-                'img/sample2.jpg',
-                'img/sample3.jpg',
-                'img/sample4.jpg',
-                'img/sample5.jpg'
+                'img/sample2.jpeg'
             ];
             
             imageCounter.textContent = `Image: ${currentImageIndex + 1} of ${images.length}`;
@@ -76,9 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
             canvas.width = canvasWidth;
             canvas.height = canvasHeight;
             
+            // Set up the annotation layer with the same dimensions
+            annotationLayer.width = canvasWidth;
+            annotationLayer.height = canvasHeight;
+            
             // Draw the image on the canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(currentImage, 0, 0, canvasWidth, canvasHeight);
+            
+            // Clear the annotation layer
+            annotationCtx.clearRect(0, 0, annotationLayer.width, annotationLayer.height);
             
             // Update navigation buttons
             prevBtn.disabled = currentImageIndex === 0;
@@ -90,31 +100,195 @@ document.addEventListener('DOMContentLoaded', () => {
     // Drawing functions
     function startDrawing(e) {
         isDrawing = true;
-        [lastX, lastY] = getMousePos(canvas, e);
+        const [x, y] = getMousePos(canvas, e);
+        points = [{ x, y }]; // Start with first point
+        lastX = x;
+        lastY = y;
+        
+        // Start animation frame for smooth drawing
+        if (animationFrameId === null) {
+            animationFrameId = requestAnimationFrame(renderPoints);
+        }
     }
 
-    function draw(e) {
-        if (!isDrawing) return;
-        const [x, y] = getMousePos(canvas, e);
+    // Calculate points between two coordinates using Bezier curve
+    function getPointsBetween(p1, p2) {
+        const distance = Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+        const numPoints = Math.max(Math.floor(distance / 2), 1); // Adjust for desired smoothness
+        const points = [];
         
-        // Set the highlighter effect with opacity
-        ctx.globalAlpha = 0.5;  // 50% opacity
-        ctx.strokeStyle = "#ff0000";  // Red color
-        ctx.lineWidth = brushSize.value;
+        for (let i = 0; i <= numPoints; i++) {
+            const t = i / numPoints;
+            points.push({
+                x: p1.x + (p2.x - p1.x) * t,
+                y: p1.y + (p2.y - p1.y) * t
+            });
+        }
+        return points;
+    }
+
+    // Smooth bezier curve through points
+    function drawSmoothLine(ctx, points) {
+        if (points.length < 2) return;
         
         ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(x, y);
+        ctx.moveTo(points[0].x, points[0].y);
+        
+        // For points that are close enough, draw direct lines
+        if (points.length === 2) {
+            ctx.lineTo(points[1].x, points[1].y);
+        } else {
+            // For multiple points, use quadratic curves for smoothing
+            for (let i = 1; i < points.length - 1; i++) {
+                const xc = (points[i].x + points[i+1].x) / 2;
+                const yc = (points[i].y + points[i+1].y) / 2;
+                ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
+            }
+            
+            // Connect to the last point
+            const lastPoint = points[points.length - 1];
+            ctx.lineTo(lastPoint.x, lastPoint.y);
+        }
+        
         ctx.stroke();
-        
-        // Reset opacity for other canvas operations
-        ctx.globalAlpha = 1.0;
-        
-        [lastX, lastY] = [x, y];
     }
+
+    // Render points using requestAnimationFrame for smooth animation
+    function renderPoints() {
+        if (points.length > 0) {
+            // Draw on the annotation layer
+            annotationCtx.globalAlpha = 0.5;  // 50% opacity
+            annotationCtx.strokeStyle = "#ff0000";  // Red color
+            annotationCtx.lineWidth = brushSize.value;
+            annotationCtx.lineCap = 'round';
+            annotationCtx.lineJoin = 'round';
+            
+            // Draw smooth line with all collected points
+            drawSmoothLine(annotationCtx, points);
+            
+            // Reset opacity
+            annotationCtx.globalAlpha = 1.0;
+            
+            // Redraw everything to the main canvas
+            redrawCanvas();
+            
+            // Clear points after drawing
+            if (!isDrawing) {
+                points = [];
+                animationFrameId = null;
+            } else {
+                animationFrameId = requestAnimationFrame(renderPoints);
+            }
+        } else if (isDrawing) {
+            // If drawing but no new points yet, continue animation
+            animationFrameId = requestAnimationFrame(renderPoints);
+        } else {
+            // Stop animation if not drawing and no points
+            animationFrameId = null;
+        }
+    }
+
+    // Throttle function to limit how often an event fires
+    function throttle(callback, delay) {
+        let previousCall = 0;
+        return function(...args) {
+            const now = Date.now();
+            if (now - previousCall >= delay) {
+                previousCall = now;
+                callback.apply(this, args);
+            }
+        };
+    }
+
+    // Throttled draw function for mouse/touch move events
+    const throttledDraw = throttle(function(e) {
+        if (!isDrawing) return;
+        
+        const [x, y] = getMousePos(canvas, e);
+        
+        // Add new point
+        const newPoint = { x, y };
+        
+        // Add intermediate points for smoother lines
+        if (points.length > 0) {
+            const lastPoint = points[points.length - 1];
+            // Only add intermediate points if the distance is significant
+            const distance = Math.sqrt(Math.pow(x - lastPoint.x, 2) + Math.pow(y - lastPoint.y, 2));
+            
+            if (distance > 5) { // Minimum distance threshold
+                const intermediatePoints = getPointsBetween(lastPoint, newPoint);
+                points = points.concat(intermediatePoints.slice(1)); // Skip first point as it's a duplicate
+            } else {
+                points.push(newPoint);
+            }
+        } else {
+            points.push(newPoint);
+        }
+        
+        lastX = x;
+        lastY = y;
+    }, 5); // 5ms throttle for smoother performance
+
+    // Function to redraw the canvas (base image + annotations + cursor)
+    function redrawCanvas() {
+        // Clear main canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw base image
+        ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
+        
+        // Draw annotations on top
+        ctx.drawImage(annotationLayer, 0, 0);
+        
+        // If mouse is over canvas and not drawing, draw cursor
+        if (!isDrawing && lastX >= 0 && lastY >= 0 && 
+            lastX <= canvas.width && lastY <= canvas.height) {
+            drawCursor(lastX, lastY);
+        }
+    }
+
+    // Function to draw the circular cursor
+    function drawCursor(x, y) {
+        // Save current drawing state
+        ctx.save();
+        
+        // Draw filled circle with red at 30% opacity
+        ctx.beginPath();
+        ctx.arc(x, y, brushSize.value, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 0, 0, 1.0)';
+        ctx.fill();
+        
+        // Restore drawing state
+        ctx.restore();
+    }
+
+    // Track mouse position for cursor with throttling
+    const throttledMouseMove = throttle((e) => {
+        const [x, y] = getMousePos(canvas, e);
+        lastX = x;
+        lastY = y;
+        
+        if (!isDrawing) {
+            redrawCanvas();
+        }
+    }, 16); // ~60fps (1000ms/60 ≈ 16ms)
+
+    // Make sure the cursor disappears when leaving the canvas
+    canvas.addEventListener('mouseout', () => {
+        if (!isDrawing) {
+            // Set cursor position to invalid so it won't be drawn
+            lastX = -1;
+            lastY = -1;
+            redrawCanvas();
+        }
+    });
 
     function stopDrawing() {
         isDrawing = false;
+        // Ensure all points are rendered before stopping
+        if (animationFrameId !== null) {
+            requestAnimationFrame(renderPoints);
+        }
     }
 
     // Helper function to get mouse position relative to canvas
@@ -126,14 +300,18 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
     }
 
-    // Function to clear the annotation
     function clearAnnotation() {
-        // Redraw the original image
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
+        // Clear the annotation layer
+        annotationCtx.clearRect(0, 0, annotationLayer.width, annotationLayer.height);
+        
+        // Redraw the canvas
+        redrawCanvas();
     }
 
-    // Function to save the annotated image as a binary mask
+    // Add this script tag to your HTML file, just before the closing </body> tag
+    // <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    // Modify the saveAnnotation function to send an email with the image as attachment
     function saveAnnotation() {
         try {
             // Get the current image name without path and extension
@@ -143,6 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create timestamp for the filename
             const now = new Date();
             const timestamp = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}${String(now.getSeconds()).padStart(2, '0')}`;
+            const fileName = `${imageName}_annotated_${timestamp}.png`;
             
             // Create a temporary canvas for the binary mask
             const tempCanvas = document.createElement('canvas');
@@ -150,8 +329,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tempCanvas.height = canvas.height;
             const tempCtx = tempCanvas.getContext('2d');
             
-            // Get the image data from our annotation canvas
-            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            // Get the image data from our annotation layer
+            const imageData = annotationCtx.getImageData(0, 0, annotationLayer.width, annotationLayer.height);
             const data = imageData.data;
             
             // Create a new imageData for the binary mask
@@ -161,9 +340,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // For each pixel, check if it has annotation (red with some opacity)
             // If it does, set it to white (1), otherwise set to black (0)
             for (let i = 0; i < data.length; i += 4) {
-                // Check if pixel has red component and is not part of the original image
-                // This assumes annotation is done in red with some opacity
-                if (data[i] > 200 && data[i+1] < 100 && data[i+2] < 100) {
+                // Check if pixel has red component with some opacity
+                if (data[i] > 0 && data[i+3] > 0) {
                     // White pixel (1)
                     binaryData[i] = 255;     // R
                     binaryData[i+1] = 255;   // G
@@ -184,16 +362,17 @@ document.addEventListener('DOMContentLoaded', () => {
             // Get the binary mask as data URL
             const dataURL = tempCanvas.toDataURL('image/png');
             
-            // Create a temporary link to download the image
+            // Create a temporary link to download the image (keep the original functionality)
             const link = document.createElement('a');
             link.href = dataURL;
-            link.download = `${imageName}_annotated_${timestamp}.png`;
+            link.download = fileName;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
             
-            statusMessage.textContent = 'Binary annotation mask saved successfully!';
-            statusMessage.className = 'success';
+            // Show status message for local download
+            statusMessage.textContent = 'Binary annotation mask saved locally. Please, send it to giacomociro@gmail.com :)';
+            statusMessage.className = 'info';
             
         } catch (error) {
             console.error('Error saving annotation:', error);
@@ -201,6 +380,18 @@ document.addEventListener('DOMContentLoaded', () => {
             statusMessage.className = 'error';
         }
     }
+
+    // Add this to your document's DOMContentLoaded event handler to load the EmailJS library
+    document.addEventListener('DOMContentLoaded', () => {
+        // ... existing code ...
+        
+        // Load the EmailJS library
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+    });
+
     // Helper function to convert dataURL to Blob (for server upload)
     function dataURLToBlob(dataURL) {
         const parts = dataURL.split(';base64,');
@@ -235,7 +426,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listeners
     canvas.addEventListener('mousedown', startDrawing);
-    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mousemove', throttledDraw); // Use throttled draw
+    canvas.addEventListener('mousemove', throttledMouseMove); // Use throttled mouse move
     canvas.addEventListener('mouseup', stopDrawing);
     canvas.addEventListener('mouseout', stopDrawing);
     
@@ -246,7 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     canvas.addEventListener('touchmove', e => {
         e.preventDefault();
-        draw(e.touches[0]);
+        throttledDraw(e.touches[0]);
     });
     canvas.addEventListener('touchend', stopDrawing);
     
@@ -255,15 +447,23 @@ document.addEventListener('DOMContentLoaded', () => {
     clearBtn.addEventListener('click', clearAnnotation);
     submitBtn.addEventListener('click', saveAnnotation);
     
-    // Update brush settings
-    brushColor.addEventListener('change', () => {
-        ctx.strokeStyle = brushColor.value;
-    });
+    // // Update brush settings
+    // brushColor.addEventListener('change', () => {
+    //     ctx.strokeStyle = "#ff0000";
+    // });
     
     brushSize.addEventListener('input', () => {
         ctx.lineWidth = brushSize.value;
         sizeValue.textContent = `${brushSize.value}px`;
+        
+        // Redraw to update cursor size
+        if (!isDrawing) {
+            redrawCanvas();
+        }
     });
+
+    // Set the canvas CSS to use no cursor
+    canvas.style.cursor = 'none';
 
     // Initial setup
     fetchImageList();
