@@ -368,6 +368,7 @@ footer {
     position: relative;
     border-radius: 1rem;
     margin: 1.5rem;
+    margin: 1.5rem;
     padding: 2rem 2.5rem;
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -385,6 +386,8 @@ footer {
     margin-bottom: 1rem;
     padding: 0;
     display: inline-block;
+    padding: 0;
+    display: inline-block;
 }
 
 .quote-content::before, 
@@ -398,8 +401,17 @@ footer {
 .quote-content::before {
     position: absolute;
     left: -1rem;
+    left: -1rem;
     top: -0.5rem;
 }
+
+.quote-content::after {
+    position: static;
+    margin-left: 0.1rem;
+    line-height: 0;
+    vertical-align: bottom;
+}
+
 
 .quote-content::after {
     position: static;
