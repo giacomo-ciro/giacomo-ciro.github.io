@@ -28,7 +28,7 @@ class Giacomino:
         self.doc_file = "faiss_docs.pkl"
 
         self._load_prompts()
-        self._init_knowledge_base()
+        self._load_documents()
 
     def _load_prompts(self):
         path_to_sys = Path("./system.txt")
@@ -45,15 +45,6 @@ class Giacomino:
         embeddings = [item.embedding for item in response.data]
         return np.array(embeddings).astype('float32')
 
-    def _init_knowledge_base(self):
-        if os.path.exists(self.index_file) and os.path.exists(self.doc_file):
-            self.index = faiss.read_index(self.index_file)
-            with open(self.doc_file, "rb") as f:
-                self.documents = pickle.load(f)
-            logger.info("Loaded existing FAISS index and documents")
-        else:
-            self._load_documents()
-
     def _load_documents(self):
         docs_file = Path("documents.txt")
         assert docs_file.exists()
@@ -63,10 +54,7 @@ class Giacomino:
         embeddings = self._embed_texts(self.documents)
         self.index = faiss.IndexFlatL2(embeddings.shape[1])
         self.index.add(embeddings)
-
         faiss.write_index(self.index, self.index_file)
-        with open(self.doc_file, "wb") as f:
-            pickle.dump(self.documents, f)
 
         logger.info(f"Loaded {len(self.documents)} documents into FAISS index")
 
