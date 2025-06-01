@@ -146,6 +146,22 @@ function updateQuotes() {
     });
 }
 
+// Chatbot Integration Function
+function includeChatbot() {
+  fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/chatbot.html")
+      .then(response => response.text())
+      .then(data => {
+          // Create a container and insert the chatbot HTML
+          const chatbotContainer = document.createElement('div');
+          chatbotContainer.innerHTML = data;
+          document.body.appendChild(chatbotContainer);
+          console.log('Chatbot loaded and integrated');
+      })
+      .catch(error => {
+          console.error('Error loading chatbot:', error);
+      });
+}
+
 //------------------------------------------- call everything
 window.onload = function() {
   // if on the project page, update projects
@@ -159,6 +175,11 @@ window.onload = function() {
   }
   // always update footer
   includeFooter();
+
+  // add chatbot
+  // includeChatbot();
+
+  // init aos
   aosInit()
 };
 
