@@ -1,19 +1,30 @@
 {
     "projects": [
       {
-        "title": "BioFormer",
-        "date": "September '24 - Now",
-        "tags": "Machine Learning, Gene Expresion Modelling",
-        "description": "Developing a novel architecture (BioFormer) for gene expression modelling. It combines the encodings from scGPT with the EvoFormer module from AlphaFold 2. BioFormer can reason on both sequence-based and pair representations of RNA expression values, effectively capturing gene interactions. Endgoal is a foundation model for single-cell omics data",
+        "title": "Do AI and Human Experts See Pneumonia the Same Way?",
+        "date": "May '25",
+        "tags": "Computer Vision, Explainable AI, Medical Imaging",
+        "description": "Compared CNN saliency maps with expert annotations on pediatric chest X-rays to understand if AI models identify pneumonia using the same visual cues as doctors. Found that high accuracy doesn't guarantee human-interpretable reasoning.",
         "links": {
-                
-                }
+          "Code": "https://github.com/davide-beltrame/medimg-saliency-benchmark",
+          "Report": "assets/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
+        }
+      },
+      {
+        "title": "More Efficient Text Diffusion via Length Prediction",
+        "date": "May '25",
+        "tags": "Natural Language Processing, Machine Learning, Optimization",
+        "description": "Improved computational efficiency of Diffusion Language Models by predicting output sequence length before generation. Achieved 80% accuracy in length prediction, reducing computation by up to 800 tokens per generation.",
+        "links": {
+          "Code": "https://github.com/giacomo-ciro/diffusion-llms",
+          "Report": "assets/more_efficient_text_diffusion_via_length_prediction.pdf"
+        }
       },
       {
         "title": "Gooper",
         "date": "December '24 - Now",
         "tags": "Software Development",
-        "description": "Building a search engine for influencers. Gooper v1 online now!",
+        "description": "A search engine for influencers. Currently live with version 1.",
         "links": {
                   "Gooper v1": "https://giacomo-ciro.github.io/gooper/index.html"
                 }
@@ -22,7 +33,7 @@
         "title": "Fundamental Matrix Estimation",
         "date": "March '25",
         "tags": "Geometric Computer Vision",
-        "description": "Python implementation of the eight-point algorithm to estimate the fundamental matrix given two views of the same scene.",
+        "description": "Python implementation of the eight-point algorithm for estimating the fundamental matrix between two camera views of the same scene.",
         "links": {
                 "Code": "https://github.com/giacomo-ciro/projective-geometry-estimation"
                 }
@@ -31,7 +42,7 @@
         "title": "Single View Metrology",
         "date": "March '25",
         "tags": "Geometric Computer Vision",
-        "description": "Algorithm to estimate a person's height given a reference point in the scene.",
+        "description": "Computer vision algorithm that estimates a person's height from a single image using a reference object in the scene.",
         "links": {
                 "Code": "https://github.com/giacomo-ciro/projective-geometry-estimation"
                 }
@@ -40,7 +51,7 @@
         "title": "Information Retrieval",
         "date": "March '25",
         "tags": "Natural Language Processing",
-        "description": "An algorithm to retrieve the most appropriate answer to a given prompt.",
+        "description": "Algorithm that retrieves the most relevant answer from a corpus given a user query.",
         "links": {
                 "Code": "https://github.com/giacomo-ciro/information-retrieval"
                 }
@@ -49,7 +60,7 @@
         "title": "Wordle Solver",
         "date": "February '24",
         "tags": "Natural Language Processing",
-        "description": "A program to find the optimal best guess in the popular online game Worlde. It achieved an accuracy of 100% and an average of 2.91 words used to guess, with a running time of 0.5s.",
+        "description": "Optimal strategy solver for Wordle that achieves 100% success rate with an average of 2.91 guesses in 0.5 seconds.",
         "links": {
                 "Code": "https://github.com/giacomo-ciro/wordle-solver"
                 }
@@ -58,7 +69,7 @@
         "title": "Image Compression via IP",
         "date": "October '24",
         "tags": "Linear Progamming, Image Processing",
-        "description": "Pipeline to compress images using K-means clustering optimized via Integer Programming (IP).",
+        "description": "Image compression pipeline using K-means clustering optimized through Integer Programming techniques.",
         "links": {
                   "Code": "https://github.com/giacomo-ciro/241012_image-compression-via-ip"
                 }
@@ -67,7 +78,7 @@
         "title": "Resilient Companies",
         "date": "October '24",
         "tags": "Finance, Data Analysis",
-        "description": "We analyzed financial data from 31,710 Indian companies to classify them based on their performance compared to industry averages. We identified resilient companies, which showed consistent strong performance before and after 2020. This is the first step toward a greater projects whose goal is to determine the cause of the observed phenomenon and determine the impact of information systems in such resilience.",
+        "description": "Analysis of 31,710 Indian companies to identify those with consistent strong performance before and after 2020, exploring the role of information systems in business resilience.",
         "links": {
                   "Report": "https://github.com/giacomo-ciro/240713_resilient-companies",
                   "Code": "https://github.com/giacomo-ciro/240713_resilient-companies/blob/main/main.ipynb"
@@ -77,7 +88,7 @@
         "title": "SCIP Debugging",
         "date": "October '24",
         "tags": "C, Software Development",
-        "description": "Used gdb and AFL++ to discover and fix 2 bugs in the open source project SCIP, used to solve LP problems.",
+        "description": "Used debugging tools (gdb and AFL++) to identify and fix two bugs in SCIP, an open-source linear programming solver.",
         "links": {
                   "Report": "assets/20875_SWE_HW02.pdf"
                 }
@@ -86,7 +97,7 @@
         "title": "Boolean Compiler",
         "date": "September '24",
         "tags": "Python, Software Development",
-        "description": "A compiler for a boolean programming language.",
+        "description": "A compiler implementation for a custom boolean programming language.",
         "links": {
                   "Code": "https://github.com/giacomo-ciro/240912_boolean-compiler"
                 }
@@ -95,7 +106,7 @@
         "title": "Bachelor of Science Thesis",
         "date": "July '24",
         "tags": "Bioinformatics, Machine Learning",
-        "description": "My thesis, titled \"Exploring Transcriptional Interactions and Language Models for Single Cell RNA-seq Masked Value Prediction\", focused on advancing scGPT, a state-of-the-art transformer model for gene expression modeling. Under the supervision of Prof. Francesca Buffa, I proposed and implemented key modifications to incorporate biological knowledge of transcriptional regulation, significantly improving the model's accuracy.",
+        "description": "Enhanced scGPT transformer model for gene expression prediction by incorporating biological knowledge of transcriptional regulation, achieving significant accuracy improvements.",
         "links": {
                   "Thesis": "assets/giacomo_ciro_bemacs_24.pdf"
                 }
@@ -104,7 +115,7 @@
           "title": "Evolving Tinder",
           "date": "April '24",
           "tags": "Python, Evolutionary Algorithm",
-          "description": "I addressed the limitations of the Deferred Acceptance Algorithm by employing an evolutionary approach to achieve a more balanced and stable matching between two sets of individuals with subjective preferences.",
+          "description": "Applied evolutionary algorithms to improve matching stability beyond the traditional Deferred Acceptance Algorithm for two-sided matching problems.",
           "links": {
                     "Code": "https://github.com/giacomo-ciro/evolving-tinder",
                     "Report": "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
@@ -114,7 +125,7 @@
           "title": "Q-Learning Playground",
           "date": "April '24",
           "tags": "Python, Reinforcement Learning",
-          "description": "I created an online playground to let everybody appreciate the beauty of the Bellman Equation and the remarkable effectiveness of a simple Q-learning algorithm.",
+          "description": "Interactive web application demonstrating Q-learning algorithm and the Bellman Equation through visual examples.",
           "links": {
                     "Code": "https://github.com/giacomo-ciro/q-learning",
                     "Web App": "https://q-learning.streamlit.app/"
@@ -124,7 +135,7 @@
           "title": "Daily Spin Bot",
           "date": "December '23",
           "tags": "Python, Browser Automation",
-          "description": "Program to automate SNAI Daily Spin and maximize the reward. The .exe is available at the link below.",
+          "description": "Automated browser bot for maximizing rewards in SNAI Daily Spin game, available as executable.",
           "links": {
                     "Code": "https://github.com/giacomo-ciro/daily-spin-bot"
                   }
@@ -133,7 +144,7 @@
           "title": "Standardization",
           "date": "October '23",
           "tags": "Python, StataSE, Marketing Analytics",
-          "description": "We investigated how standardization in customer support influences customer satisfaction. Our analytical approach includes OLS regression as a baseline model, further extended to account for confounding variables, moderator and mediator effects, industry-specific trends and language patterns in responses.",
+          "description": "Statistical analysis of how standardization in customer support affects satisfaction using OLS regression with controls for confounding variables and industry effects.",
           "links": {
                     "Code": "https://github.com/giacomo-ciro/standardization"
                   }
@@ -142,8 +153,7 @@
           "title": "F1 Race Analysis",
           "date": "June '23",
           "tags": "Python, Data Analysis, Data Visualization, Data Mining",
-          "description": "Interactive application to display statistics and insights from the first ever to the most recent Formula 1 Grand Prix, automatically updated after each race.",
-
+          "description": "Interactive dashboard displaying Formula 1 statistics and insights from historical data through current races, with automatic updates after each Grand Prix.",
           "links": {
                     "Code": "https://github.com/giacomo-ciro/F1-race-analysis",
                     "Web App": "https://f1-analysis.streamlit.app/"
@@ -153,7 +163,7 @@
           "title": "Production Function Estimation",
           "date": "May '23",
           "tags": "R, Panel Data Analysis, FE/RE Model",
-          "description": "We applied Panel Data Analysis tools, such as the Fixed Effect (FE) and Random Effect (RE) models, to identify individual and time specific latent heterogeneity and provide a statistically relevant estimation of the production function of a firm.",
+          "description": "Applied Fixed Effect and Random Effect models to estimate firm production functions while controlling for individual and time-specific heterogeneity.",
           "links": {
                     "Code": "https://github.com/giacomo-ciro/production_function_estimation"
                   }
@@ -162,7 +172,7 @@
           "title": "Words Generator",
           "date": "April '23",
           "tags": "Python, Generative AI Models",
-          "description": "I trained a collection of neural networks on different corpora of existing words to make them capable of generating novel, non-existent words possessing a striking resemblance to real ones.",
+          "description": "Neural networks trained on word corpora to generate novel, realistic-sounding words that don't exist in any language.",
           "links": {
                     "Code": "https://github.com/giacomo-ciro/words-generator",
                     "Web App": "https://word-generator.streamlit.app/"
@@ -172,7 +182,7 @@
           "title": "House Price Predictor",
           "date": "April '23",
           "tags": "Python, Random Forest Regressor, Neural Network, Linear Regression",
-          "description": "I developed, trained and tested different machine learning models to predict house prices in Milan, Rome and Venice (45k +).",
+          "description": "Machine learning models for predicting house prices in Milan, Rome, and Venice using a dataset of over 45,000 properties.",
           "links": {
                     "Code": "https://github.com/giacomo-ciro/house-price-predictor-webapp",
                     "Web App": "https://house-price-predictor.streamlit.app/"
@@ -182,7 +192,7 @@
           "title": "Taylor Rule Estimation by OLS",
           "date": "February '23",
           "tags": "R, Linear Regression",
-          "description": "My group and I estimated Austria’s interest rate through the application of OLS Regression and the insights provided by Taylor’s rule. We performed diagnostic checks to ensure robustness and accuracy.",   
+          "description": "Estimated Austria's interest rate policy using OLS regression and Taylor's rule framework, with comprehensive diagnostic testing for model robustness.",   
           "links": {
                     "Code": "https://github.com/giacomo-ciro/taylor_rule_estimation_by_OLS"
                   }
