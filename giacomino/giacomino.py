@@ -1,4 +1,5 @@
 import os
+import json
 import logging
 from typing import List, Dict, Any
 from pathlib import Path
@@ -84,13 +85,35 @@ class Giacomino:
     def generate_response(self, messages: list) -> str:
         assert isinstance(messages, list) and messages
         assert messages[-1]["role"] == "user"
-
+        self._save_messages_to_disk(messages)
         user_message = messages[-1]["content"]
         context_docs = self.retrieve_context(user_message, k=3)
         context = "\n".join(context_docs) if context_docs else "No specific context available."
         print(f"Retrieved documents:\n{context}\n"+"-"*20)
         system_prompt = self.system_prompt.format(context=context)
         return self._send_chat_completion_request(system_prompt, messages)
+
+    def _save_messages_to_disk(self, messages, filepath="saved_messages.jsonl"):
+        # Collect existing hashes to avoid duplicates
+        existing_hashes = set()
+        if os.path.exists(filepath):
+            with open(filepath, "r", encoding="utf-8") as f:
+                for line in f:
+                    try:
+                        msg = json.loads(line.strip())
+                        msg_key = msg["role"] + msg["content"]
+                        existing_hashes.add(msg_key)
+                    except (json.JSONDecodeError, KeyError):
+                        continue  # skip malformed lines
+
+        # Append only new messages
+        with open(filepath, "a", encoding="utf-8") as f:
+            for msg in messages:
+                msg_key = msg["role"] + msg["content"]
+                if msg_key not in existing_hashes:
+                    f.write(json.dumps(msg) + "\n")
+                    existing_hashes.add(msg_key)
+
 
     def get_available_docs(self) -> Dict[str, Any]:
         try:
