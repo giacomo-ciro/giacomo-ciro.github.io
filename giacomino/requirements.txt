@@ -1,0 +1,8 @@
+flask
+flask-cors
+together
+chromadb
+numpy
+pandas
+python-dotenv
+gunicorn

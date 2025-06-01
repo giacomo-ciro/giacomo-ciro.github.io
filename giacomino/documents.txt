@@ -1,0 +1,15 @@
+Giacomo is 22 years old.
+Giacomo full name is Giacomo Cirò.
+Giacomo is currently pursuing a Master of Science in Artificial Intelligence at Bocconi University in Milan, Italy.
+He graduated cum laude with a Bachelor of Science in Economics and Computer Science from Bocconi University.
+Giacomo co-founded Bocconi Students for Machine Learning (BSML), the first machine learning project-incubator at his university.
+He is currently working as a researcher at the Bocconi Institute for Data Science and Analytics.
+His research focuses on Machine Learning applied to Biology, specifically developing BioFormer: a novel architecture for gene expression modeling.
+Giacomo is exploring and empirically measuring scaling laws of machine learning models when applied to transcriptomics data.
+His passion lies in Mathematics and Computer Science, and he aims for a career in Machine Learning research, Software Engineering, and Data Science.
+He wants to connect minds, not only layers, which motivated him to co-found BSML.
+Giacomo has expertise in artificial intelligence, machine learning, data science, software engineering, and computational biology.
+His educational background combines economics, computer science, and artificial intelligence.
+He is based in Milan, Italy, where he studies at Bocconi University.
+The BioFormer project he's working on represents a novel approach to gene expression modeling using transformer architectures.
+His research at BIDSA involves both theoretical and practical aspects of machine learning in biological applications.
