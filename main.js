@@ -7,7 +7,6 @@ function updateProjects(){
       .then(data => {
         delay = 0
         data['projects'].forEach(project => {
-          console.log(project)
           const { title, date, tags, description, links } = project;
           // Initialize projectHTML with the common elements
           var projectHTML = `
@@ -97,8 +96,6 @@ function updateQuotes() {
   fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/quotes.json")
     .then(response => response.json())
     .then(data => {
-      console.log("here")
-      console.log(data.quotes)
       // If no quotes, show message
       if (!data.quotes || data.quotes.length === 0) {
         quotesContainer.innerHTML = '<div class="no-quotes">No quotes found. Add some to your quotes.json file!</div>';
@@ -158,14 +155,13 @@ function includeChatbot() {
           
           // Initialize chatbot functionality after HTML is inserted
           initializeChatbot();
-          console.log('Chatbot loaded and integrated');
       })
       .catch(error => {
           console.error('Error loading chatbot:', error);
       });
 }
 
-// Chatbot Functionality
+// Chatbot Functionality - FIXED VERSION
 function initializeChatbot() {
   // Chatbot Class Definition
   class Chatbot {
@@ -175,6 +171,12 @@ function initializeChatbot() {
       this.apiUrl = 'http://localhost:5000/chat';
       this.history = [];
       this.bindEvents();
+      
+      // Add initial bot message to history
+      this.history.push({ 
+        role: 'assistant', 
+        content: "Ciao! I'm Giacomino, ask me anything about Giacomo—I'll help if I can!" 
+      });
     }
 
     bindEvents() {
@@ -239,8 +241,10 @@ function initializeChatbot() {
       const message = input.value.trim();
       if (!message) return;
 
+      // Add user message to UI and history FIRST
       this.addMessage(message, 'user');
-
+      
+      // Clear input immediately
       input.value = '';
       if (sendBtn) sendBtn.disabled = true;
 
@@ -253,7 +257,7 @@ function initializeChatbot() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ messages: this.history })  // Send full history
+          body: JSON.stringify({ messages: this.history })
         });
 
         if (!response.ok) {
@@ -261,11 +265,13 @@ function initializeChatbot() {
         }
 
         const data = await response.json();
-        this.addMessage(data.text || 'Sorry, I couldn\'t process your request.', 'assistant');
+        
+        const botResponse = data.text || data.message || data.response || 'Sorry, I couldn\'t process your request.';
+        this.addMessage(botResponse, 'assistant');
 
       } catch (error) {
         console.error('Chatbot API error:', error);
-        this.addMessage('Sorry, I\'m having trouble connecting. Please try again later.', 'bot');
+        this.addMessage('Sorry, I\'m having trouble connecting. Please try again later.', 'assistant');
       } finally {
         this.showLoading(false);
         this.isLoading = false;
@@ -276,8 +282,12 @@ function initializeChatbot() {
 
     addMessage(content, type) {
       const messagesContainer = document.getElementById('chatbot-messages');
-      if (!messagesContainer) return;
+      if (!messagesContainer) {
+        console.error('Messages container not found');
+        return;
+      }
 
+      // Create message element
       const messageDiv = document.createElement('div');
       messageDiv.className = `message ${type}-message`;
 
@@ -288,11 +298,14 @@ function initializeChatbot() {
       messageDiv.appendChild(contentDiv);
       messagesContainer.appendChild(messageDiv);
 
-      // Add to history
-      this.history.push({ role: type, content });
+      // Add to history with correct role mapping
+      const role = type === 'user' ? 'user' : 'assistant';
+      this.history.push({ role: role, content: content });
 
-      // Scroll to bottom
-      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      // Scroll to bottom with a small delay to ensure DOM is updated
+      setTimeout(() => {
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }, 10);
     }
 
     showLoading(show) {
@@ -309,6 +322,7 @@ function initializeChatbot() {
 
   // Initialize chatbot instance
   window.chatbotInstance = new Chatbot();
+  console.log('Chatbot initialized successfully');
 }
 
 
