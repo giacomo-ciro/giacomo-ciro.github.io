@@ -152,7 +152,6 @@ function includeChatbot() {
           const chatbotContainer = document.createElement('div');
           chatbotContainer.innerHTML = data;
           document.body.appendChild(chatbotContainer);
-          
           // Initialize chatbot functionality after HTML is inserted
           initializeChatbot();
       })
