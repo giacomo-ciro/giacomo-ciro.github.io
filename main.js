@@ -168,7 +168,7 @@ function initializeChatbot() {
     constructor() {
       this.isOpen = false;
       this.isLoading = false;
-      this.apiUrl = 'http://localhost:5000/chat';
+      this.apiUrl = 'https://brimax.pythonanywhere.com/chat';
       this.history = [];
       this.bindEvents();
       
