@@ -4,6 +4,7 @@ import logging
 from typing import List, Dict, Any
 from together import Together
 import chromadb
+from chromadb.utils import embedding_functions
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -59,9 +60,13 @@ class Giacomino:
             logger.info(f"No existing collection to delete: {e}")
 
         # Create a new collection
+        ef = embedding_functions.SentenceTransformerEmbeddingFunction(
+            model_name="paraphrase-albert-small-v2"         # smallest model 40MB
+        )
         self.collection = self.chroma_client.create_collection(
             name=self.collection_name,
-            metadata={"description": "Knowledge about Giacomo Cirò"}
+            metadata={"description": "Knowledge about Giacomo Cirò"},
+            embedding_function=ef
         )
         logger.info("Created new knowledge base collection")
 
