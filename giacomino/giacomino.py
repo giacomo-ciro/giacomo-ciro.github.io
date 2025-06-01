@@ -12,7 +12,7 @@ class Giacomino:
     def __init__(
         self,
         model_text="meta-llama/Llama-3.2-3B-Instruct-Turbo",
-        model_embeddings="togethercomputer/m2-bert-80M-8k-retrieval",
+        model_embeddings="BAAI/bge-large-en-v1.5",
     ):
         self.version = "1.0.0"
         self.together_api_key = os.getenv('TOGETHER_API_KEY')
@@ -88,7 +88,7 @@ class Giacomino:
         user_message = messages[-1]["content"]
         context_docs = self.retrieve_context(user_message, k=3)
         context = "\n".join(context_docs) if context_docs else "No specific context available."
-
+        print(f"Retrieved documents:\n{context}\n"+"-"*20)
         system_prompt = self.system_prompt.format(context=context)
         return self._send_chat_completion_request(system_prompt, messages)
 
