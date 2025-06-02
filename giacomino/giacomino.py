@@ -105,34 +105,19 @@ class Giacomino:
         response = self._send_chat_completion_request(system_prompt, messages)
 
         # Save messages
-        self._save_messages_to_disk([
-            {"role":"user", "content":user_message},
-            {"role":"assistant", "content": response}
-        ])
-
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        messages.insert(0, {"timestamp":timestamp})
+        messages.append({"role":"assistant", "content":response})
+        self._save_messages_to_disk(
+            messages
+        )
         return response
 
 
     def _save_messages_to_disk(self, messages, filepath="saved_messages.jsonl"):
-        # Collect existing hashes to avoid duplicates
-        existing_hashes = set()
-        if os.path.exists(filepath):
-            with open(filepath, "r", encoding="utf-8") as f:
-                for line in f:
-                    try:
-                        msg = json.loads(line.strip())
-                        msg_key = msg["role"] + msg["content"]
-                        existing_hashes.add(msg_key)
-                    except (json.JSONDecodeError, KeyError):
-                        continue  # skip malformed lines
-
-        # Append only new messages
+        print(messages)
         with open(filepath, "a", encoding="utf-8") as f:
-            for msg in messages:
-                msg_key = msg["role"] + msg["content"]
-                if msg_key not in existing_hashes:
-                    f.write(json.dumps(msg) + "\n")
-                    existing_hashes.add(msg_key)
+            f.write(json.dumps(messages) + "\n")
 
 
     def get_available_docs(self) -> Dict[str, Any]:

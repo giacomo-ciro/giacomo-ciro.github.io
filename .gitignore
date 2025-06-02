@@ -3,4 +3,4 @@
 */__pycache__
 *.pkl
 *.index
-saved_messages.jsonl
+*/saved_messages.jsonl
