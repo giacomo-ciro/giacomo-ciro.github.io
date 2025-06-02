@@ -3,9 +3,7 @@ Giacomo full name is Giacomo Cirò.
 Giacomo is currently pursuing a Master of Science in Artificial Intelligence at Bocconi University in Milan, Italy.
 He graduated cum laude with a Bachelor of Science in Economics and Computer Science from Bocconi University.
 Giacomo co-founded Bocconi Students for Machine Learning (BSML), the first machine learning project-incubator at his university.
-He is currently working as a researcher at the Bocconi Institute for Data Science and Analytics.
-His research focuses on Machine Learning applied to Biology, specifically developing BioFormer: a novel architecture for gene expression modeling.
-Giacomo is exploring and empirically measuring scaling laws of machine learning models when applied to transcriptomics data.
+He is currently working as a researcher at the Bocconi Institute for Data Science and Analytics. His research focuses on Machine Learning applied to Biology, specifically developing BioFormer: a novel architecture for gene expression modeling. Giacomo is also exploring and empirically measuring scaling laws of machine learning models when applied to transcriptomics data.
 His passion lies in Mathematics and Computer Science, and he aims for a career in Machine Learning research, Software Engineering, and Data Science.
 He wants to connect minds, not only layers, which motivated him to co-found BSML.
 Giacomo has expertise in artificial intelligence, machine learning, data science, software engineering, and computational biology.
@@ -25,7 +23,7 @@ Giacomo analyzed 31,710 Indian companies to identify those with consistent stron
 Giacomo used debugging tools like gdb and AFL++ to identify and fix two bugs in SCIP, an open-source linear programming solver.
 Giacomo implemented a compiler for a custom boolean programming language using Python.
 Giacomo's Bachelor thesis enhanced the scGPT transformer model for gene expression prediction by incorporating biological knowledge of transcriptional regulation.
-Giacomo applied evolutionary algorithms to improve matching stability beyond the traditional Deferred Acceptance Algorithm for two-sided matching problems.
+Giacomo applied evolutionary algorithms to improve matching stability beyond the traditional Deferred Acceptance Algorithm for two-sided matching problems in his project 'Evolving Tinder'.
 Giacomo created an interactive web application demonstrating Q-learning algorithm and the Bellman Equation through visual examples.
 Giacomo built an automated browser bot for maximizing rewards in SNAI Daily Spin game.
 Giacomo conducted statistical analysis of how standardization in customer support affects satisfaction using OLS regression.
@@ -61,15 +59,15 @@ Giacomo obtained 150+ signatures to found BSML and screened over 60 candidates f
 Giacomo built and maintained BSML's website using HTML, CSS, and JavaScript.
 Giacomo supervised the publication of 3 articles on BSML's website and developed the "Thesis Repo" for free BSc thesis consultation.
 Giacomo planned and executed 5 events with external speakers attracting 150+ guests total.
-Giacomo organized a hackathon with 30 participants from 70+ applications, featuring a 150 euro prize in partnership with Boston Consulting Group X.
-Giacomo works in access control for Formula 1 Paddock Club events, coordinating entry for 1,000+ guests.
-Giacomo has worked at 8 Grand Prix events in 5 countries across 2 continents, leading teams of local stewards.
+Giacomo organized a hackathon with 30 participants from 70+ applications, featuring euro prize in partnership with Boston Consulting Group X.
+Giacomo works in access control for Formula 1 Paddock Club events, coordinating entry for 1,000+ guests. He worked at 8 Grand Prix events in 5 countries across 2 continents, leading teams of local stewards. In particular. he worked at 2023 Monza GP, 2023 Mexico City GP, 2024 Monaco GP, 2024 Austrian GP, 2024 British GP and 2024 United States GP.
 Giacomo has technical skills in Python, R, SQL, StataSE, HTML-CSS-JS, Knime Analytics Platform, Office 365, SLURM, and Adobe Creative Cloud.
 Giacomo speaks English at C1 level with IELTS 8.0, Italian as native language, and Spanish at B1 level.
 Giacomo was an AGESCI boy-scout for over 10 years and worked as a summer camp animator and cook.
 Giacomo played rugby in major Italian leagues for CUS Milano Rugby from 2010 to 2023 and now practices boxing.
 Giacomo ran 21 km in 1 hour and 50 minutes and 10 km in 44 minutes.
-Giacomo loves art, poetry, and working out, used to play drums and is now learning piano.
+Giacomo loves studying and staying active. He used to play the drums and would love to learn the piano someday.
 Giacomo can type at 120 words per minute according to keybr.com.
 Giacomo's contacts are: giacomociro02@gmail.com (email address), linkedin.com/in/giacomo-ciro (LinkedIn profile), github.com/giacomo-ciro (GitHub profile), giacomo-ciro.github.io (website).
-Giacomo is currently in a relationship with Matilde, a beautiful red-haired girl studying medicine
+Giacomo is currently in a relationship with Matilde, a beautiful red-haired girl studying medicine.
+In his free time, Giacomo loves playing video games. His favorites include Minecraft, Clash of Clans, Call of Duty, and Formula 1. Fun fact: he once bought a Formula 1 simulator but ended up returning it because he was spending too much time playing and needed to focus on studying. One of his dreams is to build an amazing racing simulator to have at home someday.

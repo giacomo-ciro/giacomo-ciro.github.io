@@ -18,10 +18,14 @@ app = Flask(__name__)
 CORS(app)
 
 # Initialize Giacomino model
-MODEL_PATH = "meta-llama/Llama-3.2-3B-Instruct-Turbo"
+TEXT_MODEL_PATH = "meta-llama/Llama-3.2-3B-Instruct-Turbo"
+EMB_MODEL_PATH = "BAAI/bge-large-en-v1.5"
 try:
-    giacomino = Giacomino(model_text=MODEL_PATH)
-    logger.info(f"Giacomino model initialized with {MODEL_PATH}")
+    giacomino = Giacomino(
+        model_text=TEXT_MODEL_PATH,
+        model_embeddings=EMB_MODEL_PATH
+    )
+    logger.info(f"Giacomino model initialized with {TEXT_MODEL_PATH} and {EMB_MODEL_PATH}.")
 except Exception as e:
     logger.error(f"Failed to initialize Giacomino: {e}")
     giacomino = None

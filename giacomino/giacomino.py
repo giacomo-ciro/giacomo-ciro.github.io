@@ -1,5 +1,6 @@
 import os
 import json
+import time
 import logging
 from typing import List, Dict, Any
 from pathlib import Path
@@ -85,13 +86,32 @@ class Giacomino:
     def generate_response(self, messages: list) -> str:
         assert isinstance(messages, list) and messages
         assert messages[-1]["role"] == "user"
-        self._save_messages_to_disk(messages)
+        
+        # User message
         user_message = messages[-1]["content"]
+
+        # Retrieve context
         context_docs = self.retrieve_context(user_message, k=3)
         context = "\n".join(context_docs) if context_docs else "No specific context available."
         print(f"Retrieved documents:\n{context}\n"+"-"*20)
-        system_prompt = self.system_prompt.format(context=context)
-        return self._send_chat_completion_request(system_prompt, messages)
+        
+        # Format prompt
+        system_prompt = self.system_prompt.format(
+            context=context,
+            date=time.strftime("%B %-d, %Y")
+        )
+
+        # Get model response
+        response = self._send_chat_completion_request(system_prompt, messages)
+
+        # Save messages
+        self._save_messages_to_disk([
+            {"role":"user", "content":user_message},
+            {"role":"assistant", "content": response}
+        ])
+
+        return response
+
 
     def _save_messages_to_disk(self, messages, filepath="saved_messages.jsonl"):
         # Collect existing hashes to avoid duplicates
