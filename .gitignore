@@ -1,0 +1,6 @@
+.env
+*/chroma_db
+*/__pycache__
+*.pkl
+*.index
+*/saved_messages.jsonl

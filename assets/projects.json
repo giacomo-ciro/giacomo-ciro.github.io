@@ -22,11 +22,11 @@
       },
       {
         "title": "Gooper",
-        "date": "December '24 - Now",
+        "date": "December '24",
         "tags": "Software Development",
-        "description": "A search engine for influencers. Currently live with version 1.",
+        "description": "A search engine for influencers.",
         "links": {
-                  "Gooper v1": "https://giacomo-ciro.github.io/gooper/index.html"
+                  "Gooper v1": "assets/gooper.pdf"
                 }
       },
       {
