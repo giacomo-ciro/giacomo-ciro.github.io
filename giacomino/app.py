@@ -10,6 +10,9 @@ from giacomino import Giacomino
 # Load environment variables
 load_dotenv()
 
+# set port env
+os.environ["PORT"]="5001"
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -30,6 +33,7 @@ except Exception as e:
     logger.error(f"Failed to initialize Giacomino: {e}")
     giacomino = None
 
+
 @app.route('/')
 def hello_world():
     """
@@ -45,6 +49,7 @@ def hello_world():
         }
     }
 
+
 @app.route('/health', methods=['GET'])
 def health_check():
     """
@@ -55,6 +60,7 @@ def health_check():
         "timestamp": datetime.now().isoformat(),
         "model_loaded": giacomino is not None
     })
+
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -70,7 +76,6 @@ def chat():
             return jsonify({'error': 'Missing message in request body'}), 400
         
         messages = data['messages']
-        print(messages)
         if not messages:
             return jsonify({'error': 'Empty message'}), 400
         
@@ -86,6 +91,7 @@ def chat():
         logger.error(f"Error in chat endpoint: {e}")
         return jsonify({'error': 'Internal server error'}), 500
 
+
 @app.route('/docs', methods=['GET'])
 def get_docs():
     """
@@ -100,6 +106,41 @@ def get_docs():
     except Exception as e:
         logger.error(f"Error retrieving docs: {e}")
         return jsonify({'error': 'Failed to retrieve documents'}), 500
+
+
+@app.route('/history', methods=["GET"])
+def get_history():
+    """
+    Returns the chat history in JSON format. Auth using a HISTORY_KEY stored in .env
+    Send reques as url/history?key=yourkey
+    """
+    try:
+        # Check for authorization key
+        auth_key = request.headers.get('Authorization') or request.args.get('key')
+        print("auth: ")
+        print(auth_key)
+        expected_key = os.environ.get('HISTORY_KEY')
+        
+        if not expected_key:
+            logger.error("HISTORY_KEY not configured in environment")
+            return jsonify({'error': 'Service not configured'}), 500
+            
+        if not auth_key or auth_key != expected_key:
+            return jsonify({'error': 'Unauthorized'}), 401
+        
+        # Read and return history.json
+        if not os.path.exists('saved_messages.jsonl'):
+            return jsonify({'history': [], 'message': 'No history file found'})
+        
+        with open('saved_messages.jsonl', 'r') as file:
+            history_data = file.read()
+            
+        return jsonify({'history': history_data})
+        
+    except Exception as e:
+        logger.error(f"Error retrieving history: {e}")
+        return jsonify({'error': 'Failed to retrieve history'}), 500
+    
 
 @app.errorhandler(404)
 def not_found(error):
