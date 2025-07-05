@@ -1,4 +1,7 @@
 // All variables
+const excluded_ids = ["230430", "230621"]
+
+// Update title for all
 document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
 
 function updateProjects(){
@@ -7,35 +10,98 @@ function updateProjects(){
       .then(data => {
         delay = 0
         data['projects'].forEach(project => {
-          const { title, date, tags, description, links } = project;
-          // Initialize projectHTML with the common elements
+          const { title, date, tags, description, links, id } = project;
+          
+          // Skip unwanted projects
+          if (excluded_ids.includes(id)) {
+            return;
+          }
+          // Function to find the correct thumbnail extension
+          const getThumbnailUrl = (projectId) => {
+            const extensions = ['png', 'jpg', 'jpeg'];
+            // We'll try each extension - the browser will handle 404s gracefully
+            return `assets/img/thumbnails/${projectId}.png`; // Default to png, fallback handled in HTML
+          };
+          
+          const thumbnailUrl = getThumbnailUrl(id);
+          
+          // Initialize projectHTML with the new layout including thumbnail
           var projectHTML = `
-            <div class="project col-md-3 col-sm-5 col-12" data-aos="fade-in" data-aos-delay="${delay}">
-              <div class="d-flex flex-row align-item-center justify-content-between">
-                <h1>${title}</h1>
-                <h3>${date}</h3>
-              </div>
-                <h2>${tags}</h2>
-                <p>${description}</p>
-                <div class="d-flex flex-row justify-content-center align-items-center">
+  <div class="project col-xl-5 col-12 d-flex justify-content-center" data-aos="fade-in" data-aos-delay="${delay}">
+    <div class="project-card d-flex">
+      <div class="project-content d-flex flex-column justify-content-start">
+        <div class="d-flex flex-row align-items-center justify-content-between mb-2">
+          <h1 class="project-title">${title}</h1>
+          <h3 class="project-date">${date}</h3>
+        </div>
+        <h2 class="project-tags">${tags}</h2>
+        <p class="project-description">${description}</p>
+        <div class="project-links d-flex flex-row justify-content-center align-items-center">
           `;
           delay += 25
+          
           // Loop through the links dictionary and add the corresponding tags with links
           for (const [key, value] of Object.entries(links)) {
             if (value) {
-              projectHTML += `<a href="${value}" target="_blank">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`;
+              projectHTML += `<a href="${value}" target="_blank" class="project-link">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`;
             }
           }
   
-          // Close the projectHTML structure
+          // Add thumbnail and close the projectHTML structure
           projectHTML += `
+                  </div>
                 </div>
+                <div class="project-thumbnail">
+                  <img src="${thumbnailUrl}" 
+                       alt="Thumbnail for ${title}" 
+                       class="thumbnail-img"
+                       onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                       onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                  <div class="thumbnail-placeholder" style="display: none;">
+                    <span>No thumbnail available for project id ${id}</span>
+                  </div>
+                </div>
+              </div>
             </div>
           `;
   
           // Append the projectHTML to the project list
           document.getElementById('project-container-row').innerHTML += projectHTML;
         });
+        
+        // After all projects are loaded, try alternative extensions for failed images
+        setTimeout(() => {
+          document.querySelectorAll('.thumbnail-img').forEach(img => {
+            if (img.style.display === 'none' || img.complete === false) {
+              const originalSrc = img.src;
+              const basePath = originalSrc.substring(0, originalSrc.lastIndexOf('.'));
+              const extensions = ['jpg', 'jpeg', 'png'];
+              
+              let extensionIndex = 0;
+              const tryNextExtension = () => {
+                if (extensionIndex < extensions.length) {
+                  const newSrc = `${basePath}.${extensions[extensionIndex]}`;
+                  img.onload = () => {
+                    img.style.display = 'block';
+                    img.nextElementSibling.style.display = 'none';
+                  };
+                  img.onerror = () => {
+                    extensionIndex++;
+                    tryNextExtension();
+                  };
+                  img.src = newSrc;
+                } else {
+                  // All extensions failed, show placeholder
+                  img.style.display = 'none';
+                  img.nextElementSibling.style.display = 'block';
+                }
+              };
+              
+              tryNextExtension();
+            }
+          });
+        }, 100);
+        
         console.log('Project list updated')
       })
       .catch(error => {

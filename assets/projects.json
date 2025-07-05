@@ -56,7 +56,7 @@
             "title": "Wordle Solver",
             "date": "February '25",
             "tags": "Natural Language Processing",
-            "description": "Optimal strategy solver for Wordle that achieves 100% success rate with an average of 2.91 guesses in 0.5 seconds.",
+            "description": "Optimal strategy solver for Wordle that achieves 100% success rate with an average of 2.89 guesses in 0.5 seconds.",
             "links": {
                 "Code": "https://github.com/giacomo-ciro/wordle-solver"
             },
@@ -68,7 +68,8 @@
             "tags": "Software Development",
             "description": "A search engine for influencers.",
             "links": {
-                "Gooper v1": "assets/docs/gooper.pdf"
+                "Architecture": "assets/docs/gooper.pdf",
+                "Gooper V1 (dev)": "https://gooper.nuxt.dev/"
             },
             "id": "250108"
         },
@@ -180,7 +181,7 @@
             "title": "Production Function Estimation",
             "date": "May '23",
             "tags": "R, Panel Data Analysis, FE/RE Model",
-            "description": "Applied Fixed Effect and Random Effect models to estimate firm production functions while controlling for individual and time-specific heterogeneity.",
+            "description": "Applied Fixed Effect and Random Effect models to estimate a company's production functions while controlling for individual and time-specific heterogeneity.",
             "links": {
                 "Code": "https://github.com/giacomo-ciro/production_function_estimation"
             },
@@ -209,7 +210,7 @@
             "id": "230408"
         },
         {
-            "title": "Taylor Rule Estimation by OLS",
+            "title": "Taylor Rule Estimation",
             "date": "February '23",
             "tags": "R, Linear Regression",
             "description": "Estimated Austria's interest rate policy using OLS regression and Taylor's rule framework, with comprehensive diagnostic testing for model robustness.",
