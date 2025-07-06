@@ -1,6 +1,18 @@
 {
     "timeline": [
         {
+            "date": "23 June 2025",
+            "event": "Started an internship as Machine Learning Engineer at <a href='https://www.lexroom.ai/'>Lexroom.ai</a>"
+        },
+        {
+            "date": "20 June 2025",
+            "event": "Exam: Information Theory"
+        },
+        {
+            "date": "29 May 2025",
+            "event": "Exam: Computer Vision & Image Processing"
+        },
+        {
             "date": "22 May 2025",
             "event": "Exam: Deep Learning & Reinforcement Learning"
         },
