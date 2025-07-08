@@ -115,7 +115,7 @@
             "id": "240912"
         },
         {
-            "title": "Bachelor of Science Thesis",
+            "title": "BSc Thesis",
             "date": "July '24",
             "tags": "Bioinformatics, Machine Learning",
             "description": "Enhanced scGPT transformer model for gene expression prediction by incorporating biological knowledge of transcriptional regulation, achieving significant accuracy improvements.",
