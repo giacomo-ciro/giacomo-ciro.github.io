@@ -452,11 +452,50 @@ footer {
 
 .timeline-title {
     font-size: 18px;
-    margin: 5px 0;
+    margin: 0 0 1rem 0;
 }
 
 .timeline-event:nth-last-child(1):before {
     visibility: hidden;
+}
+
+/* Timeline highlighting based on importance */
+.timeline-event.strong .timeline-dot {
+    /* width: 24px;
+    height: 24px; */
+    background-color: var(--accent-color); /* more vivid color for strong events */
+    box-shadow: 0 0 4px var(--accent-color);
+    /* left: -32px; */
+}
+
+.timeline-event.weak .timeline-dot {
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-color);
+    left: -28px;
+}
+
+.timeline-event.strong .timeline-title {
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+.timeline-event.weak .timeline-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--accent-color);
+}
+
+.timeline-event.strong .timeline-date {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+.timeline-event.weak .timeline-date {
+    font-size: 0.85rem;
+    font-weight: 350;
+    color: var(--accent-color);
 }
 
 /*-------------------------------------------------------------------

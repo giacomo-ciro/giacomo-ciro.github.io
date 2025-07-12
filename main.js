@@ -125,22 +125,20 @@ function updateTimeline(){
     .then(data => {
       const chronologicalEvents = data['timeline'];
       chronologicalEvents.forEach(project => {
-        const { date, event } = project;
-        
-        // Initialize projectHTML with the common elements
+        const { date, event, strong } = project;
+        // Assign class based on 'strong'
+        const eventClass = strong ? 'strong' : 'weak';
         var projectHTML = `
-                  <div class="timeline-event d-flex flex-row align-items-center" data-aos="fade-in" data-aos-delay="${delay}">
-                      <div class="timeline-dot"></div>
-                      <div class="timeline-content">
-                          <div class="timeline-date">${date}</div>
-                          <div class="timeline-title">${event}</div>
-                      </div>
-                  </div>
+          <div class="timeline-event ${eventClass} d-flex flex-row align-items-center" data-aos="fade-in" data-aos-delay="${delay}">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                  <div class="timeline-date">${date}</div>
+                  <div class="timeline-title">${event}</div>
+              </div>
+          </div>
         `;
-        // Append the projectHTML to the project list
         document.getElementById('timeline-container').innerHTML += projectHTML;
-
-        delay += 50
+        delay += 0
       });
       console.log('Timeline updated')
       })

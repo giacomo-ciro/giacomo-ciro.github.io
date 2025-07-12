@@ -2,7 +2,7 @@
     "timeline": [
         {
             "date": "23 June 2025",
-            "event": "Started an internship as Machine Learning Engineer at <a href='https://www.lexroom.ai/'>Lexroom.ai</a>",
+            "event": "Started an internship as Machine Learning Engineer at <a href='https://www.lexroom.ai/' target='_blank'>Lexroom.ai</a>",
             "strong": true
         },
         {
@@ -22,7 +22,7 @@
         },
         {
             "date": "1 May 2025",
-            "event": "Renewed my contract as Machine Learning Researcher at BIDSA",
+            "event": "Renewed my contract as Machine Learning Researcher at <a href='https://bidsa.unibocconi.eu/' target='_blank'>BIDSA</a>",
             "strong": true
         },
         {
@@ -47,12 +47,12 @@
         },
         {
             "date": "1 September 2024",
-            "event": "Started a new position as Machine Learning Researcher at BIDSA",
+            "event": "Started a new position as Machine Learning Researcher at <a href='https://bidsa.unibocconi.eu/' target='_blank'>BIDSA</a>",
             "strong": true
         },
         {
             "date": "August 2024",
-            "event": "Restructured BSML as the first Machine Learning Project Incubator at Bocconi University",
+            "event": "Restructured <a href='https://bsmachinelearning.com/' target='_blank'>BSML</a> as the first Machine Learning Project Incubator at Bocconi University",
             "strong": true
         },
         {
@@ -107,7 +107,7 @@
         },
         {
             "date": "June 2023",
-            "event": "Co-founded BSML",
+            "event": "Co-founded <a href='https://bsmachinelearning.com/' target='_blank'>BSML</a>",
             "strong": true
         },
         {
@@ -128,7 +128,7 @@
         {
             "date": "May 2023",
             "event": "Decided to pursue a career in Machine Learning",
-            "strong": false
+            "strong": true
         },
         {
             "date": "12 January 2023",
