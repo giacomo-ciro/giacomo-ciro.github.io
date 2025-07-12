@@ -2,175 +2,218 @@
     "timeline": [
         {
             "date": "23 June 2025",
-            "event": "Started an internship as Machine Learning Engineer at <a href='https://www.lexroom.ai/'>Lexroom.ai</a>"
+            "event": "Started an internship as Machine Learning Engineer at <a href='https://www.lexroom.ai/'>Lexroom.ai</a>",
+            "type": "career"
         },
         {
             "date": "20 June 2025",
-            "event": "Exam: Information Theory"
+            "event": "Exam: Information Theory",
+            "type": "exam"
         },
         {
             "date": "29 May 2025",
-            "event": "Exam: Computer Vision & Image Processing"
+            "event": "Exam: Computer Vision & Image Processing",
+            "type": "exam"
         },
         {
             "date": "22 May 2025",
-            "event": "Exam: Deep Learning & Reinforcement Learning"
+            "event": "Exam: Deep Learning & Reinforcement Learning",
+            "type": "exam"
         },
         {
             "date": "1 May 2025",
-            "event": "Renewed my contract as Machine Learning Researcher at BIDSA"
+            "event": "Renewed my contract as Machine Learning Researcher at BIDSA",
+            "type": "career"
         },
         {
             "date": "13 January 2025",
-            "event": "Exam: Software Engineering"
+            "event": "Exam: Software Engineering",
+            "type": "exam"
         },
         {
             "date": "9 January 2025",
-            "event": "Exam: Mathematical Methods in Computer Science"
+            "event": "Exam: Mathematical Methods in Computer Science",
+            "type": "exam"
         },
         {
             "date": "11 December 2024",
-            "event": "Exam: Algorithms for Optimization and Inference"
+            "event": "Exam: Algorithms for Optimization and Inference",
+            "type": "exam"
         },
         {
             "date": "9 September 2024",
-            "event": "Enrolled in a MSc in Artificial Intelligence"
+            "event": "Enrolled in a MSc in Artificial Intelligence",
+            "type": "career"
         },
         {
             "date": "1 September 2024",
-            "event": "Started a new position as Machine Learning Researcher at BIDSA"
+            "event": "Started a new position as Machine Learning Researcher at BIDSA",
+            "type": "career"
         },
         {
             "date": "August 2024",
-            "event": "Restructured BSML as the first Machine Learning Project Incubator at Bocconi University"
+            "event": "Restructured BSML as the first Machine Learning Project Incubator at Bocconi University",
+            "type": "career"
         },
         {
             "date": "18 July 2024",
-            "event": "Graduated with 110 Cum Laude"
+            "event": "Graduated with 110 Cum Laude",
+            "type": "milestone"
         },
         {
             "date": "18 June 2024",
-            "event": "Exam: Information System Management"
+            "event": "Exam: Information System Management",
+            "type": "exam"
         },
         {
             "date": "13 June 2024",
-            "event": "Submitted my BSc Thesis"
+            "event": "Submitted my BSc Thesis",
+            "type": "milestone"
         },
         {
             "date": "5 June 2024",
-            "event": "Exam: Mechanism Design"
+            "event": "Exam: Mechanism Design",
+            "type": "exam"
         },
         {
             "date": "20 May 2024",
-            "event": "Exam: Elements of Real and Fourier Analysis"
+            "event": "Exam: Elements of Real and Fourier Analysis",
+            "type": "exam"
         },
         {
             "date": "29 January 2024",
-            "event": "Exam: Game Theory"
+            "event": "Exam: Game Theory",
+            "type": "exam"
         },
         {
             "date": "18 January 2024",
-            "event": "Exam: Marketing Analytics"
+            "event": "Exam: Marketing Analytics",
+            "type": "exam"
         },
         {
             "date": "11 December 2023",
-            "event": "Exam: Big Data & Databases"
+            "event": "Exam: Big Data & Databases",
+            "type": "exam"
         },
         {
             "date": "September 2023",
-            "event": "Started my boxing career"
+            "event": "Started my boxing career",
+            "type": "personal"
         },
         {
             "date": "12 June 2023",
-            "event": "Exam: Advanced Statistics"
+            "event": "Exam: Advanced Statistics",
+            "type": "exam"
         },
         {
             "date": "June 2023",
-            "event": "Co-founded BSML"
+            "event": "Co-founded BSML",
+            "type": "career"
         },
         {
             "date": "30 May 2023",
-            "event": "Exam: Econometrics"
+            "event": "Exam: Econometrics",
+            "type": "exam"
         },
         {
             "date": "26 May 2023",
-            "event": "Exam: Principles of Finance"
+            "event": "Exam: Principles of Finance",
+            "type": "exam"
         },
         {
             "date": "16 May 2023",
-            "event": "Exam: Machine Learning"
+            "event": "Exam: Machine Learning",
+            "type": "exam"
         },
         {
             "date": "May 2023",
-            "event": "Decided to pursue a career in Machine Learning"
+            "event": "Decided to pursue a career in Machine Learning",
+            "type": "exam"
         },
         {
             "date": "12 January 2023",
-            "event": "Exam: European and International IT Law and Data Economy"
+            "event": "Exam: European and International IT Law and Data Economy",
+            "type": "exam"
         },
         {
             "date": "9 January 2023",
-            "event": "Exam: Advanced Mathematics"
+            "event": "Exam: Advanced Mathematics",
+            "type": "exam"
         },
         {
             "date": "21 December 2022",
-            "event": "Exam: Macroeconomics"
+            "event": "Exam: Macroeconomics",
+            "type": "exam"
         },
         {
             "date": "14 December 2022",
-            "event": "Exam: Computer Programming"
+            "event": "Exam: Computer Programming",
+            "type": "exam"
         },
         {
             "date": "25 May 2022",
-            "event": "Exam: Accounting"
+            "event": "Exam: Accounting",
+            "type": "exam"
         },
         {
             "date": "19 May 2022",
-            "event": "Exam: Fundamentals of IT Law"
+            "event": "Exam: Fundamentals of IT Law",
+            "type": "exam"
         },
         {
             "date": "16 May 2022",
-            "event": "Exam: Statistics"
+            "event": "Exam: Statistics",
+            "type": "exam"
         },
         {
             "date": "13 May 2022",
-            "event": "Exam: Fundamentals of Computer Science"
+            "event": "Exam: Fundamentals of Computer Science",
+            "type": "exam"
         },
         {
             "date": "18 January 2022",
-            "event": "Exam: Principles of Management"
+            "event": "Exam: Principles of Management",
+            "type": "exam"
         },
         {
             "date": "11 January 2022",
-            "event": "Exam: Microeconomics"
+            "event": "Exam: Microeconomics",
+            "type": "exam"
         },
         {
             "date": "14 December 2021",
-            "event": "Exam: Mathematics"
+            "event": "Exam: Mathematics",
+            "type": "exam"
         },
         {
             "date": "September 2021",
-            "event": "Enrolled in a BSc in Economics and Computer Science"
+            "event": "Enrolled in a BSc in Economics and Computer Science",
+            "type": "career"
         },
         {
             "date": "June 2021",
-            "event": "Received my High School Diploma"
+            "event": "Received my High School Diploma",
+            "type": "milestone"
         },
         {
             "date": "3 October 2013",
-            "event": "Established the village #2VQLJOP (currently TH 16)"
+            "event": "Established the village #2VQLJOP (currently TH 16)",
+            "type": "personal"
         },
         {
             "date": "September 2010",
-            "event": "Started my rugby career"
+            "event": "Started my rugby career",
+            "type": "personal"
         },
         {
             "date": "September 2009",
-            "event": "Joined a boy-scout group "
+            "event": "Joined a boy-scout group ",
+            "type": "personal"
         },
         {
             "date": "9 July 2002",
-            "event": "Deployed to the warzone"
+            "event": "Deployed to the warzone",
+            "type": "personal"
         }
     ]
 }
