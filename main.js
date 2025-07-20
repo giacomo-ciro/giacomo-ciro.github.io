@@ -229,6 +229,21 @@ function includeChatbot() {
 
 // Chatbot Functionality - FIXED VERSION
 function initializeChatbot() {
+
+  // Render the version
+  fetch('https://brimax.pythonanywhere.com/status')
+    .then(response => response.json())
+    .then(data => {
+      if (data.version) {
+        const title = document.getElementById('chatbot-title');
+        if (title) {
+          title.textContent += ` (v${data.version})`;
+        }
+      }
+    })
+    .catch(error => {
+      console.error('Failed to fetch chatbot version:', error);
+    });
   // Chatbot Class Definition
   class Chatbot {
     constructor() {
@@ -244,7 +259,7 @@ function initializeChatbot() {
         content: "Ciao! I'm Giacomino, ask me anything about Giacomo—I'll help if I can!" 
       });
     }
-
+    
     bindEvents() {
       const button = document.getElementById('chatbot-button');
       const closeBtn = document.getElementById('chatbot-close');
