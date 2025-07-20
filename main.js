@@ -1,11 +1,14 @@
-// All variables
-const excluded_ids = ["230430", "230621"]
+const BRANCH_NAME="main";
+const PATH_TO_ROOT = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 
+  window.location.origin : `https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/${BRANCH_NAME}`;
+
+const PROJECTS_TO_EXCLUDE = ["230430", "230621"];
 
 // Update title for all
 document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
 
 function updateProjects(){
-    fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/projects.json")
+    fetch(`${PATH_TO_ROOT}/assets/projects.json`)
       .then(response => response.json())
       .then(data => {
         delay = 0
@@ -13,7 +16,7 @@ function updateProjects(){
           const { title, date, tags, description, links, id } = project;
           
           // Skip unwanted projects
-          if (excluded_ids.includes(id)) {
+          if (PROJECTS_TO_EXCLUDE.includes(id)) {
             return;
           }
           // Function to find the correct thumbnail extension
@@ -110,7 +113,7 @@ function updateProjects(){
   };
 
 function includeFooter() {
-  fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/footer.html")
+  fetch(`${PATH_TO_ROOT}/footer.html`)
       .then(response => response.text())
       .then(data => {
           document.getElementById('footer').innerHTML = data;
@@ -120,7 +123,7 @@ function includeFooter() {
 
 function updateTimeline(){
   delay = 0
-  fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/timeline.json")
+  fetch(`${PATH_TO_ROOT}/assets/timeline.json`)
     .then(response => response.json())
     .then(data => {
       const chronologicalEvents = data['timeline'];
@@ -157,7 +160,7 @@ function updateQuotes() {
   // Clear existing quotes
   quotesContainer.innerHTML = '';
   
-  fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/assets/quotes.json")
+  fetch(`${PATH_TO_ROOT}/assets/quotes.json`)
     .then(response => response.json())
     .then(data => {
       // If no quotes, show message
@@ -209,7 +212,7 @@ function updateQuotes() {
 
 // Chatbot Integration
 function includeChatbot() {
-  fetch("https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/main/chatbot.html")
+  fetch(`${PATH_TO_ROOT}/chatbot.html`)
       .then(response => response.text())
       .then(data => {
           // Create a container and insert the chatbot HTML
