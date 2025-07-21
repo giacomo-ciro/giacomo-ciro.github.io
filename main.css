@@ -596,3 +596,19 @@ footer {
     color: var(--accent-color);
     margin: 3rem 0;
 }
+
+.chatbot-model-info {
+  background: var(--contrast-color, #eee);
+  color: var(--default-color, #444);
+  font-size: 12px;
+  padding: 6px 18px;
+  border-bottom: 1px solid var(--contrast-color, #ddd);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.chatbot-model-info i {
+  color: var(--accent-color, #666);
+  font-size: 14px;
+}

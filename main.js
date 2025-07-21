@@ -230,19 +230,27 @@ function includeChatbot() {
 // Chatbot Functionality - FIXED VERSION
 function initializeChatbot() {
 
-  // Render the version
+  // Render the version and model info
+  // Fetch and render chatbot version and model info
   fetch('https://brimax.pythonanywhere.com/status')
     .then(response => response.json())
     .then(data => {
-      if (data.version) {
-        const title = document.getElementById('chatbot-title');
-        if (title) {
-          title.textContent += ` (v${data.version})`;
-        }
+      // Update version in title
+      const title = document.getElementById('chatbot-title');
+      if (title && data.version) {
+        title.textContent += ` (v${data.version})`;
+      }
+      // Update model info
+      const modelInfo = document.getElementById('chatbot-model-info');
+      const modelText = document.getElementById('chatbot-model-text');
+      if (modelInfo && modelText && data.models && data.models.model_text) {
+        const modelName = data.models.model_text.split('/').pop().replace(/-/g, ' ');
+        modelText.textContent = `Powered by: ${modelName}`;
+        modelInfo.style.display = 'flex';
       }
     })
     .catch(error => {
-      console.error('Failed to fetch chatbot version:', error);
+      console.error('Failed to fetch chatbot version/model:', error);
     });
   // Chatbot Class Definition
   class Chatbot {
