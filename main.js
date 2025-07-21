@@ -1,7 +1,7 @@
 const BRANCH_NAME="main";
 const PATH_TO_ROOT = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 
   window.location.origin : `https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/${BRANCH_NAME}`;
-
+const PATH_TO_GIACOMINO_API= "https://brimax.pythonanywhere.com";
 const PROJECTS_TO_EXCLUDE = ["230430", "230621"];
 
 // Update title for all
@@ -232,7 +232,7 @@ function initializeChatbot() {
 
   // Render the version and model info
   // Fetch and render chatbot version and model info
-  fetch('https://brimax.pythonanywhere.com/status')
+  fetch(`${PATH_TO_GIACOMINO_API}/status`)
     .then(response => response.json())
     .then(data => {
       // Update version in title
@@ -257,7 +257,7 @@ function initializeChatbot() {
     constructor() {
       this.isOpen = false;
       this.isLoading = false;
-      this.apiUrl = 'https://brimax.pythonanywhere.com/chat';
+      this.apiUrl = `${PATH_TO_GIACOMINO_API}/chat`;
       this.history = [];
       this.bindEvents();
       
