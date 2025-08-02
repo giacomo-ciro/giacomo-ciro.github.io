@@ -153,39 +153,44 @@ a:hover {
 }
 
 /*-------------------------------------------------------------------
-# Sections
+# About
 --------------------------------------------------------------------*/
 
-.section {
-    margin: 5rem 0 5rem 0;
+.about {
+  padding: 2.5rem 0 0 0;
+}
+.about h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: solid var(--default-color);
+  border-width: 0.01rem;
 }
 
-.section h1 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-align: center;
-    border-bottom: solid var(--default-color);
-    border-width: 0.01rem;
+.about #about-me-content {
+  margin: 1rem 0 1rem 0;
+}
+.about a {
+  color: #0d1d91;
 }
 
-.section a {
-    color: #0d1d91;
+.about a:hover {
+  text-decoration: underline;
+  transition: 3s ease-in;
 }
 
-.section a:hover {
-    text-decoration: underline;
-    transition: 3s ease-in;
-}
-
-.section p {
-    text-align: justify;
-    text-justify: inter-word;
+.about p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /*-------------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------------*/
 
+.hero {
+  margin: 2.5rem 0 0 0;
+}
 .hero .img-container {
   max-width: 50%;
   height: auto;
@@ -505,10 +510,6 @@ footer {
 /*-------------------------------------------------------------------
 # Quotes
 --------------------------------------------------------------------*/
-
-.section {
-    margin: 3rem 0 5rem 0;
-}
 
 .quotes-disclaimer {
     text-align: right;

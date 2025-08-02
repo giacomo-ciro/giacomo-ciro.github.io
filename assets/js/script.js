@@ -5,130 +5,36 @@ const GIACOMINO_API_URL= "https://brimax.pythonanywhere.com";
 const PROJECTS_TO_EXCLUDE = ["230430", "230621"];
 const PATH_TO_JSONS=`${PATH_TO_ROOT}/assets/jsons`;
 const PATH_TO_TEMPLATES=`${PATH_TO_ROOT}/assets/templates`;
-
+const PATH_TO_MARKDOWNS=`${PATH_TO_ROOT}/assets/markdowns`;
 
 // ----------------------
 //      [functions] 
 // ----------------------
 
+function showLoader() {
+  const preloader = document.createElement('div');
+  preloader.id = 'preloader';
+  document.body.appendChild(preloader);
+}
+
+function hideLoader() {
+  const loaderDiv = document.getElementById('preloader');
+  if (loaderDiv) {
+    loaderDiv.remove();
+  }
+}
+
 function includeHeader(){
   fetch(`${PATH_TO_TEMPLATES}/header.html`)
     .then(response => response.text())
     .then(data => {
-        console.log(data);
         const header = document.getElementById('header');
         header.innerHTML = data;
-        console.log(header)
         console.log('Header updated')
       }).catch(error => {
         console.error('Error including header:', error);
       });
 };
-
-function updateProjects(){
-    fetch(`${PATH_TO_JSONS}/projects.json`)
-      .then(response => response.json())
-      .then(data => {
-        delay = 0
-        data['projects'].forEach(project => {
-          const { title, date, tags, description, links, id } = project;
-          
-          // Skip unwanted projects
-          if (PROJECTS_TO_EXCLUDE.includes(id)) {
-            return;
-          }
-          // Function to find the correct thumbnail extension
-          const getThumbnailUrl = (projectId) => {
-            const extensions = ['png', 'jpg', 'jpeg'];
-            // We'll try each extension - the browser will handle 404s gracefully
-            return `assets/img/thumbnails/${projectId}.png`; // Default to png, fallback handled in HTML
-          };
-          
-          const thumbnailUrl = getThumbnailUrl(id);
-          
-          // Initialize projectHTML with the new layout including thumbnail
-          var projectHTML = `
-  <div class="project col-xl-5 col-12 d-flex justify-content-center" data-aos="fade-in" data-aos-delay="${delay}">
-    <div class="project-card d-flex">
-      <div class="project-content d-flex flex-column justify-content-start">
-        <div class="d-flex flex-row align-items-center justify-content-between mb-2">
-          <h1 class="project-title">${title}</h1>
-          <h3 class="project-date">${date}</h3>
-        </div>
-        <h2 class="project-tags">${tags}</h2>
-        <p class="project-description">${description}</p>
-        <div class="project-links d-flex flex-row justify-content-center align-items-center">
-          `;
-          delay += 25
-          
-          // Loop through the links dictionary and add the corresponding tags with links
-          for (const [key, value] of Object.entries(links)) {
-            if (value) {
-              projectHTML += `<a href="${value}" target="_blank" class="project-link">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`;
-            }
-          }
-  
-          // Add thumbnail and close the projectHTML structure
-          projectHTML += `
-                  </div>
-                </div>
-                <div class="project-thumbnail">
-                  <img src="${thumbnailUrl}" 
-                       alt="Thumbnail for ${title}" 
-                       class="thumbnail-img"
-                       onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-                       onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
-                  <div class="thumbnail-placeholder" style="display: none;">
-                    <span>No thumbnail available for project id ${id}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          `;
-  
-          // Append the projectHTML to the project list
-          document.getElementById('project-container-row').innerHTML += projectHTML;
-        });
-        
-        // After all projects are loaded, try alternative extensions for failed images
-        setTimeout(() => {
-          document.querySelectorAll('.thumbnail-img').forEach(img => {
-            if (img.style.display === 'none' || img.complete === false) {
-              const originalSrc = img.src;
-              const basePath = originalSrc.substring(0, originalSrc.lastIndexOf('.'));
-              const extensions = ['jpg', 'jpeg', 'png'];
-              
-              let extensionIndex = 0;
-              const tryNextExtension = () => {
-                if (extensionIndex < extensions.length) {
-                  const newSrc = `${basePath}.${extensions[extensionIndex]}`;
-                  img.onload = () => {
-                    img.style.display = 'block';
-                    img.nextElementSibling.style.display = 'none';
-                  };
-                  img.onerror = () => {
-                    extensionIndex++;
-                    tryNextExtension();
-                  };
-                  img.src = newSrc;
-                } else {
-                  // All extensions failed, show placeholder
-                  img.style.display = 'none';
-                  img.nextElementSibling.style.display = 'block';
-                }
-              };
-              
-              tryNextExtension();
-            }
-          });
-        }, 100);
-        
-        console.log('Project list updated')
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  };
 
 function includeFooter() {
   fetch(`${PATH_TO_TEMPLATES}/footer.html`)
@@ -139,96 +45,18 @@ function includeFooter() {
       });
 };
 
-function updateTimeline(){
-  delay = 0
-  fetch(`${PATH_TO_JSON}/timeline.json`)
-    .then(response => response.json())
-    .then(data => {
-      const chronologicalEvents = data['timeline'];
-      chronologicalEvents.forEach(project => {
-        const { date, event, strong } = project;
-        // Assign class based on 'strong'
-        const eventClass = strong ? 'strong' : 'weak';
-        var projectHTML = `
-          <div class="timeline-event ${eventClass} d-flex flex-row align-items-center" data-aos="fade-in" data-aos-delay="${delay}">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                  <div class="timeline-date">${date}</div>
-                  <div class="timeline-title">${event}</div>
-              </div>
-          </div>
-        `;
-        document.getElementById('timeline-container').innerHTML += projectHTML;
-        delay += 0
-      });
-      console.log('Timeline updated')
-      })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
-
+function includeAbouteMe(){
+  fetch(`${PATH_TO_MARKDOWNS}/aboutme.md`)
+    .then(data => data.text())
+    .then(text => {
+      let aboutMeHTML = marked.parse(text);
+      console.log(aboutMeHTML)
+      aboutMeHTML = aboutMeHTML.replace(/<p>/g, '<p data-aos="fade-up">')
+      console.log(aboutMeHTML)
+      document.getElementById('about-me-content').innerHTML = aboutMeHTML;
+    })
 };
 
-function updateQuotes() {
-  let delay = 0;
-  const quotesContainer = document.getElementById('quotes-container-row');
-  
-  if (!quotesContainer) return;
-  
-  // Clear existing quotes
-  quotesContainer.innerHTML = '';
-  
-  fetch(`${PATH_TO_JSON}/quotes.json`)
-    .then(response => response.json())
-    .then(data => {
-      // If no quotes, show message
-      if (!data.quotes || data.quotes.length === 0) {
-        quotesContainer.innerHTML = '<div class="no-quotes">No quotes found. Add some to your quotes.json file!</div>';
-        return;
-      }
-      
-      // Randomize quotes array using Fisher-Yates (Knuth) shuffle algorithm
-      const quotes = [...data.quotes]; // Create a copy of the quotes array
-      for (let i = quotes.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [quotes[i], quotes[j]] = [quotes[j], quotes[i]]; // Swap elements
-      }
-      
-      // Render randomized quotes
-      quotes.forEach(quote => {
-        const { text, author, source, year } = quote;
-        let quoteHTML = `
-          <div class="quote-card col-md-3 col-sm-5 col-12" data-aos="fade-up" data-aos-delay="${delay}">
-            <p class="quote-content">${text}</p>
-            <p class="quote-author">${author || 'Unknown'}</p>
-        `;
-        
-        // Add source info if available
-        if (source || year) {
-          quoteHTML += `<p class="quote-source">${source || ''}${source && year ? ', ' : ''}${year || ''}</p>`;
-        }
-        
-        quoteHTML += `</div>`;
-        
-        // Append quote to container
-        quotesContainer.innerHTML += quoteHTML;
-        
-        delay += 0;
-      });
-      
-      console.log('Quotes updated and randomized');
-    })
-    .catch(error => {
-      console.error('Error fetching quotes:', error);
-      // Hide loading indicator and show error message
-      if (loadingIndicator) {
-        loadingIndicator.style.display = 'none';
-      }
-      quotesContainer.innerHTML = '<div class="no-quotes">Failed to load quotes. Please try again later.</div>';
-    });
-}
-
-// Chatbot Integration
 function includeChatbot() {
   fetch(`${PATH_TO_TEMPLATES}/chatbot.html`)
       .then(response => response.text())
@@ -245,7 +73,6 @@ function includeChatbot() {
       });
 }
 
-// Chatbot Functionality - FIXED VERSION
 function initializeChatbot() {
 
   // Render the version and model info
@@ -432,17 +259,198 @@ function initializeChatbot() {
   console.log('Chatbot initialized successfully');
 }
 
-function showLoader() {
-  const preloader = document.createElement('div');
-  preloader.id = 'preloader';
-  document.body.appendChild(preloader);
-}
+function updateProjects(){
+    fetch(`${PATH_TO_JSONS}/projects.json`)
+      .then(response => response.json())
+      .then(data => {
+        delay = 0
+        data['projects'].forEach(project => {
+          const { title, date, tags, description, links, id } = project;
+          
+          // Skip unwanted projects
+          if (PROJECTS_TO_EXCLUDE.includes(id)) {
+            return;
+          }
+          // Function to find the correct thumbnail extension
+          const getThumbnailUrl = (projectId) => {
+            const extensions = ['png', 'jpg', 'jpeg'];
+            // We'll try each extension - the browser will handle 404s gracefully
+            return `assets/img/thumbnails/${projectId}.png`; // Default to png, fallback handled in HTML
+          };
+          
+          const thumbnailUrl = getThumbnailUrl(id);
+          
+          // Initialize projectHTML with the new layout including thumbnail
+          var projectHTML = `
+  <div class="project col-xl-5 col-12 d-flex justify-content-center" data-aos="fade-in" data-aos-delay="${delay}">
+    <div class="project-card d-flex">
+      <div class="project-content d-flex flex-column justify-content-start">
+        <div class="d-flex flex-row align-items-center justify-content-between mb-2">
+          <h1 class="project-title">${title}</h1>
+          <h3 class="project-date">${date}</h3>
+        </div>
+        <h2 class="project-tags">${tags}</h2>
+        <p class="project-description">${description}</p>
+        <div class="project-links d-flex flex-row justify-content-center align-items-center">
+          `;
+          delay += 25
+          
+          // Loop through the links dictionary and add the corresponding tags with links
+          for (const [key, value] of Object.entries(links)) {
+            if (value) {
+              projectHTML += `<a href="${value}" target="_blank" class="project-link">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`;
+            }
+          }
+  
+          // Add thumbnail and close the projectHTML structure
+          projectHTML += `
+                  </div>
+                </div>
+                <div class="project-thumbnail">
+                  <img src="${thumbnailUrl}" 
+                       alt="Thumbnail for ${title}" 
+                       class="thumbnail-img"
+                       onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                       onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                  <div class="thumbnail-placeholder" style="display: none;">
+                    <span>No thumbnail available for project id ${id}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+  
+          // Append the projectHTML to the project list
+          document.getElementById('project-container-row').innerHTML += projectHTML;
+        });
+        
+        // After all projects are loaded, try alternative extensions for failed images
+        setTimeout(() => {
+          document.querySelectorAll('.thumbnail-img').forEach(img => {
+            if (img.style.display === 'none' || img.complete === false) {
+              const originalSrc = img.src;
+              const basePath = originalSrc.substring(0, originalSrc.lastIndexOf('.'));
+              const extensions = ['jpg', 'jpeg', 'png'];
+              
+              let extensionIndex = 0;
+              const tryNextExtension = () => {
+                if (extensionIndex < extensions.length) {
+                  const newSrc = `${basePath}.${extensions[extensionIndex]}`;
+                  img.onload = () => {
+                    img.style.display = 'block';
+                    img.nextElementSibling.style.display = 'none';
+                  };
+                  img.onerror = () => {
+                    extensionIndex++;
+                    tryNextExtension();
+                  };
+                  img.src = newSrc;
+                } else {
+                  // All extensions failed, show placeholder
+                  img.style.display = 'none';
+                  img.nextElementSibling.style.display = 'block';
+                }
+              };
+              
+              tryNextExtension();
+            }
+          });
+        }, 100);
+        
+        console.log('Project list updated')
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  };
 
-function hideLoader() {
-  const loaderDiv = document.getElementById('preloader');
-  if (loaderDiv) {
-    loaderDiv.remove();
-  }
+function updateTimeline(){
+  delay = 0
+  fetch(`${PATH_TO_JSON}/timeline.json`)
+    .then(response => response.json())
+    .then(data => {
+      const chronologicalEvents = data['timeline'];
+      chronologicalEvents.forEach(project => {
+        const { date, event, strong } = project;
+        // Assign class based on 'strong'
+        const eventClass = strong ? 'strong' : 'weak';
+        var projectHTML = `
+          <div class="timeline-event ${eventClass} d-flex flex-row align-items-center" data-aos="fade-in" data-aos-delay="${delay}">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                  <div class="timeline-date">${date}</div>
+                  <div class="timeline-title">${event}</div>
+              </div>
+          </div>
+        `;
+        document.getElementById('timeline-container').innerHTML += projectHTML;
+        delay += 0
+      });
+      console.log('Timeline updated')
+      })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+
+};
+
+function updateQuotes() {
+  let delay = 0;
+  const quotesContainer = document.getElementById('quotes-container-row');
+  
+  if (!quotesContainer) return;
+  
+  // Clear existing quotes
+  quotesContainer.innerHTML = '';
+  
+  fetch(`${PATH_TO_JSONS}/quotes.json`)
+    .then(response => response.json())
+    .then(data => {
+      // If no quotes, show message
+      if (!data.quotes || data.quotes.length === 0) {
+        quotesContainer.innerHTML = '<div class="no-quotes">No quotes found. Add some to your quotes.json file!</div>';
+        return;
+      }
+      
+      // Randomize quotes array using Fisher-Yates (Knuth) shuffle algorithm
+      const quotes = [...data.quotes]; // Create a copy of the quotes array
+      for (let i = quotes.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [quotes[i], quotes[j]] = [quotes[j], quotes[i]]; // Swap elements
+      }
+      
+      // Render randomized quotes
+      quotes.forEach(quote => {
+        const { text, author, source, year } = quote;
+        let quoteHTML = `
+          <div class="quote-card col-md-3 col-sm-5 col-12" data-aos="fade-up" data-aos-delay="${delay}">
+            <p class="quote-content">${text}</p>
+            <p class="quote-author">${author || 'Unknown'}</p>
+        `;
+        
+        // Add source info if available
+        if (source || year) {
+          quoteHTML += `<p class="quote-source">${source || ''}${source && year ? ', ' : ''}${year || ''}</p>`;
+        }
+        
+        quoteHTML += `</div>`;
+        
+        // Append quote to container
+        quotesContainer.innerHTML += quoteHTML;
+        
+        delay += 0;
+      });
+      
+      console.log('Quotes updated and randomized');
+    })
+    .catch(error => {
+      console.error('Error fetching quotes:', error);
+      // Hide loading indicator and show error message
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+      }
+      quotesContainer.innerHTML = '<div class="no-quotes">Failed to load quotes. Please try again later.</div>';
+    });
 }
 
 // Scroll animation (shadow) on header
@@ -482,12 +490,14 @@ window.onload = function() {
 
   // Dynamic updates based on page
   var path = window.location.pathname;
-  if (path.includes('projects.html')) {
-      updateProjects();
+  if (path.includes('index.html')) {
+    includeAbouteMe();
+  } else if (path.includes('projects.html')) {
+    updateProjects();
   } else if (path.includes('timeline.html')){
-      updateTimeline();
+    updateTimeline();
   } else if (path.includes('quotes.html')) {
-      updateQuotes();
+    updateQuotes();
   }
 
   includeFooter();
