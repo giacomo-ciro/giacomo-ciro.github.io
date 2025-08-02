@@ -4,9 +4,10 @@ const PATH_TO_ROOT = window.location.hostname === 'localhost' || window.location
 const PATH_TO_GIACOMINO_API= "https://brimax.pythonanywhere.com";
 const PROJECTS_TO_EXCLUDE = ["230430", "230621"];
 
-// Update title for all
-document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
 
+// ----------------------
+//      [functions] 
+// ----------------------
 function updateProjects(){
     fetch(`${PATH_TO_ROOT}/assets/projects.json`)
       .then(response => response.json())
@@ -414,9 +415,47 @@ function initializeChatbot() {
   console.log('Chatbot initialized successfully');
 }
 
+function showLoader() {
+      const preloader = document.createElement('div');
+      preloader.id = 'preloader';
+      document.body.appendChild(preloader);
+}
 
-//------------------------------------------- call everything
+function hideLoader() {
+  const loaderDiv = document.getElementById('preloader');
+  if (loaderDiv) {
+    loaderDiv.remove();
+  }
+}
+
+// Scroll animation (shadow) on header
+function toggleScrolled() {
+  const selectBody = document.querySelector('body');
+  const selectHeader = document.querySelector('#header');
+  if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
+  window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+}
+
+function aosInit() {
+  AOS.init({
+    duration: 600,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+}
+
+// ------ [functions end] -------
+
+
+// -----------------------
+//    call everything
+// -----------------------
+// Update title for all
+document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
+
 window.onload = function() {
+
   // if on the project page, update projects
   var path = window.location.pathname;
   if (path.includes('projects.html')) {
@@ -434,23 +473,14 @@ window.onload = function() {
 
   // init aos
   aosInit()
+
+  // Remove loader when page is loaded
+  hideLoader();
 };
 
-function toggleScrolled() {
-  const selectBody = document.querySelector('body');
-  const selectHeader = document.querySelector('#header');
-  if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-  window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-}
+// Show loader immediately when script loads
+showLoader();
+
 
 document.addEventListener('scroll', toggleScrolled);
 window.addEventListener('load', toggleScrolled);
-
-function aosInit() {
-  AOS.init({
-    duration: 600,
-    easing: 'ease-in-out',
-    once: true,
-    mirror: false
-  });
-}
