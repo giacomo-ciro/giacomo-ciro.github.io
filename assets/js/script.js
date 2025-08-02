@@ -366,7 +366,7 @@ function updateProjects(){
 
 function updateTimeline(){
   delay = 0
-  fetch(`${PATH_TO_JSON}/timeline.json`)
+  fetch(`${PATH_TO_JSONS}/timeline.json`)
     .then(response => response.json())
     .then(data => {
       const chronologicalEvents = data['timeline'];

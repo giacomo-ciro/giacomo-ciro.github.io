@@ -510,7 +510,6 @@ footer {
 /*-------------------------------------------------------------------
 # Quotes
 --------------------------------------------------------------------*/
-
 .quotes-disclaimer {
     text-align: right;
     font-weight: 100;
@@ -520,6 +519,10 @@ footer {
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     border-radius: 8px;
+}
+
+.quotes-disclaimer p {
+  text-align: center;
 }
 
 .quote-card {
