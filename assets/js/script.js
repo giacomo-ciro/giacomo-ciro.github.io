@@ -1,15 +1,17 @@
 const BRANCH_NAME="main";
 const PATH_TO_ROOT = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 
   window.location.origin : `https://raw.githubusercontent.com/giacomo-ciro/giacomo-ciro.github.io/refs/heads/${BRANCH_NAME}`;
-const PATH_TO_GIACOMINO_API= "https://brimax.pythonanywhere.com";
+const GIACOMINO_API_URL= "https://brimax.pythonanywhere.com";
 const PROJECTS_TO_EXCLUDE = ["230430", "230621"];
+const PATH_TO_JSONS=`${PATH_TO_ROOT}/assets/jsons`;
+const PATH_TO_TEMPLATES=`${PATH_TO_ROOT}/assets/templates`;
 
 
 // ----------------------
 //      [functions] 
 // ----------------------
 function updateProjects(){
-    fetch(`${PATH_TO_ROOT}/assets/projects.json`)
+    fetch(`${PATH_TO_JSONS}/projects.json`)
       .then(response => response.json())
       .then(data => {
         delay = 0
@@ -114,7 +116,7 @@ function updateProjects(){
   };
 
 function includeFooter() {
-  fetch(`${PATH_TO_ROOT}/footer.html`)
+  fetch(`${PATH_TO_TEMPLATES}/footer.html`)
       .then(response => response.text())
       .then(data => {
           document.getElementById('footer').innerHTML = data;
@@ -124,7 +126,7 @@ function includeFooter() {
 
 function updateTimeline(){
   delay = 0
-  fetch(`${PATH_TO_ROOT}/assets/timeline.json`)
+  fetch(`${PATH_TO_JSON}/timeline.json`)
     .then(response => response.json())
     .then(data => {
       const chronologicalEvents = data['timeline'];
@@ -161,7 +163,7 @@ function updateQuotes() {
   // Clear existing quotes
   quotesContainer.innerHTML = '';
   
-  fetch(`${PATH_TO_ROOT}/assets/quotes.json`)
+  fetch(`${PATH_TO_JSON}/quotes.json`)
     .then(response => response.json())
     .then(data => {
       // If no quotes, show message
@@ -213,7 +215,7 @@ function updateQuotes() {
 
 // Chatbot Integration
 function includeChatbot() {
-  fetch(`${PATH_TO_ROOT}/chatbot.html`)
+  fetch(`${PATH_TO_TEMPLATES}/chatbot.html`)
       .then(response => response.text())
       .then(data => {
           // Create a container and insert the chatbot HTML
@@ -233,7 +235,7 @@ function initializeChatbot() {
 
   // Render the version and model info
   // Fetch and render chatbot version and model info
-  fetch(`${PATH_TO_GIACOMINO_API}/status`)
+  fetch(`${GIACOMINO_API_URL}/status`)
     .then(response => response.json())
     .then(data => {
       // Update version in title
@@ -258,7 +260,7 @@ function initializeChatbot() {
     constructor() {
       this.isOpen = false;
       this.isLoading = false;
-      this.apiUrl = `${PATH_TO_GIACOMINO_API}/chat`;
+      this.apiUrl = `${GIACOMINO_API_URL}/chat`;
       this.history = [];
       this.bindEvents();
       
@@ -416,9 +418,9 @@ function initializeChatbot() {
 }
 
 function showLoader() {
-      const preloader = document.createElement('div');
-      preloader.id = 'preloader';
-      document.body.appendChild(preloader);
+  const preloader = document.createElement('div');
+  preloader.id = 'preloader';
+  document.body.appendChild(preloader);
 }
 
 function hideLoader() {
