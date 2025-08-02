@@ -186,10 +186,14 @@ a:hover {
 # Hero Section
 --------------------------------------------------------------------*/
 
-.hero img{
-    width: 40%;
-    height: auto;
-    border-radius: 5%;
+.hero .img-container {
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero .img-container img {
+  border-radius: 5%;
 }
 
 .hero ul {

@@ -25,7 +25,6 @@ function includeHeader(){
       });
 };
 
-
 function updateProjects(){
     fetch(`${PATH_TO_JSONS}/projects.json`)
       .then(response => response.json())
