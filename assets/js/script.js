@@ -10,6 +10,22 @@ const PATH_TO_TEMPLATES=`${PATH_TO_ROOT}/assets/templates`;
 // ----------------------
 //      [functions] 
 // ----------------------
+
+function includeHeader(){
+  fetch(`${PATH_TO_TEMPLATES}/header.html`)
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        const header = document.getElementById('header');
+        header.innerHTML = data;
+        console.log(header)
+        console.log('Header updated')
+      }).catch(error => {
+        console.error('Error including header:', error);
+      });
+};
+
+
 function updateProjects(){
     fetch(`${PATH_TO_JSONS}/projects.json`)
       .then(response => response.json())
@@ -438,6 +454,7 @@ function toggleScrolled() {
   window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
 }
 
+// Animate on scroll library
 function aosInit() {
   AOS.init({
     duration: 600,
@@ -453,12 +470,18 @@ function aosInit() {
 // -----------------------
 //    call everything
 // -----------------------
+
+// Show loader immediately when script loads
+showLoader();
+
 // Update title for all
 document.querySelector('head').getElementsByTagName('title')[0].innerHTML = 'Giacomo Cirò | MSc in Artificial Intelligence'
 
 window.onload = function() {
 
-  // if on the project page, update projects
+  includeHeader();
+
+  // Dynamic updates based on page
   var path = window.location.pathname;
   if (path.includes('projects.html')) {
       updateProjects();
@@ -467,21 +490,15 @@ window.onload = function() {
   } else if (path.includes('quotes.html')) {
       updateQuotes();
   }
-  // always update footer
+
   includeFooter();
 
-  // add chatbot
   includeChatbot();
 
-  // init aos
   aosInit()
 
-  // Remove loader when page is loaded
   hideLoader();
 };
-
-// Show loader immediately when script loads
-showLoader();
 
 
 document.addEventListener('scroll', toggleScrolled);
