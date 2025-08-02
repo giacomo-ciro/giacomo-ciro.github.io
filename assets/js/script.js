@@ -42,6 +42,8 @@ function includeFooter() {
       .then(data => {
           document.getElementById('footer').innerHTML = data;
           console.log('Footer updated')
+      }).catch(error => {
+        console.error('Error including footer:', error);
       });
 };
 
@@ -50,9 +52,7 @@ function includeAbouteMe(){
     .then(data => data.text())
     .then(text => {
       let aboutMeHTML = marked.parse(text);
-      console.log(aboutMeHTML)
       aboutMeHTML = aboutMeHTML.replace(/<p>/g, '<p data-aos="fade-up">')
-      console.log(aboutMeHTML)
       document.getElementById('about-me-content').innerHTML = aboutMeHTML;
     })
 };
@@ -490,7 +490,7 @@ window.onload = function() {
 
   // Dynamic updates based on page
   var path = window.location.pathname;
-  if (path.includes('index.html')) {
+  if (path.includes('index.html') || path === "/") {
     includeAbouteMe();
   } else if (path.includes('projects.html')) {
     updateProjects();
