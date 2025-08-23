@@ -510,7 +510,7 @@ footer {
 .timeline-event.weak .timeline-title {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--accent-color);
+    /* color: var(--accent-color); */
 }
 
 .timeline-event.strong .timeline-date {
@@ -524,6 +524,7 @@ footer {
     font-weight: 350;
     color: var(--accent-color);
 }
+
 
 /*-------------------------------------------------------------------
 # Quotes
