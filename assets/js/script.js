@@ -53,6 +53,7 @@ function includeAbouteMe(){
     .then(text => {
       let aboutMeHTML = marked.parse(text);
       aboutMeHTML = aboutMeHTML.replace(/<p>/g, '<p data-aos="fade-up">')
+      aboutMeHTML = aboutMeHTML.replace(/<a/g, '<a target="_blank"')
       document.getElementById('about-me-content').innerHTML = aboutMeHTML;
     })
 };
@@ -371,9 +372,10 @@ function updateTimeline(){
     .then(data => {
       const chronologicalEvents = data['timeline'];
       chronologicalEvents.forEach(project => {
-        const { date, event, strong } = project;
+        let { date, event, strong } = project;
         // Assign class based on 'strong'
         const eventClass = strong ? 'strong' : 'weak';
+        event = event.replace(/\.$/, "");
         var projectHTML = `
           <div class="timeline-event ${eventClass} d-flex flex-row align-items-center" data-aos="fade-in" data-aos-delay="${delay}">
               <div class="timeline-dot"></div>

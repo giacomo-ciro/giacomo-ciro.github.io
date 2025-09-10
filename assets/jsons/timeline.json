@@ -1,6 +1,11 @@
 {
     "timeline": [
         {
+            "date": "10-11-12 September 2025",
+            "event": "Presented a poster at <a href='https://www.bioinformatics.polimi.it/CIBB2025/' target='_blank'>CIBB 2025</a>, to showcase preliminary results from our research on transcriptomics scaling laws",
+            "strong": true
+        },
+        {
             "date": "23 June 2025",
             "event": "Started an internship as Machine Learning Engineer at <a href='https://www.lexroom.ai/' target='_blank'>Lexroom.ai</a>",
             "strong": true
@@ -9,6 +14,11 @@
             "date": "20 June 2025",
             "event": "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20877&anno=2025&IdPag=7921' target='_blank'>Information Theory</a>",
             "strong": false
+        },
+        {
+            "date": "1 June 2025",
+            "event": "Started a new position as Guest Researcher at <a href='https://www.ifom.eu/it/'>IFOM</a>.",
+            "strong": true
         },
         {
             "date": "29 May 2025",
@@ -21,7 +31,7 @@
             "strong": false
         },
         {
-            "date": "12 November 2024",
+            "date": "12 May 2025",
             "event": "Again on <a href='https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz' target='_blank'>'AI AI che male che mi fai'</a> podcast, now as co-host (<a href='https://open.spotify.com/episode/2Xnw48PmrCkVq2CfnPtes6' target='_blank'>1h 30min episode</a>)",
             "strong": true
         },
