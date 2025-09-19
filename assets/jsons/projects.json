@@ -15,7 +15,7 @@
             "title": "More Efficient Text Diffusion via Length Prediction",
             "date": "May '25",
             "tags": "Natural Language Processing, Machine Learning, Optimization",
-            "description": "Improved computational efficiency of Diffusion Language Models by predicting output sequence length before generation. Achieved 80% accuracy in length prediction, reducing computation by up to 800 tokens per generation.",
+            "description": "Improved computational efficiency of a 8B diffusion language model by predicting output sequence length before generation. Achieved 80% accuracy in length prediction, reducing computation by up to 800 tokens per generation.",
             "links": {
                 "Code": "https://github.com/giacomo-ciro/diffusion-llms",
                 "Report": "assets/docs/more_efficient_text_diffusion_via_length_prediction.pdf"
