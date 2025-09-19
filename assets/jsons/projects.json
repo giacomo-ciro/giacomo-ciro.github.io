@@ -118,7 +118,7 @@
             "title": "BSc Thesis",
             "date": "July '24",
             "tags": "Bioinformatics, Machine Learning",
-            "description": "Enhanced scGPT transformer model for gene expression prediction by incorporating biological knowledge of transcriptional regulation, achieving significant accuracy improvements.",
+            "description": "Enhanced scGPT transformer model for gene expression prediction by incorporating prior biological knowledge of transcriptional regulation.",
             "links": {
                 "Thesis": "assets/docs/giacomo_ciro_bemacs_24.pdf"
             },
