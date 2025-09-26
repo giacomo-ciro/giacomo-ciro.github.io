@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+            "title": "Knowledge Graph of the Italian Supreme Court's Rulings",
+            "date": "Aug '25",
+            "tags": "Python, Neo4j, Knowledge Graph",
+            "description": "Designed and developed an ETL pipeline to construct a knowledge graph from over 5,000 unstructured Italian Supreme Court's rulings. Implemented an out-of-core, efficient PageRank-based algorithm to assign relevance scores to graph nodes.",
+            "links": {},
+            "id": "250801"
+        },
+        {
             "title": "Do AI and Human Experts See Pneumonia the Same Way?",
             "date": "May '25",
             "tags": "Computer Vision, Explainable AI, Medical Imaging",
