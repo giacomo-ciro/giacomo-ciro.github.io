@@ -1,7 +1,5 @@
 title: giacomociro
 url: "https://giacomociro.com"
-twitter_username: jekyllrb
-github_username:  jekyll
 
 exclude:
   - README.md
