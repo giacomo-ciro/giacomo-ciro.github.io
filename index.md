@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: MSc in Artificial Intelligence
 class: index-page
 permalink: /
 ---
@@ -23,7 +23,7 @@ permalink: /
     <h1 class="col-md-7 col-12" data-aos="fade-up">About Me</h1>
       <div id="about-me-content" data-aos="fade-up" class="d-flex flex-column col-md-7 col-sm-12">
 {{ "
-I am currently pursuing a [MSc in Computer Science (AI)](https://www.unibocconi.it/en/programs/master-science/artificial-intelligence) at [Bocconi University](https://www.unibocconi.it/en) in Milan, Italy after having graduated cum laude with a [BSc in Economics and Computer Science](https://www.unibocconi.it/en/programs/bachelor-science/economics-management-and-computer-science).
+I am currently pursuing a [MSc in Artificial Intelligence](https://www.unibocconi.it/en/programs/master-science/artificial-intelligence) at [Bocconi University](https://www.unibocconi.it/en) in Milan, Italy after having graduated cum laude with a [BSc in Economics and Computer Science](https://www.unibocconi.it/en/programs/bachelor-science/economics-management-and-computer-science).
 
 My passion lies in Mathematics and Computer Science, and I aim at a career as Quantitative Researcher in Finance.
 
