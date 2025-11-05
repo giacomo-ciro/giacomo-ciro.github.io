@@ -1,0 +1,10 @@
+title: Giacomo Cirò
+url: "https://giacomociro.com"
+
+exclude:
+  - README.md
+  - CONTRIBUTING
+  - CNAME
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
