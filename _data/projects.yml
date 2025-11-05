@@ -2,7 +2,7 @@
   date: "Aug '25"
   tags: "Python, Neo4j, Knowledge Graph"
   description: "Designed and developed an ETL pipeline to construct a knowledge graph from over 5,000 unstructured Italian Supreme Court's rulings. Implemented an out-of-core, efficient PageRank-based algorithm to assign relevance scores to graph nodes."
-  id: "250801"
+  thumbnail: "250801.png"
 
 - title: "Do AI and Human Experts See Pneumonia the Same Way?"
   date: "May '25"
@@ -10,8 +10,8 @@
   description: "Compared CNN saliency maps with expert annotations on pediatric chest X-rays to understand if AI models identify pneumonia using the same visual cues as doctors. Found that high accuracy doesn't guarantee human-interpretable reasoning."
   links:
     Code: "https://github.com/davide-beltrame/medimg-saliency-benchmark"
-    "Report": "assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
-    id: "250523"
+    Report: "assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
+  thumbnail: "250523.png"
 
 - title: "More Efficient Text Diffusion via Length Prediction"
   date: "May '25"
@@ -19,8 +19,8 @@
   description: "Improved computational efficiency of a 8B diffusion language model by predicting output sequence length before generation. Achieved 80% accuracy in length prediction, reducing computation by up to 800 tokens per generation."
   links:
     Code: "https://github.com/giacomo-ciro/diffusion-llms"
-    "Report": "assets/docs/more_efficient_text_diffusion_via_length_prediction.pdf"
-  id: "250519"
+    Report: "assets/docs/more_efficient_text_diffusion_via_length_prediction.pdf"
+  thumbnail: "250519.png"
 
 - title: "Fundamental Matrix Estimation"
   date: "March '25"
@@ -28,7 +28,7 @@
   description: "Python implementation of the eight-point algorithm for estimating the fundamental matrix between two camera views of the same scene."
   links:
     Code: "https://github.com/giacomo-ciro/projective-geometry-estimation"
-  id: "250329"
+  thumbnail: "250329.png"
 
 - title: "Single View Metrology"
   date: "March '25"
@@ -36,7 +36,7 @@
   description: "Computer vision algorithm that estimates a person's height from a single image using a reference object in the scene."
   links:
     Code: "https://github.com/giacomo-ciro/projective-geometry-estimation"
-  id: "250328"
+  thumbnail: "250328.png"
 
 - title: "Information Retrieval"
   date: "March '25"
@@ -44,7 +44,7 @@
   description: "Comparison of algorithms for retrieving the most relevant answer from a corpus given a user query."
   links:
     Code: "https://github.com/giacomo-ciro/information-retrieval"
-  id: "250325"
+  thumbnail: "250325.png"
 
 - title: "Wordle Solver"
   date: "February '25"
@@ -52,7 +52,7 @@
   description: "Optimal strategy solver for Wordle that achieves 100% success rate with an average of 2.89 guesses in 0.5 seconds."
   links:
     Code: "https://github.com/giacomo-ciro/wordle-solver"
-  id: "250227"
+  thumbnail: "250227.jpg"
 
 - title: "Gooper"
   date: "January '25"
@@ -61,7 +61,7 @@
   links:
     Architecture: "assets/docs/gooper.pdf"
     Gooper V1 (dev): "https://gooper.nuxt.dev/"
-  id: "250108"
+  thumbnail: "250108.png"
 
 - title: "Image Compression via IP"
   date: "November '24"
@@ -69,7 +69,7 @@
   description: "Image compression pipeline using K-means clustering optimized through Integer Programming techniques."
   links:
     Code: "https://github.com/giacomo-ciro/241012_image-compression-via-ip"
-  id: "241129"
+  thumbnail: "241129.png"
 
 - title: "SCIP Debugging"
   date: "November '24"
@@ -77,7 +77,7 @@
   description: "Used debugging tools (gdb and AFL++) to identify and fix two bugs in SCIP, an open-source linear programming solver."
   links:
     Report: "assets/docs/20875_SWE_HW02.pdf"
-  id: "241120"
+  thumbnail: "241120.jpg"
 
 - title: "Resilient Companies"
   date: "October '24"
@@ -86,7 +86,7 @@
   links:
     Report: "https://github.com/giacomo-ciro/240713_resilient-companies"
     Code: "https://github.com/giacomo-ciro/240713_resilient-companies/blob/main/main.ipynb"
-  id: "241001"
+  thumbnail: "241001.png"
 
 - title: "Boolean Compiler"
   date: "September '24"
@@ -94,7 +94,7 @@
   description: "A compiler for a boolean programming language."
   links:
     Code: "https://github.com/giacomo-ciro/240912_boolean-compiler"
-  id: "240912"
+  thumbnail: "240912.png"
 
 - title: "BSc Thesis"
   date: "July '24"
@@ -102,7 +102,7 @@
   description: "Enhanced scGPT transformer model for gene expression prediction by incorporating prior biological knowledge of transcriptional regulation."
   links:
     "Thesis": "assets/docs/giacomo_ciro_bemacs_24.pdf"
-  id: "240718"
+  thumbnail: "240718.png"
 
 - title: "Evolving Tinder"
   date: "April '24"
@@ -110,17 +110,17 @@
   description: "Applied evolutionary algorithms to improve matching stability beyond the traditional Deferred Acceptance Algorithm for two-sided matching problems."
   links:
     Code: "https://github.com/giacomo-ciro/evolving-tinder"
-    "Report": "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
-  id: "240429"
+    Report: "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
+  thumbnail: "240429.png"
 
 - title: "Q-Learning Playground"
   date: "April '24"
   tags: "Python, Reinforcement Learning"
-  description: "Interactive web application demonstrating Q-learning algorithm and the Bellman Equation through visual examples."
+  description: "Interactive webapplication demonstrating Q-learning algorithm and the Bellman Equation through visual examples."
   links:
     Code: "https://github.com/giacomo-ciro/q-learning"
-    Web App: "https://q-learning.streamlit.app/"
-  id: "240413"
+    WebApp: "https://q-learning.streamlit.app/"
+  thumbnail: "240413.png"
 
 - title: "Daily Spin Bot"
   date: "December '23"
@@ -128,7 +128,7 @@
   description: "Automated browser bot for maximizing rewards in SNAI Daily Spin game, available as executable."
   links:
     Code: "https://github.com/giacomo-ciro/daily-spin-bot"
-  id: "231212"
+  thumbnail: "231212.jpg"
 
 - title: "Standardization"
   date: "October '23"
@@ -136,16 +136,16 @@
   description: "Statistical analysis of how standardization in customer support affects satisfaction using OLS regression with controls for confounding variables and industry effects."
   links:
     Code: "https://github.com/giacomo-ciro/standardization"
-  id: "231006"
+  thumbnail: "231006.png"
 
-- title: "F1 Race Analysis"
-  date: "June '23"
-  tags: "Python, Data Analysis, Data Visualization, Data Mining"
-  description: "Interactive dashboard displaying Formula 1 statistics and insights from historical data through current races, with automatic updates after each Grand Prix."
-  links:
-    Code: "https://github.com/giacomo-ciro/F1-race-analysis"
-    Web App: "https://f1-analysis.streamlit.app/"
-  id: "230621"
+# - title: "F1 Race Analysis"
+#   date: "June '23"
+#   tags: "Python, Data Analysis, Data Visualization, Data Mining"
+#   description: "Interactive dashboard displaying Formula 1 statistics and insights from historical data through current races, with automatic updates after each Grand Prix."
+#   links:
+#     Code: "https://github.com/giacomo-ciro/F1-race-analysis"
+#     WebApp: "https://f1-analysis.streamlit.app/"
+#   thumbnail: "230621.jpg"
 
 - title: "Production Function Estimation"
   date: "May '23"
@@ -153,16 +153,16 @@
   description: "Applied Fixed Effect and Random Effect models to estimate a company's production functions while controlling for individual and time-specific heterogeneity."
   links:
     Code: "https://github.com/giacomo-ciro/production_function_estimation"
-  id: "230522"
+  thumbnail: "230522.png"
 
-- title: "House Price Predictor"
-  date: "April '23"
-  tags: "Python, Random Forest Regressor, Neural Network, Linear Regression"
-  description: "Machine learning models for predicting house prices in Milan, Rome, and Venice using a dataset of over 45,000 properties."
-  links:
-    Code: "https://github.com/giacomo-ciro/house-price-predictor-webapp"
-    Web App: "https://house-price-predictor.streamlit.app/"
-  id: "230430"
+# - title: "House Price Predictor"
+#   date: "April '23"
+#   tags: "Python, Random Forest Regressor, Neural Network, Linear Regression"
+#   description: "Machine learning models for predicting house prices in Milan, Rome, and Venice using a dataset of over 45,000 properties."
+#   links:
+#     Code: "https://github.com/giacomo-ciro/house-price-predictor-webapp"
+#     WebApp: "https://house-price-predictor.streamlit.app/"
+#   thumbnail: "230430.jpg"
 
 - title: "Words Generator"
   date: "April '23"
@@ -170,8 +170,8 @@
   description: "Neural networks trained on word corpora to generate novel, realistic-sounding words that don't exist in any language."
   links:
     Code: "https://github.com/giacomo-ciro/words-generator"
-    Web App: "https://word-generator.streamlit.app/"
-  id: "230408"
+    WebApp: "https://word-generator.streamlit.app/"
+  thumbnail: "230408.png"
 
 - title: "Taylor Rule Estimation"
   date: "February '23"
@@ -179,4 +179,4 @@
   description: "Estimated Austria's interest rate policy using OLS regression and Taylor's rule framework, with comprehensive diagnostic testing for model robustness."
   links:
     Code: "https://github.com/giacomo-ciro/taylor_rule_estimation_by_OLS"
-  id: "230223"
+  thumbnail: "230223.png"

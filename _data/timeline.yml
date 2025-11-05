@@ -1,203 +1,203 @@
 - date: "26 September 2025"
-  event: "Joined <a href='https://www.leadthefuture.tech/' target='_blank'>Lead The Future (LTF)</a> as mentee"
+  description: "Joined <a href='https://www.leadthefuture.tech/' target='_blank'>Lead The Future (LTF)</a> as mentee"
   strong: true
 
 - date: "23 September 2025"
-  event: "Concluded my internship at <a href='https://www.lexroom.ai/' target='_blank'>Lexroom.ai</a>"
+  description: "Concluded my internship at <a href='https://www.lexroom.ai/' target='_blank'>Lexroom.ai</a>"
   strong: true
 
 - date: "10-11-12 September 2025"
-  event: "Presented a poster at <a href='https://www.bioinformatics.polimi.it/CIBB2025/' target='_blank'>CIBB 2025</a>, to showcase preliminary results from our research on transcriptomics scaling laws"
+  description: "Presented a poster at <a href='https://www.bioinformatics.polimi.it/CIBB2025/' target='_blank'>CIBB 2025</a>, to showcase preliminary results from our research on transcriptomics scaling laws"
   strong: true
 
 - date: "4 September 2025"
-  event: "Last year of my MSc"
+  description: "Last year of my MSc"
   strong: true
 
 - date: "23 June 2025"
-  event: "Started an internship as Machine Learning Engineer at <a href='https://www.lexroom.ai/' target='_blank'>Lexroom.ai</a>"
+  description: "Started an internship as Machine Learning Engineer at <a href='https://www.lexroom.ai/' target='_blank'>Lexroom.ai</a>"
   strong: true
 
 - date: "20 June 2025"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20877&anno=2025&IdPag=7921' target='_blank'>Information Theory</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20877&anno=2025&IdPag=7921' target='_blank'>Information Theory</a>"
   strong: false
 
 - date: "10 June 2025"
-  event: "Joined <a href='https://eurotech-federation.com/', target='_blank'>EuroTech Federation</a> as part of batch #1"
+  description: "Joined <a href='https://eurotech-federation.com/' target='_blank'>EuroTech Federation</a> as part of batch #1"
   strong: true
 
 - date: "1 June 2025"
-  event: "Started a new position as Guest Researcher at <a href='https://www.ifom.eu/it/'>IFOM</a>."
+  description: "Started a new position as Guest Researcher at <a href='https://www.ifom.eu/it/'>IFOM</a>."
   strong: true
 
 - date: "29 May 2025"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20878&anno=2025&IdPag=7921' target='_blank'>Computer Vision & Image Processing</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20878&anno=2025&IdPag=7921' target='_blank'>Computer Vision & Image Processing</a>"
   strong: false
 
 - date: "22 May 2025"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20876&anno=2025&IdPag=7921' target='_blank'>Deep Learning & Reinforcement Learning</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20876&anno=2025&IdPag=7921' target='_blank'>Deep Learning & Reinforcement Learning</a>"
   strong: false
 
 - date: "12 May 2025"
-  event: "Again on <a href='https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz' target='_blank'>'AI AI che male che mi fai'</a> podcast, now as co-host (<a href='https://open.spotify.com/episode/2Xnw48PmrCkVq2CfnPtes6' target='_blank'>1h 30min episode</a>)"
+  description: "Again on <a href='https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz' target='_blank'>'AI AI che male che mi fai'</a> podcast, now as co-host (<a href='https://open.spotify.com/episode/2Xnw48PmrCkVq2CfnPtes6' target='_blank'>1h 30min episode</a>)"
   strong: true
 
 - date: "1 May 2025"
-  event: "Renewed my contract as Machine Learning Researcher at <a href='https://bidsa.unibocconi.eu/' target='_blank'>BIDSA</a>"
+  description: "Renewed my contract as Machine Learning Researcher at <a href='https://bidsa.unibocconi.eu/' target='_blank'>BIDSA</a>"
   strong: true
 
 - date: "13 January 2025"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20875&anno=2025&IdPag=7921' target='_blank'>Software Engineering</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20875&anno=2025&IdPag=7921' target='_blank'>Software Engineering</a>"
   strong: false
 
 - date: "9 January 2025"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20872&anno=2025&IdPag=7921' target='_blank'>Mathematical Methods in Computer Science</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20872&anno=2025&IdPag=7921' target='_blank'>Mathematical Methods in Computer Science</a>"
   strong: false
 
 - date: "12 November 2024"
-  event: "Guest on the <a href='https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz' target='_blank'>'AI AI che male che mi fai'</a> podcast (<a href='https://open.spotify.com/episode/7JeI5Fmzh8LUBHMWoohfEr' target='_blank'>1h 30min episode</a>)"
+  description: "Guest on the <a href='https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz' target='_blank'>'AI AI che male che mi fai'</a> podcast (<a href='https://open.spotify.com/episode/7JeI5Fmzh8LUBHMWoohfEr' target='_blank'>1h 30min episode</a>)"
   strong: true
 
 - date: "11 December 2024"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20874&anno=2025&IdPag=7921' target='_blank'>Algorithms for Optimization and Inference</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20874&anno=2025&IdPag=7921' target='_blank'>Algorithms for Optimization and Inference</a>"
   strong: false
 
 - date: "9 September 2024"
-  event: "Enrolled in a MSc in Artificial Intelligence"
+  description: "Enrolled in a MSc in Artificial Intelligence"
   strong: true
 
 - date: "1 September 2024"
-  event: "Started a new position as Machine Learning Researcher at <a href='https://bidsa.unibocconi.eu/' target='_blank'>BIDSA</a>"
+  description: "Started a new position as Machine Learning Researcher at <a href='https://bidsa.unibocconi.eu/' target='_blank'>BIDSA</a>"
   strong: true
 
 - date: "August 2024"
-  event: "Restructured <a href='https://bsmachinelearning.com/' target='_blank'>BSML</a> as the first Machine Learning Project Incubator at Bocconi University"
+  description: "Restructured <a href='https://bsmachinelearning.com/' target='_blank'>BSML</a> as the first Machine Learning Project Incubator at Bocconi University"
   strong: true
 
 - date: "18 July 2024"
-  event: "Graduated with 110 Cum Laude"
+  description: "Graduated with 110 Cum Laude"
   strong: true
 
 - date: "18 June 2024"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30421&anno=2024&IdPag=7921' target='_blank'>Information System Management</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30421&anno=2024&IdPag=7921' target='_blank'>Information System Management</a>"
   strong: false
 
 - date: "13 June 2024"
-  event: "Submitted my BSc Thesis"
+  description: "Submitted my BSc Thesis"
   strong: true
 
 - date: "5 June 2024"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30419&anno=2024&IdPag=7921' target='_blank'>Mechanism Design</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30419&anno=2024&IdPag=7921' target='_blank'>Mechanism Design</a>"
   strong: false
 
 - date: "20 May 2024"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30665&anno=2024&IdPag=7921' target='_blank'>Elements of Real and Fourier Analysis</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30665&anno=2024&IdPag=7921' target='_blank'>Elements of Real and Fourier Analysis</a>"
   strong: false
 
 - date: "29 January 2024"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30418&anno=2024&IdPag=7921' target='_blank'>Game Theory</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30418&anno=2024&IdPag=7921' target='_blank'>Game Theory</a>"
   strong: false
 
 - date: "18 January 2024"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30420&anno=2024&IdPag=7921' target='_blank'>Marketing Analytics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30420&anno=2024&IdPag=7921' target='_blank'>Marketing Analytics</a>"
   strong: false
 
 - date: "11 December 2023"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30416&anno=2024&IdPag=7921' target='_blank'>Big Data & Databases</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30416&anno=2024&IdPag=7921' target='_blank'>Big Data & Databases</a>"
   strong: false
 
 - date: "September 2023"
-  event: "Started my boxing career"
+  description: "Started my boxing career"
   strong: true
 
 - date: "12 June 2023"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30408&anno=2023&IdPag=7921' target='_blank'>Advanced Statistical Methods</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30408&anno=2023&IdPag=7921' target='_blank'>Advanced Statistical Methods</a>"
   strong: false
 
 - date: "June 2023"
-  event: "Co-founded <a href='https://bsmachinelearning.com/' target='_blank'>BSML</a>"
+  description: "Co-founded <a href='https://bsmachinelearning.com/' target='_blank'>BSML</a>"
   strong: true
 
 - date: "30 May 2023"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30414&anno=2023&IdPag=7921' target='_blank'>Econometrics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30414&anno=2023&IdPag=7921' target='_blank'>Econometrics</a>"
   strong: false
 
 - date: "26 May 2023"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30413&anno=2023&IdPag=7921' target='_blank'>Principles of Finance</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30413&anno=2023&IdPag=7921' target='_blank'>Principles of Finance</a>"
   strong: false
 
 - date: "16 May 2023"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30412&anno=2023&IdPag=7921' target='_blank'>Machine Learning</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30412&anno=2023&IdPag=7921' target='_blank'>Machine Learning</a>"
   strong: false
 
 - date: "May 2023"
-  event: "Decided to pursue a career in Machine Learning"
+  description: "Decided to pursue a career in Machine Learning"
   strong: true
 
 - date: "12 January 2023"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30519&anno=2023&IdPag=7921' target='_blank'>European and International IT Law and Data Economy</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30519&anno=2023&IdPag=7921' target='_blank'>European and International IT Law and Data Economy</a>"
   strong: false
 
 - date: "9 January 2023"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30407&anno=2023&IdPag=7921' target='_blank'>Applied Mathematics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30407&anno=2023&IdPag=7921' target='_blank'>Applied Mathematics</a>"
   strong: false
 
 - date: "21 December 2022"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30409&anno=2023&IdPag=7921' target='_blank'>Macroeconomics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30409&anno=2023&IdPag=7921' target='_blank'>Macroeconomics</a>"
   strong: false
 
 - date: "14 December 2022"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30509&anno=2023&IdPag=7921' target='_blank'>Computer Programming</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30509&anno=2023&IdPag=7921' target='_blank'>Computer Programming</a>"
   strong: false
 
 - date: "25 May 2022"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30404&anno=2022&IdPag=7921' target='_blank'>Accounting</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30404&anno=2022&IdPag=7921' target='_blank'>Accounting</a>"
   strong: false
 
 - date: "19 May 2022"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30405&anno=2022&IdPag=7921' target='_blank'>Fundamentals of IT Law</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30405&anno=2022&IdPag=7921' target='_blank'>Fundamentals of IT Law</a>"
   strong: false
 
 - date: "16 May 2022"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30401&anno=2022&IdPag=7921' target='_blank'>Statistics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30401&anno=2022&IdPag=7921' target='_blank'>Statistics</a>"
   strong: false
 
 - date: "13 May 2022"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30398&anno=2022&IdPag=7921' target='_blank'>Fundamentals of Computer Science</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30398&anno=2022&IdPag=7921' target='_blank'>Fundamentals of Computer Science</a>"
   strong: false
 
 - date: "18 January 2022"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30402&anno=2022&IdPag=7921' target='_blank'>Principles of Management</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30402&anno=2022&IdPag=7921' target='_blank'>Principles of Management</a>"
   strong: false
 
 - date: "11 January 2022"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30636&anno=2022&IdPag=7921' target='_blank'>Microeconomics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30636&anno=2022&IdPag=7921' target='_blank'>Microeconomics</a>"
   strong: false
 
 - date: "14 December 2021"
-  event: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30400&anno=2022&IdPag=7921' target='_blank'>Mathematics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30400&anno=2022&IdPag=7921' target='_blank'>Mathematics</a>"
   strong: false
 
 - date: "September 2021"
-  event: "Enrolled in a BSc in Economics and Computer Science"
+  description: "Enrolled in a BSc in Economics and Computer Science"
   strong: true
 
 - date: "June 2021"
-  event: "Received my High School Diploma"
+  description: "Received my High School Diploma"
   strong: true
 
 - date: "3 October 2013"
-  event: "Established the village #2VQLJOP (currently TH 16)"
+  description: "Established the village #2VQLJOP (currently TH 16)"
   strong: true
 
 - date: "September 2010"
-  event: "Started my rugby career"
+  description: "Started my rugby career"
   strong: true
 
 - date: "September 2009"
-  event: "Joined a boy-scout group "
+  description: "Joined a boy-scout group "
   strong: true
 
 - date: "9 July 2002"
-  event: "Deployed to the warzone"
+  description: "Deployed to the warzone"
   strong: true
