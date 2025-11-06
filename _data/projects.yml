@@ -10,7 +10,7 @@
   description: "Compared CNN saliency maps with expert annotations on pediatric chest X-rays to understand if AI models identify pneumonia using the same visual cues as doctors. Found that high accuracy doesn't guarantee human-interpretable reasoning."
   links:
     Code: "https://github.com/davide-beltrame/medimg-saliency-benchmark"
-    Report: "assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
+    Report: "/assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
   thumbnail: "250523.png"
 
 - title: "More Efficient Text Diffusion via Length Prediction"
@@ -19,7 +19,7 @@
   description: "Improved computational efficiency of a 8B diffusion language model by predicting output sequence length before generation. Achieved 80% accuracy in length prediction, reducing computation by up to 800 tokens per generation."
   links:
     Code: "https://github.com/giacomo-ciro/diffusion-llms"
-    Report: "assets/docs/more_efficient_text_diffusion_via_length_prediction.pdf"
+    Report: "/assets/docs/more_efficient_text_diffusion_via_length_prediction.pdf"
   thumbnail: "250519.png"
 
 - title: "Fundamental Matrix Estimation"
@@ -59,7 +59,7 @@
   tags: "Software Development"
   description: "A search engine for influencers."
   links:
-    Architecture: "assets/docs/gooper.pdf"
+    Architecture: "/assets/docs/gooper.pdf"
     Gooper V1 (dev): "https://gooper.nuxt.dev/"
   thumbnail: "250108.png"
 
@@ -76,7 +76,7 @@
   tags: "C, Software Development"
   description: "Used debugging tools (gdb and AFL++) to identify and fix two bugs in SCIP, an open-source linear programming solver."
   links:
-    Report: "assets/docs/20875_SWE_HW02.pdf"
+    Report: "/assets/docs/20875_SWE_HW02.pdf"
   thumbnail: "241120.jpg"
 
 - title: "Resilient Companies"
@@ -84,8 +84,7 @@
   tags: "Finance, Data Analysis"
   description: "Analysis of 31,710 Indian companies to identify those with consistent strong performance before and after 2020, exploring the role of information systems in business resilience."
   links:
-    Report: "https://github.com/giacomo-ciro/240713_resilient-companies"
-    Code: "https://github.com/giacomo-ciro/240713_resilient-companies/blob/main/main.ipynb"
+    Report: "https://github.com/giacomo-ciro/240713_resilient-companies/blob/main/resilient_cos_report.pdf"
   thumbnail: "241001.png"
 
 - title: "Boolean Compiler"
@@ -101,7 +100,7 @@
   tags: "Bioinformatics, Machine Learning"
   description: "Enhanced scGPT transformer model for gene expression prediction by incorporating prior biological knowledge of transcriptional regulation."
   links:
-    "Thesis": "assets/docs/giacomo_ciro_bemacs_24.pdf"
+    Thesis: "/assets/docs/giacomo_ciro_bemacs_24.pdf"
   thumbnail: "240718.png"
 
 - title: "Evolving Tinder"

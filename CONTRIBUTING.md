@@ -9,6 +9,10 @@ Install the required gems (Ruby packages):
 ```
 gem install jekyll bundler
 ```
+Install required dependencies
+```
+bundler install
+```
 Serve the website (using bundler, which reads from a Gemfile):
 ```
 bundler exec jekyll serve
