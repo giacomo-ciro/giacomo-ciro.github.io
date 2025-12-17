@@ -27,7 +27,7 @@ Below are some of the resources I have found most valuable for learning, explori
     - [Hugging Face Daily Papers](https://huggingface.co/papers): Daily feed of new model releases and research papers, with a focus on recent developments.
 
 - Textbooks
-    - [Applied Linear Statistical Models](https://www.researchgate.net/publication/344587293_Applied_Linear_Statistical_Models) by M. H. Kutner: Foundational textbook for applied statistics.
+    - [Applied Linear Statistical Models](https://www.researchgate.net/publication/344587293_Applied_Linear_Statistical_Models) by M. H. Kutner: Foundational textbook for linear models.
     - [Operating System Concepts](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf) by A. Silberschatz: Comprehensive overview of how operating systems work.
     - [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by C. M. Bishop: Core reference for pattern recognition and machine learning concepts.
     - [System Design Interview](https://bytes.usc.edu/~saty/courses/docs/data/SystemDesignInterview.pdf) by A. Xu: Concise yet thorough overview of system design, with each chapter focusing on a well-known system and curated further readings.
