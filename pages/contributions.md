@@ -10,7 +10,7 @@ permalink: /contributions/
     <h1 class="col-md-7 col-12" data-aos="fade-up">Open Source</h1>
     <div id="contributions-intro" data-aos="fade-up" class="d-flex flex-column col-md-7 col-12">
       <p>
-        I love open-source software and how the internet enables large-scale collaboration. I co-founded the <a href="https://b-open.dev/" target="_blank">Bocconi Open Source Society (BOSS)</a> to promote open source at Bocconi. Here are some projects I've contributed to:
+        I believe one of the greatest byproducts of the internet is large-scale collaboration. It fascinates me how people around the world manage to work together to advance open-source projects. I co-founded the <a href="https://b-open.dev/" target="_blank">Bocconi Open Source Society (BOSS)</a> to promote open source at my university, and I contribute to projects whenever I can. Here are some I've worked on:
       </p>
     </div>
     <ul id="contributions-list" class="col-md-7 col-12" data-aos="fade-up">
