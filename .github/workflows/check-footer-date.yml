@@ -1,0 +1,34 @@
+name: Check Footer Date
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  check-footer-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check footer date matches commit date
+        run: |
+          # Get the current month and year from the commit
+          COMMIT_DATE=$(git show -s --format=%ci HEAD)
+          COMMIT_MONTH_YEAR=$(date -d "$COMMIT_DATE" +"%B %Y")
+          
+          # Extract the date from the footer
+          FOOTER_DATE=$(grep -oP 'Last update: \K[A-Za-z]+ [0-9]{4}' _includes/footer.html)
+          
+          echo "Commit date: $COMMIT_MONTH_YEAR"
+          echo "Footer date: $FOOTER_DATE"
+          
+          if [ "$COMMIT_MONTH_YEAR" != "$FOOTER_DATE" ]; then
+            echo "::error::Footer date ($FOOTER_DATE) does not match commit date ($COMMIT_MONTH_YEAR)"
+            echo "Please update the footer in _includes/footer.html to: Last update: $COMMIT_MONTH_YEAR"
+            exit 1
+          fi
+          
+          echo "✓ Footer date is up to date"

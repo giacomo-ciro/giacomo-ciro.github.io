@@ -683,3 +683,46 @@ footer {
     opacity: 0;
   }
 }
+
+/*-------------------------------------------------------------------
+# Contributions
+--------------------------------------------------------------------*/
+
+.contributions {
+  padding: 2.5rem 0;
+}
+
+.contributions h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: solid var(--default-color);
+  border-width: 0.01rem;
+}
+
+#contributions-intro {
+  margin: 1.5rem 0 1rem 0;
+}
+
+#contributions-intro p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#contributions-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+#contributions-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+#contributions a {
+  color: #0d1d91;
+}
+
+#contributions-list a:hover {
+  text-decoration: underline;
+}
