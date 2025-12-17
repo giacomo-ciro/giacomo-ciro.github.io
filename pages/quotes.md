@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Quotes
-class: quotes-page
 permalink: /quotes/
 ---
 <section id="quotes" class="quotes">

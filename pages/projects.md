@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Projects
-class: projects-page
 permalink: /projects/
 ---
 <div id="project-container" class="container-fluid d-flex flex-column align-items-center">
