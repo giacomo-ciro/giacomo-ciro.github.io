@@ -5,6 +5,7 @@
     --accent-color: #666;
     --surface-color: #1c1c1c;
     --contrast-color: #ddd;
+    --link-color: #0d1d91
   }
 
 /*-------------------------------------------------------------------
@@ -16,12 +17,71 @@ body {
     background-color: var(--background-color);
 }
 
-a:link, a:visited, a:hover, a:active {
-text-decoration: none;
-color: var(--accent-color);
+/*-------------------------------------------------------------------
+# Links
+--------------------------------------------------------------------*/
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: var(--link-color);
 }
 a:hover {
-    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--link-color), transparent 25%);
+  text-decoration: underline;
+  transition: 3s ease-in;
+}
+
+/* Header & Footer links */
+header a:link,
+header a:visited,
+header a:hover,
+header a:active,
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active,
+.project a:link,
+.project a:visited,
+.project a:hover,
+.timeline-event a:active,
+.timeline-event a:link,
+.timeline-event a:visited,
+.timeline-event a:hover,
+.timeline-event a:active {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+header a:hover,
+footer a:hover,
+.project a:hover,
+.timeline-event a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+/*-------------------------------------------------------------------
+# Default Content Styles
+--------------------------------------------------------------------*/
+
+/* Default section styling */
+main section {
+  padding: 2.5rem 0 0 0;
+}
+
+/* Default heading style */
+main h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: solid var(--default-color);
+  border-width: 0.01rem;
+}
+
+/* Default paragraph style */
+main p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /*-------------------------------------------------------------------
@@ -56,7 +116,6 @@ a:hover {
     font-weight: 350;
 }
 
-/* CV Button  */
 .header .btn-cv,
 .header .btn-cv:focus {
   color: var(--heading-color);
@@ -153,46 +212,14 @@ a:hover {
 }
 
 /*-------------------------------------------------------------------
-# About
---------------------------------------------------------------------*/
-
-.about {
-  padding: 2.5rem 0 0 0;
-}
-.about h1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-align: center;
-  border-bottom: solid var(--default-color);
-  border-width: 0.01rem;
-}
-
-.about #about-me-content {
-  margin: 1rem 0 1rem 0;
-}
-.about a {
-  color: #0d1d91;
-}
-
-.about a:hover {
-  text-decoration: underline;
-  transition: 3s ease-in;
-}
-
-.about p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/*-------------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------------*/
 
 .hero {
-  margin: 2.5rem 0 0 0;
+  margin: 0 0 0 0;
 }
 .hero .img-container {
-  max-width: 25%; /* make it bigger on small screens*/
+  max-width: 20%;
   height: auto;
   object-fit: contain;
 }
@@ -685,28 +712,11 @@ footer {
 }
 
 /*-------------------------------------------------------------------
-# Contributions
+# Contributions (inherits from default styles)
 --------------------------------------------------------------------*/
-
-.contributions {
-  padding: 2.5rem 0;
-}
-
-.contributions h1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-align: center;
-  border-bottom: solid var(--default-color);
-  border-width: 0.01rem;
-}
 
 #contributions-intro {
   margin: 1.5rem 0 1rem 0;
-}
-
-#contributions-intro p {
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 #contributions-list {
@@ -717,12 +727,4 @@ footer {
 #contributions-list li {
   margin-bottom: 0.8rem;
   line-height: 1.6;
-}
-
-#contributions a {
-  color: #0d1d91;
-}
-
-#contributions-list a:hover {
-  text-decoration: underline;
 }
