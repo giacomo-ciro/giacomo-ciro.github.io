@@ -23,21 +23,21 @@ I believe one of the greatest byproducts of the internet is large-scale collabor
 # Study Material
 Below are some of the resources I have found most valuable for learning, exploring, or reviewing topics in mathematics, statistics, computer science and machine learning:
 
-- Blogs
-    - [Hugging Face Daily Papers](https://huggingface.co/papers): Daily feed of new model releases and research papers, with a focus on recent developments.
-
-- Textbooks
-    - [Applied Linear Statistical Models](https://www.researchgate.net/publication/344587293_Applied_Linear_Statistical_Models) by M. H. Kutner: Foundational textbook for linear models.
-    - [Operating System Concepts](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf) by A. Silberschatz: Comprehensive overview of how operating systems work.
-    - [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by C. M. Bishop: Core reference for pattern recognition and machine learning concepts.
-    - [System Design Interview](https://bytes.usc.edu/~saty/courses/docs/data/SystemDesignInterview.pdf) by A. Xu: Concise yet thorough overview of system design, with each chapter focusing on a well-known system and curated further readings.
-    - [The Elements of Statistical Learning](https://www.sas.upenn.edu/~fdiebold/NoHesitations/BookAdvanced.pdf) by T. Hastie, R. Tibshirani, and J. Friedman: Also used in my undergraduate machine learning course.
-    - [Understanding Deep Learning](https://udlbook.github.io/udlbook/): Textbook for my graduate deep learning course. The [further reading](https://udlbook.github.io/udlbook/#:~:text=MORE-,Further%20reading,-Other%20articles%2C%20blogs) section is especially well curated.
-
-- YouTube channels:
+- **Mathematics & Statistics**:
     - [3Blue1Brown](https://www.youtube.com/@3blue1brown/featured): Exceptional visual explanations of quantitative concepts; highly recommended series on transformers and neural networks.
+    - [Applied Linear Statistical Models](https://www.researchgate.net/publication/344587293_Applied_Linear_Statistical_Models) by M. H. Kutner: Foundational textbook for linear models.
+    - [The Elements of Statistical Learning](https://www.sas.upenn.edu/~fdiebold/NoHesitations/BookAdvanced.pdf) by T. Hastie, R. Tibshirani, and J. Friedman: Also used in my undergraduate machine learning course.
+
+- **Machine Learning & AI**:
+    - [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by C. M. Bishop: Core reference for pattern recognition and machine learning concepts.
+    - [Understanding Deep Learning](https://udlbook.github.io/udlbook/): Textbook for my graduate deep learning course. The [further reading](https://udlbook.github.io/udlbook/#:~:text=MORE-,Further%20reading,-Other%20articles%2C%20blogs) section is especially well curated.
+    - [Hugging Face Daily Papers](https://huggingface.co/papers): Daily feed of new model releases and research papers, with a focus on recent developments.
     - [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy/videos): OpenAI co-founder sharing hands-on, advanced tutorials (e.g., building GPT from scratch).
     - [Yannic Kilcher](https://www.youtube.com/@YannicKilcher): In-depth paper readings and walkthroughs.
+
+- **Computer Science & Engineering**:
+    - [Operating System Concepts](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf) by A. Silberschatz: Comprehensive overview of how operating systems work.
+    - [System Design Interview](https://bytes.usc.edu/~saty/courses/docs/data/SystemDesignInterview.pdf) by A. Xu: Concise yet thorough overview of system design, with each chapter focusing on a well-known system and curated further readings.
 
 # Finance
 Here are some resources I found most useful for learning about finance, quant finance, and personal finance, as well as preparing for interviews:

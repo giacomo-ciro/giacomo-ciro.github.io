@@ -1,3 +1,15 @@
+- date: "27 January 2026"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20882&anno=2026' target='_blank'>Computational Neurosciences</a>"
+  strong: false
+
+- date: "14 January 2026"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=21048&anno=2026' target='_blank'>Market Structure & Information-Based Models</a>"
+  strong: false
+
+- date: "9 January 2026"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20881&anno=2026' target='_blank'>Cryptography & Security</a>"
+  strong: false
+
 - date: "26 September 2025"
   description: "Joined <a href='https://www.leadthefuture.tech/' target='_blank'>Lead The Future (LTF)</a> as mentee"
   strong: true
@@ -19,7 +31,7 @@
   strong: true
 
 - date: "20 June 2025"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20877&anno=2025&IdPag=7921' target='_blank'>Information Theory</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20877&anno=2025' target='_blank'>Information Theory</a>"
   strong: false
 
 - date: "10 June 2025"
@@ -31,11 +43,11 @@
   strong: true
 
 - date: "29 May 2025"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20878&anno=2025&IdPag=7921' target='_blank'>Computer Vision & Image Processing</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20878&anno=2025' target='_blank'>Computer Vision & Image Processing</a>"
   strong: false
 
 - date: "22 May 2025"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20876&anno=2025&IdPag=7921' target='_blank'>Deep Learning & Reinforcement Learning</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20876&anno=2025' target='_blank'>Deep Learning & Reinforcement Learning</a>"
   strong: false
 
 - date: "12 May 2025"
@@ -47,11 +59,11 @@
   strong: true
 
 - date: "13 January 2025"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20875&anno=2025&IdPag=7921' target='_blank'>Software Engineering</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20875&anno=2025' target='_blank'>Software Engineering</a>"
   strong: false
 
 - date: "9 January 2025"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20872&anno=2025&IdPag=7921' target='_blank'>Mathematical Methods in Computer Science</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20872&anno=2025' target='_blank'>Mathematical Methods in Computer Science</a>"
   strong: false
 
 - date: "12 November 2024"
@@ -59,7 +71,7 @@
   strong: true
 
 - date: "11 December 2024"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20874&anno=2025&IdPag=7921' target='_blank'>Algorithms for Optimization and Inference</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20874&anno=2025' target='_blank'>Algorithms for Optimization and Inference</a>"
   strong: false
 
 - date: "9 September 2024"
@@ -79,7 +91,7 @@
   strong: true
 
 - date: "18 June 2024"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30421&anno=2024&IdPag=7921' target='_blank'>Information System Management</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30421&anno=2024' target='_blank'>Information System Management</a>"
   strong: false
 
 - date: "13 June 2024"
@@ -87,23 +99,23 @@
   strong: true
 
 - date: "5 June 2024"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30419&anno=2024&IdPag=7921' target='_blank'>Mechanism Design</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30419&anno=2024' target='_blank'>Mechanism Design</a>"
   strong: false
 
 - date: "20 May 2024"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30665&anno=2024&IdPag=7921' target='_blank'>Elements of Real and Fourier Analysis</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30665&anno=2024' target='_blank'>Elements of Real and Fourier Analysis</a>"
   strong: false
 
 - date: "29 January 2024"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30418&anno=2024&IdPag=7921' target='_blank'>Game Theory</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30418&anno=2024' target='_blank'>Game Theory</a>"
   strong: false
 
 - date: "18 January 2024"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30420&anno=2024&IdPag=7921' target='_blank'>Marketing Analytics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30420&anno=2024' target='_blank'>Marketing Analytics</a>"
   strong: false
 
 - date: "11 December 2023"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30416&anno=2024&IdPag=7921' target='_blank'>Big Data & Databases</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30416&anno=2024' target='_blank'>Big Data & Databases</a>"
   strong: false
 
 - date: "September 2023"
@@ -111,7 +123,7 @@
   strong: true
 
 - date: "12 June 2023"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30408&anno=2023&IdPag=7921' target='_blank'>Advanced Statistical Methods</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30408&anno=2023' target='_blank'>Advanced Statistical Methods</a>"
   strong: false
 
 - date: "June 2023"
@@ -119,15 +131,15 @@
   strong: true
 
 - date: "30 May 2023"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30414&anno=2023&IdPag=7921' target='_blank'>Econometrics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30414&anno=2023' target='_blank'>Econometrics</a>"
   strong: false
 
 - date: "26 May 2023"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30413&anno=2023&IdPag=7921' target='_blank'>Principles of Finance</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30413&anno=2023' target='_blank'>Principles of Finance</a>"
   strong: false
 
 - date: "16 May 2023"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30412&anno=2023&IdPag=7921' target='_blank'>Machine Learning</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30412&anno=2023' target='_blank'>Machine Learning</a>"
   strong: false
 
 - date: "May 2023"
@@ -135,47 +147,47 @@
   strong: true
 
 - date: "12 January 2023"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30519&anno=2023&IdPag=7921' target='_blank'>European and International IT Law and Data Economy</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30519&anno=2023' target='_blank'>European and International IT Law and Data Economy</a>"
   strong: false
 
 - date: "9 January 2023"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30407&anno=2023&IdPag=7921' target='_blank'>Applied Mathematics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30407&anno=2023' target='_blank'>Applied Mathematics</a>"
   strong: false
 
 - date: "21 December 2022"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30409&anno=2023&IdPag=7921' target='_blank'>Macroeconomics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30409&anno=2023' target='_blank'>Macroeconomics</a>"
   strong: false
 
 - date: "14 December 2022"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30509&anno=2023&IdPag=7921' target='_blank'>Computer Programming</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30509&anno=2023' target='_blank'>Computer Programming</a>"
   strong: false
 
 - date: "25 May 2022"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30404&anno=2022&IdPag=7921' target='_blank'>Accounting</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30404&anno=2022' target='_blank'>Accounting</a>"
   strong: false
 
 - date: "19 May 2022"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30405&anno=2022&IdPag=7921' target='_blank'>Fundamentals of IT Law</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30405&anno=2022' target='_blank'>Fundamentals of IT Law</a>"
   strong: false
 
 - date: "16 May 2022"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30401&anno=2022&IdPag=7921' target='_blank'>Statistics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30401&anno=2022' target='_blank'>Statistics</a>"
   strong: false
 
 - date: "13 May 2022"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30398&anno=2022&IdPag=7921' target='_blank'>Fundamentals of Computer Science</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30398&anno=2022' target='_blank'>Fundamentals of Computer Science</a>"
   strong: false
 
 - date: "18 January 2022"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30402&anno=2022&IdPag=7921' target='_blank'>Principles of Management</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30402&anno=2022' target='_blank'>Principles of Management</a>"
   strong: false
 
 - date: "11 January 2022"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30636&anno=2022&IdPag=7921' target='_blank'>Microeconomics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30636&anno=2022' target='_blank'>Microeconomics</a>"
   strong: false
 
 - date: "14 December 2021"
-  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30400&anno=2022&IdPag=7921' target='_blank'>Mathematics</a>"
+  description: "Exam: <a href='https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30400&anno=2022' target='_blank'>Mathematics</a>"
   strong: false
 
 - date: "September 2021"
