@@ -39,6 +39,13 @@ Below are some of the resources I have found most valuable for learning, explori
     - [Operating System Concepts](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf) by A. Silberschatz: Comprehensive overview of how operating systems work.
     - [System Design Interview](https://bytes.usc.edu/~saty/courses/docs/data/SystemDesignInterview.pdf) by A. Xu: Concise yet thorough overview of system design, with each chapter focusing on a well-known system and curated further readings.
 
+# Suggested Readings
+This section features articles, books, and blog posts I find especially insightful and recommend exploring:
+- [Demystifying the American Graduate Admissions Process](https://cs.stanford.edu/~rkarthik/DAGAP.pdf): A Stanford admissions committee member explains in detail the key factors and their weightings considered when reviewing MSc applications at top U.S. graduate schools.
+- [Should You Apply for a PhD in AI (2025-26)?](https://yashbhalgat.github.io/blog/phd-or-not-phd.html): An Oxford VGG PhD student (ex-Meta, ex-Qualcomm) discusses the pros and cons of pursuing a PhD in AI today, given the need of hyperscale clusters and research teams.
+- [The unconscious process that leads to creativity: how ‘incubation’ works](https://www.theguardian.com/wellness/2025/sep/10/creativity-unconscious-process-incubation): A look at how unconscious mental processes foster creativity.
+- [WhatsApp Encryption Overview](https://www.bitsoffreedom.nl/wp-content/uploads/WhatsApp-Security-Whitepaper.pdf): A technical whitepaper detailing WhatsApp's end-to-end encryption, including cryptographic primitives like AES, HMAC-SHA, and EC-25519.
+
 # Finance
 Here are some resources I found most useful for learning about finance, quant finance, and personal finance, as well as preparing for interviews:
 - [A Random Walk Down Wall Street](https://www.amazon.com/Random-Walk-Down-Wall-Street/dp/1324035439): A classic and highly recommended book on investing and personal finance.
