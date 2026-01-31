@@ -17,6 +17,10 @@ body {
     background-color: var(--background-color);
 }
 
+strong, b {
+  font-weight: 500;
+}
+
 /*-------------------------------------------------------------------
 # Links
 --------------------------------------------------------------------*/
@@ -188,7 +192,8 @@ main p {
 }
 
 .navmenu a:hover,
-.navmenu li:hover>a {
+.navmenu li:hover>a,
+.navmenu .active {
     color: var(--default-color);
 }
 
@@ -712,19 +717,5 @@ footer {
 }
 
 /*-------------------------------------------------------------------
-# Contributions (inherits from default styles)
+# Resources
 --------------------------------------------------------------------*/
-
-#contributions-intro {
-  margin: 1.5rem 0 1rem 0;
-}
-
-#contributions-list {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-#contributions-list li {
-  margin-bottom: 0.8rem;
-  line-height: 1.6;
-}
