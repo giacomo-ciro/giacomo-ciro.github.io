@@ -64,4 +64,18 @@ This section collects useful tips, solutions, and interesting facts I wish I'd k
 - $$r = 1-\sin(\theta)$$ is a [heart curve](https://mathworld.wolfram.com/HeartCurve.html) in polar coordinates.
 
 "| markdownify | target_blank}}
+{{ "# Map My Visitors" | markdownify}}
+<script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=666&w=a&t=t&d=P1us-I_g_S7L1wNk2krrGDIg5Mz3O-yVjIrfqToKhE4&co=f4f4f4&cmo=0d1d91&cmn=0d1d91&ct=666'></script>
+<!-- 
+cl=666      land color
+co=f4f4f4   ocean color
+cmo=0d1d91  past visitors
+cmn=0d1d91  current visitors
+t=n&d       don't show page view counter
+t=tt&d      show total views
+t=m&d       show monthly views
+t=t&d       show daily views
+-->
+
 </section>
+
