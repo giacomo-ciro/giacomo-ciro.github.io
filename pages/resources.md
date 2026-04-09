@@ -19,6 +19,7 @@ I believe one of the greatest byproducts of the internet is large-scale collabor
 - Fixed errors in the [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook by Simon J.D. Prince (The MIT Press, 2023).
 - Fixed a bug in [TileDB-Vector-Search](https://github.com/TileDB-Inc/TileDB-Vector-Search/pull/580), a library for efficient out-of-core vector search.
 - Refactored an enum object in the [Conda](https://github.com/conda/conda/pull/15428) package manager.
+- I curate a [collection of code snippets](https://gist.github.com/giacomo-ciro) to improve the quality-of-life during your everyday tasks.
 
 # Study Material
 Below are some of the resources I have found most valuable for learning, exploring, or reviewing topics in mathematics, statistics, computer science and machine learning:
@@ -38,6 +39,10 @@ Below are some of the resources I have found most valuable for learning, explori
 - **Computer Science & Engineering**:
     - [Operating System Concepts](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf) by A. Silberschatz: Comprehensive overview of how operating systems work.
     - [System Design Interview](https://bytes.usc.edu/~saty/courses/docs/data/SystemDesignInterview.pdf) by A. Xu: Concise yet thorough overview of system design, with each chapter focusing on a well-known system and curated further readings.
+    - [Simon Oz](https://www.youtube.com/@szymonozog7862): Comprehensive introduction to GPU architecture and GPU computing.
+    - [CUDA Tutorial](https://cuda-tutorial.readthedocs.io/en/latest/): Beginner-friendly tutorials for getting started with GPU programming using CUDA.
+    - [Tensor and Fully Sharded Data Parallelism](https://substack.com/@martynassubonis/p-154292281): Clear introduction to basic parallel computing concepts..
+
 
 # Suggested Readings
 This section features articles, books, and blog posts I find especially insightful and recommend exploring:
@@ -45,6 +50,8 @@ This section features articles, books, and blog posts I find especially insightf
 - [Should You Apply for a PhD in AI (2025-26)?](https://yashbhalgat.github.io/blog/phd-or-not-phd.html): An Oxford VGG PhD student (ex-Meta, ex-Qualcomm) discusses the pros and cons of pursuing a PhD in AI today, given the need of hyperscale clusters and research teams.
 - [The unconscious process that leads to creativity: how ‘incubation’ works](https://www.theguardian.com/wellness/2025/sep/10/creativity-unconscious-process-incubation): A look at how unconscious mental processes foster creativity.
 - [WhatsApp Encryption Overview](https://www.bitsoffreedom.nl/wp-content/uploads/WhatsApp-Security-Whitepaper.pdf): A technical whitepaper detailing WhatsApp's end-to-end encryption, including cryptographic primitives like AES, HMAC-SHA, and EC-25519.
+ - [Doing Well in Your Courses](https://cs.stanford.edu/people/karpathy/advice.html): Andrej Karpathy's practical guide to excelling as an undergraduate student, something I wish I'd found sooner.
+ - [How I Became a Linux Kernel Contributor](https://lewboski.dev/blog/linux-kernel): Step-by-step guide to getting your first pull request merged into the Linux kernel.
 
 # Finance
 Here are some resources I found most useful for learning about finance, quant finance, and personal finance, as well as preparing for interviews:
