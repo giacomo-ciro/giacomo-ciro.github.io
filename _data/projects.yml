@@ -1,3 +1,12 @@
+- title: "Multi-Modal Real Estate Search MCP"
+  date: "18-19 Apr '26"
+  tags: "Python, AWS, MCP"
+  description: "As our Datathon 2026 submission, we built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the Swiss market. The result is an MCP server fully deployed on AWS enabling any compatible LLM to query real-time listings."
+  links:
+    Code: https://github.com/alexcaldarone/datathon-2026
+    Datathon: https://www.datathon.ai/
+    Demo: https://github.com/alexcaldarone/datathon-2026/blob/main/assets/demo.gif 
+  thumbnail: "260418.png"
 - title: "Knowledge Graph of the Italian Supreme Court's Rulings"
   date: "Aug '25"
   tags: "Python, Neo4j, Knowledge Graph"

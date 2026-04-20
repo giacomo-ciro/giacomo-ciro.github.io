@@ -23,7 +23,7 @@ I am currently pursuing a [MSc in Artificial Intelligence](https://www.uniboccon
 
 My passion lies in Mathematics and Computer Science, and I aim at a career as Researcher.
 
-I am currently doing my MSc Thesis at the [Computer Vision and Geometry Group (CVG)](https://cvg.ethz.ch/) at [ETH Zurich](https://ethz.ch/en.html), under the supervision of [Dr. Zuria Bauer](https://zuriabauer.com/) and [Prof. Dr. Marc Pollefeys](https://people.inf.ethz.ch/marc.pollefeys/). I am working on 4D scene understanding and dynamic object representation.
+I am currently doing my MSc Thesis at the [Computer Vision and Geometry Group (CVG)](https://cvg.ethz.ch/) at [ETH Zurich](https://ethz.ch/en.html), under the supervision of [Dr. Zuria Bauer](https://zuriabauer.com/), [Prof. Marc Pollefeys](https://people.inf.ethz.ch/marc.pollefeys/) and [Prof. Chiara Plizzari](https://chiaraplizz.github.io/). I am working on 4D scene understanding and dynamic objects representation.
 
 Previosuly, I spent two years as a Machine Learning Researcher at the [Bocconi Institute for Data Science and Analytics](https://bidsa.unibocconi.eu/?_gl=1*vwq429*_up*MQ..*_ga*NTg0NTkzNzg4LjE3MzI0ODA4MDc.*_ga_FMVFTTB8Q4*MTczMjQ4MDgwNS4xLjEuMTczMjQ4MDg3MS4wLjAuMA..) and the [AIRC Institute for Molecular Biology](https://www.ifom.eu/it/), under the supervision of Professor [Francesca Buffa](https://cs.unibocconi.eu/people/francesca-buffa). My work focused on exploring the scaling laws of deep learning models in transcriptomics and developing novel architectures for gene expression modeling.
 
