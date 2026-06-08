@@ -1,3 +1,13 @@
+- title: "SO-101 Policy Training"
+  date: "6-7 June '26"
+  tags: "Robotics, Imitation Learning, Hackathon"
+  description: "Trained ACT and SmolVLA policies on a SO-101 robotic arm during the EuroTech x HKTE hackathon. It was our team first time working with robotics hardware: we failed miserably, but learned a lot."
+  links:
+    Code: https://github.com/giacomo-ciro/eurotech-hackathon
+    Hackathon: https://www.hkengage.gov.hk/en/events/eurotech-x-hkte-hackathon
+    Demo: https://github.com/giacomo-ciro/eurotech-hackathon/blob/main/public/blue_ext.gif
+  thumbnail: "260606.png"
+
 - title: "Multi-Modal Real Estate Search MCP"
   date: "18-19 Apr '26"
   tags: "Python, AWS, MCP"
