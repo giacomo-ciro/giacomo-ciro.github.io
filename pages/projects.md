@@ -8,13 +8,11 @@ permalink: /projects/
     {% assign delay = 0 %}
     {% for project in site.data.projects %}
       {% unless site.data.projects_to_exclude contains project.id %}
-      <div class="project col-xl-5 col-12 d-flex justify-content-center" data-aos="fade-in" data-aos-delay="{{ delay }}">
+      <div class="project col-xl-10 col-12 d-flex justify-content-center" data-aos="fade-in" data-aos-delay="{{ delay }}">
         <div class="project-card d-flex">
           <div class="project-content d-flex flex-column justify-content-start">
-            <div class="d-flex flex-row align-items-top justify-content-between mb-2">
-              <h1 class="project-title">{{ project.title }}</h1>
-              <h2 class="project-date">{{ project.date }}</h2>
-            </div>
+            <h2 class="project-date">{{ project.date }}</h2>
+            <h1 class="project-title">{{ project.title }}</h1>
             <h2 class="project-tags">{{ project.tags }}</h2>
             <p class="project-description">{{ project.description }}</p>
             {% if project.links %}
