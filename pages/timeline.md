@@ -4,7 +4,7 @@ title: Timeline
 permalink: /timeline/
 ---
 <main class="d-flex flex-column align-items-center justify-content-center">
-  <div id="timeline" class="col-md-5 col-9 d-flex flex-column">
+  <div id="timeline" class="col-md-12 col-9 d-flex flex-column">
     {% for event in site.data.timeline %}
       {% if event.strong %}
         {% assign eventClass = "strong" %}

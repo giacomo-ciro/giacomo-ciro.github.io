@@ -1,5 +1,5 @@
 - title: "Integrated Research Environment (IRE)"
-  date: "30 June '26"
+  date: "30 June 2026"
   tags: "Desktop App, Rust, AI Agents"
   description: "A local-first desktop environment for researchers that keeps code, literature, experiments, and AI collaboration seamlessly connected. Features a persistent Git-tracked wiki, non-blocking experiment tracking, and a native MCP bridge for agentic IDE integration."
   links:
@@ -8,7 +8,7 @@
   thumbnail: "260630.png"
 
 - title: "SO-101 Policy Training"
-  date: "6-7 June '26"
+  date: "6-7 June 2026"
   tags: "Robotics, Imitation Learning, Hackathon"
   description: "Trained ACT and SmolVLA policies on a SO-101 robotic arm during the EuroTech x HKTE hackathon. It was our team first time working with robotics hardware: we failed miserably, but learned a lot."
   links:
@@ -18,7 +18,7 @@
   thumbnail: "260606.png"
 
 - title: "Autoresearch HFT"
-  date: "30-31 May '26"
+  date: "30-31 May 2026"
   tags: "Quantitative Finance, Machine Learning, AI Agents"
   description: "A weekend challenge to trade six months of nanosecond-precision HFT order book data. Using a modular, agent-driven research harness, self-looping agents tested 30 strategies in under 48 hours, going from losing money to a fully automated strategy earning over €25k/month."
   links:
@@ -26,7 +26,7 @@
   thumbnail: "260530.png"
 
 - title: "Multi-Modal Real Estate Search MCP"
-  date: "18-19 Apr '26"
+  date: "18-19 Apr 2026"
   tags: "Python, AWS, MCP"
   description: "As our Datathon 2026 submission, we built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the Swiss market. The result is an MCP server fully deployed on AWS enabling any compatible LLM to query real-time listings."
   links:
@@ -35,14 +35,24 @@
     Demo: https://github.com/alexcaldarone/datathon-2026/blob/main/assets/demo.gif 
   thumbnail: "260418.png"
 
+- title: "More Efficient Text Diffusion via Length Prediction"
+  date: "Mar 2026"
+  tags: "Natural Language Processing, Machine Learning, Optimization"
+  description: "Improved computational efficiency of an 8B diffusion language model by predicting output sequence length before generation, dynamically cropping the context window to cut computation with minimal performance impact. Submitted to ICML 2026."
+  links:
+    Code: "https://github.com/giacomo-ciro/diffusion-llms"
+    arXiv: "https://arxiv.org/abs/2603.06123"
+    OpenReview: "https://openreview.net/forum?id=gnQVz850h6&nesting=2&sort=date-desc"
+  thumbnail: "260300.png"
+
 - title: "Knowledge Graph of the Italian Supreme Court's Rulings"
-  date: "Aug '25"
+  date: "Aug 2025"
   tags: "Python, Neo4j, Knowledge Graph"
   description: "During my internship at Lexroom.ai, I designed and developed a proprietary ETL pipeline to construct a knowledge graph from over 5,000 unstructured Italian Supreme Court's rulings. Implemented an out-of-core, efficient PageRank-based algorithm to assign relevance scores to graph nodes."
   thumbnail: "250801.png"
 
 - title: "Do AI and Human Experts See Pneumonia the Same Way?"
-  date: "May '25"
+  date: "May 2025"
   tags: "Computer Vision, Explainable AI, Medical Imaging"
   description: "We compared CNNs with experienced professionals on pediatric chest X-rays to understand if deep learning models identify pneumonia using the same visual cues as doctors. The answer is no, and high accuracy doesn't guarantee human-interpretable reasoning."
   links:
@@ -50,17 +60,8 @@
     Report: "/assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
   thumbnail: "250523.png"
 
-- title: "More Efficient Text Diffusion via Length Prediction"
-  date: "May '25"
-  tags: "Natural Language Processing, Machine Learning, Optimization"
-  description: "Improved computational efficiency of a 8B diffusion language model by predicting output sequence length before generation. Achieved 80% accuracy in length prediction, reducing computation by up to 800 tokens per generation."
-  links:
-    Code: "https://github.com/giacomo-ciro/diffusion-llms"
-    Report: "/assets/docs/more_efficient_text_diffusion_via_length_prediction.pdf"
-  thumbnail: "250519.png"
-
 # - title: "Fundamental Matrix Estimation"
-#   date: "March '25"
+#   date: "March 2025"
 #   tags: "Geometric Computer Vision"
 #   description: "Python implementation of the eight-point algorithm for estimating the fundamental matrix between two camera views of the same scene."
 #   links:
@@ -68,7 +69,7 @@
 #   thumbnail: "250329.png"
 
 # - title: "Single View Metrology"
-#   date: "March '25"
+#   date: "March 2025"
 #   tags: "Geometric Computer Vision"
 #   description: "Computer vision algorithm that estimates a person's height from a single image using a reference object in the scene."
 #   links:
@@ -76,7 +77,7 @@
 #   thumbnail: "250328.png"
 
 # - title: "Information Retrieval"
-#   date: "March '25"
+#   date: "March 2025"
 #   tags: "Natural Language Processing"
 #   description: "Comparison of algorithms for retrieving the most relevant answer from a corpus given a user query."
 #   links:
@@ -84,7 +85,7 @@
 #   thumbnail: "250325.png"
 
 - title: "Wordle Solver"
-  date: "February '25"
+  date: "February 2025"
   tags: "Natural Language Processing"
   description: "Optimal strategy solver for Wordle that achieves 100% success rate with an average of 2.89 guesses in 0.5 seconds."
   links:
@@ -92,7 +93,7 @@
   thumbnail: "250227.jpg"
 
 - title: "Gooper"
-  date: "January '25"
+  date: "January 2025"
   tags: "Software Development"
   description: "A search engine for influencers."
   links:
@@ -101,7 +102,7 @@
   thumbnail: "250108.png"
 
 # - title: "Image Compression via IP"
-#   date: "November '24"
+#   date: "November 2024"
 #   tags: "Linear Progamming, Image Processing"
 #   description: "Image compression pipeline using K-means clustering optimized through Integer Programming techniques."
 #   links:
@@ -109,7 +110,7 @@
 #   thumbnail: "241129.png"
 
 # - title: "SCIP Debugging"
-#   date: "November '24"
+#   date: "November 2024"
 #   tags: "C, Software Development"
 #   description: "Used debugging tools (gdb and AFL++) to identify and fix two bugs in SCIP, an open-source linear programming solver."
 #   links:
@@ -117,7 +118,7 @@
 #   thumbnail: "241120.jpg"
 
 # - title: "Resilient Companies"
-#   date: "October '24"
+#   date: "October 2024"
 #   tags: "Finance, Data Analysis"
 #   description: "Analysis of 31,710 Indian companies to identify those with consistent strong performance before and after 2020, exploring the role of information systems in business resilience."
 #   links:
@@ -125,7 +126,7 @@
 #   thumbnail: "241001.png"
 
 # - title: "Boolean Compiler"
-#   date: "September '24"
+#   date: "September 2024"
 #   tags: "Python, Software Development"
 #   description: "A compiler for a boolean programming language."
 #   links:
@@ -133,7 +134,7 @@
 #   thumbnail: "240912.png"
 
 - title: "BSc Thesis"
-  date: "July '24"
+  date: "July 2024"
   tags: "Bioinformatics, Machine Learning"
   description: "Enhanced scGPT transformer model for gene expression prediction by incorporating prior biological knowledge of transcriptional regulation."
   links:
@@ -141,7 +142,7 @@
   thumbnail: "240718.png"
 
 - title: "Evolving Tinder"
-  date: "April '24"
+  date: "April 2024"
   tags: "Python, Evolutionary Algorithm"
   description: "Applied evolutionary algorithms to improve matching stability beyond the traditional Deferred Acceptance Algorithm for two-sided matching problems."
   links:
@@ -150,7 +151,7 @@
   thumbnail: "240429.png"
 
 # - title: "Q-Learning Playground"
-#   date: "April '24"
+#   date: "April 2024"
 #   tags: "Python, Reinforcement Learning"
 #   description: "Interactive webapplication demonstrating Q-learning algorithm and the Bellman Equation through visual examples."
 #   links:
@@ -159,7 +160,7 @@
 #   thumbnail: "240413.png"
 
 - title: "Daily Spin Bot"
-  date: "December '23"
+  date: "December 2023"
   tags: "Python, Browser Automation"
   description: "Automated browser bot for maximizing rewards in SNAI Daily Spin game, available as executable."
   links:
@@ -167,7 +168,7 @@
   thumbnail: "231212.jpg"
 
 # - title: "Standardization"
-#   date: "October '23"
+#   date: "October 2023"
 #   tags: "Python, StataSE, Marketing Analytics"
 #   description: "Statistical analysis of how standardization in customer support affects satisfaction using OLS regression with controls for confounding variables and industry effects."
 #   links:
@@ -175,7 +176,7 @@
 #   thumbnail: "231006.png"
 
 # - title: "F1 Race Analysis"
-#   date: "June '23"
+#   date: "June 2023"
 #   tags: "Python, Data Analysis, Data Visualization, Data Mining"
 #   description: "Interactive dashboard displaying Formula 1 statistics and insights from historical data through current races, with automatic updates after each Grand Prix."
 #   links:
@@ -184,7 +185,7 @@
 #   thumbnail: "230621.jpg"
 
 # - title: "Production Function Estimation"
-#   date: "May '23"
+#   date: "May 2023"
 #   tags: "R, Panel Data Analysis, FE/RE Model"
 #   description: "Applied Fixed Effect and Random Effect models to estimate a company's production functions while controlling for individual and time-specific heterogeneity."
 #   links:
@@ -192,7 +193,7 @@
 #   thumbnail: "230522.png"
 
 # - title: "House Price Predictor"
-#   date: "April '23"
+#   date: "April 2023"
 #   tags: "Python, Random Forest Regressor, Neural Network, Linear Regression"
 #   description: "Machine learning models for predicting house prices in Milan, Rome, and Venice using a dataset of over 45,000 properties."
 #   links:
@@ -201,7 +202,7 @@
 #   thumbnail: "230430.jpg"
 
 # - title: "Words Generator"
-#   date: "April '23"
+#   date: "April 2023"
 #   tags: "Python, Generative AI Models"
 #   description: "Neural networks trained on word corpora to generate novel, realistic-sounding words that don't exist in any language."
 #   links:
@@ -210,7 +211,7 @@
 #   thumbnail: "230408.png"
 
 # - title: "Taylor Rule Estimation"
-#   date: "February '23"
+#   date: "February 2023"
 #   tags: "R, Linear Regression"
 #   description: "Estimated Austria's interest rate policy using OLS regression and Taylor's rule framework, with comprehensive diagnostic testing for model robustness."
 #   links:
