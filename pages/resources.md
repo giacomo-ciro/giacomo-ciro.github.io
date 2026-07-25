@@ -4,17 +4,19 @@ title: Resources
 permalink: /resources/
 ---
 
-<section class="col-md-7 col-12 resources-page">
-<div class="d-flex justify-content-center quotes-disclaimer">
+<section id="resources-disclaimer" class="d-flex flex-column justify-content-center page-col">
+  <div class="d-flex justify-content-center quotes-disclaimer">
     <p>
         The resources on this page are shared to inspire curiosity and support learning. If you know of a valuable resource or have something insightful to share, feel free to reach out.
     </p>
-</div>
+  </div>
+</section>
+<section class="resources-page page-col" data-aos="fade-in">
 {{ "
-
-
 # Open Source
-I believe one of the greatest byproducts of the internet is large-scale collaboration. People around the world manage to work together to advance open-source projects and build amazing projects. I co-founded the [Bocconi Open Source Society (BOSS)](https://b-open.dev) to promote open source at my university, and I contribute to projects whenever I can. Here are some I've worked on:
+I believe one of the greatest byproducts of the internet is large-scale collaboration. People around the world manage to work together to advance open-source projects and build amazing projects.
+
+I co-founded the [Bocconi Open Source Society (BOSS)](https://b-open.dev) to promote open source at my university, and I contribute to projects whenever I can. Here are some I've worked on:
 
 - [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook by Simon J.D. Prince (The MIT Press, 2023).
 - [TileDB-Vector-Search](https://github.com/TileDB-Inc/TileDB-Vector-Search/pull/580), a library for efficient out-of-core vector search.

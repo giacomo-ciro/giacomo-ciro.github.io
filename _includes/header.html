@@ -1,23 +1,20 @@
-<header id="header" class="header d-flex align-items-center sticky-top">
-<div class="container-fluid position-relative d-flex align-items-center justify-content-around">
-    <div class="col-md-7">
-    <a href="/" class="d-flex flex-column">
-        <h1 class="hero-title">{{ site.title }}</h1>
-        <h2 class="hero-subtitle">{{ page.title }}</h2>
-    </a>
-    </div>
-    
-    <div class="upper-right-nav col-md-5 d-flex align-items-center justify-content-end">
-    <nav id="navmenu" class="navmenu">
-        <ul>
-        <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-        <li><a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}>Projects</a></li>
-        <li><a href="{{ '/timeline/' | relative_url }}" {% if page.url contains '/timeline' %}class="active"{% endif %}>Timeline</a></li>
-        <li><a href="{{ '/quotes/' | relative_url }}" {% if page.url contains '/quotes' %}class="active"{% endif %}>Quotes</a></li>
-        <li><a href="{{ '/resources/' | relative_url }}" {% if page.url contains '/resources' %}class="active"{% endif %}>Resources</a></li>
-        </ul>
-    </nav>
-        <a class="btn-cv" href="/assets/docs/Giacomo_Ciro_CV.pdf" target="_blank">CV</a>
-    </div>
+<button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+
+<div id="nav-dropdown" class="nav-dropdown">
+  <nav id="navmenu" class="navmenu">
+    <ul>
+      <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}><span class="label">Home</span></a></li>
+      <li><a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}><span class="label">Projects</span></a></li>
+      <li><a href="{{ '/timeline/' | relative_url }}" {% if page.url contains '/timeline' %}class="active"{% endif %}><span class="label">Timeline</span></a></li>
+      <li><a href="{{ '/quotes/' | relative_url }}" {% if page.url contains '/quotes' %}class="active"{% endif %}><span class="label">Quotes</span></a></li>
+      <li><a href="{{ '/resources/' | relative_url }}" {% if page.url contains '/resources' %}class="active"{% endif %}><span class="label">Resources</span></a></li>
+    </ul>
+  </nav>
+  <div class="btn-cv-row">
+    <a class="btn-cv" href="/assets/docs/Giacomo_Ciro_CV.pdf" target="_blank">CV</a>
+  </div>
 </div>
-</header>

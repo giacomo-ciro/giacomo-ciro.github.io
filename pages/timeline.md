@@ -3,8 +3,13 @@ layout: default
 title: Timeline
 permalink: /timeline/
 ---
-<main class="d-flex flex-column align-items-center justify-content-center">
-  <div id="timeline" class="col-md-12 col-9 d-flex flex-column">
+<section id="timeline-page" class="d-flex flex-column justify-content-center page-col">
+  <div class="d-flex justify-content-center quotes-disclaimer">
+    <p>
+      This timeline collects milestones and events I find worth remembering. It's a personal and evolving list, not necessarily exhaustive or objective.
+    </p>
+  </div>
+  <div id="timeline" class="d-flex flex-column">
     {% for event in site.data.timeline %}
       {% if event.strong %}
         {% assign eventClass = "strong" %}
@@ -20,4 +25,4 @@ permalink: /timeline/
       </div>
     {% endfor %}
   </div>
-</main>
+</section>
