@@ -13,8 +13,11 @@ function initializeChatbot() {
       const modelInfo = document.getElementById('chatbot-model-info');
       const modelText = document.getElementById('chatbot-model-text');
       if (modelInfo && modelText && data.models && data.models.model_text) {
-        const modelName = data.models.model_text.split('/').pop().replace(/-/g, ' ');
-        modelText.textContent = `Powered by: ${modelName}`;
+        console.log(data.models.model_text);
+        const modelSlug = data.models.model_text.split('/').pop();
+        const modelName = modelSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        const modelUrl = `https://www.together.ai/models/${modelSlug.toLowerCase()}`;
+        modelText.innerHTML = `Powered by: <a href="${modelUrl}" target="_blank" rel="noopener">${modelName}</a>`;
         modelInfo.style.display = 'flex';
       }
     })
@@ -186,12 +189,34 @@ function initializeChatbot() {
 }
 
 
-// Scroll animation (shadow) on header
-function toggleScrolled() {
-  const selectBody = document.querySelector('body');
-  const selectHeader = document.querySelector('#header');
-  if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-  window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+// Hamburger menu dropdown
+function initNavToggle() {
+  const toggle = document.getElementById('menu-toggle');
+  const dropdown = document.getElementById('nav-dropdown');
+  if (!toggle || !dropdown) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
+      dropdown.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dropdown.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 // Animate on scroll library
@@ -205,11 +230,13 @@ function aosInit() {
 }
 
 // Load everything
-window.onload = function() {
+function initAll() {
   initializeChatbot();
-  aosInit()
-};
-
-
-document.addEventListener('scroll', toggleScrolled);
-window.addEventListener('load', toggleScrolled);
+  aosInit();
+  initNavToggle();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
