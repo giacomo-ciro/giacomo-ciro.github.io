@@ -35,14 +35,10 @@ To connect minds, not only layers, I co-founded [Bocconi Students for Machine Le
 <section class="d-flex flex-column justify-content-center page-col" id="timeline-preview-section" data-aos="fade-up">
   <h1>Timeline</h1>
   <div id="timeline-preview" class="d-flex flex-column">
-    {% assign preview_timeline = site.data.timeline | slice: 0, 4 %}
+    {% assign strong_timeline = site.data.timeline | where: "strong", true %}
+    {% assign preview_timeline = strong_timeline | slice: 0, 3 %}
     {% for event in preview_timeline %}
-      {% if event.strong %}
-        {% assign eventClass = "strong" %}
-      {% else %}
-        {% assign eventClass = "weak" %}
-      {% endif %}
-      <div class="timeline-event {{ eventClass }} d-flex flex-row align-items-center">
+      <div class="timeline-event strong d-flex flex-row align-items-center">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <div class="timeline-date">{{ event.date }}</div>

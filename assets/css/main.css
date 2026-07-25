@@ -363,17 +363,18 @@ main p {
    either. Below it the pair simply reflows; --hero-t stays clamped at 0. */
 @media screen and (max-width: 432px) {
   .hero {
-    /* Second ramp: 1 at the threshold, 0 at 300px, so the stacked pair keeps
-       shrinking on small phones instead of sitting at a fixed size. */
-    --hero-t: clamp(0, (100vw - 300px) / 132, 1);
+    /* --hero-t stays clamped at 0 here: type size and rhythm are already at
+       their minimum when we cross the threshold and must not spring back.
+       A separate ramp drives the image alone, since below the threshold it no
+       longer competes with the text for horizontal room. --hero-img-t is 1 at
+       the threshold, so the image width is continuous across the switch. */
+    --hero-img-t: clamp(0, (100vw - 300px) / 132px, 1);
 
     flex-direction: column;
     gap: 1.25rem;
   }
   .hero .img-container {
-    /* Narrower band below the threshold — the image is no longer competing
-       with the text for horizontal room, so it need not shrink as hard. */
-    width: calc(150px + 40px * var(--hero-t));
+    width: calc(var(--hero-img-min) - 40px + 40px * var(--hero-img-t));
   }
   .hero .hero-text {
     align-items: flex-start;
@@ -533,7 +534,6 @@ footer {
 # Timeline
 --------------------------------------------------------------------*/
 
-#timeline,
 #timeline-preview {
     padding-left: 20px;
 }
@@ -543,15 +543,164 @@ footer {
     margin: 0.5rem;
 }
 
+/* On the timeline page the dot must sit on the row's first line rather than
+   at the row's vertical centre: a wrapped two-line entry would otherwise
+   push its dot down and out of line with the month label beside it. */
+#timeline .timeline-event {
+    align-items: flex-start !important;
+}
+
+/* Sit on the centre of the row's first text line. --dot-offset is that
+   distance from the event's top edge; it is a constant so that strong/weak
+   rows (different title sizes) and wrapped rows all place their dot at the
+   same height, keeping every dot in step with the month label beside it. */
+#timeline .timeline-dot {
+    top: var(--dot-offset);
+    margin-top: calc(var(--dot-half) * -1);
+}
+
+/* Dot sizing. Hierarchy is carried by diameter alone — same colour, same
+   shape — so milestones read clearly while routine entries stay quiet.
+   --dot-half is half the weak dot and drives the month-label alignment
+   below; keep the two in step if the sizes ever change. */
+:root {
+    --dot-weak: 7px;
+    --dot-strong: 14px;
+    --dot-half: 3.5px;
+    /* Distance from a .timeline-event's top edge down to its dot centre:
+       half of the 18px/1.5 title line box. Constant across strong/weak and
+       wrapped rows, so every dot lines up with its month label. */
+    --dot-offset: 13.5px;
+}
+
 .timeline-dot {
-    width: 20px;
-    height: 20px;
+    width: var(--dot-strong);
+    height: var(--dot-strong);
     background-color: var(--accent-color);
     border-radius: 50%;
     position: absolute;
     left: -20px;
-    margin-left: -10px;
+    /* Centre stays on the line whatever the diameter. */
+    margin-left: calc(var(--dot-strong) / -2);
     z-index: 1;
+}
+
+/*-------------------------------------------------------------------
+# Timeline page — year/month rail
+--------------------------------------------------------------------*/
+
+/* Dates are shown once per group on a left rail instead of on every row.
+   Both labels are sticky and pin to the same line, so as you scroll the
+   year stays put while the month advances beside it. */
+/* No left padding here: the two rail columns of .year-group already provide
+   the offset, and .month-body adds the 20px dot gutter. */
+#timeline {
+    position: relative;
+}
+
+/* The line is drawn per month-body rather than once on #timeline, because
+   only .month-body sits at the dot axis — #timeline spans the rail columns
+   too. Each body's line runs its full height and the bodies stack directly
+   on top of each other, so the result is continuous; the first and last
+   groups then inset their outer end onto the first/last dot centre. */
+.month-body:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    /* Dot centres sit at the body's 20px padding plus the event's own 0.5rem
+       side margin, less the dot's 20px offset — i.e. exactly the margin. */
+    left: 0.5rem;
+    margin-left: -2px;
+    top: 0;
+    bottom: 0;
+    background-color: var(--contrast-color);
+    z-index: 0;
+}
+
+/* Inset the very first and very last ends so the line stops on a dot centre
+   instead of overshooting into the surrounding whitespace. */
+/* `.month-group` is not :first-of-type within its year group — the
+   `.year-label` div precedes it — so the first month group is nth-of-type(2).
+   Keep this in step with the markup in pages/timeline.md. */
+#timeline > .year-group:first-child .month-group:nth-of-type(2) .month-body:before {
+    top: calc(0.5rem + var(--dot-offset));
+}
+
+#timeline > .year-group:last-child .month-group:last-child .month-body:before {
+    /* From the body's bottom edge up to the last dot's centre: the event's
+       0.5rem margin, the title's 1rem bottom margin, and the remainder of
+       the title's first line below the dot. */
+    bottom: calc(0.5rem + 1rem + 18px - var(--dot-offset));
+}
+
+.year-group {
+    display: grid;
+    /* Fixed widths, never auto: auto sizes each year group independently and
+       the whole rail jitters horizontally from one year to the next.
+       4.9rem = widest year text at 1.35rem, plus the 1.5rem gap the month
+       uses before its dot, so both gaps read as equal. */
+    grid-template-columns: 4.9rem 3.6rem 1fr;
+    align-items: start;
+}
+
+.year-label {
+    grid-column: 1;
+    position: sticky;
+    /* Offset so the year's text centre lines up with the month's despite the
+       larger font size. Must be applied via `top`, not a margin — a margin
+       shifts the box out of its own sticky range and it stops pinning. */
+    top: calc(4.2rem + (0.78rem * 1.2 / 2) - (1.35rem * 1.2 / 2));
+    z-index: 3;
+    align-self: start;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--accent-color);
+    text-align: right;
+    padding: 0 1.5rem 0 0;
+    background-color: var(--background-color);
+}
+
+/* subgrid so the month's own columns line up with the year grid. */
+.month-group {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 2 / -1;
+}
+
+.month-label {
+    grid-column: 1;
+    /* Same pin line as the year, so the two sit level side by side. */
+    position: sticky;
+    top: 4.2rem;
+    z-index: 2;
+    align-self: start;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    /* Right-aligned so the edge the dot gap is measured from stays fixed;
+       left-aligning makes that gap vary with each month's word width. */
+    text-align: right;
+    padding: 0 1.5rem 0.35rem 0;
+    /* Opaque so an outgoing month is hidden behind the next year's label
+       rather than showing through it. */
+    background-color: var(--background-color);
+    /* Centre the label on its group's first dot. The event is flex-centred,
+       so its dot sits --dot-offset below the group's top edge (the 0.5rem
+       margin plus half the title's line box, not half the dot). The label's
+       own centre is at half its box height: text line + bottom padding. */
+    margin-top: calc(0.5rem + var(--dot-offset) - (1.2em + 0.35rem) / 2);
+}
+
+/* The 20px gutter is what the dots hang in: each is positioned left:-20px
+   relative to its event, putting its centre on this padding edge. */
+.month-body {
+    grid-column: 2;
+    position: relative;
+    padding-left: 20px;
 }
 
 /* The line is drawn in two halves per event (above and below the dot's
@@ -588,6 +737,20 @@ footer {
     height: 0;
 }
 
+/* The timeline page draws one continuous line on #timeline instead, so the
+   per-event halves would double up on it. The preview still uses them. */
+#timeline .timeline-event:before,
+#timeline .timeline-event:after {
+    content: none;
+}
+
+/* Dots sit above the sticky rail labels: their opaque backgrounds are flush
+   with the dot column, and at an equal stacking level they clip the dot's
+   edge into a visible flat corner as they scroll past. */
+#timeline .timeline-dot {
+    z-index: 6;
+}
+
 /* Preview only: more (older) events exist below the last shown dot, so its
    line fades out instead of stopping cleanly like the full page does. */
 #timeline-preview .timeline-event:last-child:after {
@@ -612,18 +775,22 @@ footer {
     margin: 0 0 1rem 0;
 }
 
-/* Timeline highlighting based on importance */
+/* Timeline highlighting based on importance. Strong and weak differ only in
+   diameter: previously both were the same colour 4px apart, which made the
+   two tiers nearly indistinguishable. */
 .timeline-event.strong .timeline-dot {
-    background-color: var(--accent-color); /* more vivid color for strong events */
-    box-shadow: 0 0 4px var(--accent-color);
+    width: var(--dot-strong);
+    height: var(--dot-strong);
+    margin-left: calc(var(--dot-strong) / -2);
+    background-color: var(--accent-color);
 }
 
 .timeline-event.weak .timeline-dot {
-    width: 16px;
-    height: 16px;
-    background-color: var(--accent-color);
-    left: -20px;
-    margin-left: -8px;
+    width: var(--dot-weak);
+    height: var(--dot-weak);
+    margin-left: calc(var(--dot-weak) / -2);
+    background-color: var(--contrast-color);
+    filter: brightness(0.82);
 }
 
 .timeline-event.strong .timeline-title {
@@ -647,6 +814,44 @@ footer {
     font-size: 0.85rem;
     font-weight: 350;
     color: var(--accent-color);
+}
+
+/* Narrow screens: the two rail columns cost ~8.5rem, too much next to the
+   text on a phone. Both labels become inline headings above their group and
+   keep pinning, the month just below the year. */
+@media (max-width: 600px) {
+  .year-group,
+  .month-group {
+    display: block;
+  }
+  .year-label {
+    text-align: left;
+    padding: 0.2rem 0 0.3rem 20px;
+    margin-top: 1.6rem;
+    top: 0;
+  }
+  .year-group:first-child .year-label {
+    margin-top: 0;
+  }
+  .month-label {
+    text-align: left;
+    padding: 0.15rem 0 0.3rem 20px;
+    /* Cancel the wide-layout offset that centres the label on its first dot;
+       stacked above the group, it just sits inline. */
+    margin-top: 0;
+    top: 2.1rem;
+  }
+  /* Stacked, the labels sit BETWEEN the month bodies rather than beside them,
+     so each body's line no longer meets the next and the spine breaks up.
+     Extend every segment down through the following label to close the gap;
+     the last group in each year stops at its own dot as before. */
+  .month-body:before {
+    bottom: auto;
+    height: calc(100% + 3.2rem);
+  }
+  .month-group:last-child .month-body:before {
+    height: 100%;
+  }
 }
 
 .view-more-wrap {

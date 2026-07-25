@@ -1,5 +1,5 @@
 - title: "Paperino"
-  date: "25 July 2026"
+  date: "July 2026"
   tags: "CLI, TypeScript, AI Agents"
   description: "Every new arXiv paper, every day, filtered by Claude Code down to what's actually worth your time. A CLI utility that runs a hyper-precise, agent-driven daily digest tailored to your exact research project."
   links:
@@ -8,7 +8,7 @@
   thumbnail: "260725.jpg"
 
 - title: "Integrated Research Environment (IRE)"
-  date: "30 June 2026"
+  date: "June 2026"
   tags: "Desktop App, Rust, AI Agents"
   description: "A local-first desktop environment for researchers that keeps code, literature, experiments, and AI collaboration seamlessly connected. Features a persistent Git-tracked wiki, non-blocking experiment tracking, and a native MCP bridge for agentic IDE integration."
   links:
@@ -17,7 +17,7 @@
   thumbnail: "260630.png"
 
 - title: "SO-101 Policy Training"
-  date: "6-7 June 2026"
+  date: "June 2026"
   tags: "Robotics, Imitation Learning, Hackathon"
   description: "Trained ACT and SmolVLA policies on a SO-101 robotic arm during the EuroTech x HKTE hackathon. It was our team first time working with robotics hardware: we failed miserably, but learned a lot."
   links:
@@ -27,15 +27,15 @@
   thumbnail: "260606.png"
 
 - title: "Autoresearch HFT"
-  date: "30-31 May 2026"
+  date: "May 2026"
   tags: "Quantitative Finance, Machine Learning, AI Agents"
   description: "A weekend challenge to trade six months of nanosecond-precision HFT order book data. Using a modular, agent-driven research harness, self-looping agents tested 30 strategies in under 48 hours, going from losing money to a fully automated strategy earning over €25k/month."
   links:
     Code: https://github.com/giacomo-ciro/autoresearch-hft
   thumbnail: "260530.png"
 
-- title: "Multi-Modal Real Estate Search MCP"
-  date: "18-19 Apr 2026"
+- title: "Multi-Modal Real Estate Search"
+  date: "April 2026"
   tags: "Python, AWS, MCP"
   description: "As our Datathon 2026 submission, we built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the Swiss market. The result is an MCP server fully deployed on AWS enabling any compatible LLM to query real-time listings."
   links:
@@ -44,18 +44,18 @@
     Demo: https://github.com/alexcaldarone/datathon-2026/blob/main/assets/demo.gif 
   thumbnail: "260418.png"
 
-- title: "More Efficient Text Diffusion via Length Prediction"
-  date: "Mar 2026"
-  tags: "Natural Language Processing, Machine Learning, Optimization"
-  description: "Improved computational efficiency of an 8B diffusion language model by predicting output sequence length before generation, dynamically cropping the context window to cut computation with minimal performance impact. Submitted to ICML 2026."
+- title: "Diffusion Language Models Are Natively Length-Aware"
+  date: "March 2026"
+  tags: "Natural Language Processing, Language Modelling"
+  description: "Improved computational efficiency of an 8B diffusion language model by predicting output sequence length before generation, dynamically cropping the context window to cut computation with minimal performance impact."
   links:
     Code: "https://github.com/giacomo-ciro/diffusion-llms"
     arXiv: "https://arxiv.org/abs/2603.06123"
     OpenReview: "https://openreview.net/forum?id=gnQVz850h6&nesting=2&sort=date-desc"
   thumbnail: "260300.png"
 
-- title: "Knowledge Graph of the Italian Supreme Court's Rulings"
-  date: "Aug 2025"
+- title: "Knowledge Graph of the Italian Law"
+  date: "August 2025"
   tags: "Python, Neo4j, Knowledge Graph"
   description: "During my internship at Lexroom.ai, I designed and developed a proprietary ETL pipeline to construct a knowledge graph from over 5,000 unstructured Italian Supreme Court's rulings. Implemented an out-of-core, efficient PageRank-based algorithm to assign relevance scores to graph nodes."
   thumbnail: "250801.png"
