@@ -1,3 +1,12 @@
+- title: "Paperino"
+  date: "25 July 2026"
+  tags: "CLI, TypeScript, AI Agents"
+  description: "Every new arXiv paper, every day, filtered by Claude Code down to what's actually worth your time. A CLI utility that runs a hyper-precise, agent-driven daily digest tailored to your exact research project."
+  links:
+    Code: https://github.com/giacomo-ciro/paperino
+    npm: https://www.npmjs.com/package/@giacomo-ciro/paperino
+  thumbnail: "260725.jpg"
+
 - title: "Integrated Research Environment (IRE)"
   date: "30 June 2026"
   tags: "Desktop App, Rust, AI Agents"
