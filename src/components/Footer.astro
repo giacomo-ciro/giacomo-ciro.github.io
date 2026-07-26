@@ -1,0 +1,27 @@
+---
+// Previously hardcoded and enforced by a CI check; now derived at build time.
+const lastUpdate = new Date().toLocaleDateString('en-US', {
+  month: 'long',
+  year: 'numeric',
+});
+const year = new Date().getFullYear();
+---
+<footer id="footer" class="page-col d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
+<div id="social-links">
+    <a href="https://www.github.com/giacomo-ciro" target="_blank" aria-label="GitHub">
+    <i class="fa-brands fa-github fa-2x" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/giacomo-ciro/" target="_blank" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin fa-2x" aria-hidden="true"></i>
+    </a>
+    <a href="https://scholar.google.com/citations?user=tSp1S0AAAAAJ" target="_blank" aria-label="Google Scholar">
+    <i class="fa-brands fa-google-scholar fa-2x" aria-hidden="true"></i>
+    </a>
+    <a href="https://x.com/gciro_" target="_blank" aria-label="X">
+    <i class="fa-brands fa-x-twitter fa-2x" aria-hidden="true"></i>
+    </a>
+ </div>
+<div id="copyright">
+    &copy; {year} Giacomo Cirò | Last update: {lastUpdate}
+</div>
+</footer>

@@ -1,0 +1,112 @@
+- title: "Paperino"
+  date: "July 2026"
+  tags: "CLI, TypeScript, AI Agents"
+  description: "Every new arXiv paper, every day, filtered by Claude Code down to what's actually worth your time. A CLI utility that runs a hyper-precise, agent-driven daily digest tailored to your exact research project."
+  links:
+    Code: https://github.com/giacomo-ciro/paperino
+    npm: https://www.npmjs.com/package/@giacomo-ciro/paperino
+  thumbnail: "260725.jpg"
+
+- title: "Integrated Research Environment (IRE)"
+  date: "June 2026"
+  tags: "Desktop App, Rust, AI Agents"
+  description: "A local-first desktop environment for researchers that keeps code, literature, experiments, and AI collaboration seamlessly connected. Features a persistent Git-tracked wiki, non-blocking experiment tracking, and a native MCP bridge for agentic IDE integration."
+  links:
+    Code: https://github.com/ire-research/ire
+    Website: https://ire-research.com
+  thumbnail: "260630.png"
+
+- title: "SO-101 Policy Training"
+  date: "June 2026"
+  tags: "Robotics, Imitation Learning, Hackathon"
+  description: "Trained ACT and SmolVLA policies on a SO-101 robotic arm during the EuroTech x HKTE hackathon. It was our team first time working with robotics hardware: we failed miserably, but learned a lot."
+  links:
+    Code: https://github.com/giacomo-ciro/eurotech-hackathon
+    Hackathon: https://www.hkengage.gov.hk/en/events/eurotech-x-hkte-hackathon
+    Demo: https://github.com/giacomo-ciro/eurotech-hackathon/blob/main/public/blue_ext.gif
+  thumbnail: "260606.png"
+
+- title: "Autoresearch HFT"
+  date: "May 2026"
+  tags: "Quantitative Finance, Machine Learning, AI Agents"
+  description: "A weekend challenge to trade six months of nanosecond-precision HFT order book data. Using a modular, agent-driven research harness, self-looping agents tested 30 strategies in under 48 hours, going from losing money to a fully automated strategy earning over €25k/month."
+  links:
+    Code: https://github.com/giacomo-ciro/autoresearch-hft
+  thumbnail: "260530.png"
+
+- title: "Multi-Modal Real Estate Search"
+  date: "April 2026"
+  tags: "Python, AWS, MCP"
+  description: "As our Datathon 2026 submission, we built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the Swiss market. The result is an MCP server fully deployed on AWS enabling any compatible LLM to query real-time listings."
+  links:
+    Code: https://github.com/alexcaldarone/datathon-2026
+    Datathon: https://www.datathon.ai/
+    Demo: https://github.com/alexcaldarone/datathon-2026/blob/main/assets/demo.gif 
+  thumbnail: "260418.png"
+
+- title: "Diffusion Language Models Are Natively Length-Aware"
+  date: "March 2026"
+  tags: "Natural Language Processing, Language Modelling"
+  description: "Improved computational efficiency of an 8B diffusion language model by predicting output sequence length before generation, dynamically cropping the context window to cut computation with minimal performance impact."
+  links:
+    Code: "https://github.com/giacomo-ciro/diffusion-llms"
+    arXiv: "https://arxiv.org/abs/2603.06123"
+    OpenReview: "https://openreview.net/forum?id=gnQVz850h6&nesting=2&sort=date-desc"
+  thumbnail: "260300.png"
+
+- title: "Knowledge Graph of the Italian Law"
+  date: "August 2025"
+  tags: "Python, Neo4j, Knowledge Graph"
+  description: "During my internship at Lexroom.ai, I designed and developed a proprietary ETL pipeline to construct a knowledge graph from over 5,000 unstructured Italian Supreme Court's rulings. Implemented an out-of-core, efficient PageRank-based algorithm to assign relevance scores to graph nodes."
+  thumbnail: "250801.png"
+
+- title: "Do AI and Human Experts See Pneumonia the Same Way?"
+  date: "May 2025"
+  tags: "Computer Vision, Explainable AI, Medical Imaging"
+  description: "We compared CNNs with experienced professionals on pediatric chest X-rays to understand if deep learning models identify pneumonia using the same visual cues as doctors. The answer is no, and high accuracy doesn't guarantee human-interpretable reasoning."
+  links:
+    Code: "https://github.com/davide-beltrame/medimg-saliency-benchmark"
+    Report: "/assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
+  thumbnail: "250523.png"
+
+- title: "Wordle Solver"
+  date: "February 2025"
+  tags: "Natural Language Processing"
+  description: "Optimal strategy solver for Wordle that achieves 100% success rate with an average of 2.89 guesses in 0.5 seconds."
+  links:
+    Code: "https://github.com/giacomo-ciro/wordle-solver"
+  thumbnail: "250227.jpg"
+
+- title: "Gooper"
+  date: "January 2025"
+  tags: "Software Development"
+  description: "A search engine for influencers."
+  links:
+    Architecture: "/assets/docs/gooper.pdf"
+    Gooper V1 (dev): "https://gooper.nuxt.dev/"
+  thumbnail: "250108.png"
+
+- title: "BSc Thesis"
+  date: "July 2024"
+  tags: "Bioinformatics, Machine Learning"
+  description: "Enhanced scGPT transformer model for gene expression prediction by incorporating prior biological knowledge of transcriptional regulation."
+  links:
+    Thesis: "/assets/docs/giacomo_ciro_bemacs_24.pdf"
+  thumbnail: "240718.png"
+
+- title: "Evolving Tinder"
+  date: "April 2024"
+  tags: "Python, Evolutionary Algorithm"
+  description: "Applied evolutionary algorithms to improve matching stability beyond the traditional Deferred Acceptance Algorithm for two-sided matching problems."
+  links:
+    Code: "https://github.com/giacomo-ciro/evolving-tinder"
+    Report: "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
+  thumbnail: "240429.png"
+
+- title: "Daily Spin Bot"
+  date: "December 2023"
+  tags: "Python, Browser Automation"
+  description: "Automated browser bot for maximizing rewards in SNAI Daily Spin game, available as executable."
+  links:
+    Code: "https://github.com/giacomo-ciro/daily-spin-bot"
+  thumbnail: "231212.jpg"

@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  project: {
+    title: string;
+    date: string;
+    tags: string;
+    description: string;
+    links?: Record<string, string>;
+    thumbnail: string;
+  };
+  delay: number;
+}
+
+// Thumbnails are referenced by filename in projects.yml, so they are resolved
+// here against a build-time map of the imported assets. Astro's <Image /> can
+// only optimize images it can statically import, which is why they live in
+// src/assets/ rather than public/.
+const thumbnails = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/thumbnails/*.{png,jpg,jpeg}',
+  { eager: true }
+);
+
+const { project, delay } = Astro.props;
+const links = Object.entries(project.links ?? {});
+
+const thumbnail = thumbnails[`../assets/thumbnails/${project.thumbnail}`];
+if (!thumbnail) {
+  throw new Error(
+    `Missing thumbnail "${project.thumbnail}" for project "${project.title}". ` +
+      `Add it to src/assets/thumbnails/ or fix the filename in projects.yml.`
+  );
+}
+---
+<div class="project-row" data-aos="fade-in" data-aos-delay={delay}>
+  <div class="project-thumb">
+    <Image src={thumbnail.default}
+           alt={`Thumbnail for ${project.title}`}
+           class="thumbnail-img" />
+  </div>
+  <div class="project-body">
+    <div class="project-heading">
+      <h1 class="project-title">{project.title}</h1>
+      <span class="project-date">{project.date}</span>
+    </div>
+    <h2 class="project-tags">{project.tags}</h2>
+    <p class="project-description">{project.description}</p>
+    {links.length > 0 && (
+      <div class="project-links d-flex flex-row">
+        {links.map(([label, url]) => (
+          <a href={url} target="_blank" class="project-link">{label}</a>
+        ))}
+      </div>
+    )}
+  </div>
+</div>

@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets';
+import Default from '../layouts/Default.astro';
+import ProjectRow from '../components/ProjectRow.astro';
+import profilePic from '../assets/profile-pic.png';
+import AboutMe from '../components/AboutMe.md';
+import projects from '../data/projects.yml';
+import timeline from '../data/timeline.yml';
+import { renderMarkdown } from '../markdown.mjs';
+
+const previewTimeline = await Promise.all(
+  timeline
+    .filter((e) => e.strong === true)
+    .slice(0, 3)
+    // "June 2026" -> "Jun 2026", matching the abbreviated month labels on /timeline/
+    .map(async (e) => ({
+      ...e,
+      date: e.date.replace(/^(\w{3})\w*/, '$1'),
+      html: await renderMarkdown(e.description),
+    }))
+);
+const previewProjects = projects.slice(0, 3);
+---
+<Default title="MSc in Artificial Intelligence">
+<section id="hero" class="hero page-col">
+    <div class="img-container">
+      <Image src={profilePic} alt="Giacomo Cirò" class="img-fluid" width={409} height={409} loading="eager" data-aos="fade-right" />
+    </div>
+    <div class="hero-text">
+      <div class="hero-name" data-aos="fade-left">Giacomo Cirò</div>
+      <ul>
+        <li data-aos="fade-left" data-aos-delay="250">CS Student</li>
+        <li data-aos="fade-left" data-aos-delay="500">ML Researcher</li>
+        <li data-aos="fade-left" data-aos-delay="750">BSML Co-founder</li>
+        <li data-aos="fade-left" data-aos-delay="1000">Data Nerd</li>
+        <li data-aos="fade-left" data-aos-delay="1250">TH 16</li>
+      </ul>
+    </div>
+</section>
+<section class="d-flex flex-column justify-content-center page-col" data-aos="fade-up">
+<AboutMe />
+</section>
+
+<section class="d-flex flex-column justify-content-center page-col" id="timeline-preview-section" data-aos="fade-up">
+  <h1>Timeline</h1>
+  <div id="timeline-preview" class="d-flex flex-column">
+    {previewTimeline.map((event) => (
+      <div class="timeline-event strong d-flex flex-row align-items-center">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">{event.date}</div>
+          <div class="timeline-title" set:html={event.html} />
+        </div>
+      </div>
+    ))}
+  </div>
+  <div class="view-more-wrap">
+    <a class="view-more-btn" href="/timeline/">View full timeline <span class="arrow">&rarr;</span></a>
+  </div>
+</section>
+
+<section class="d-flex flex-column justify-content-center page-col" id="projects-preview-section" data-aos="fade-up">
+  <h1>Projects</h1>
+  <div id="project-preview-row" class="project-list">
+    {previewProjects.map((project, i) => (
+      <ProjectRow project={project} delay={i * 25} />
+    ))}
+  </div>
+  <div class="view-more-wrap">
+    <a class="view-more-btn" href="/projects/">View all projects <span class="arrow">&rarr;</span></a>
+  </div>
+</section>
+</Default>

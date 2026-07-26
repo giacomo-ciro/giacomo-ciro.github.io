@@ -5,7 +5,8 @@
 *.index
 */saved_messages.jsonl
 *Zone.Identifier
-_site
-.jekyll-cache
+dist/
+.astro/
+node_modules/
 .antigravitycli/
 .DS_Store

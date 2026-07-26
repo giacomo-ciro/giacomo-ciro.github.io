@@ -1,0 +1,47 @@
+---
+import Default from '../layouts/Default.astro';
+import ResourcesBody from '../components/ResourcesBody.md';
+---
+<Default title="Resources">
+<section id="resources-disclaimer" class="d-flex flex-column justify-content-center page-col">
+  <div class="d-flex justify-content-center quotes-disclaimer">
+    <p>
+        The resources on this page are shared to inspire curiosity and support learning. If you know of a valuable resource or have something insightful to share, feel free to reach out.
+    </p>
+  </div>
+</section>
+<section class="resources-page page-col" data-aos="fade-in">
+<ResourcesBody />
+<h1 id="map-my-visitors">Map My Visitors</h1>
+<div id="mapmyvisitors-container"></div>
+<script is:inline>
+  // Load the visitor map lazily so it never blocks the rest of the page.
+  (() => {
+    const container = document.getElementById('mapmyvisitors-container');
+    const load = () => {
+      const s = document.createElement('script');
+      s.id = 'mapmyvisitors';
+      s.src = 'https://mapmyvisitors.com/map.js?cl=666&w=a&t=t&d=P1us-I_g_S7L1wNk2krrGDIg5Mz3O-yVjIrfqToKhE4&co=f4f4f4&cmo=0d1d91&cmn=0d1d91&ct=666';
+      container.appendChild(s);
+    };
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        observer.disconnect();
+        load();
+      }
+    }, { rootMargin: '200px' });
+    observer.observe(container);
+  })();
+</script>
+<!--
+cl=666      land color
+co=f4f4f4   ocean color
+cmo=0d1d91  past visitors
+cmn=0d1d91  current visitors
+t=n&d       don't show page view counter
+t=tt&d      show total views
+t=m&d       show monthly views
+t=t&d       show daily views
+-->
+</section>
+</Default>
