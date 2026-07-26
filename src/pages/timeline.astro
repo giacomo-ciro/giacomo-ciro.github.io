@@ -1,0 +1,65 @@
+---
+import Default from '../layouts/Default.astro';
+import timeline from '../data/timeline.yml';
+import { renderMarkdown } from '../markdown.mjs';
+
+interface Event {
+  date: string;
+  description: string;
+  strong: boolean;
+}
+
+// Dates are "Month Year" and the data is already in reverse-chronological
+// order, so events are grouped by splitting on the label itself: consecutive
+// entries sharing a year go in one .year-group, and within it consecutive
+// entries sharing a month go in one .month-group. Each label is therefore
+// rendered once, on the left rail, instead of repeating on every row.
+function groupConsecutive<T>(items: T[], key: (item: T) => string) {
+  return items.reduce<{ name: string; items: T[] }[]>((groups, item) => {
+    const name = key(item);
+    const last = groups[groups.length - 1];
+    if (last && last.name === name) last.items.push(item);
+    else groups.push({ name, items: [item] });
+    return groups;
+  }, []);
+}
+
+const events = timeline as Event[];
+const yearGroups = groupConsecutive(events, (e) => e.date.split(' ').pop()!);
+const descriptions = new Map(
+  await Promise.all(
+    events.map(async (e) => [e.description, await renderMarkdown(e.description)] as const)
+  )
+);
+---
+<Default title="Timeline">
+<section id="timeline-page" class="d-flex flex-column justify-content-center page-col">
+  <div class="d-flex justify-content-center quotes-disclaimer">
+    <p>
+      This timeline collects milestones and events I find worth remembering. It's a personal and evolving list, not necessarily exhaustive or objective.
+    </p>
+  </div>
+  <div id="timeline">
+    {yearGroups.map((yearGroup) => (
+      <div class="year-group">
+        <div class="year-label">{yearGroup.name}</div>
+        {groupConsecutive(yearGroup.items, (e) => e.date).map((monthGroup) => (
+          <div class="month-group">
+            <div class="month-label">{monthGroup.name.split(' ')[0].slice(0, 3)}</div>
+            <div class="month-body">
+              {monthGroup.items.map((event) => (
+                <div class={`timeline-event ${event.strong ? 'strong' : 'weak'} d-flex flex-row align-items-center`} data-aos="fade-in">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-title" set:html={descriptions.get(event.description)} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+</section>
+</Default>

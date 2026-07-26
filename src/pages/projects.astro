@@ -1,0 +1,19 @@
+---
+import Default from '../layouts/Default.astro';
+import ProjectRow from '../components/ProjectRow.astro';
+import projects from '../data/projects.yml';
+---
+<Default title="Projects">
+<section id="projects-page" class="d-flex flex-column justify-content-center page-col">
+  <div class="d-flex justify-content-center quotes-disclaimer">
+    <p>
+      Projects I've worked on, ranging from research code to side experiments.
+    </p>
+  </div>
+  <div id="project-container" class="project-list">
+    {projects.map((project, i) => (
+      <ProjectRow project={project} delay={i * 25} />
+    ))}
+  </div>
+</section>
+</Default>

@@ -1,19 +1,19 @@
 # Contributing
-This site is built with [Jekyll](https://jekyllrb.com/).
+This site is built with [Astro](https://astro.build/).
 
-Download Ruby:
+Install the dependencies (requires [Node.js](https://nodejs.org/)):
 ```
-sudo snap install ruby --classic
+npm install
 ```
-Install the required gems (Ruby packages):
+Serve the website locally with hot reloading:
 ```
-gem install jekyll bundler
+npm run dev
 ```
-Install required dependencies
+Build the production site into `dist/`:
 ```
-bundler install
+npm run build
 ```
-Serve the website (using bundler, which reads from a Gemfile):
+Preview the production build:
 ```
-bundler exec jekyll serve
+npm run preview
 ```

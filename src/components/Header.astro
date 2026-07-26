@@ -1,0 +1,23 @@
+---
+const path = Astro.url.pathname;
+---
+<button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+
+<div id="nav-dropdown" class="nav-dropdown">
+  <nav id="navmenu" class="navmenu">
+    <ul>
+      <li><a href="/" class={path === '/' ? 'active' : undefined}><span class="label">Home</span></a></li>
+      <li><a href="/projects/" class={path.includes('/projects') ? 'active' : undefined}><span class="label">Projects</span></a></li>
+      <li><a href="/timeline/" class={path.includes('/timeline') ? 'active' : undefined}><span class="label">Timeline</span></a></li>
+      <li><a href="/quotes/" class={path.includes('/quotes') ? 'active' : undefined}><span class="label">Quotes</span></a></li>
+      <li><a href="/resources/" class={path.includes('/resources') ? 'active' : undefined}><span class="label">Resources</span></a></li>
+    </ul>
+  </nav>
+  <div class="btn-cv-row">
+    <a class="btn-cv" href="/assets/docs/Giacomo_Ciro_CV.pdf" target="_blank">CV</a>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+---
+interface Props {
+  project: {
+    title: string;
+    date: string;
+    tags: string;
+    description: string;
+    links?: Record<string, string>;
+    thumbnail: string;
+  };
+  delay: number;
+}
+
+const { project, delay } = Astro.props;
+const links = Object.entries(project.links ?? {});
+---
+<div class="project-row" data-aos="fade-in" data-aos-delay={delay}>
+  <div class="project-thumb">
+    <img src={`/assets/img/thumbnails/${project.thumbnail}`}
+         alt={`Thumbnail for ${project.title}`}
+         class="thumbnail-img"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+         onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+    <div class="thumbnail-placeholder" style="display: none;">
+      <span>{project.thumbnail}</span>
+    </div>
+  </div>
+  <div class="project-body">
+    <div class="project-heading">
+      <h1 class="project-title">{project.title}</h1>
+      <span class="project-date">{project.date}</span>
+    </div>
+    <h2 class="project-tags">{project.tags}</h2>
+    <p class="project-description">{project.description}</p>
+    {links.length > 0 && (
+      <div class="project-links d-flex flex-row">
+        {links.map(([label, url]) => (
+          <a href={url} target="_blank" class="project-link">{label}</a>
+        ))}
+      </div>
+    )}
+  </div>
+</div>

@@ -1,3 +1,11 @@
+---
+// Previously hardcoded and enforced by a CI check; now derived at build time.
+const lastUpdate = new Date().toLocaleDateString('en-US', {
+  month: 'long',
+  year: 'numeric',
+});
+const year = new Date().getFullYear();
+---
 <footer id="footer" class="page-col d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
 <div id="social-links">
     <a href="https://www.github.com/giacomo-ciro" target="_blank">
@@ -14,6 +22,6 @@
     </a>
  </div>
 <div id="copyright">
-    &copy; 2026 Giacomo Cirò | Last update: July 2026
+    &copy; {year} Giacomo Cirò | Last update: {lastUpdate}
 </div>
 </footer>

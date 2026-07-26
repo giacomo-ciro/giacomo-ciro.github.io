@@ -1,8 +1,8 @@
 ---
-layout: default
-title: Quotes
-permalink: /quotes/
+import Default from '../layouts/Default.astro';
+import quotes from '../data/quotes.yml';
 ---
+<Default title="Quotes">
 <section id="quotes" class="quotes page-col">
   <div class="d-flex justify-content-center quotes-disclaimer">
     <p>
@@ -11,13 +11,11 @@ permalink: /quotes/
   </div>
   <div id="quotes-container" class="d-flex flex-column align-items-center">
     <div id="quotes-container-row" class="quote-grid">
-      <!-- Quotes will be rendered here by JavaScript (jekyll is static, must use JS for shuffling on reload) -->
+      <!-- Quotes will be rendered here by JavaScript (the build is static, must use JS for shuffling on reload) -->
     </div>
-    <script id="quotes-data" type="application/json">
-      {{ site.data.quotes | jsonify }}
-    </script>
+    <script id="quotes-data" type="application/json" set:html={JSON.stringify(quotes)}></script>
   </div>
-  <script>
+  <script is:inline>
     document.addEventListener('DOMContentLoaded', function() {
       const quotesData = JSON.parse(document.getElementById('quotes-data').textContent);
       // Fisher-Yates shuffle
@@ -62,3 +60,4 @@ permalink: /quotes/
     });
   </script>
 </section>
+</Default>
