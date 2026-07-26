@@ -42,10 +42,10 @@ const descriptions = new Map(
   <div id="timeline">
     {yearGroups.map((yearGroup) => (
       <div class="year-group">
-        <div class="year-label">{yearGroup.name}</div>
+        <div class="year-label"><span>{yearGroup.name}</span></div>
         {groupConsecutive(yearGroup.items, (e) => e.date).map((monthGroup) => (
           <div class="month-group">
-            <div class="month-label">{monthGroup.name.split(' ')[0].slice(0, 3)}</div>
+            <div class="month-label"><span>{monthGroup.name.split(' ')[0].slice(0, 3)}</span></div>
             <div class="month-body">
               {monthGroup.items.map((event) => (
                 <div class={`timeline-event ${event.strong ? 'strong' : 'weak'} d-flex flex-row align-items-center`} data-aos="fade-in">

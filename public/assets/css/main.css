@@ -17,8 +17,8 @@
     --hero-font: 'EB Garamond', Georgia, 'Times New Roman', serif;
     --hero-w-full: 620px;    /* --hero-t = 1 at and above this */
     --hero-w-tight: 432px;   /* --hero-t = 0 here; also the stack threshold */
-    --hero-img-max: 260px;
-    --hero-img-min: 190px;
+    --hero-img-max: 220px;
+    --hero-img-min: 150px;
     --hero-gap: 2rem;
     --hero-gap-min: 1.25rem;
   }
@@ -292,7 +292,13 @@ main p {
    Image size, type size and vertical rhythm are all derived from --hero-t, a
    single 0..1 ramp, so they move in lockstep rather than on separate curves.
    --hero-t is 1 at --hero-w-full and 0 at --hero-w-tight, clamped at both
-   ends. clamp() does the clamping; the division yields a unitless number. */
+   ends. clamp() does the clamping; the division yields a unitless number.
+
+   While the two sit side by side, the text column is sized to match the image
+   height exactly, so neither spills past the other under align-items:center.
+   The name/li line-height (1.25) and the li margin (0.16rem + 0.28rem * t) are
+   solved against the image width formula and hold to within a pixel across the
+   whole ramp — changing any one of them means re-solving the others. */
 .hero {
   --hero-t: clamp(0, (100vw - var(--hero-w-tight)) / (var(--hero-w-full) - var(--hero-w-tight)), 1);
 
@@ -335,6 +341,7 @@ main p {
   font-style: normal;
   font-weight: 500;
   font-size: calc(1.3rem + 0.3rem * var(--hero-t));
+  line-height: 1.25;
   letter-spacing: 0.01em;
   color: var(--default-color);
   white-space: nowrap;
@@ -352,9 +359,10 @@ main p {
     text-align: left;
     font-style: italic;
     font-weight: 400;
-    margin: calc(0.22rem + 0.28rem * var(--hero-t)) 0;
+    margin: calc(0.16rem + 0.28rem * var(--hero-t)) 0;
     font-family: var(--hero-font);
     font-size: calc(0.95rem + 0.15rem * var(--hero-t));
+    line-height: 1.25;
     white-space: nowrap;
 }
 
@@ -374,7 +382,7 @@ main p {
     gap: 1.25rem;
   }
   .hero .img-container {
-    width: calc(var(--hero-img-min) - 40px + 40px * var(--hero-img-t));
+    width: calc(var(--hero-img-min) - 32px + 32px * var(--hero-img-t));
   }
   .hero .hero-text {
     align-items: flex-start;
@@ -817,37 +825,128 @@ footer {
 }
 
 /* Narrow screens: the two rail columns cost ~8.5rem, too much next to the
-   text on a phone. Both labels become inline headings above their group and
-   keep pinning, the month just below the year. */
+   text on a phone. The rail is dropped entirely and both labels move ONTO
+   the line — year above month, each a full-width opaque band that entries
+   scroll behind, with only the label text sitting on the line's axis.
+
+   The previous version kept the labels as full-width sticky BLOCKS with no
+   column of their own, pinned at two different `top`s. That is what made
+   them float over the entry text and over each other: on desktop a sticky
+   label overlays nothing because it owns a rail column, and going
+   display:block threw that property away without replacing it. Here the
+   bands are opaque and span the whole row, so covering the text as it
+   passes underneath is the intended effect rather than a defect. */
 @media (max-width: 600px) {
+  /* --axis is the single x that the spine, the dots and both label texts
+     all sit on, measured from .year-group's left edge. It must exceed half
+     the widest label ("2026" ~= 30px) or the text overhangs the screen. */
+  #timeline {
+    --axis: 2.5rem;
+  }
+
   .year-group,
   .month-group {
     display: block;
   }
-  .year-label {
+
+  /* Only the OUTER group is padded: .month-group nests inside .year-group,
+     so padding both would compound to 2*--axis and put the month's axis
+     40px right of the year's. They must share one x, not each get their own. */
+  .year-group {
+    padding-left: var(--axis);
+  }
+  .month-group {
+    padding-left: 0;
+  }
+
+  /* The body's own 20px dot gutter is redundant now that the group padding
+     places the axis, so the spine and dots reposition onto it. */
+  .month-body {
+    padding-left: 0;
+  }
+  .month-body:before {
+    left: 0;
+    margin-left: -2px;
+  }
+  .timeline-event {
+    margin: 0.5rem 0;
+  }
+  .timeline-dot {
+    left: 0;
+  }
+
+  /* The band. The label spans the full row so its opaque background covers
+     the whole line of text scrolling underneath; the text itself is offset
+     onto the axis by the inner span, not by the label, since transforming
+     the label would drag the band with it. */
+  .year-label,
+  .month-label {
+    display: block;
+    /* box-sizing is border-box (Bootstrap's reset), so the --axis padding
+       below is absorbed rather than added: the width must include the
+       --axis that margin-left pulls the band back by, or the band falls
+       --axis short of #timeline's right edge. Do NOT switch this to a
+       vw-based width — that extends the scrollable area and widens the
+       page, the failure `overflow-x: clip` on main already guards against. */
+    width: calc(100% + var(--axis));
+    margin-left: calc(var(--axis) * -1);
+    padding: 0.1rem 0 0.1rem var(--axis);
     text-align: left;
-    padding: 0.2rem 0 0.3rem 20px;
-    margin-top: 1.6rem;
+    background-color: var(--background-color);
+  }
+
+  /* Centres the text on the axis; the band stays put. */
+  .year-label > span,
+  .month-label > span {
+    display: inline-block;
+    transform: translateX(-50%);
+  }
+
+  /* Stacking, bottom to top: spine (0) < dots (6) < month < year. Dots and
+     spine must vanish behind a pinned band as they scroll past it, and an
+     outgoing month must vanish behind the year pinned above it. */
+  .month-label {
+    z-index: 7;
+  }
+  .year-label {
+    z-index: 8;
+  }
+
+  /* Year pins first, month directly beneath — the same pairing as desktop,
+     where the year holds while its months advance past it. The month's
+     `top` must equal the year band's exact height or the spine shows
+     through the gap between them: 0.1rem*2 padding + a 1.35rem/1.2 line
+     = 1.82rem. Keep the two in step if either value changes. */
+  .year-label {
     top: 0;
+    margin-top: 1.2rem;
   }
   .year-group:first-child .year-label {
     margin-top: 0;
   }
   .month-label {
-    text-align: left;
-    padding: 0.15rem 0 0.3rem 20px;
+    top: 1.82rem;
     /* Cancel the wide-layout offset that centres the label on its first dot;
-       stacked above the group, it just sits inline. */
+       sitting on the line above its group, it just runs inline. */
     margin-top: 0;
-    top: 2.1rem;
   }
+
+  /* Clear the dot and keep a right-hand gutter so text never reaches the
+     device edge. */
+  .timeline-content {
+    padding: 0 0.5rem 0 16px;
+  }
+
   /* Stacked, the labels sit BETWEEN the month bodies rather than beside them,
      so each body's line no longer meets the next and the spine breaks up.
      Extend every segment down through the following label to close the gap;
-     the last group in each year stops at its own dot as before. */
+     the last group in each year stops at its own dot as before. The bridged
+     distance is a month band (1.82rem), or at a year boundary that plus the
+     year's own 1.82rem band and 1.2rem margin — size for the larger case and
+     let the shorter one run behind the opaque band. */
   .month-body:before {
     bottom: auto;
-    height: calc(100% + 3.2rem);
+    height: calc(100% + 4.9rem);
   }
   .month-group:last-child .month-body:before {
     height: 100%;

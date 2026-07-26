@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Default from '../layouts/Default.astro';
 import ProjectRow from '../components/ProjectRow.astro';
+import profilePic from '../assets/profile-pic.png';
 import AboutMe from '../components/AboutMe.md';
 import projects from '../data/projects.yml';
 import timeline from '../data/timeline.yml';
@@ -22,7 +24,7 @@ const previewProjects = projects.slice(0, 3);
 <Default title="MSc in Artificial Intelligence">
 <section id="hero" class="hero page-col">
     <div class="img-container">
-      <img src="/assets/img/profile-pic.png" class="img-fluid" width="409" height="409" data-aos="fade-right">
+      <Image src={profilePic} alt="Giacomo Cirò" class="img-fluid" width={409} height={409} loading="eager" data-aos="fade-right" />
     </div>
     <div class="hero-text">
       <div class="hero-name" data-aos="fade-left">Giacomo Cirò</div>

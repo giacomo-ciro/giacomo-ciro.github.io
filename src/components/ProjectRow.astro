@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
   project: {
     title: string;
@@ -11,19 +13,31 @@ interface Props {
   delay: number;
 }
 
+// Thumbnails are referenced by filename in projects.yml, so they are resolved
+// here against a build-time map of the imported assets. Astro's <Image /> can
+// only optimize images it can statically import, which is why they live in
+// src/assets/ rather than public/.
+const thumbnails = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/thumbnails/*.{png,jpg,jpeg}',
+  { eager: true }
+);
+
 const { project, delay } = Astro.props;
 const links = Object.entries(project.links ?? {});
+
+const thumbnail = thumbnails[`../assets/thumbnails/${project.thumbnail}`];
+if (!thumbnail) {
+  throw new Error(
+    `Missing thumbnail "${project.thumbnail}" for project "${project.title}". ` +
+      `Add it to src/assets/thumbnails/ or fix the filename in projects.yml.`
+  );
+}
 ---
 <div class="project-row" data-aos="fade-in" data-aos-delay={delay}>
   <div class="project-thumb">
-    <img src={`/assets/img/thumbnails/${project.thumbnail}`}
-         alt={`Thumbnail for ${project.title}`}
-         class="thumbnail-img"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-         onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
-    <div class="thumbnail-placeholder" style="display: none;">
-      <span>{project.thumbnail}</span>
-    </div>
+    <Image src={thumbnail.default}
+           alt={`Thumbnail for ${project.title}`}
+           class="thumbnail-img" />
   </div>
   <div class="project-body">
     <div class="project-heading">
