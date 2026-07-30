@@ -28,7 +28,8 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 - [Leaked System Prompts](https://github.com/asgeirtj/system_prompts_leaks)
 - [UltraScale](https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=high-level_overview) (Hugging Face's guide on large scale LLM training)
 - [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles) (21 exercises to reimplement NumPy/PyTorch functions from scratch, broadcasting only)
-
+- [Building AI Agents: From Design Patterns to Production](https://docs.google.com/document/u/0/d/1keM4ZbbfVmdsq3EAkbAliIegOpnnuBf-_KpD4oDOF0o/mobilebasic) (21 agentic design patterns)
+  
 ## Computer Science & Engineering
 
 - [Operating System Concepts](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf)
@@ -39,7 +40,8 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 - [CUDA Tutorial](https://cuda-tutorial.readthedocs.io/en/latest/)
 - [Tensor and Fully Sharded Data Parallelism](https://substack.com/@martynassubonis/p-154292281)
 - [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/local-management/create-local-tunnel/) (exposes a local server to the internet without opening ports on your router)
-
+- [WhatsApp Encryption Overview](https://www.bitsoffreedom.nl/wp-content/uploads/WhatsApp-Security-Whitepaper.pdf) (down to the actual cryptographic primitives used)
+  
 ## Finance
 
 - [A Random Walk Down Wall Street](https://www.amazon.com/Random-Walk-Down-Wall-Street/dp/1324035439)
@@ -57,14 +59,12 @@ Articles, books, and blog posts worth reading.
 - [Demystifying the American Graduate Admissions Process](https://cs.stanford.edu/~rkarthik/DAGAP.pdf) (by a Stanford admissions committee member)
 - [Should You Apply for a PhD in AI (2025-26)?](https://yashbhalgat.github.io/blog/phd-or-not-phd.html)
 - [The unconscious process that leads to creativity: how ‘incubation’ works](https://www.theguardian.com/wellness/2025/sep/10/creativity-unconscious-process-incubation)
-- [WhatsApp Encryption Overview](https://www.bitsoffreedom.nl/wp-content/uploads/WhatsApp-Security-Whitepaper.pdf) (down to the actual cryptographic primitives used)
- - [Doing Well in Your Courses](https://cs.stanford.edu/people/karpathy/advice.html) (Karpathy on being an undergraduate, something I wish I'd found sooner)
- - [A Survival Guide to a PhD](https://karpathy.github.io/2016/09/07/phd/) (same as above, but for a PhD)
- - [How I Became a Linux Kernel Contributor](https://lewboski.dev/blog/linux-kernel) (step-by-step to getting your first patch merged)
- - [My Ten Rules for Negotiating a Job Offer](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/)
- - [Building AI Agents: From Design Patterns to Production](https://docs.google.com/document/u/0/d/1keM4ZbbfVmdsq3EAkbAliIegOpnnuBf-_KpD4oDOF0o/mobilebasic) (21 agentic design patterns)
- - [How to Be Good at Research](https://x.com/itsreallyvivek/article/2064686372737454155) (on how research is actually learned, since it's rarely taught directly)
- - [ML Job Interviews: The Ultimate Guide](https://silviasapora.github.io/blog/ml-interviews.html) (inside look at landing a Research Scientist role at a top lab)
+- [Doing Well in Your Courses](https://cs.stanford.edu/people/karpathy/advice.html) (Karpathy on being an undergraduate, something I wish I'd found sooner)
+- [A Survival Guide to a PhD](https://karpathy.github.io/2016/09/07/phd/) (same as above, but for a PhD)
+- [How I Became a Linux Kernel Contributor](https://lewboski.dev/blog/linux-kernel) (step-by-step to getting your first PR merged)
+- [My Ten Rules for Negotiating a Job Offer](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/)
+- [How to Be Good at Research](https://x.com/itsreallyvivek/article/2064686372737454155) (on how research is actually learned, since it's rarely taught directly)
+- [ML Job Interviews: The Ultimate Guide](https://silviasapora.github.io/blog/ml-interviews.html) (inside look at landing a Research Scientist role at a top lab)
 
 # Misc
 Useful tips, solutions, and interesting facts I wish I'd known sooner or simply find worth sharing.
