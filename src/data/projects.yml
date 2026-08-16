@@ -1,3 +1,12 @@
+- title: "Superquadria"
+  date: "August 2026"
+  tags: "Python, 3D Environments, AI Agents"
+  description: "An agent harness that builds a 3D world and then plays it, using only text prompts."
+  links:
+    Code: https://github.com/giacomo-ciro/superquadria
+    Demo: https://github.com/user-attachments/assets/251657ec-7505-4604-8c4d-1fc6dd699a5e
+  thumbnail: "260816.png"
+
 - title: "Paperino"
   date: "July 2026"
   tags: "CLI, TypeScript, AI Agents"
