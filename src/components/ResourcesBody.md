@@ -69,6 +69,6 @@ Articles, books, and blog posts worth reading.
 # Misc
 Useful tips, solutions, and interesting facts I wish I'd known sooner or simply find worth sharing.
 
+- A visual guide to major AI/ML/Robotics [conference templates](/conference-templates/).
 - Converting `.epub` to `.mobi` and then back to `.epub` can resolve `ERROR 999 Internal Problem` on Amazon Kindle. See the reference [here](https://www.mobileread.com/forums/showthread.php?p=4396847).
 - \\(r = 1-\sin(\theta)\\) is a [heart curve](https://mathworld.wolfram.com/HeartCurve.html) in polar coordinates.
-

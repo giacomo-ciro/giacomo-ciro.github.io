@@ -1,0 +1,131 @@
+---
+import Default from '../layouts/Default.astro';
+
+const conferences = [
+  {
+    name: 'NeurIPS',
+    fullName: 'Neural Information Processing Systems',
+    website: 'https://neurips.cc/',
+    year: '2017',
+    title: 'Attention Is All You Need',
+    preview: 'neurips.pdf',
+    paper: 'https://arxiv.org/abs/1706.03762',
+  },
+  {
+    name: 'ICML',
+    fullName: 'International Conference on Machine Learning',
+    website: 'https://icml.cc/',
+    year: '2026',
+    title: 'Diffusion Language Models Are Natively Length-Aware',
+    preview: 'icml.pdf',
+    paper: 'https://arxiv.org/abs/2603.06123',
+  },
+  {
+    name: 'ICLR',
+    fullName: 'International Conference on Learning Representations',
+    website: 'https://iclr.cc/',
+    year: '2017',
+    title: 'Understanding Deep Learning Requires Rethinking Generalization',
+    preview: 'iclr.pdf',
+    paper: 'https://arxiv.org/abs/1611.03530',
+  },
+  {
+    name: 'CVPR',
+    fullName: 'Computer Vision and Pattern Recognition',
+    website: 'https://cvpr.thecvf.com/',
+    year: '2016',
+    title: 'Deep Residual Learning for Image Recognition',
+    preview: 'cvpr.pdf',
+    paper: 'https://arxiv.org/abs/1512.03385',
+  },
+  {
+    name: 'ICCV',
+    fullName: 'International Conference on Computer Vision',
+    website: 'https://iccv.thecvf.com/',
+    year: '2023',
+    title: 'Segment Anything',
+    preview: 'iccv.pdf',
+    paper: 'https://arxiv.org/abs/2304.02643',
+  },
+  {
+    name: 'ECCV',
+    fullName: 'European Conference on Computer Vision',
+    website: 'https://eccv.ecva.net/',
+    year: '2016',
+    title: '3D-R2N2: A Unified Approach for Single and Multi-view 3D Object Reconstruction',
+    preview: 'eccv.pdf',
+    paper: 'https://arxiv.org/abs/1604.00449',
+  },
+  {
+    name: 'CoRL',
+    fullName: 'Conference on Robot Learning',
+    website: 'https://www.corl.org/',
+    year: '2021',
+    title: 'A Workflow for Offline Model-Free Robotic Reinforcement Learning',
+    preview: 'corl.pdf',
+    paper: 'https://arxiv.org/abs/2109.10813',
+  },
+  {
+    name: 'RSS',
+    fullName: 'Robotics: Science and Systems',
+    website: 'https://roboticsconference.org/',
+    year: '2023',
+    title: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion',
+    preview: 'rss.pdf',
+    paper: 'https://arxiv.org/abs/2303.04137',
+  },
+  {
+    name: 'SIGGRAPH',
+    fullName: 'Special Interest Group on Computer Graphics',
+    website: 'https://www.siggraph.org/',
+    year: '2023',
+    title: '3D Gaussian Splatting for Real-Time Radiance Field Rendering',
+    preview: 'siggraph.pdf',
+    paper: 'https://arxiv.org/abs/2308.04079',
+  },
+];
+
+const previewDirectory = '/assets/docs/conference-templates';
+---
+<Default title="Conference Templates">
+  <section id="conference-templates" class="page-col" data-aos="fade-in">
+    <div class="d-flex justify-content-center quotes-disclaimer">
+      <p>
+        A visual guide to the templates you instantly recognize.
+        Select a first page to open the corresponding paper.
+      </p>
+    </div>
+
+    <div class="conference-template-grid">
+      {conferences.map((conference) => (
+        <article class="conference-template-card">
+          <div class="conference-template-meta">
+            <div class="conference-template-heading">
+              <h2>
+                <a href={conference.website} target="_blank" rel="noreferrer">{conference.name}</a>
+              </h2>
+              <p class="conference-template-subtitle">{conference.fullName}</p>
+            </div>
+            <span>{conference.year}</span>
+          </div>
+          <a
+            class="conference-template-preview"
+            href={conference.paper}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${conference.title} on arXiv`}
+          >
+            <object
+              data={`${previewDirectory}/${conference.preview}#view=Fit&toolbar=0&navpanes=0`}
+              type="application/pdf"
+              title={`${conference.name} paper template preview`}
+              aria-hidden="true"
+            >
+              {conference.title}
+            </object>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Default>

@@ -523,6 +523,102 @@ footer {
   color: var(--link-color);
 }
 
+/*-------------------------------------------------------------------
+# Conference templates
+--------------------------------------------------------------------*/
+.conference-template-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.conference-template-card {
+  min-width: 0;
+}
+
+.conference-template-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.55rem;
+}
+
+.conference-template-heading {
+  min-width: 0;
+}
+
+.conference-template-meta h2 {
+  margin: 0;
+  color: var(--default-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.conference-template-meta h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.conference-template-meta h2 a:hover,
+.conference-template-meta h2 a:focus-visible {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.conference-template-subtitle {
+  margin: 0.18rem 0 0;
+  color: var(--accent-color);
+  font-size: 0.68rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.conference-template-meta span {
+  flex: 0 0 auto;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.conference-template-preview {
+  display: block;
+  aspect-ratio: 612 / 792;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.conference-template-preview:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.11);
+}
+
+.conference-template-preview object {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+  .conference-template-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .conference-template-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .project-row {

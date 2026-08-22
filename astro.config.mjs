@@ -7,7 +7,7 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 export default defineConfig({
   site: 'https://www.giacomociro.com',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   integrations: [mdx()],
   markdown: {
     // rehype-slug adds the heading id slugs that Kramdown used to generate.
