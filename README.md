@@ -1,8 +1,6 @@
-# giacomo-ciro.github.io
-This repo hosts my personal website! Check it out at https://giacomociro.com/
+https://giacomociro.com/
 
-## Development
-Run a local development server:
+Local dev server:
 ```
 npm install
 npm run dev
