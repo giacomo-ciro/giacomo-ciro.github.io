@@ -57,6 +57,24 @@ const conferences = [
     paper: 'https://arxiv.org/abs/1604.00449',
   },
   {
+    name: 'ICRA',
+    fullName: 'International Conference on Robotics and Automation',
+    website: 'https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra/',
+    year: '2009',
+    title: 'ROS: an open-source Robot Operating System',
+    preview: 'icra.pdf',
+    paper: 'https://ai.stanford.edu/~ang/papers/icraoss09-ROS.pdf',
+  },
+  {
+    name: 'IROS',
+    fullName: 'International Conference on Intelligent Robots and Systems',
+    website: 'https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros/',
+    year: '2012',
+    title: 'A Benchmark for the Evaluation of RGB-D SLAM Systems',
+    preview: 'iros.pdf',
+    paper: 'https://ieeexplore.ieee.org/document/6385773',
+  },
+  {
     name: 'CoRL',
     fullName: 'Conference on Robot Learning',
     website: 'https://www.corl.org/',
@@ -113,7 +131,7 @@ const previewDirectory = '/assets/docs/conference-templates';
             href={conference.paper}
             target="_blank"
             rel="noreferrer"
-            aria-label={`Open ${conference.title} on arXiv`}
+            aria-label={`Open ${conference.title}${conference.paper.includes('arxiv.org') ? ' on arXiv' : ''}`}
           >
             <object
               data={`${previewDirectory}/${conference.preview}#view=Fit&toolbar=0&navpanes=0`}
