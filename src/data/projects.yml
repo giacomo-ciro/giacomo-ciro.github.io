@@ -1,3 +1,11 @@
+- title: "Scaling Recipes for Bio Foundation Models"
+  date: "August 2026"
+  tags: "Bioinformatics, Machine Learning, Scaling Laws"
+  description: "Investigated empirical scaling behavior in foundation models trained on single-cell transcriptomes, quantifying power-law relationships across model capacity and training compute."
+  links:
+    bioRxiv: "https://www.biorxiv.org/content/10.64898/2026.08.31.747783v1"
+  thumbnail: "260831.png"
+
 - title: "Superquadria"
   date: "August 2026"
   tags: "Python, 3D Environments, AI Agents"

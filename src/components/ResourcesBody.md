@@ -7,6 +7,7 @@ I co-founded the [Bocconi Open Source Society (BOSS)](https://b-open.dev) to pro
 - [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook by Simon J.D. Prince (The MIT Press, 2023).
 - [TileDB-Vector-Search](https://github.com/TileDB-Inc/TileDB-Vector-Search/pull/580), a library for efficient out-of-core vector search.
 - [Conda](https://github.com/conda/conda/pull/15428) package manager.
+- [PyTorch Lightning](https://github.com/Lightning-AI/pytorch-lightning/pull/21811), a framework to train and scale PyTorch models.
 
 Check out my [collection of code snippets](https://gist.github.com/giacomo-ciro) to improve the quality-of-life during your everyday tasks.
 
@@ -16,6 +17,7 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 ## Mathematics & Statistics
 
 - [3Blue1Brown](https://www.youtube.com/@3blue1brown/featured) (the series on transformers and neural networks is especially good)
+- [Visualizing Complex Functions](https://www.youtube.com/watch?v=ldxFjLJ3rVY&t=13m04s) (the segment at 13:04 offers the best visuals of complex functions I've found so far)
 
 ## Machine Learning & AI
 
@@ -29,6 +31,8 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 - [UltraScale](https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=high-level_overview) (Hugging Face's guide on large scale LLM training)
 - [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles) (21 exercises to reimplement NumPy/PyTorch functions from scratch, broadcasting only)
 - [Building AI Agents: From Design Patterns to Production](https://docs.google.com/document/u/0/d/1keM4ZbbfVmdsq3EAkbAliIegOpnnuBf-_KpD4oDOF0o/mobilebasic) (21 agentic design patterns)
+- [Stanford CS224R: Deep Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
+- [Frontier Model Training Methodologies](https://djdumpling.github.io/2026/01/31/frontier_training.html)
   
 ## Computer Science & Engineering
 
@@ -40,6 +44,7 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 - [CUDA Tutorial](https://cuda-tutorial.readthedocs.io/en/latest/)
 - [Tensor and Fully Sharded Data Parallelism](https://substack.com/@martynassubonis/p-154292281)
 - [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/local-management/create-local-tunnel/) (exposes a local server to the internet without opening ports on your router)
+- [PythonAnywhere](https://www.pythonanywhere.com/) (free hosting for servers with <500MB RAM)
 - [WhatsApp Encryption Overview](https://www.bitsoffreedom.nl/wp-content/uploads/WhatsApp-Security-Whitepaper.pdf) (down to the actual cryptographic primitives used)
   
 ## Finance
@@ -54,7 +59,7 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 
 
 # Suggested Readings
-Articles, books, and blog posts worth reading.
+Articles, books, blog posts and talks worth checking out.
 
 - [Demystifying the American Graduate Admissions Process](https://cs.stanford.edu/~rkarthik/DAGAP.pdf) (by a Stanford admissions committee member)
 - [Should You Apply for a PhD in AI (2025-26)?](https://yashbhalgat.github.io/blog/phd-or-not-phd.html)
@@ -65,6 +70,9 @@ Articles, books, and blog posts worth reading.
 - [My Ten Rules for Negotiating a Job Offer](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/)
 - [How to Be Good at Research](https://x.com/itsreallyvivek/article/2064686372737454155) (on how research is actually learned, since it's rarely taught directly)
 - [ML Job Interviews: The Ultimate Guide](https://silviasapora.github.io/blog/ml-interviews.html) (inside look at landing a Research Scientist role at a top lab)
+- [Doing a PhD and Mental Health](https://sites.google.com/view/tobiasgalla/doing-a-phd-and-mental-health) (on navigating frustration, expectations, and supervisor dynamics)
+- [You and Your Research](https://www.youtube.com/watch?v=a1zDuOPkMSw) (on what makes great research and great researchers)
+- [How to Approach Research](https://www.youtube.com/watch?v=FacJ_1tTSx4&t=34m00s) (segment starting at 34:00 on research methodology and mindset)
 
 # Misc
 Useful tips, solutions, and interesting facts I wish I'd known sooner or simply find worth sharing.

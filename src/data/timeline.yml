@@ -9,6 +9,7 @@
 - date: "April 2026"
   description: Built [this](https://github.com/alexcaldarone/datathon-2026/tree/main) in 24h and achieved top five in the [Datathon 2026](https://www.datathon.ai/).
   strong: false
+  
 - date: "April 2026"
   description: "Moved to Zurich to conduct my MSc Thesis in the [Computer Vision & Geometry (CVG)](https://cvg.ethz.ch/) Group at [ETH](https://ethz.ch/en.html)."
   strong: true
@@ -42,7 +43,7 @@
   strong: true
 
 - date: "September 2025"
-  description: "Presented our research on transcriptomics scaling laws at [CIBB 2025](https://www.bioinformatics.polimi.it/CIBB2025/) "
+  description: "Presented [our research](https://www.biorxiv.org/content/10.64898/2026.08.31.747783v1) on transcriptomics scaling laws at [CIBB 2025](https://www.bioinformatics.polimi.it/CIBB2025/)"
   strong: true
 
 - date: "September 2025"
