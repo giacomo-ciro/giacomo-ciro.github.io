@@ -1,29 +1,4 @@
-const GIACOMINO_API_URL= "https://brimax.pythonanywhere.com";
-
-function initializeChatbot() {
-  fetch(`${GIACOMINO_API_URL}/status`)
-    .then(response => response.json())
-    .then(data => {
-      // Update version in title
-      const title = document.getElementById('chatbot-title');
-      if (title && data.version) {
-        title.textContent += ` (v${data.version})`;
-      }
-      // Update model info
-      const modelInfo = document.getElementById('chatbot-model-info');
-      const modelText = document.getElementById('chatbot-model-text');
-      if (modelInfo && modelText && data.models && data.models.model_text) {
-        console.log(data.models.model_text);
-        const modelSlug = data.models.model_text.split('/').pop();
-        const modelName = modelSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        const modelUrl = `https://www.together.ai/models/${modelSlug.toLowerCase()}`;
-        modelText.innerHTML = `Powered by: <a href="${modelUrl}" target="_blank" rel="noopener">${modelName}</a>`;
-        modelInfo.style.display = 'flex';
-      }
-    })
-    .catch(error => {
-      console.error('Failed to fetch chatbot version/model:', error);
-    });
+const GIACOMINO_API_URL = "https://brimax.pythonanywhere.com";
 
 
   // Chatbot Class Definition
@@ -183,9 +158,49 @@ function initializeChatbot() {
     }
   }
 
-  // Initialize chatbot instance
-  window.chatbotInstance = new Chatbot();
-  console.log('Chatbot initialized successfully');
+async function initializeChatbot() {
+  const container = document.getElementById('chatbot-container');
+  if (!container) return;
+
+  try {
+    const response = await fetch(`${GIACOMINO_API_URL}/status`, {
+      signal: AbortSignal?.timeout ? AbortSignal.timeout(8000) : undefined
+    });
+
+    if (!response.ok) {
+      throw new Error(`API status check failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+    if (data.status && data.status !== 'healthy') {
+      throw new Error(`API status unhealthy: ${data.status}`);
+    }
+
+    // Update version in title
+    const title = document.getElementById('chatbot-title');
+    if (title && data.version) {
+      title.textContent += ` (v${data.version})`;
+    }
+
+    // Update model info
+    const modelInfo = document.getElementById('chatbot-model-info');
+    const modelText = document.getElementById('chatbot-model-text');
+    if (modelInfo && modelText && data.models && data.models.model_text) {
+      const modelSlug = data.models.model_text.split('/').pop();
+      const modelName = modelSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      const modelUrl = `https://www.together.ai/models/${modelSlug.toLowerCase()}`;
+      modelText.innerHTML = `Powered by: <a href="${modelUrl}" target="_blank" rel="noopener">${modelName}</a>`;
+      modelInfo.style.display = 'flex';
+    }
+
+    // Initialize chatbot instance and display container
+    window.chatbotInstance = new Chatbot();
+    container.classList.add('show');
+    console.log('Chatbot initialized successfully');
+  } catch (error) {
+    console.warn('Chatbot service unavailable, skipping initialization:', error.message || error);
+    container.remove();
+  }
 }
 
 
