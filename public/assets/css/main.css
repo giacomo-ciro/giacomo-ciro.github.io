@@ -1079,6 +1079,12 @@ a.view-more-btn:hover .arrow {
 /*-------------------------------------------------------------------
 # Quotes
 --------------------------------------------------------------------*/
+.quotes {
+    width: 100%;
+    padding-inline: clamp(var(--content-gutter-min), 3vw, var(--content-gutter-max));
+    box-sizing: border-box;
+}
+
 .quotes-disclaimer {
     text-align: right;
     font-weight: 100;
@@ -1092,26 +1098,22 @@ a.view-more-btn:hover .arrow {
 
 .quotes-disclaimer p {
   text-align: center;
+  max-width: var(--content-width);
+  margin-inline: auto;
 }
 
-/* Width comes from the enclosing .page-col.
-
-   clip contains the scatter-in transforms: cards start offset by up to 140px
+/* clip contains the scatter-in transforms: cards start offset by up to 140px
    in a random direction, and transforms extend the scrollable overflow area
    even though they don't affect layout. On a phone that widened the page past
    the viewport, which zoomed the page out and carried the position:fixed
    hamburger off-screen with it. */
 .quote-grid {
-    columns: 3;
+    column-width: 17.5rem;
     column-gap: 1.5rem;
     width: 100%;
     overflow: clip;
     /* room for the cards' hover shadow, which would otherwise be clipped */
     overflow-clip-margin: 1.5rem;
-}
-
-@media (max-width: 900px) {
-    .quote-grid { columns: 2; }
 }
 
 @media (max-width: 600px) {

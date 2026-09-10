@@ -3,13 +3,13 @@ import Default from '../layouts/Default.astro';
 import quotes from '../data/quotes.yml';
 ---
 <Default title="Quotes">
-<section id="quotes" class="quotes page-col">
+<section id="quotes" class="quotes w-100">
   <div class="d-flex justify-content-center quotes-disclaimer">
     <p>
       Quotes on this page are based on my personal collection. Attributions are made to the best of my knowledge—often to the first person I heard say them. If you spot an error or know the correct author, please email me.
     </p>
   </div>
-  <div id="quotes-container" class="d-flex flex-column align-items-center">
+  <div id="quotes-container" class="w-100 d-flex flex-column align-items-center">
     <div id="quotes-container-row" class="quote-grid">
       <!-- Quotes will be rendered here by JavaScript (the build is static, must use JS for shuffling on reload) -->
     </div>

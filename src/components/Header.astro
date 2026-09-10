@@ -13,8 +13,8 @@ const path = Astro.url.pathname;
       <li><a href="/" aria-label="Home" class={path === '/' ? 'active' : undefined}><span class="label">Home</span></a></li>
       <li><a href="/projects/" aria-label="Projects" class={path.includes('/projects') ? 'active' : undefined}><span class="label">Projects</span></a></li>
       <li><a href="/timeline/" aria-label="Timeline" class={path.includes('/timeline') ? 'active' : undefined}><span class="label">Timeline</span></a></li>
-      <li><a href="/quotes/" aria-label="Quotes" class={path.includes('/quotes') ? 'active' : undefined}><span class="label">Quotes</span></a></li>
       <li><a href="/resources/" aria-label="Resources" class={path.includes('/resources') ? 'active' : undefined}><span class="label">Resources</span></a></li>
+      <li><a href="/quotes/" aria-label="Quotes" class={path.includes('/quotes') ? 'active' : undefined}><span class="label">Quotes</span></a></li>
     </ul>
   </nav>
   <div class="btn-cv-row">
