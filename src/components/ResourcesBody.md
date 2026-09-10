@@ -1,25 +1,18 @@
 
 # Open Source
-I believe one of the greatest byproducts of the internet is large-scale collaboration. People around the world manage to work together to advance open-source projects and build amazing projects.
+One of the greatest byproducts of the internet is large-scale collaboration on open source projects. I contributed to:
 
-I co-founded the [Bocconi Open Source Society (BOSS)](https://b-open.dev) to promote open source at my university, and I contribute to projects whenever I can. Here are some I've worked on:
+- [Understanding Deep Learning](https://udlbook.github.io/udlbook/)
+- [TileDB-Vector-Search](https://github.com/TileDB-Inc/TileDB-Vector-Search/pull/580)
+- [Conda](https://github.com/conda/conda/pull/15428)
+- [PyTorch Lightning](https://github.com/Lightning-AI/pytorch-lightning/pull/21811)
 
-- [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook by Simon J.D. Prince (The MIT Press, 2023).
-- [TileDB-Vector-Search](https://github.com/TileDB-Inc/TileDB-Vector-Search/pull/580), a library for efficient out-of-core vector search.
-- [Conda](https://github.com/conda/conda/pull/15428) package manager.
-- [PyTorch Lightning](https://github.com/Lightning-AI/pytorch-lightning/pull/21811), a framework to train and scale PyTorch models.
-
-Check out my [collection of code snippets](https://gist.github.com/giacomo-ciro) to improve the quality-of-life during your everyday tasks.
-
-# Resources by topic
-Resources I have found most valuable for learning, exploring, or reviewing different topics.
-
-## Mathematics & Statistics
+# Mathematics & Statistics
 
 - [3Blue1Brown](https://www.youtube.com/@3blue1brown/featured) (the series on transformers and neural networks is especially good)
 - [Visualizing Complex Functions](https://www.youtube.com/watch?v=ldxFjLJ3rVY&t=13m04s) (the segment at 13:04 offers the best visuals of complex functions I've found so far)
 
-## Machine Learning & AI
+# Machine Learning & AI
 
 - [Understanding Deep Learning](https://udlbook.github.io/udlbook/) (the [further reading](https://udlbook.github.io/udlbook/#:~:text=MORE-,Further%20reading,-Other%20articles%2C%20blogs) section is especially well curated)
 - [Hugging Face Daily Papers](https://huggingface.co/papers) (daily feed of new model releases and papers)
@@ -33,8 +26,8 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 - [Building AI Agents: From Design Patterns to Production](https://docs.google.com/document/u/0/d/1keM4ZbbfVmdsq3EAkbAliIegOpnnuBf-_KpD4oDOF0o/mobilebasic) (21 agentic design patterns)
 - [Stanford CS224R: Deep Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
 - [Frontier Model Training Methodologies](https://djdumpling.github.io/2026/01/31/frontier_training.html)
-  
-## Computer Science & Engineering
+
+# Computer Science & Engineering
 
 - [Operating System Concepts](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf)
 - [How Linux Works: What Every Superuser Should Know](https://nostarch.com/how-linux-works-3rd-edition)
@@ -46,8 +39,8 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 - [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/local-management/create-local-tunnel/) (exposes a local server to the internet without opening ports on your router)
 - [PythonAnywhere](https://www.pythonanywhere.com/) (free hosting for servers with <500MB RAM)
 - [WhatsApp Encryption Overview](https://www.bitsoffreedom.nl/wp-content/uploads/WhatsApp-Security-Whitepaper.pdf) (down to the actual cryptographic primitives used)
-  
-## Finance
+
+# Finance
 
 - [A Random Walk Down Wall Street](https://www.amazon.com/Random-Walk-Down-Wall-Street/dp/1324035439)
 - [The Elements of Investing](https://www.amazon.com/Elements-Investing-Lessons-Every-Investor/dp/1119851416) (shorter and blunter than the above, if you only read one)
@@ -56,7 +49,6 @@ Resources I have found most valuable for learning, exploring, or reviewing diffe
 - [How I made $500k with machine learning](https://jspauld.com/post/35126549635/how-i-made-500k-with-machine-learning-and-hft/) (one engineer running an HFT strategy alone in 2009-2010)
 - [Max Dama on HFTs](https://open.spotify.com/episode/4PRVDkZwFiKVEk7XKwKcvo?si=oqOXRBQtTgKHUR3EMcwAjQ) (what it actually takes to succeed in high-frequency trading)
 - [Quantitative Trading Summary](https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/) (the whole Headlands blog is worth exploring)
-
 
 # Suggested Readings
 Articles, books, blog posts and talks worth checking out.

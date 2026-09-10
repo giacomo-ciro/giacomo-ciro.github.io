@@ -124,21 +124,6 @@ main h1 {
   margin: 0 0 1.25rem 0;
 }
 
-.resources-page h2 {
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: var(--default-color);
-  margin-top: 1.5rem;
-}
-
-.resources-page code {
-  font-family: SFMono-Regular, Menlo, Consolas, monospace;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--default-color), transparent 92%);
-  padding: 0.1em 0.35em;
-  border-radius: 0.25rem;
-}
-
 /* Default paragraph style */
 main p {
   text-align: justify;
@@ -1313,11 +1298,10 @@ a.view-more-btn:hover .arrow {
   margin-bottom: 0;
 }
 
-.resources-page h2 {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent-color);
-  margin: 2rem 0 0.85rem 0;
+.resources-page code {
+  font-family: SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--default-color), transparent 92%);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
 }
