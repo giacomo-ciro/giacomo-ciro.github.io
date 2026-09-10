@@ -24,7 +24,7 @@ One of the greatest byproducts of the internet is large-scale collaboration on o
 - [UltraScale](https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=high-level_overview) (Hugging Face's guide on large scale LLM training)
 - [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles) (21 exercises to reimplement NumPy/PyTorch functions from scratch, broadcasting only)
 - [Building AI Agents: From Design Patterns to Production](https://docs.google.com/document/u/0/d/1keM4ZbbfVmdsq3EAkbAliIegOpnnuBf-_KpD4oDOF0o/mobilebasic) (21 agentic design patterns)
-- [Stanford CS224R: Deep Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
+- [Stanford CS224R, Deep Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
 - [Frontier Model Training Methodologies](https://djdumpling.github.io/2026/01/31/frontier_training.html)
 
 # Computer Science & Engineering
@@ -39,6 +39,11 @@ One of the greatest byproducts of the internet is large-scale collaboration on o
 - [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/local-management/create-local-tunnel/) (exposes a local server to the internet without opening ports on your router)
 - [PythonAnywhere](https://www.pythonanywhere.com/) (free hosting for servers with <500MB RAM)
 - [WhatsApp Encryption Overview](https://www.bitsoffreedom.nl/wp-content/uploads/WhatsApp-Security-Whitepaper.pdf) (down to the actual cryptographic primitives used)
+
+# Robotics
+
+- [ETHZ 263-5911-00L, Robot Learning: From Fundamentals to Foundation Models](https://www.youtube.com/playlist?list=PLPU18BnWYUZJx3_d901-GD6BGpeWwE2vx)
+- [SO-101 Official Repo](https://github.com/TheRobotStudio/SO-ARM100)
 
 # Finance
 
