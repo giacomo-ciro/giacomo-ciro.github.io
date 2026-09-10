@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
 import yaml from '@rollup/plugin-yaml';
 import rehypeSlug from 'rehype-slug';
 import rehypeExternalLinks from 'rehype-external-links';
@@ -10,7 +9,6 @@ import { unified } from '@astrojs/markdown-remark';
 export default defineConfig({
   site: 'https://www.giacomociro.com',
   trailingSlash: 'ignore',
-  integrations: [mdx()],
   markdown: {
     // rehype-slug adds the heading id slugs that Kramdown used to generate.
     processor: unified({
