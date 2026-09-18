@@ -1,3 +1,12 @@
+- title: "Learning Distributional Value Functions"
+  date: "September 2026"
+  tags: "Robotics, Machine Learning"
+  description: "Learned a distributional value function from robot rollouts labeled only as successes or failures, producing dense, frame-level signals that make failed trajectories useful for VLA training."
+  links:
+    Code: https://github.com/giacomo-ciro/learning-distributional-values
+    Results: https://github.com/giacomo-ciro/learning-distributional-values/blob/main/dump/slides.pdf
+  thumbnail: "260918.png"
+
 - title: "Scaling Recipes for Bio Foundation Models"
   date: "August 2026"
   tags: "Bioinformatics, Machine Learning, Scaling Laws"
