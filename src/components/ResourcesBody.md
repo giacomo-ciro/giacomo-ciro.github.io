@@ -44,6 +44,7 @@ One of the greatest byproducts of the internet is large-scale collaboration on o
 
 - [ETHZ 263-5911-00L, Robot Learning: From Fundamentals to Foundation Models](https://www.youtube.com/playlist?list=PLPU18BnWYUZJx3_d901-GD6BGpeWwE2vx)
 - [SO-101 Official Repo](https://github.com/TheRobotStudio/SO-ARM100)
+- [Unfolding Robotics: The Open-Source Recipe for Teaching a Robot to Fold Your Clothes](https://huggingface.co/spaces/lerobot/robot-folding)
 
 # Finance
 
