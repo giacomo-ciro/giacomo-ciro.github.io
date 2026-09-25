@@ -10,7 +10,7 @@
 - title: "Scaling Recipes for Bio Foundation Models"
   date: "August 2026"
   tags: "Bioinformatics, Machine Learning, Scaling Laws"
-  description: "Investigated empirical scaling behavior in foundation models trained on single-cell transcriptomes, quantifying power-law relationships across model capacity and training compute."
+  description: "Investigated how deep learning models scale on transcriptomics data, quantifying power-law relationships between model size, compute, data and pretraining loss, downstream performance."
   links:
     bioRxiv: "https://www.biorxiv.org/content/10.64898/2026.08.31.747783v1"
   thumbnail: "260831.png"
@@ -45,7 +45,7 @@
 - title: "SO-101 Policy Training"
   date: "June 2026"
   tags: "Robotics, Imitation Learning, Hackathon"
-  description: "Trained ACT and SmolVLA policies on a SO-101 robotic arm during the EuroTech x HKTE hackathon. It was our team first time working with robotics hardware: we failed miserably, but learned a lot."
+  description: "Trained ACT and SmolVLA policies on a SO-101 robotic arm. Failed miserably, but learned a lot."
   links:
     Code: https://github.com/giacomo-ciro/eurotech-hackathon
     Hackathon: https://www.hkengage.gov.hk/en/events/eurotech-x-hkte-hackathon
@@ -55,7 +55,7 @@
 - title: "Autoresearch HFT"
   date: "May 2026"
   tags: "Quantitative Finance, Machine Learning, AI Agents"
-  description: "A weekend challenge to trade six months of nanosecond-precision HFT order book data. Using a modular, agent-driven research harness, self-looping agents tested 30 strategies in under 48 hours, going from losing money to a fully automated strategy earning over €25k/month."
+  description: "Self-looping agents tested 30 high-frequency trading strategies in under 48 hours, going from losing money to earning over €25k/month on nanosecond precision order book data."
   links:
     Code: https://github.com/giacomo-ciro/autoresearch-hft
   thumbnail: "260530.png"
@@ -63,7 +63,7 @@
 - title: "Multi-Modal Real Estate Search"
   date: "April 2026"
   tags: "Python, AWS, MCP"
-  description: "As our Datathon 2026 submission, we built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the Swiss market. The result is an MCP server fully deployed on AWS enabling any compatible LLM to query real-time listings."
+  description: "Built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the Swiss market. The result is an MCP server fully deployed on AWS enabling any compatible LLM to query real-time listings."
   links:
     Code: https://github.com/alexcaldarone/datathon-2026
     Datathon: https://www.datathon.ai/
@@ -73,7 +73,7 @@
 - title: "Diffusion Language Models Are Natively Length-Aware"
   date: "March 2026"
   tags: "Natural Language Processing, Language Modelling"
-  description: "Improved computational efficiency of an 8B diffusion language model by predicting output sequence length before generation, dynamically cropping the context window to cut computation with minimal performance impact."
+  description: "Showed that diffusion language models encode target output length and used it to make inference significantly more efficient."
   links:
     Code: "https://github.com/giacomo-ciro/diffusion-llms"
     arXiv: "https://arxiv.org/abs/2603.06123"
@@ -83,13 +83,13 @@
 - title: "Knowledge Graph of the Italian Law"
   date: "August 2025"
   tags: "Python, Neo4j, Knowledge Graph"
-  description: "During my internship at Lexroom.ai, I designed and developed a proprietary ETL pipeline to construct a knowledge graph from over 5,000 unstructured Italian Supreme Court's rulings. Implemented an out-of-core, efficient PageRank-based algorithm to assign relevance scores to graph nodes."
+  description: "Designed and developed a proprietary ETL pipeline to construct a knowledge graph from over 5,000 unstructured Italian Supreme Court's rulings. Implemented an out-of-core, efficient PageRank-based algorithm to assign relevance scores to graph nodes."
   thumbnail: "250801.png"
 
 - title: "Do AI and Human Experts See Pneumonia the Same Way?"
   date: "May 2025"
   tags: "Computer Vision, Explainable AI, Medical Imaging"
-  description: "We compared CNNs with experienced professionals on pediatric chest X-rays to understand if deep learning models identify pneumonia using the same visual cues as doctors. The answer is no, and high accuracy doesn't guarantee human-interpretable reasoning."
+  description: "Compared CNNs with experienced professionals on pediatric chest X-rays to understand if deep learning models identify pneumonia using the same visual cues as doctors. The answer is no, and high accuracy doesn't guarantee human-interpretable reasoning."
   links:
     Code: "https://github.com/davide-beltrame/medimg-saliency-benchmark"
     Report: "/assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
