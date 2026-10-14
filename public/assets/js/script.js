@@ -204,51 +204,9 @@ async function initializeChatbot() {
 }
 
 
-// Hamburger menu dropdown
-function initNavToggle() {
-  const toggle = document.getElementById('menu-toggle');
-  const dropdown = document.getElementById('nav-dropdown');
-  if (!toggle || !dropdown) return;
-
-  toggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isOpen = dropdown.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
-      dropdown.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      dropdown.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-}
-
-// Animate on scroll library
-function aosInit() {
-  AOS.init({
-    duration: 600,
-    easing: 'ease-in-out',
-    once: true,
-    mirror: false
-  });
-}
-
 // Load everything
 function initAll() {
   initializeChatbot();
-  aosInit();
-  initNavToggle();
 }
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initAll);

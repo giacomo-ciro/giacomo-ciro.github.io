@@ -3,8 +3,8 @@
   tags: "Robotics, Machine Learning"
   description: "Learned a distributional value function from robot rollouts labeled only as successes or failures, producing dense, frame-level signals that make failed trajectories useful for VLA training."
   links:
-    Code: https://github.com/giacomo-ciro/learning-distributional-values
-    Results: https://github.com/giacomo-ciro/learning-distributional-values/blob/main/dump/slides.pdf
+    code: https://github.com/giacomo-ciro/learning-distributional-values
+    results: https://github.com/giacomo-ciro/learning-distributional-values/blob/main/dump/slides.pdf
   thumbnail: "260918.png"
 
 - title: "Scaling Recipes for Bio Foundation Models"
@@ -20,8 +20,8 @@
   tags: "Python, 3D Environments, AI Agents"
   description: "An agent harness that builds a 3D world and then plays it, using only text prompts."
   links:
-    Code: https://github.com/giacomo-ciro/superquadria
-    Demo: https://github.com/user-attachments/assets/251657ec-7505-4604-8c4d-1fc6dd699a5e
+    code: https://github.com/giacomo-ciro/superquadria
+    demo: https://github.com/user-attachments/assets/251657ec-7505-4604-8c4d-1fc6dd699a5e
   thumbnail: "260816.png"
 
 - title: "Paperino"
@@ -29,7 +29,7 @@
   tags: "CLI, TypeScript, AI Agents"
   description: "Every new arXiv paper, every day, filtered by Claude Code down to what's actually worth your time. A CLI utility that runs a hyper-precise, agent-driven daily digest tailored to your exact research project."
   links:
-    Code: https://github.com/giacomo-ciro/paperino
+    code: https://github.com/giacomo-ciro/paperino
     npm: https://www.npmjs.com/package/@giacomo-ciro/paperino
   thumbnail: "260725.jpg"
 
@@ -38,8 +38,8 @@
   tags: "Desktop App, Rust, AI Agents"
   description: "A local-first desktop environment for researchers that keeps code, literature, experiments, and AI collaboration seamlessly connected. Features a persistent Git-tracked wiki, non-blocking experiment tracking, and a native MCP bridge for agentic IDE integration."
   links:
-    Code: https://github.com/ire-research/ire
-    Website: https://ire-research.com
+    code: https://github.com/ire-research/ire
+    website: https://ire-research.com
   thumbnail: "260630.png"
 
 - title: "SO-101 Policy Training"
@@ -47,9 +47,9 @@
   tags: "Robotics, Imitation Learning, Hackathon"
   description: "Trained ACT and SmolVLA policies on a SO-101 robotic arm. Failed miserably, but learned a lot."
   links:
-    Code: https://github.com/giacomo-ciro/eurotech-hackathon
-    Hackathon: https://www.hkengage.gov.hk/en/events/eurotech-x-hkte-hackathon
-    Demo: https://github.com/giacomo-ciro/eurotech-hackathon/blob/main/public/blue_ext.gif
+    code: https://github.com/giacomo-ciro/eurotech-hackathon
+    hackathon: https://www.hkengage.gov.hk/en/events/eurotech-x-hkte-hackathon
+    demo: https://github.com/giacomo-ciro/eurotech-hackathon/blob/main/public/blue_ext.gif
   thumbnail: "260606.png"
 
 - title: "Autoresearch HFT"
@@ -57,7 +57,7 @@
   tags: "Quantitative Finance, Machine Learning, AI Agents"
   description: "Self-looping agents tested 30 high-frequency trading strategies in under 48 hours, going from losing money to earning over €25k/month on nanosecond precision order book data."
   links:
-    Code: https://github.com/giacomo-ciro/autoresearch-hft
+    code: https://github.com/giacomo-ciro/autoresearch-hft
   thumbnail: "260530.png"
 
 - title: "Multi-Modal Real Estate Search"
@@ -65,9 +65,9 @@
   tags: "Python, AWS, MCP"
   description: "Built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the Swiss market. The result is an MCP server fully deployed on AWS enabling any compatible LLM to query real-time listings."
   links:
-    Code: https://github.com/alexcaldarone/datathon-2026
-    Datathon: https://www.datathon.ai/
-    Demo: https://github.com/alexcaldarone/datathon-2026/blob/main/assets/demo.gif 
+    code: https://github.com/alexcaldarone/datathon-2026
+    datathon: https://www.datathon.ai/
+    demo: https://github.com/alexcaldarone/datathon-2026/blob/main/assets/demo.gif
   thumbnail: "260418.png"
 
 - title: "Diffusion Language Models Are Natively Length-Aware"
@@ -75,9 +75,9 @@
   tags: "Natural Language Processing, Language Modelling"
   description: "Showed that diffusion language models encode target output length and used it to make inference significantly more efficient."
   links:
-    Code: "https://github.com/giacomo-ciro/diffusion-llms"
+    code: "https://github.com/giacomo-ciro/diffusion-llms"
     arXiv: "https://arxiv.org/abs/2603.06123"
-    OpenReview: "https://openreview.net/forum?id=gnQVz850h6&nesting=2&sort=date-desc"
+    openReview: "https://openreview.net/forum?id=gnQVz850h6&nesting=2&sort=date-desc"
   thumbnail: "260300.png"
 
 - title: "Knowledge Graph of the Italian Law"
@@ -91,8 +91,8 @@
   tags: "Computer Vision, Explainable AI, Medical Imaging"
   description: "Compared CNNs with experienced professionals on pediatric chest X-rays to understand if deep learning models identify pneumonia using the same visual cues as doctors. The answer is no, and high accuracy doesn't guarantee human-interpretable reasoning."
   links:
-    Code: "https://github.com/davide-beltrame/medimg-saliency-benchmark"
-    Report: "/assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
+    code: "https://github.com/davide-beltrame/medimg-saliency-benchmark"
+    report: "/assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
   thumbnail: "250523.png"
 
 - title: "Wordle Solver"
@@ -100,7 +100,7 @@
   tags: "Natural Language Processing"
   description: "Optimal strategy solver for Wordle that achieves 100% success rate with an average of 2.89 guesses in 0.5 seconds."
   links:
-    Code: "https://github.com/giacomo-ciro/wordle-solver"
+    code: "https://github.com/giacomo-ciro/wordle-solver"
   thumbnail: "250227.jpg"
 
 - title: "Gooper"
@@ -108,8 +108,8 @@
   tags: "Software Development"
   description: "A search engine for influencers."
   links:
-    Architecture: "/assets/docs/gooper.pdf"
-    Gooper V1 (dev): "https://gooper.nuxt.dev/"
+    architecture: "/assets/docs/gooper.pdf"
+    gooper V1 (dev): "https://gooper.nuxt.dev/"
   thumbnail: "250108.png"
 
 - title: "BSc Thesis"
@@ -117,7 +117,7 @@
   tags: "Bioinformatics, Machine Learning"
   description: "Enhanced scGPT transformer model for gene expression prediction by incorporating prior biological knowledge of transcriptional regulation."
   links:
-    Thesis: "/assets/docs/giacomo_ciro_bemacs_24.pdf"
+    thesis: "/assets/docs/giacomo_ciro_bemacs_24.pdf"
   thumbnail: "240718.png"
 
 - title: "Evolving Tinder"
@@ -125,8 +125,8 @@
   tags: "Python, Evolutionary Algorithm"
   description: "Applied evolutionary algorithms to improve matching stability beyond the traditional Deferred Acceptance Algorithm for two-sided matching problems."
   links:
-    Code: "https://github.com/giacomo-ciro/evolving-tinder"
-    Report: "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
+    code: "https://github.com/giacomo-ciro/evolving-tinder"
+    report: "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
   thumbnail: "240429.png"
 
 - title: "Daily Spin Bot"
@@ -134,5 +134,5 @@
   tags: "Python, Browser Automation"
   description: "Automated browser bot for maximizing rewards in SNAI Daily Spin game, available as executable."
   links:
-    Code: "https://github.com/giacomo-ciro/daily-spin-bot"
+    code: "https://github.com/giacomo-ciro/daily-spin-bot"
   thumbnail: "231212.jpg"

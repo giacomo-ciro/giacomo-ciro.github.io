@@ -10,7 +10,6 @@ interface Props {
     links?: Record<string, string>;
     thumbnail: string;
   };
-  delay: number;
 }
 
 // Thumbnails are referenced by filename in projects.yml, so they are resolved
@@ -22,8 +21,9 @@ const thumbnails = import.meta.glob<{ default: ImageMetadata }>(
   { eager: true }
 );
 
-const { project, delay } = Astro.props;
+const { project } = Astro.props;
 const links = Object.entries(project.links ?? {});
+const date = project.date.replace(/^(\w{3})\w*/, '$1');
 
 const thumbnail = thumbnails[`../assets/thumbnails/${project.thumbnail}`];
 if (!thumbnail) {
@@ -33,7 +33,7 @@ if (!thumbnail) {
   );
 }
 ---
-<div class="project-row" data-aos="fade-in" data-aos-delay={delay}>
+<div class="project-row">
   <div class="project-thumb">
     <Image src={thumbnail.default}
            alt={`Thumbnail for ${project.title}`}
@@ -42,7 +42,7 @@ if (!thumbnail) {
   <div class="project-body">
     <div class="project-heading">
       <h1 class="project-title">{project.title}</h1>
-      <span class="project-date">{project.date}</span>
+      <span class="project-date">{date}</span>
     </div>
     <h2 class="project-tags">{project.tags}</h2>
     <p class="project-description">{project.description}</p>

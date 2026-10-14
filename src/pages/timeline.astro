@@ -36,7 +36,7 @@ const descriptions = new Map(
 <section id="timeline-page" class="d-flex flex-column justify-content-center page-col">
   <div class="d-flex justify-content-center quotes-disclaimer">
     <p>
-      This timeline collects milestones and events I find worth remembering. It's a personal and evolving list, not necessarily exhaustive or objective.
+      this timeline collects milestones and events I find worth remembering. It's a personal and evolving list, not necessarily exhaustive or objective.
     </p>
   </div>
   <div id="timeline">
@@ -48,7 +48,7 @@ const descriptions = new Map(
             <div class="month-label"><span>{monthGroup.name.split(' ')[0].slice(0, 3)}</span></div>
             <div class="month-body">
               {monthGroup.items.map((event) => (
-                <div class={`timeline-event ${event.strong ? 'strong' : 'weak'} d-flex flex-row align-items-center`} data-aos="fade-in">
+                <div class={`timeline-event ${event.strong ? 'strong' : 'weak'} d-flex flex-row align-items-center`}>
                   <div class="timeline-dot"></div>
                   <div class="timeline-content">
                     <div class="timeline-title" set:html={descriptions.get(event.description)} />

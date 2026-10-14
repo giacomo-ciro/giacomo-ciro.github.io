@@ -12,15 +12,8 @@
     --content-gutter-min: 1rem;
     --content-gutter-max: 2rem;
 
-    /* Hero — see the Hero Section block. Everything scales off --hero-t,
-       which ramps 1 -> 0 between these two viewport widths. */
+    /* Hero name */
     --hero-font: 'EB Garamond', Georgia, 'Times New Roman', serif;
-    --hero-w-full: 620px;    /* --hero-t = 1 at and above this */
-    --hero-w-tight: 432px;   /* --hero-t = 0 here; also the stack threshold */
-    --hero-img-max: 220px;
-    --hero-img-min: 150px;
-    --hero-gap: 2rem;
-    --hero-gap-min: 1.25rem;
   }
 
 /*-------------------------------------------------------------------
@@ -31,16 +24,8 @@ body {
     color: var(--default-color);
     background-color: var(--background-color);
     font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
     overflow-x: hidden;
-}
-
-/* AOS's fade-left/fade-right animate via translate3d. Transforms don't affect
-   layout but do extend the scrollable overflow area, which on a narrow screen
-   makes the page wider than the viewport — the browser then zooms out to fit
-   and drags the position:fixed hamburger off-screen. Clipping here contains
-   the animation without changing how it looks. */
-main {
-    overflow-x: clip;
 }
 
 strong, b {
@@ -131,246 +116,118 @@ main p {
 }
 
 /*-------------------------------------------------------------------
-# Header — hamburger + dropdown menu
+# Header
 --------------------------------------------------------------------*/
 
-.menu-toggle {
-  position: fixed;
-  top: 1.25rem;
-  right: 1.5rem;
-  z-index: 1001;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  background: var(--background-color);
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+.site-header {
+  padding-top: 1.45rem;
+}
+
+.site-header nav {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  cursor: pointer;
+  column-gap: 1.7rem;
+  row-gap: .5rem;
 }
 
-.menu-toggle .bar {
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  background: var(--default-color);
-  border-radius: 2px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.site-header a {
+  color: var(--accent-color);
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
-.menu-toggle .bar:nth-child(1) { top: 15px; }
-.menu-toggle .bar:nth-child(2) { top: 22px; }
-.menu-toggle .bar:nth-child(3) { top: 29px; }
-
-.menu-toggle.open .bar:nth-child(1) { top: 22px; transform: rotate(45deg); }
-.menu-toggle.open .bar:nth-child(2) { opacity: 0; }
-.menu-toggle.open .bar:nth-child(3) { top: 22px; transform: rotate(-45deg); }
-
-.nav-dropdown {
-  position: fixed;
-  top: 1.25rem;
-  right: 1.5rem;
-  z-index: 1000;
-  background: var(--background-color);
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.15);
-  border-radius: 12px;
-  padding: 44px 0 8px 0;
-  min-width: 180px;
-  transform-origin: top right;
-  transform: scale(0.9);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.18s ease, visibility 0s linear 0.22s;
+.site-header a:hover {
+  color: var(--default-color);
+  text-decoration: none;
+  transition: none;
 }
 
-.nav-dropdown.open {
-  transform: scale(1);
-  opacity: 1;
-  visibility: visible;
-  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.18s ease, visibility 0s linear 0s;
+.site-header a.active {
+  color: var(--default-color);
+  text-decoration: underline;
+  text-underline-offset: .38rem;
+  text-decoration-thickness: 1px;
 }
 
-.navmenu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.navmenu li a {
-    display: block;
-    padding: 0.55rem 1.5rem;
-    color: var(--accent-color);
-    font-weight: 450;
-    font-size: 0.95rem;
-    white-space: nowrap;
-    transition: color 0.3s ease-in-out;
-}
-
-.navmenu li a:hover,
-.navmenu li a.active {
-    color: color-mix(in srgb, var(--accent-color), transparent 25%);
-    text-decoration: none;
-}
-
-.navmenu li a .label {
-    position: relative;
-    display: inline-block;
-}
-
-.navmenu li a .label::before {
-    content: "";
-    position: absolute;
-    width: 0px;
-    height: 1.5px;
-    bottom: -4px;
-    left: 0;
-    background-color: currentColor;
-    transition: width 0.3s ease-in-out;
-}
-
-.navmenu li a:hover .label::before,
-.navmenu li a.active .label::before {
-    width: 100%;
-}
-
-.nav-dropdown .btn-cv-row {
-  padding: 0.5rem 1.5rem 0.25rem 1.5rem;
-}
-
-.nav-dropdown .btn-cv,
-.nav-dropdown .btn-cv:focus {
-  display: block;
-  color: var(--heading-color);
-  background: var(--accent-color);
-  font-size: 14px;
-  padding: 8px 13px;
-  border-radius: 4px;
-  transition: 0.3s;
-  font-weight: 450;
-  text-align: center;
-}
-
-.nav-dropdown .btn-cv:hover,
-.nav-dropdown .btn-cv:focus:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
-
-.nav-dropdown .btn-cv:active,
-.nav-dropdown .btn-cv:focus:active {
-    color: var(--surface-color);
-    background: var(--accent-color);
+@media (max-width: 520px) {
+  .site-header nav {
+    max-width: 16rem;
+    margin-inline: auto;
+    column-gap: 1.15rem;
+    row-gap: .65rem;
+  }
 }
 
 /*-------------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------------*/
 
-/* The hero shrinks in four stages as the viewport narrows:
-     1. full      — everything at full size, text beside the image, pair centred
-     2. gutters   — .page-col padding shrinks 2rem -> 1rem
-     3. lockstep  — image AND text shrink together, driven by one scale factor
-     4. stacked   — below the threshold the text drops under the image,
-                    left-aligned with the block centred, still shrinking
-
-   Image size, type size and vertical rhythm are all derived from --hero-t, a
-   single 0..1 ramp, so they move in lockstep rather than on separate curves.
-   --hero-t is 1 at --hero-w-full and 0 at --hero-w-tight, clamped at both
-   ends. clamp() does the clamping; the division yields a unitless number.
-
-   While the two sit side by side, the text column is sized to match the image
-   height exactly, so neither spills past the other under align-items:center.
-   The name/li line-height (1.25) and the li margin (0.16rem + 0.28rem * t) are
-   solved against the image width formula and hold to within a pixel across the
-   whole ramp — changing any one of them means re-solving the others. */
 .hero {
-  --hero-t: clamp(0, (100vw - var(--hero-w-tight)) / (var(--hero-w-full) - var(--hero-w-tight)), 1);
-
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  gap: calc(var(--hero-gap-min) + (var(--hero-gap) - var(--hero-gap-min)) * var(--hero-t));
   margin: 0;
 }
 
-/* min-width:0 so the flex item can shrink below the image's intrinsic
-   width (409px), which would otherwise force the page wider than a phone
-   viewport and carry the position:fixed hamburger off-screen with it. */
+.hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
 .hero .img-container {
-  flex: 0 1 auto;
-  width: calc(var(--hero-img-min) + (var(--hero-img-max) - var(--hero-img-min)) * var(--hero-t));
-  min-width: 0;
+  width: 96px;
+  margin-bottom: 0.85rem;
 }
 
 .hero .img-container img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 5%;
-}
-
-.hero .hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 0 1 auto;
-  min-width: 0;
+  border-radius: 50%;
 }
 
 .hero .hero-name {
-  text-align: left;
-  margin: 0 0 calc(0.2rem + 0.3rem * var(--hero-t)) 0;
+  margin: 0 0 0.65rem;
   font-family: var(--hero-font);
-  font-style: normal;
   font-weight: 500;
-  font-size: calc(1.3rem + 0.3rem * var(--hero-t));
-  line-height: 1.25;
-  letter-spacing: 0.01em;
+  font-size: clamp(2.6rem, 5.7vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
   color: var(--default-color);
   white-space: nowrap;
 }
 
 .hero ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 1.1rem;
+  row-gap: 0.15rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .hero ul>li {
-    text-align: left;
-    font-style: italic;
-    font-weight: 400;
-    margin: calc(0.16rem + 0.28rem * var(--hero-t)) 0;
-    font-family: var(--hero-font);
-    font-size: calc(0.95rem + 0.15rem * var(--hero-t));
-    line-height: 1.25;
-    white-space: nowrap;
+  color: var(--accent-color);
+  font-size: 0.94rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
-/* Stage 4. At the threshold --hero-t has reached 0, so image and text are
-   already at their smallest and the switch to a column introduces no jump in
-   either. Below it the pair simply reflows; --hero-t stays clamped at 0. */
-@media screen and (max-width: 432px) {
-  .hero {
-    /* --hero-t stays clamped at 0 here: type size and rhythm are already at
-       their minimum when we cross the threshold and must not spring back.
-       A separate ramp drives the image alone, since below the threshold it no
-       longer competes with the text for horizontal room. --hero-img-t is 1 at
-       the threshold, so the image width is continuous across the switch. */
-    --hero-img-t: clamp(0, (100vw - 300px) / 132px, 1);
-
-    flex-direction: column;
-    gap: 1.25rem;
-  }
+@media screen and (max-width: 520px) {
   .hero .img-container {
-    width: calc(var(--hero-img-min) - 32px + 32px * var(--hero-img-t));
+    width: 80px;
   }
-  .hero .hero-text {
-    align-items: flex-start;
+  .hero .hero-name {
+    font-size: clamp(2.35rem, 9vw, 2.8rem);
   }
 }
 
@@ -384,7 +241,6 @@ footer {
     margin: 3rem auto 0 auto;
     color: #999;
     border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
-    font-size: 0.9rem;
     bottom: 0;
     background-color: #f4f4f4;
 }
@@ -455,11 +311,10 @@ footer {
 }
 
 .project-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: start;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .project-title {
@@ -471,7 +326,8 @@ footer {
   border-bottom: none;
 }
 
-.project-date {
+.project-date,
+.timeline-date {
   font-size: 0.8rem;
   color: var(--accent-color);
   white-space: nowrap;
@@ -641,25 +497,24 @@ footer {
 
 /* Sit on the centre of the row's first text line. --dot-offset is that
    distance from the event's top edge; it is a constant so that strong/weak
-   rows (different title sizes) and wrapped rows all place their dot at the
+   rows and wrapped rows all place their dot at the
    same height, keeping every dot in step with the month label beside it. */
 #timeline .timeline-dot {
     top: var(--dot-offset);
-    margin-top: calc(var(--dot-half) * -1);
+    transform: translateY(-50%);
 }
 
 /* Dot sizing. Hierarchy is carried by diameter alone — same colour, same
    shape — so milestones read clearly while routine entries stay quiet.
-   --dot-half is half the weak dot and drives the month-label alignment
-   below; keep the two in step if the sizes ever change. */
+   The dot is translated by half its own height to stay centred on the
+   first line of text. */
 :root {
     --dot-weak: 7px;
     --dot-strong: 14px;
-    --dot-half: 3.5px;
     /* Distance from a .timeline-event's top edge down to its dot centre:
-       half of the 18px/1.5 title line box. Constant across strong/weak and
+       half of the 0.9rem/1.5 title line box. Constant across strong/weak and
        wrapped rows, so every dot lines up with its month label. */
-    --dot-offset: 13.5px;
+    --dot-offset: 0.675rem;
 }
 
 .timeline-dot {
@@ -728,7 +583,7 @@ footer {
     /* From the body's bottom edge up to the last dot's centre: the event's
        0.5rem margin, the title's 1rem bottom margin, and the remainder of
        the title's first line below the dot. */
-    bottom: calc(0.5rem + 1rem + 18px - var(--dot-offset));
+    bottom: calc(0.5rem + 1rem + 1.35rem - var(--dot-offset));
 }
 
 .year-group {
@@ -777,7 +632,6 @@ footer {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.04em;
-    text-transform: uppercase;
     color: var(--accent-color);
     /* Right-aligned so the edge the dot gap is measured from stays fixed;
        left-aligning makes that gap vary with each month's word width. */
@@ -863,13 +717,8 @@ footer {
     position: relative;
 }
 
-.timeline-date {
-    font-size: 14px;
-    color: var(--accent-color);
-}
-
 .timeline-title {
-    font-size: 18px;
+    font-size: 0.9rem;
     margin: 0 0 1rem 0;
 }
 
@@ -889,29 +738,6 @@ footer {
     margin-left: calc(var(--dot-weak) / -2);
     background-color: var(--contrast-color);
     filter: brightness(0.82);
-}
-
-.timeline-event.strong .timeline-title {
-    font-size: 1.15rem;
-    font-weight: 400;
-}
-
-.timeline-event.weak .timeline-title {
-    font-size: 1rem;
-    font-weight: 400;
-    /* color: var(--accent-color); */
-}
-
-.timeline-event.strong .timeline-date {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--accent-color);
-}
-
-.timeline-event.weak .timeline-date {
-    font-size: 0.85rem;
-    font-weight: 350;
-    color: var(--accent-color);
 }
 
 /* Narrow screens: the two rail columns cost ~8.5rem, too much next to the
@@ -1149,8 +975,8 @@ a.view-more-btn:hover .arrow {
 }
 
 .quote-content {
-    font-size: 1.1rem;
     font-style: italic;
+    text-align: left;
     position: relative;
     margin: 0 0 1rem 0;
     display: inline-block;
@@ -1160,7 +986,7 @@ a.view-more-btn:hover .arrow {
 .quote-content::before,
 .quote-content::after {
     content: '"';
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--accent-color);
     opacity: 0.5;
 }
@@ -1181,14 +1007,12 @@ a.view-more-btn:hover .arrow {
 .quote-author {
     text-align: right;
     font-weight: 500;
-    font-size: 0.95rem;
     color: var(--accent-color);
     margin: 0;
 }
 
 .quote-source {
     text-align: right;
-    font-size: 0.78rem;
     font-style: italic;
     color: var(--accent-color);
     opacity: 0.8;
@@ -1247,18 +1071,11 @@ a.view-more-btn:hover .arrow {
 }
 
 .resources-page h1 {
-  font-size: 1.75rem;
-  font-weight: 400;
-  letter-spacing: -0.01em;
   margin: 2.5rem 0 0.6rem 0;
-  padding-top: 2.5rem;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .resources-page h1:first-of-type {
   margin-top: 0;
-  padding-top: 0;
-  border-top: none;
 }
 
 .resources-page > p,
