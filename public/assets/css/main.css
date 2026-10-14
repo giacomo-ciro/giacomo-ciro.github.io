@@ -674,6 +674,15 @@ footer {
     z-index: 1;
 }
 
+/* The preview's connector is centred on each event. Explicitly centre its
+   dot on that same axis instead of relying on the flex static position,
+   which shifts on narrow, wrapped entries. The full timeline sets its own
+   first-line position above. */
+#timeline-preview .timeline-dot {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 /*-------------------------------------------------------------------
 # Timeline page — year/month rail
 --------------------------------------------------------------------*/
@@ -952,7 +961,9 @@ footer {
   .timeline-event {
     margin: 0.5rem 0;
   }
-  .timeline-dot {
+  /* The preview retains its 20px gutter; only the full timeline drops that
+     gutter when its mobile rail moves the axis onto the group edge. */
+  #timeline .timeline-dot {
     left: 0;
   }
 
