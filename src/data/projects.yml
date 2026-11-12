@@ -1,148 +1,148 @@
-- title: "Brainy Storm"
-  date: "October 2026"
-  tags: "AI Agents, Hackathon"
-  description: "A real-time brainstorming companion that listens to team conversations, extracts ideas on the fly, and enriches them with live critique and competitor research."
+- title: "brainy storm"
+  date: "october 2026"
+  tags: "ai agents, hackathon"
+  description: "a real-time brainstorming companion that listens to team conversations, extracts ideas on the fly, and enriches them with live critique and competitor research."
   links:
     code: https://github.com/alexcaldarone/brainy-storm
     hackathon: https://luma.com/zrh-hack
     demo: https://github.com/user-attachments/assets/402708e6-c2ad-4e40-b67b-ea1e0501324d
   thumbnail: "261018.png"
 
-- title: "Learning Distributional Value Functions"
-  date: "September 2026"
-  tags: "Robotics, Machine Learning"
-  description: "Learned a distributional value function from robot rollouts labeled only as successes or failures, producing dense, frame-level signals that make failed trajectories useful for VLA training."
+- title: "learning distributional value functions"
+  date: "september 2026"
+  tags: "robotics, machine learning"
+  description: "learned a distributional value function from robot rollouts labeled only as successes or failures, producing dense, frame-level signals that make failed trajectories useful for vla training."
   links:
     code: https://github.com/giacomo-ciro/learning-distributional-values
     results: https://github.com/giacomo-ciro/learning-distributional-values/blob/main/dump/slides.pdf
   thumbnail: "260918.png"
 
-- title: "Scaling Recipes for Bio Foundation Models"
-  date: "August 2026"
-  tags: "Bioinformatics, Machine Learning, Scaling Laws"
-  description: "Investigated how deep learning models scale on transcriptomics data, quantifying power-law relationships between model size, compute, data and pretraining loss, downstream performance."
+- title: "scaling recipes for bio foundation models"
+  date: "august 2026"
+  tags: "bioinformatics, machine learning, scaling laws"
+  description: "investigated how deep learning models scale on transcriptomics data, quantifying power-law relationships between model size, compute, data and pretraining loss, downstream performance."
   links:
-    bioRxiv: "https://www.biorxiv.org/content/10.64898/2026.08.31.747783v1"
+    biorxiv: "https://www.biorxiv.org/content/10.64898/2026.08.31.747783v1"
   thumbnail: "260831.png"
 
-- title: "Superquadria"
-  date: "August 2026"
-  tags: "Python, 3D Environments, AI Agents"
-  description: "An agent harness that builds a 3D world and then plays it, using only text prompts."
+- title: "superquadria"
+  date: "august 2026"
+  tags: "python, 3d environments, ai agents"
+  description: "an agent harness that builds a 3d world and then plays it, using only text prompts."
   links:
     code: https://github.com/giacomo-ciro/superquadria
     demo: https://github.com/user-attachments/assets/251657ec-7505-4604-8c4d-1fc6dd699a5e
   thumbnail: "260816.png"
 
-- title: "Paperino"
-  date: "July 2026"
-  tags: "CLI, TypeScript, AI Agents"
-  description: "Every new arXiv paper, every day, filtered by Claude Code down to what's actually worth your time. A CLI utility that runs a hyper-precise, agent-driven daily digest tailored to your exact research project."
+- title: "paperino"
+  date: "july 2026"
+  tags: "cli, typescript, ai agents"
+  description: "a cli utility running a hyper-precise, agent-driven daily digest tailored to your exact research project, filtering new arxiv papers with claude code down to what's actually worth your time."
   links:
     code: https://github.com/giacomo-ciro/paperino
     npm: https://www.npmjs.com/package/@giacomo-ciro/paperino
   thumbnail: "260725.jpg"
 
-- title: "Integrated Research Environment (IRE)"
-  date: "June 2026"
-  tags: "Desktop App, Rust, AI Agents"
-  description: "A local-first desktop environment for researchers that keeps code, literature, experiments, and AI collaboration seamlessly connected. Features a persistent Git-tracked wiki, non-blocking experiment tracking, and a native MCP bridge for agentic IDE integration."
+- title: "integrated research environment (ire)"
+  date: "june 2026"
+  tags: "desktop app, rust, ai agents"
+  description: "a local-first desktop environment for researchers that keeps code, literature, experiments, and ai collaboration seamlessly connected, featuring a persistent git-tracked wiki, non-blocking experiment tracking, and a native mcp bridge for agentic ide integration."
   links:
     code: https://github.com/ire-research/ire
     website: https://ire-research.com
   thumbnail: "260630.png"
 
-- title: "SO-101 Policy Training"
-  date: "June 2026"
-  tags: "Robotics, Imitation Learning, Hackathon"
-  description: "Trained ACT and SmolVLA policies on a SO-101 robotic arm. Failed miserably, but learned a lot."
+- title: "so-101 policy training"
+  date: "june 2026"
+  tags: "robotics, imitation learning, hackathon"
+  description: "trained act and smolvla policies on a so-101 robotic arm, failing miserably but learning a lot."
   links:
     code: https://github.com/giacomo-ciro/eurotech-hackathon
     hackathon: https://www.hkengage.gov.hk/en/events/eurotech-x-hkte-hackathon
     demo: https://github.com/giacomo-ciro/eurotech-hackathon/blob/main/public/blue_ext.gif
   thumbnail: "260606.png"
 
-- title: "Autoresearch HFT"
-  date: "May 2026"
-  tags: "Quantitative Finance, Machine Learning, AI Agents"
-  description: "Self-looping agents tested 30 high-frequency trading strategies in under 48 hours, going from losing money to earning over €25k/month on nanosecond precision order book data."
+- title: "autoresearch hft"
+  date: "may 2026"
+  tags: "quantitative finance, machine learning, ai agents"
+  description: "self-looping agents tested 30 high-frequency trading strategies in under 48 hours, going from losing money to earning over €25k/month on nanosecond precision order book data."
   links:
     code: https://github.com/giacomo-ciro/autoresearch-hft
   thumbnail: "260530.png"
 
-- title: "Multi-Modal Real Estate Search"
-  date: "April 2026"
-  tags: "Python, MCP, Hackathon"
-  description: "Built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the Swiss market. The result is an MCP server fully deployed on AWS enabling any compatible LLM to query real-time listings."
+- title: "multi-modal real estate search"
+  date: "april 2026"
+  tags: "python, mcp, hackathon"
+  description: "built a multi-stage, multi-modal search pipeline that transforms natural language queries into ranked real estate listings for the swiss market, deployed as an mcp server on aws enabling any compatible llm to query real-time listings."
   links:
     code: https://github.com/alexcaldarone/datathon-2026
     datathon: https://www.datathon.ai/
     demo: https://github.com/alexcaldarone/datathon-2026/blob/main/assets/demo.gif
   thumbnail: "260418.png"
 
-- title: "Diffusion Language Models Are Natively Length-Aware"
-  date: "March 2026"
-  tags: "Natural Language Processing, Language Modelling"
-  description: "Showed that diffusion language models encode target output length and used it to make inference significantly more efficient."
+- title: "diffusion language models are natively length-aware"
+  date: "march 2026"
+  tags: "natural language processing, language modelling"
+  description: "showed that diffusion language models encode target output length and used it to make inference significantly more efficient."
   links:
     code: "https://github.com/giacomo-ciro/diffusion-llms"
-    arXiv: "https://arxiv.org/abs/2603.06123"
-    openReview: "https://openreview.net/forum?id=gnQVz850h6&nesting=2&sort=date-desc"
+    arxiv: "https://arxiv.org/abs/2603.06123"
+    openreview: "https://openreview.net/forum?id=gnQVz850h6&nesting=2&sort=date-desc"
   thumbnail: "260300.png"
 
-- title: "Knowledge Graph of the Italian Law"
-  date: "August 2025"
-  tags: "Python, Neo4j, Knowledge Graph"
-  description: "Designed and developed a proprietary ETL pipeline to construct a knowledge graph from over 5,000 unstructured Italian Supreme Court's rulings. Implemented an out-of-core, efficient PageRank-based algorithm to assign relevance scores to graph nodes."
+- title: "knowledge graph of the italian law"
+  date: "august 2025"
+  tags: "python, neo4j, knowledge graph"
+  description: "designed and developed a proprietary etl pipeline to construct a knowledge graph from over 5,000 unstructured italian supreme court's rulings, and implemented an out-of-core, efficient pagerank-based algorithm to assign relevance scores to graph nodes."
   thumbnail: "250801.png"
 
-- title: "Do AI and Human Experts See Pneumonia the Same Way?"
-  date: "May 2025"
-  tags: "Computer Vision, Explainable AI, Medical Imaging"
-  description: "Compared CNNs with experienced professionals on pediatric chest X-rays to understand if deep learning models identify pneumonia using the same visual cues as doctors. The answer is no, and high accuracy doesn't guarantee human-interpretable reasoning."
+- title: "do ai and human experts see pneumonia the same way?"
+  date: "may 2025"
+  tags: "computer vision, explainable ai, medical imaging"
+  description: "compared cnns with experienced professionals on pediatric chest x-rays to test whether deep learning models identify pneumonia using the same visual cues as doctors, finding that they do not and that high accuracy doesn't guarantee human-interpretable reasoning."
   links:
     code: "https://github.com/davide-beltrame/medimg-saliency-benchmark"
     report: "/assets/docs/do_ai_and_human_experts_see_pneumonia_the_same_way.pdf"
   thumbnail: "250523.png"
 
-- title: "Wordle Solver"
-  date: "February 2025"
-  tags: "Natural Language Processing"
-  description: "Optimal strategy solver for Wordle that achieves 100% success rate with an average of 2.89 guesses in 0.5 seconds."
+- title: "wordle solver"
+  date: "february 2025"
+  tags: "natural language processing"
+  description: "optimal strategy solver for wordle that achieves 100% success rate with an average of 2.89 guesses in 0.5 seconds."
   links:
     code: "https://github.com/giacomo-ciro/wordle-solver"
   thumbnail: "250227.jpg"
 
-- title: "Gooper"
-  date: "January 2025"
-  tags: "Software Development"
-  description: "A search engine for influencers."
+- title: "gooper"
+  date: "january 2025"
+  tags: "software development"
+  description: "a search engine for influencers."
   links:
     architecture: "/assets/docs/gooper.pdf"
-    gooper V1 (dev): "https://gooper.nuxt.dev/"
+    gooper v1 (dev): "https://gooper.nuxt.dev/"
   thumbnail: "250108.png"
 
-- title: "BSc Thesis"
-  date: "July 2024"
-  tags: "Bioinformatics, Machine Learning"
-  description: "Enhanced scGPT transformer model for gene expression prediction by incorporating prior biological knowledge of transcriptional regulation."
+- title: "bsc thesis"
+  date: "july 2024"
+  tags: "bioinformatics, machine learning"
+  description: "enhanced scgpt transformer model for gene expression prediction by incorporating prior biological knowledge of transcriptional regulation."
   links:
     thesis: "/assets/docs/giacomo_ciro_bemacs_24.pdf"
   thumbnail: "240718.png"
 
-- title: "Evolving Tinder"
-  date: "April 2024"
-  tags: "Python, Evolutionary Algorithm"
-  description: "Applied evolutionary algorithms to improve matching stability beyond the traditional Deferred Acceptance Algorithm for two-sided matching problems."
+- title: "evolving tinder"
+  date: "april 2024"
+  tags: "python, evolutionary algorithm"
+  description: "applied evolutionary algorithms to improve matching stability beyond the traditional deferred acceptance algorithm for two-sided matching problems."
   links:
     code: "https://github.com/giacomo-ciro/evolving-tinder"
     report: "https://github.com/giacomo-ciro/evolving-tinder/blob/main/evolving_tinder.pdf"
   thumbnail: "240429.png"
 
-- title: "Daily Spin Bot"
-  date: "December 2023"
-  tags: "Python, Browser Automation"
-  description: "Automated browser bot for maximizing rewards in SNAI Daily Spin game, available as executable."
+- title: "daily spin bot"
+  date: "december 2023"
+  tags: "python, browser automation"
+  description: "automated browser bot for maximizing rewards in snai daily spin game, available as executable."
   links:
     code: "https://github.com/giacomo-ciro/daily-spin-bot"
   thumbnail: "231212.jpg"

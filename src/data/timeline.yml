@@ -1,111 +1,111 @@
-- date: "June 2026"
-  description: "[open-sourced](https://github.com/ire-research/ire) the first [Integrated Research Environment (IRE)](https://ire-research.com/)."
+- date: "june 2026"
+  description: "[open-sourced](https://github.com/ire-research/ire) the first [integrated research environment (ire)](https://ire-research.com/)."
   strong: false
   
-- date: "June 2026"
-  description: "participated in the robotics & AI track of the [EuroTech x HKTE Hackathon](https://www.hkengage.gov.hk/en/events/eurotech-x-hkte-hackathon)."
+- date: "june 2026"
+  description: "participated in the robotics & ai track of the [eurotech x hkte hackathon](https://www.hkengage.gov.hk/en/events/eurotech-x-hkte-hackathon)."
   strong: false
 
-- date: "April 2026"
-  description: built [this](https://github.com/alexcaldarone/datathon-2026/tree/main) in 24h and achieved top five in the [Datathon 2026](https://www.datathon.ai/).
+- date: "april 2026"
+  description: built [this](https://github.com/alexcaldarone/datathon-2026/tree/main) in 24h and achieved top five in the [datathon 2026](https://www.datathon.ai/).
   strong: false
   
-- date: "April 2026"
-  description: "started my MSc Thesis in 3D egocentric vision at the [CVG](https://cvg.ethz.ch/) lab in Zurich."
+- date: "april 2026"
+  description: "started my msc thesis in 3d egocentric vision at the [cvg](https://cvg.ethz.ch/) lab in zurich."
   strong: true
 
-- date: "September 2025"
-  description: "joined [Lead The Future (LTF)](https://www.leadthefuture.tech/) as mentee"
+- date: "september 2025"
+  description: "joined [lead the future (ltf)](https://www.leadthefuture.tech/) as mentee"
   strong: false
 
-- date: "September 2025"
-  description: "concluded my internship at [Lexroom.ai](https://www.lexroom.ai/)"
+- date: "september 2025"
+  description: "concluded my internship at [lexroom.ai](https://www.lexroom.ai/)"
   strong: true
 
-- date: "September 2025"
-  description: "presented [our research](https://www.biorxiv.org/content/10.64898/2026.08.31.747783v1) on transcriptomics scaling laws at [CIBB 2025](https://www.bioinformatics.polimi.it/CIBB2025/)"
+- date: "september 2025"
+  description: "presented [our research](https://www.biorxiv.org/content/10.64898/2026.08.31.747783v1) on transcriptomics scaling laws at [cibb 2025](https://www.bioinformatics.polimi.it/CIBB2025/)"
   strong: true
 
-- date: "September 2025"
-  description: "last year of my MSc"
+- date: "september 2025"
+  description: "last year of my msc"
   strong: true
 
-- date: "June 2025"
-  description: "started an internship as Machine Learning Engineer at [Lexroom.ai](https://www.lexroom.ai/)"
+- date: "june 2025"
+  description: "started an internship as machine learning engineer at [lexroom.ai](https://www.lexroom.ai/)"
   strong: true
 
-- date: "June 2025"
-  description: "joined [EuroTech Federation](https://eurotech-federation.com/) as part of [batch #1](https://www.eurotech-federation.com/community/fellows/giacomo-ciro)"
+- date: "june 2025"
+  description: "joined [eurotech federation](https://eurotech-federation.com/) as part of [batch #1](https://www.eurotech-federation.com/community/fellows/giacomo-ciro)"
   strong: true
 
-- date: "June 2025"
-  description: "started a new position as Guest Researcher at [IFOM](https://www.ifom.eu/it/)."
+- date: "june 2025"
+  description: "started a new position as guest researcher at [ifom](https://www.ifom.eu/it/)."
   strong: true
 
-- date: "May 2025"
-  description: "again on [‘AI AI che male che mi fai’](https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz) podcast, now as co-host ([1h 30min episode](https://open.spotify.com/episode/2Xnw48PmrCkVq2CfnPtes6))"
+- date: "may 2025"
+  description: "again on [‘ai ai che male che mi fai’](https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz) podcast, now as co-host ([1h 30min episode](https://open.spotify.com/episode/2Xnw48PmrCkVq2CfnPtes6))"
   strong: false
 
-- date: "May 2025"
-  description: "renewed my contract as Machine Learning Researcher at [BIDSA](https://bidsa.unibocconi.eu/)"
+- date: "may 2025"
+  description: "renewed my contract as machine learning researcher at [bidsa](https://bidsa.unibocconi.eu/)"
   strong: true
 
-- date: "November 2024"
-  description: "guest on the [‘AI AI che male che mi fai’](https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz) podcast ([1h 30min episode](https://open.spotify.com/episode/7JeI5Fmzh8LUBHMWoohfEr))"
+- date: "november 2024"
+  description: "guest on the [‘ai ai che male che mi fai’](https://open.spotify.com/show/68X8ndvDNAXg5U3sEqcuOz) podcast ([1h 30min episode](https://open.spotify.com/episode/7JeI5Fmzh8LUBHMWoohfEr))"
   strong: false
 
-- date: "September 2024"
-  description: "enrolled in a MSc in Artificial Intelligence"
+- date: "september 2024"
+  description: "enrolled in a msc in artificial intelligence"
   strong: true
 
-- date: "September 2024"
-  description: "started a new position as Machine Learning Researcher at [BIDSA](https://bidsa.unibocconi.eu/)"
+- date: "september 2024"
+  description: "started a new position as machine learning researcher at [bidsa](https://bidsa.unibocconi.eu/)"
   strong: true
 
-- date: "August 2024"
-  description: "restructured [BSML](https://bsmachinelearning.com/) as the first Machine Learning Project Incubator at Bocconi University"
+- date: "august 2024"
+  description: "restructured [bsml](https://bsmachinelearning.com/) as the first machine learning project incubator at bocconi university"
   strong: true
 
-- date: "July 2024"
-  description: "graduated my BSc with 110 Cum Laude"
+- date: "july 2024"
+  description: "graduated my bsc with 110 cum laude"
   strong: true
 
-- date: "June 2024"
-  description: "submitted my [BSc Thesis](http://www.giacomociro.com/assets/docs/giacomo_ciro_bemacs_24.pdf)"
+- date: "june 2024"
+  description: "submitted my [bsc thesis](http://www.giacomociro.com/assets/docs/giacomo_ciro_bemacs_24.pdf)"
   strong: true
 
-- date: "September 2023"
+- date: "september 2023"
   description: "started my boxing career"
   strong: false
 
-- date: "June 2023"
-  description: "co-founded [BSML](https://bsmachinelearning.com/)"
+- date: "june 2023"
+  description: "co-founded [bsml](https://bsmachinelearning.com/)"
   strong: true
 
-- date: "May 2023"
-  description: "decided to pursue a career in Machine Learning"
+- date: "may 2023"
+  description: "decided to pursue a career in machine learning"
   strong: true
 
-- date: "September 2021"
-  description: "enrolled in a BSc in Economics and Computer Science"
+- date: "september 2021"
+  description: "enrolled in a bsc in economics and computer science"
   strong: true
 
-- date: "June 2021"
-  description: "received my High School Diploma"
+- date: "june 2021"
+  description: "received my high school diploma"
   strong: true
 
-- date: "October 2013"
-  description: "established the village #2VQLJOP (currently TH 16)"
+- date: "october 2013"
+  description: "established the village #2vqljop (currently th 16)"
   strong: false
 
-- date: "September 2010"
+- date: "september 2010"
   description: "started my rugby career"
   strong: false
 
-- date: "September 2009"
+- date: "september 2009"
   description: "joined a boy-scout group "
   strong: false
 
-- date: "July 2002"
+- date: "july 2002"
   description: "deployed to the warzone"
   strong: true

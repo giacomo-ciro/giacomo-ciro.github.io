@@ -23,7 +23,7 @@ const thumbnails = import.meta.glob<{ default: ImageMetadata }>(
 
 const { project } = Astro.props;
 const links = Object.entries(project.links ?? {});
-const date = project.date.replace(/^(\w{3})\w*/, '$1');
+const date = project.date.replace(/^(\w{3})\w*/, '$1').toLowerCase();
 
 const thumbnail = thumbnails[`../assets/thumbnails/${project.thumbnail}`];
 if (!thumbnail) {

@@ -9,7 +9,7 @@ import timeline from '../data/timeline.yml';
 import { renderMarkdown } from '../markdown.mjs';
 import sitePackage from '../../package.json';
 
-const abbreviateMonth = (date: string) => date.replace(/^(\w{3})\w*/, '$1');
+const abbreviateMonth = (date: string) => date.replace(/^(\w{3})\w*/, '$1').toLowerCase();
 
 const previewTimeline = await Promise.all(
   timeline
@@ -23,7 +23,7 @@ const previewTimeline = await Promise.all(
 );
 const previewProjects = projects.slice(0, 3);
 ---
-<Default title="MSc in Artificial Intelligence">
+<Default title="home">
 <section id="hero" class="hero page-col">
     <div class="hero-text">
       {sitePackage.showProfileImage && (
@@ -33,9 +33,9 @@ const previewProjects = projects.slice(0, 3);
       )}
       <h1 class="hero-name">Giacomo Cirò</h1>
       <ul>
-        <li>CS Student</li>
-        <li>ML Researcher</li>
-        <li>TH 16</li>
+        <li>cs student</li>
+        <li>ml researcher</li>
+        <li>th 16</li>
       </ul>
     </div>
 </section>
@@ -44,7 +44,7 @@ const previewProjects = projects.slice(0, 3);
 </section>
 
 <section class="d-flex flex-column justify-content-center page-col" id="timeline-preview-section">
-  <h1>Timeline</h1>
+  <h1>timeline</h1>
   <div id="timeline-preview" class="d-flex flex-column">
     {previewTimeline.map((event) => (
       <div class="timeline-event strong d-flex flex-row align-items-center">
@@ -62,7 +62,7 @@ const previewProjects = projects.slice(0, 3);
 </section>
 
 <section class="d-flex flex-column justify-content-center page-col" id="projects-preview-section">
-  <h1>Projects</h1>
+  <h1>projects</h1>
   <div id="project-preview-row" class="project-list">
     {previewProjects.map((project) => (
       <ProjectRow project={project} />
